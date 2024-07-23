@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<title>RAON K Agent Install</title>
+    <link type="text/css" rel="stylesheet" href="css/raonkeditor.setup.css">
+    <script src="../../config/editor_crossdomain_config.js?ver=2018.1196447.1500.01" type="text/javascript"></script>
+    <script type="text/javascript">
+        function set_page() {
+            var lang = parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._FRAMEWIN.RAONKEditor_lang;
+            var agentInfo = parent.KEDITORWIN.KEDITORTOP.RAONKEDITOR.UserAgent;
+
+            if (parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._config.installGuideLogoUrl) {
+                document.getElementsByTagName('img')[0].src = parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._config.installGuideLogoUrl;
+            } else {
+                document.getElementsByTagName('img')[0].src = 'images/BI-raonk.png';
+            }
+
+            document.getElementsByTagName('div')[0].className = 'setupPopup raonk_' + parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._config.lang;
+
+            var content1 = document.getElementById('content1');
+            var _html = '';
+            // _html += '<li class="first">' + lang.install_guide.desc1 + '</li>';
+            _html += '<li class="first">' + 'GBox Agent 설치를 시작합니다.' + '</li>';
+            _html += '<li><i>·</i>' + lang.install_guide.desc2.replace('{0}', parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._config.agentInstallFileName) + '</li>';
+            _html += '<li><i>·</i>' + lang.install_guide.desc3 + '</li>';
+            _html += '<li><i>·</i>' + lang.install_guide.desc4 + '</li>';
+            content1.innerHTML = _html;
+
+            var content2 = document.getElementById('content2');
+            content2.innerHTML = lang.install_guide.agent_info.replace('{0}', agentInfo.os.name + ' ' + agentInfo.os.version).replace('{1}', agentInfo.browser.name + agentInfo.browser.major);
+
+            install_ready();
+        }
+
+        function install_ready() {
+            try {
+                var downloadLink = document.getElementById('download_link');
+                downloadLink.href = parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._config.agentInstallFileUrl;
+
+                parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._FRAMEWIN.requestManagerInstall(parent.KEDITORWIN.window, document);
+            } catch (e) { }
+        }
+    </script>
+</head>
+<body onload="set_page();">
+    <div class="setupPopup">
+        <div class="setupPopup_w">
+            <img src="images/BI-raonk.png" alt="RAON K 2018">
+            <ul id="content1"></ul>
+        </div>
+        <div>
+            <div id="content2" class="client_info" style="position:absolute; bottom:18px; left:20px;"></div>
+            <span class="line"></span>
+        </div>
+        <a href="javascript:parent.KEDITORWIN.KEDITORTOP.G_CURRKEDITOR._FRAMEWIN.closeInstallPopup()" class="close"><span class="hidden">닫힘</span></a>
+    </div>
+</body>
+</html>

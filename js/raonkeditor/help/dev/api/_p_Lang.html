@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>RAON K Developer Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="../../css/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="raonkhelp_content_right">
+<div class="right_con">           
+    <h3 class="title">K Editor :: Config :: Lang</h3>
+    <p class="ttl">Lang</p>
+    <p class="txt">
+        에디터에 로드 할 언어를 설정합니다. 
+    </p>
+    <p class="mttl01">remarks</p>
+    <p class="txt">
+    기본값은 "ko-kr : 한국어" 로 설정됩니다.<br />
+    필요시 Lang: '언어코드'로 설정합니다.<br /><br />
+    언어코드는<br />
+    ko-kr : 한국어(대한민국)<br /> en-us : 영어(미국)<br /> zh-cn : 중국어(중국)<br /> zh-tw : 중국어(대만)<br /> ja-jp : 일본어
+    </p>
+    <p class="mttl01">sample code</p>            
+    <div class="cord">
+        <pre class="pre">
+&#60;script type="text/javascript" src="keditor/js/raonkeditor.js"&#62;&#60;/script&#62;	
+ 
+&#60;!-- ..... 생략 ..... --&#62;
+ 
+&#60;div style="width:900px;height:550px"&#62;  
+    &#60;script type="text/javascript"&#62;
+
+        var paramObj = {
+            Id: 'editor1',          
+            // 에디터 언어를 en-us로 설정합니다.
+            Lang: 'en-us'
+        };
+        
+        new RAONKEditor(paramObj);
+
+    &#60;/script&#62;       
+&#60;/div&#62;
+        </pre>  
+    </div>                   
+    </div>
+</div>
+</body>
+</html>
+

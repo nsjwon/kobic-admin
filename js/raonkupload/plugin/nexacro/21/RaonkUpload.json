@@ -1,0 +1,18 @@
+﻿{
+	"name": "RAONKUpload",
+	"version": "2021.12.28",
+	"description": "RAONKUpload Plugin for nexacro platform N (version 21)",
+	"license": "Commercial license",
+	"scripts": [
+		"raonkupload/js/raonkupload.js",
+		"raonkupload/plugin/nexacro/21/raonkupload.nexacro21.js"
+	],
+	"objInfo": [
+		"raonkupload/plugin/nexacro/21/metainfo/raonkupload.nexacro.enum.info",
+		"raonkupload/plugin/nexacro/21/metainfo/raonkupload.nexacro.meta.info",
+		"raonkupload/plugin/nexacro/21/metainfo/raonkupload.nexacro.event.info"
+	],
+	"designscripts": [
+		"raonkupload/plugin/nexacro/21/design/raonkupload.nexacro.design.js"
+	]
+}

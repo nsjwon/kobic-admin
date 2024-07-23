@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>RAON K Developer Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="../../css/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="raonkhelp_content_right">
+<div class="right_con">           
+    <h3 class="title">K Editor :: Config :: ShowStatusBar</h3>
+    <p class="ttl">ShowStatusBar</p>
+    <p class="txt">
+        에디터의 상태바는 "디자인", "HTML" 및 "미리보기", "TEXT" 탭으로 구성되어 있습니다.<br />이 설정은 상태바를 보이거나 숨기는 기능을 설정합니다.<br/> 사용 용도에 따라서 상태바를 숨김으로 원할 때 사용하면 유용 할 수 있습니다.
+    </p>
+    <p class="mttl01">remarks</p>
+    <p class="txt">
+    기본값은 "1" 이고, "0" 로 설정시 상태바를 숨김으로 설정합니다.
+    </p>
+    <p class="mttl01">sample code</p>            
+    <div class="cord">
+        <pre class="pre">
+&#60;script type="text/javascript" src="keditor/js/raonkeditor.js"&#62;&#60;/script&#62;	
+ 
+&#60;!-- ..... 생략 ..... --&#62;
+ 
+&#60;div style="width:900px;height:550px"&#62;  
+    &#60;script type="text/javascript"&#62;
+
+        var paramObj = {
+            Id: 'editor1',          
+            // 에디터 상태바를 숨김으로 설정합니다.
+            ShowStatusBar: '0'
+        };
+        
+        new RAONKEditor(paramObj);
+
+    &#60;/script&#62;       
+&#60;/div&#62;
+        </pre>  
+    </div>                   
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,252 @@
+﻿<html>
+<head>
+    <title>RAONWIZ with nexacro Runtime</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script type="text/javascript">
+        document.write( '<scr' + 'ipt src="../../../js/raonkupload.js?t=' + ( new Date ).getTime() + '" type="text/javascript"><\/scr' + 'ipt>' );
+    </script>
+    <script type="text/javascript">
+
+        var G_GetListInfoForArray_ResultObj = null;
+        var G_GetListInfoForJson_ResultObj = null;
+        var G_GetListInfoForText_ResultObj = null;
+
+        var G_GetNewUploadListForArray_ResultObj = null;
+        var G_GetNewUploadListForJson_ResultObj = null;
+        var G_GetNewUploadListForText_ResultObj = null;
+
+        var G_EventReturnValue_AddLocalFileDirectly = null;
+        var G_EventReturnValue_AddLocalFileDirectlyEx = null;
+        var G_EventReturnValue_GetZipFileInfo = null;
+        var G_EventReturnValue_GetExcelData = null;
+
+        if ( !window.NEXACROHTML ) {
+            window.NEXACROHTML = {};
+        }
+
+        // ref. http://tobetong.com/?p=10955&ckattempt=1
+        window.NEXACROHTML.FireUserNotify = function ( userdata ) {
+            if ( window.NEXACROWEBBROWSER ) {
+                // Web runtime environment, iOS/iPadOS NRE 일때
+                window.NEXACROWEBBROWSER.on_fire_onusernotify( window.NEXACROWEBBROWSER, userdata );
+            } else if ( typeof nexacro === "undefined" ) {
+                // Windows NRE 일때
+                window.document.title = userdata;
+            } else if ( nexacro ) {
+                // Android NRE, macOS NRE 일때,
+                // nexacro.Webview 일때
+                nexacro.fireUserNotify( userdata );
+            }
+        }
+
+        function fn_bodyOnload() {
+            // iOS 넥사크로 앱에서 로드 안되는 현상 때문에 setTimeout 설정
+            setTimeout( function () {
+                window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_WEBBROWSER_INIT" );
+            }, 0 );
+        }
+        function fn_FireUserNotify( userdata ) {
+            window.NEXACROHTML.FireUserNotify( userdata );
+        }
+        function fn_RunFunction( func ) {
+            if ( typeof func === 'string' ) {
+                return _looseJsonParse( func );
+            }
+        }
+        function _looseJsonParse( obj ) {
+            return Function( '"use strict";return (' + obj + ')' )();
+        }
+        function fn_InitGlobalVar() {
+            G_GetListInfoForArray_ResultObj = null;
+            G_GetListInfoForJson_ResultObj = null;
+            G_GetListInfoForText_ResultObj = null;
+
+            G_GetNewUploadListForArray_ResultObj = null;
+            G_GetNewUploadListForJson_ResultObj = null;
+            G_GetNewUploadListForText_ResultObj = null;
+        }
+        function fn_GetAllMethodFileInfo( uploadID ) {
+            G_GetListInfoForArray_ResultObj = RAONKUPLOAD.GetListInfo( "array", uploadID );
+            if ( G_GetListInfoForArray_ResultObj != null ) {
+                G_GetListInfoForArray_ResultObj = RAONKUPLOAD.util.jsonToString( G_GetListInfoForArray_ResultObj );
+                G_GetListInfoForArray_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetListInfoForArray_ResultObj );
+            }
+
+            G_GetListInfoForJson_ResultObj = RAONKUPLOAD.GetListInfo( "json", uploadID );
+            if ( G_GetListInfoForJson_ResultObj != null ) {
+                G_GetListInfoForJson_ResultObj = RAONKUPLOAD.util.jsonToString( G_GetListInfoForJson_ResultObj );
+                G_GetListInfoForJson_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetListInfoForJson_ResultObj );
+            }
+
+            G_GetListInfoForText_ResultObj = RAONKUPLOAD.GetListInfo( "text", uploadID );
+            if ( G_GetListInfoForText_ResultObj != null ) {
+                G_GetListInfoForText_ResultObj = RAONKUPLOAD.util.jsonToString( G_GetListInfoForText_ResultObj );
+                G_GetListInfoForText_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetListInfoForText_ResultObj );
+            }
+
+            G_GetNewUploadListForArray_ResultObj = RAONKUPLOAD.GetNewUploadList( "array", uploadID );
+            if ( G_GetNewUploadListForArray_ResultObj != null ) {
+                G_GetNewUploadListForArray_ResultObj = RAONKUPLOAD.util.jsonToString( G_GetNewUploadListForArray_ResultObj );
+                G_GetNewUploadListForArray_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetNewUploadListForArray_ResultObj );
+            }
+
+            G_GetNewUploadListForJson_ResultObj = RAONKUPLOAD.GetNewUploadList( "json", uploadID );
+            if ( G_GetNewUploadListForJson_ResultObj != null ) {
+                G_GetNewUploadListForJson_ResultObj = RAONKUPLOAD.util.jsonToString( G_GetNewUploadListForJson_ResultObj );
+                G_GetNewUploadListForJson_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetNewUploadListForJson_ResultObj );
+            }
+
+            G_GetNewUploadListForText_ResultObj = RAONKUPLOAD.GetNewUploadList( "text", uploadID );
+            if ( G_GetNewUploadListForText_ResultObj != null ) {
+                G_GetNewUploadListForText_ResultObj = RAONKUPLOAD.util.base64_encode( G_GetNewUploadListForText_ResultObj );
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // event start
+        ///////////////////////////////////////////////////////////////////////
+        // create
+        function RAONKUPLOAD_CreationComplete( uploadID, paramObj ) {
+            fn_InitGlobalVar();
+
+            if ( typeof paramObj !== 'object' ) {
+                paramObj = {};
+            }
+            paramObj.useAgentMode = RAONKUPLOAD.GetUploadByName( uploadID )._config.useKManager;
+
+            G_EventReturnValue_CreationComplete = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_CreationComplete = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_CreationComplete );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_CreationComplete" );
+        }
+
+        // add file
+        function RAONKUPLOAD_AfterAddFile( uploadID, paramObj ) {
+            G_EventReturnValue_AfterAddFile = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_AfterAddFile = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_AfterAddFile );
+
+            // not supported
+            //window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_AfterAddFile" );
+        }
+
+        function RAONKUPLOAD_AfterAddAllFile( uploadID, paramObj ) {
+            fn_GetAllMethodFileInfo( uploadID );
+
+            G_EventReturnValue_AfterAddAllFile = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_AfterAddAllFile = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_AfterAddAllFile );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_AfterAddAllFile" );
+        }
+        function RAONKUPLOAD_AfterAddWebFile( uploadID ) {
+            fn_GetAllMethodFileInfo( uploadID );
+        }
+
+        // delete file
+        function RAONKUPLOAD_DeleteAllFile( uploadID, paramObj ) {
+            fn_GetAllMethodFileInfo( uploadID );
+
+            G_EventReturnValue_DeleteAllFile = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_DeleteAllFile = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_DeleteAllFile );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_DeleteAllFile" );
+        }
+
+        // upload
+        function RAONKUPLOAD_BeforeUpload( uploadID, paramObj ) {
+            fn_InitGlobalVar();
+
+            return true;
+        }
+        function RAONKUPLOAD_UploadComplete( uploadID, paramObj ) {
+            fn_GetAllMethodFileInfo( uploadID );
+
+            G_EventReturnValue_UploadComplete = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_UploadComplete = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_UploadComplete );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_UploadComplete" );
+        }
+
+        // download
+        function RAONKUPLOAD_BeforeDownloadFile( uploadID, paramObj ) {
+            fn_InitGlobalVar();
+
+            return true;
+        }
+        function RAONKUPLOAD_BeforeOpenFile( uploadID, paramObj ) {
+            fn_InitGlobalVar();
+
+            return true;
+        }
+
+        function RAONKUPLOAD_DownloadCompleteFile(uploadID, paramObj) {
+            // RAONKUPLOAD_DownloadCompleteAllFile 발생을 위해 정의 
+        }
+
+        function RAONKUPLOAD_DownloadCompleteAllFile( uploadID, paramObj ) {
+            G_EventReturnValue_DownloadCompleteAllFile = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_DownloadCompleteAllFile = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_DownloadCompleteAllFile );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_DownloadCompleteAllFile" );
+        }
+
+        // error / cancel
+        function RAONKUPLOAD_OnError( uploadID, paramObj ) {
+            G_EventReturnValue_OnError = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_OnError = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_OnError );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_OnError" );
+        }
+        function RAONKUPLOAD_UploadingCancel( uploadID, paramObj ) {
+            G_EventReturnValue_UploadingCancel = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_UploadingCancel = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_UploadingCancel );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_UploadingCancel" );
+        }
+        function RAONKUPLOAD_DownloadCancel( uploadID, paramObj ) {
+            G_EventReturnValue_DownloadCancel = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_DownloadCancel = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_DownloadCancel );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_DownloadCancel" );
+        }
+
+        // etc
+        function RAONKUPLOAD_SelectItem( uploadID, paramObj ) {
+            G_EventReturnValue_SelectItem = RAONKUPLOAD.util.jsonToString( paramObj );
+            G_EventReturnValue_SelectItem = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_SelectItem );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_SelectItem" );
+        }
+        function RAONKUPLOAD_CustomAction( uploadID, command ) {
+            G_EventReturnValue_CustomAction = RAONKUPLOAD.util.base64_encode( command );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_CustomAction" );
+        }
+        function RAONKUPLOAD_Alert( uploadID, msg ) {
+            G_EventReturnValue_Alert = RAONKUPLOAD.util.base64_encode( msg );
+
+            window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_Alert" );
+        }
+        function RAONKUPLOAD_AgentInstall(uploadID, paramObj) {
+            G_EventReturnValue_AgentInstall = RAONKUPLOAD.util.jsonToString(paramObj);
+            G_EventReturnValue_AgentInstall = RAONKUPLOAD.util.base64_encode(G_EventReturnValue_AgentInstall);
+
+            window.NEXACROHTML.FireUserNotify("RAONKUPLOAD_AgentInstall");
+        }
+        //function RAONKUPLOAD_TransferStatusChange( uploadID, paramObj ) {
+        //    G_EventReturnValue_TransferStatusChange = RAONKUPLOAD.util.jsonToString( paramObj );
+        //    G_EventReturnValue_TransferStatusChange = RAONKUPLOAD.util.base64_encode( G_EventReturnValue_TransferStatusChange );
+
+        //    window.NEXACROHTML.FireUserNotify( "RAONKUPLOAD_TransferStatusChange" );
+        //}
+        ///////////////////////////////////////////////////////////////////////
+        // event end
+        ///////////////////////////////////////////////////////////////////////
+    </script>
+</head>
+<body onload="fn_bodyOnload();" style="padding:0; margin:0; height:100%; text-align: center; overflow: hidden; border: 0;">
+    <div id="component_Holder" style="width: 100%; height: 100%; margin: 0 auto; overflow: hidden;"></div>
+</body>
+</html>

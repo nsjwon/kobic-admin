@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<title>RAONK Upload</title>
+    <link type="text/css" rel="stylesheet" href="css/raonkupload.setup.css">
+    <script src="../../config/crossdomain_config.js?ver=2018.1196447.1500.01" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var agentInfo = parent.KUPLOADWIN.KUPLOADTOP.RAONKUPLOAD.UserAgent;
+        var _needPrivateNetworkAccess = false;
+
+        function set_page() {
+            try {
+                typeof parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER.frameWin.installGuideLoadedPage === 'function' && parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER.frameWin.installGuideLoadedPage(window);
+            } catch (e) {
+                window && window.console && console.log(e);
+            }
+
+            var notPna = false;
+            try {
+                var urlSearch = document.location.search;
+                var urlParams = new URLSearchParams(urlSearch);
+                if (urlParams.get('f') == '1') {
+                    notPna = true;
+                }
+            } catch (e) {
+                window && window.console && console.log(e);
+            }
+
+            var lang = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER.frameWin.RAONKUpload_Lang;
+            if (parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.installGuideLogoUrl) {
+                document.getElementsByTagName('img')[0].src = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.installGuideLogoUrl;
+            } else {
+                document.getElementsByTagName('img')[0].src = 'images/BI-raonk.png';
+            }
+
+            document.getElementsByTagName('div')[0].className = 'setupPopup raonk_' + parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.lang;
+
+            var content1 = document.getElementById('content1');
+            var _html = '';
+            _html += '<li class="first">' + lang.install_guide.desc1 + '</li>';
+
+            // private network access info
+            if ( !notPna && document.location.protocol.toLowerCase() === 'http:'
+                &&
+                !( document.location.href.toLowerCase().indexOf( 'http://127.0.0.1' ) === 0 || document.location.href.toLowerCase().indexOf( 'http://localhost' ) === 0)
+                &&
+                (
+                    ( agentInfo.browser.name.toLowerCase() === 'chrome' && agentInfo.browser.major >= 94 )
+                    ||
+                    ( agentInfo.browser.name.toLowerCase() === 'edge' && agentInfo.browser.major >= 94 )
+                )
+            ) {
+                _needPrivateNetworkAccess = true;                
+            }
+
+            var _lang = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.lang.substring( 0, 2 );
+            if ( _lang !== 'ko' ) _lang = 'en';
+
+            if ( _needPrivateNetworkAccess && ( agentInfo.os.name.toLowerCase() == 'linux' || agentInfo.os.name.toLowerCase() == 'mac' ) ) {
+                _html += '<li><i>·</i>' + lang.install_guide.pna_notice1 + '&nbsp;';
+                _html += '<a href="javascript:window.open(\'raonk_pna_guide_' + _lang + '.html\');" class="txt_org bold">' + lang.install_guide.pna_notice2 + '</a>';
+                _html += '</li>';
+            }
+
+            if ( agentInfo.os.name.toLowerCase() == 'linux' ) {
+                _html += '<li><i>·</i>' + lang.install_guide.desc2_linux + '</li>';
+                _html += '<li><i>·</i>' + lang.install_guide.desc3_linux.replace( '{0}', parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileName ).replace( '{1}', parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileName2 ) + '</li>';
+            } else {
+                _html += '<li><i>·</i>' + lang.install_guide.desc2.replace( '{0}', parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileName ) + '</li>';
+                _html += '<li><i>·</i>' + lang.install_guide.desc3 + '</li>';
+            }
+
+            if ( !_needPrivateNetworkAccess ) {
+                _html += '<li><i>·</i>' + lang.install_guide.desc4 + '</li>';
+            } else {
+                if ( agentInfo.os.name.toLowerCase() === 'windows' ) {
+                    _html += '<li><i>·</i>' + lang.install_guide.pna_notice3;
+                    _html += ' <a href="javascript:window.open(\'raonk_pna_guide_' + _lang + '.html\');" class="txt_org bold">(Private Network Access)</a>';
+                }
+
+                _html += '</li>';
+            }
+
+            content1.innerHTML = _html;
+
+            var content2 = document.getElementById('content2');
+            content2.innerHTML = lang.install_guide.agent_info.replace('{0}', agentInfo.os.name + ' ' + (agentInfo.os.version ? agentInfo.os.version : '')).replace('{1}', agentInfo.browser.name + ' ' + agentInfo.browser.major);
+
+            install_ready();
+        }
+
+        function install_ready() {
+            if (_needPrivateNetworkAccess && agentInfo.os.name.toLowerCase() == 'windows') {
+                var _installFileUrl = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileUrl;
+                _installFileName = _installFileUrl.substring( _installFileUrl.lastIndexOf( "/" ) + 1 );
+                _installFileUrl = _installFileUrl.substring( 0, _installFileUrl.lastIndexOf( "/" ) );
+                parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileUrl = _installFileUrl + "/pna/" + _installFileName;
+            }
+
+            if (agentInfo.os.name.toLowerCase() == 'linux') {
+                try {
+                    var downloadLink = document.getElementById('download_link');
+                    downloadLink.href = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileUrl;
+
+                    var downloadLink2 = document.getElementById('download_link2');
+                    downloadLink2.href = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileUrl2;
+                } catch (e) {
+                    window && window.console && console.log(e);
+                }
+            } else {
+                try {
+                    var downloadLink = document.getElementById('download_link');
+                    downloadLink.href = parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER._config.agentInstallFileUrl;
+
+                    parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER.frameWin.requestManagerInstall(parent.KUPLOADWIN.window, document);
+                } catch (e) {
+                    window && window.console && console.log(e);
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="set_page();">
+    <div class="setupPopup">
+        <div class="setupPopup_w">
+            <img src="" alt="">
+            <ul id="content1"></ul>
+        </div>
+        <div>
+            <div id="content2" class="client_info" style="position:absolute; bottom:18px; left:20px;"></div>
+            <span class="line"></span>
+        </div>
+        <a href="javascript:parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER.frameWin.closeInstallPopup(parent.KUPLOADWIN.KUPLOADTOP.G_CURRKUPLOADER, true)" class="close"><span class="hidden">닫힘</span></a>
+    </div>
+</body>
+</html>

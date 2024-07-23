@@ -1,0 +1,18 @@
+﻿{
+	"name": "RAONKUpload",
+	"version": "2018.06.25",
+	"description": "RAONKUpload Plugin for nexacro platform 17",
+	"license": "Commercial license",
+	"scripts": [
+		"raonkupload/js/raonkupload.js",
+		"raonkupload/plugin/nexacro/17/raonkupload.nexacro17.js"
+	],
+	"objInfo": [
+		"raonkupload/plugin/nexacro/17/metainfo/raonkupload.nexacro.enum.info",
+		"raonkupload/plugin/nexacro/17/metainfo/raonkupload.nexacro.meta.info",
+		"raonkupload/plugin/nexacro/17/metainfo/raonkupload.nexacro.event.info"
+	],
+	"designscripts": [
+		"raonkupload/plugin/nexacro/17/design/raonkupload.nexacro.design.js"
+	]
+}

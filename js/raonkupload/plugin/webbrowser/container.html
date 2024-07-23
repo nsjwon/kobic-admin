@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>RAONWIZ with WebBrowser Runtime</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        body, html {
+            overflow: hidden;
+            margin-top: 0;
+            margin-left: 0;
+            border: 0;
+        }
+    </style>
+    <script src="3rdparty/jquery.js"></script>
+    <script type="text/javascript">
+        document.write( '<scr' + 'ipt src="../../js/raonkupload.js?t=' + ( new Date ).getTime() + '" type="text/javascript"><\/scr' + 'ipt>' );
+    </script>
+    <script type="text/javascript">
+        var ContainerModule = {
+
+            G_kuploadComponentId: "kuploadComponent",
+            G_BeforeAddFileCount: 0, // UndoAddFiles API를 위해서 파일 선택전에 설정
+
+            Util: {
+                runCommand: function () {
+                    var _command = $( "#hid_command" ).val();
+                    var _setValue = $( "#hid_setValue" ).val();
+                    var _func = "";
+
+                    try {
+                        switch ( _command ) {
+                            case "MakeComponent":
+                                this.makeComponent( _setValue );
+                                break;
+                            case "OpenFileDialog":
+                                // 삭제후 초기화 기준 개수 (UndoAddFiles API를 위해서 설정)
+                                this.G_BeforeAddFileCount = RAONKUPLOAD.GetTotalFileCount( ContainerModule.G_kuploadComponentId );
+
+                                RAONKUPLOAD.OpenFileDialog( ContainerModule.G_kuploadComponentId );
+                                break;
+                            case "DownloadFile":
+                                if ( _setValue != "" ) {
+                                    _setValue = _setValue.split( ',' );
+
+                                    RAONKUPLOAD.SetSelectFile( -1, 0, ContainerModule.G_kuploadComponentId ); // 전체해제
+
+                                    for ( var idx = 0, len = _setValue.length; idx < len; idx++ ) {
+                                        if ( _setValue[idx] != "" ) {
+                                            RAONKUPLOAD.SetSelectFile( _setValue[idx], 1, ContainerModule.G_kuploadComponentId );
+                                        }
+                                    }
+                                    RAONKUPLOAD.DownloadFile( ContainerModule.G_kuploadComponentId );
+                                }
+                                break;
+                            case "ClearTitle":
+                                if ( _setValue != "" ) {
+                                    document.title = _setValue;
+                                }
+                                break;
+                            case "UndoAddFiles":
+                                RAONKUPLOAD.SetSelectFile( -1, 0, ContainerModule.G_kuploadComponentId ); // 전체해제
+
+                                for ( var idx = RAONKUPLOAD.GetTotalFileCount( ContainerModule.G_kuploadComponentId ) - 1; idx >= this.G_BeforeAddFileCount; idx-- ) {
+                                    RAONKUPLOAD.SetSelectFile( idx, 1, ContainerModule.G_kuploadComponentId );
+                                }
+
+                                RAONKUPLOAD.DeleteSelectedFile( ContainerModule.G_kuploadComponentId );
+
+                                // 삭제후 현재개수 동기화
+                                //ContainerModule.EventHandler.setElementValue( "hid_totalFileCount", RAONKUPLOAD.GetTotalFileCount( ContainerModule.G_kuploadComponentId ) );
+                                break;
+                            case "DeleteSelectedFile":
+                                if ( _setValue != "" ) {
+                                    _setValue = _setValue.split( ',' );
+
+                                    RAONKUPLOAD.SetSelectFile( -1, 0, ContainerModule.G_kuploadComponentId ); // 전체해제
+
+                                    for ( var idx = 0, len = _setValue.length; idx < len; idx++ ) {
+                                        if ( _setValue[idx] != "" ) {
+                                            RAONKUPLOAD.SetSelectFile( _setValue[idx], 1, ContainerModule.G_kuploadComponentId );
+                                        }
+                                    }
+                                    RAONKUPLOAD.DeleteSelectedFile( ContainerModule.G_kuploadComponentId );
+                                }
+                                break;
+                            case "AddUploadedFileAsArray":
+                                if ( _setValue != "" ) {
+                                    /*
+                                    // u형태:
+                                    0 201004011020089471813413190*
+                                    1 20100329_PV_PR_완료_모델_Block(이건형).eml*
+                                    2 Outlook Express Mail Message*
+                                    3 y:/epftp/attach/appeon/dev_work/201004/20100401102003_30742873280.000*
+                                    4 86330|
+                                    */
+                                    var aryFiles = _setValue.split( '|' );
+                                    var uniqueKey = [];
+                                    var originName = [];
+                                    var webPath = [];
+                                    var size = [];
+                                    var customValue = [];
+                                    for ( var idx = 0, len = aryFiles.length, aryFileInfo; idx < len; idx++ ) {
+                                        if ( aryFiles[idx] != "" ) {
+                                            aryFileInfo = aryFiles[idx].split( '*' );
+
+                                            uniqueKey.push( aryFileInfo[0] );
+                                            originName.push( aryFileInfo[1] );
+                                            webPath.push( aryFileInfo[3] );
+                                            size.push( aryFileInfo[4] );
+                                            customValue.push( "" );
+                                        }
+                                    }
+                                    RAONKUPLOAD.AddUploadedFileAsArray( uniqueKey, originName, webPath, size, customValue, ContainerModule.G_kuploadComponentId );
+                                }
+                                break;
+                            case "OpenSelectedFile":
+                                if ( _setValue != "" ) {
+                                    _setValue = parseInt( _setValue );
+
+                                    RAONKUPLOAD.SetSelectFile( -1, 0, ContainerModule.G_kuploadComponentId ); // 전체해제
+
+                                    RAONKUPLOAD.SetSelectFile( _setValue, 0, ContainerModule.G_kuploadComponentId );
+                                    RAONKUPLOAD.OpenSelectedFile( ContainerModule.G_kuploadComponentId );
+                                }
+                                break;
+                            case "SetHeight":
+                                if ( _setValue != "" ) {
+                                    _setValue = parseInt( _setValue );
+
+                                    RAONKUPLOAD.SetSize( "100%", _setValue + "px", ContainerModule.G_kuploadComponentId );
+                                }
+                                break;
+                            default:
+                                _func += "(function() { ";
+
+                                // API 실행후 리턴받을 값 - 텍스트만 가능
+                                if ( _command.toLowerCase().indexOf( 'get' ) == 0 ) {
+                                    _func += "  var _retValue = ";
+                                }
+
+                                var _apiParams = "";
+                                if ( _setValue != "" ) {
+                                    var _arysetValue = _setValue.split( '|' );
+                                    for ( var idx = 0, len = _arysetValue.length; idx < len; idx++ ) {
+                                        _apiParams += "'" + _arysetValue[idx] + "', ";
+                                    }
+                                }
+                                _apiParams += " '" + ContainerModule.G_kuploadComponentId + "' "
+
+                                _func += " RAONKUPLOAD." + _command + "(" + _apiParams + ");";
+
+                                // API 실행후 리턴받을 값 - 텍스트만 가능
+                                if ( _command.toLowerCase().indexOf( 'get' ) == 0 ) {
+                                    _func += " $( '#hid_returnValue' ).val( _retValue ) ;";
+                                }
+
+                                _func += "}) ()";
+
+                                this.runFunction( _func );
+                                break;
+                        }
+                    } catch ( e ) {
+                        alert( "[ webview runCommand ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                    }
+                },
+                makeComponent: function ( options ) {
+                    var _compConfig = {
+                        Id: ContainerModule.G_kuploadComponentId,
+                        Runtimes: "agent",
+                        Width: "100%",
+                        Height: this._getWinHeight() + "px",
+                        UploadHolder: "component_Holder",
+                        DisableAlertMessage: {
+                            DisableDeleteConfirm: "1"
+                        },
+                        SkipSentFile: "1",
+                        Event: {
+                            CreationComplete: function ( uploadID, paramObj ) {
+                                try {
+                                    ContainerModule.EventHandler.throwEvent( ContainerModule.EventHandler.eventKey.CreationComplete, paramObj );
+                                } catch ( e ) {
+                                    alert( "[ webview CreationComplete ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            BeforeAddFile: function ( uploadID, paramObj ) {
+                                try {
+                                    return true;
+                                } catch ( e ) {
+                                    alert( "[ webview BeforeAddFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            AfterAddFile: function ( uploadID, paramObj ) {
+                                try {
+
+                                } catch ( e ) {
+                                    alert( "[ webview AfterAddFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            AfterAddAllFile: function ( uploadID, paramObj ) {
+                                try {
+                                    // 추가후 현재개수 동기화
+                                    //ContainerModule.EventHandler.setElementValue( "hid_totalFileCount", RAONKUPLOAD.GetTotalFileCount( uploadID ) );
+
+                                    // *C:\anymold\pb\anymoldreport.pbl*PBL 파일**3489792*user*testID*2008:09:16 PM 02:36:49|
+                                    var retValue = "";
+                                    for ( var idx = 0, len = paramObj.arrFileList.length, fileInfo; idx < len; idx++ ) {
+                                        fileInfo = paramObj.arrFileList[idx];
+
+                                        retValue += "*"
+                                        retValue += fileInfo.strPath + "*";
+                                        retValue += "MIME TYPE" + "*";
+                                        retValue += fileInfo.nSize + "*";
+                                        retValue += "user" + "*";
+                                        retValue += "testID" + "*";
+                                        retValue += "2008:09:16 PM 02:36:49" + "|";
+                                    }
+
+                                    ContainerModule.EventHandler.throwEvent( ContainerModule.EventHandler.eventKey.AfterAddAllFile, retValue );
+                                } catch ( e ) {
+                                    alert( "[ webview AfterAddAllFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            BeforeDeleteFile: function ( uploadID, paramObj ) {
+                                try {
+                                    return true;
+                                } catch ( e ) {
+                                    alert( "[ webview BeforeDeleteFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            AfterDeleteFile: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview AfterDeleteFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            DeleteAllFile: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview DeleteAllFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            BeforeUpload: function ( uploadID, paramObj ) {
+                                try {
+                                    return true;
+                                } catch ( e ) {
+                                    alert( "[ webview BeforeUpload ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            UploadComplete: function ( uploadID, paramObj ) {
+                                try {
+                                    var retValue = "";
+
+                                    var allListArray = RAONKUPLOAD.GetListInfo( "array", uploadID );
+                                    if ( allListArray ) {
+                                        var newFileArray = allListArray.newFile;
+
+                                        if ( newFileArray ) {
+                                            /*
+                                            // u형태:
+                                            0 201004011020089471813413190*
+                                            1 20100329_PV_PR_완료_모델_Block(이건형).eml*
+                                            2 Outlook Express Mail Message*
+                                            3 y:/epftp/attach/appeon/dev_work/201004/20100401102003_30742873280.000*
+                                            4 86330|
+                                            */
+                                            for ( var idx = 0, len = newFileArray.length; idx < len; idx++ ) {
+                                                retValue += newFileArray[idx].fileId + "*";
+                                                retValue += newFileArray[idx].originalName + "*";
+                                                retValue += newFileArray[idx].mimeType + "*";
+                                                retValue += newFileArray[idx].uploadPath + "*";
+                                                retValue += newFileArray[idx].size + "|";
+                                            }
+                                        }
+                                    }
+
+                                    ContainerModule.EventHandler.throwEvent( ContainerModule.EventHandler.eventKey.UploadComplete, retValue );
+                                } catch ( e ) {
+                                    alert( "[ webview UploadComplete ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            BeforeDownloadFile: function ( uploadID, paramObj ) {
+                                try {
+                                    return true;
+                                } catch ( e ) {
+                                    alert( "[ webview BeforeDownloadFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            BeforeOpenFile: function ( uploadID, paramObj ) {
+                                try {
+                                    return true;
+                                } catch ( e ) {
+                                    alert( "[ webview BeforeOpenFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            DownloadCompleteFile: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview DownloadCompleteFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            DownloadCompleteAllFile: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview DownloadCompleteAllFile ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            OnError: function ( uploadID, paramObj ) {
+                                try {
+                                    alert( RAONKUPLOAD.util.jsonToString( paramObj ) );
+                                } catch ( e ) {
+                                    alert( "[ webview OnError ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            UploadingCancel: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview UploadingCancel ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            DownloadCancel: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview DownloadCancel ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            SelectItem: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview SelectItem ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            CustomAction: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview CustomAction ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            },
+                            Alert: function ( uploadID, paramObj ) {
+                                try {
+                                } catch ( e ) {
+                                    alert( "[ webview Alert ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                                }
+                            }
+                        }
+                    };
+
+                    // 응용프로그램에서 옵션을 전달한 경우 속성확장
+                    if ( typeof options !== 'undefined' && options !== '' ) {
+                        options = $.parseJSON( options );
+                        _compConfig = RAONKUPLOAD.util.objectExtend( true, options, _compConfig );
+                    }
+
+                    new RAONKUpload( _compConfig );
+                },
+                runFunction: function ( func ) {
+                    if ( typeof func === 'string' ) {
+                        return this._looseJsonParse( func );
+                    }
+                },
+                _getWinHeight: function () {
+                    return window.innerHeight || Math.max( document.documentElement.clientHeight, document.body.clientHeight );
+                },
+                _looseJsonParse: function ( obj ) {
+                    return Function( '"use strict";return (' + obj + ')' )();
+                },
+                _obectToString: function ( obj ) {
+                    var rtn = "{";
+                    var dt = new Array();
+
+                    for ( var k in obj ) {
+                        dt.push( '"' + k + '":"' + obj[k] + '"' );
+                    }
+
+                    rtn += dt.join( "," );
+                    rtn += "}";
+
+                    return rtn;
+                }
+            },
+            EventHandler: {
+                throwEvent: function ( eventId, val ) {
+                    try {
+                        this.setElementValue( "hid_returnValue", val );
+
+                        document.title = eventId;
+                    } catch ( e ) {
+                        alert( "[ webview throwEvent ] " + RAONKUPLOAD.util.jsonToString( e ) );
+                    }
+                },
+                setElementValue: function ( id, val ) {
+                    ( typeof val === 'object' ) && ( val = RAONKUPLOAD.util.jsonToString( val ) );
+
+                    $( "#" + id ).val( val );
+                },
+                eventKey: {
+                    CreationComplete: "RAONKUPLOAD_CreationComplete",
+                    AfterAddAllFile: "RAONKUPLOAD_AfterAddAllFile",
+                    UploadComplete: "RAONKUPLOAD_UploadComplete"
+                }
+            }
+        }
+
+        function fnRunCommand( argCmd, argSetVal, argRetVal ) {
+            $( "#hid_command" ).val( argCmd );
+            $( "#hid_setValue" ).val( argSetVal );
+            $( "#hid_returnValue" ).val( argRetVal );
+
+            $( "#btn_runCommand" ).click();
+        }
+
+        function fnGetReturnValue() {
+            return $( "#hid_returnValue" ).val();
+        }
+    </script>
+</head>
+<body onload="( function () { document.title = 'PageLoaded'; } )();" style="padding:0; margin:0; height:100%; text-align: center; border: 0;">
+    <div id="component_Holder" style="width: 100%; height: 100%; margin: 0 auto; overflow: hidden;"></div>
+    <div style="display: none;">
+        <input type="hidden" id="hid_command" />
+        <input type="hidden" id="hid_setValue" />
+        <input type="hidden" id="hid_returnValue" />
+        <button id="btn_runCommand" onclick="ContainerModule.Util.runCommand();">runCommand</button>
+    </div>
+</body>
+</html>

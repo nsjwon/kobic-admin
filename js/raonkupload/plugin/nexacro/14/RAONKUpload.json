@@ -1,0 +1,14 @@
+﻿{
+	"name": "RAONKUpload",
+	"version": "2018.08.01",
+	"description": "RAONKUpload Plugin for nexacro platform 14",
+	"scripts": [
+			"raonkupload/js/raonkupload.js", 
+			"raonkupload/plugin/nexacro/14/raonkupload.nexacro14.js"
+	],
+	"objInfo": [
+		"raonkupload/plugin/nexacro/14/RAONKUpload.info",
+		"raonkupload/plugin/nexacro/14/RAONKUploadEnum.info"
+	]
+}
+//@ sourceURL=RAONKUpload.json

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>RAON K Developer Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="../../css/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="raonkhelp_content_right">
+<div class="right_con">           
+    <h3 class="title">K Editor :: Config :: LineHeightList</h3>
+    <p class="ttl">LineHeightList</p>
+    <p class="txt">
+        에디터 줄간격 메뉴에 노출할 줄간격 리스트를 설정합니다.
+    </p>
+    <p class="mttl01">remarks</p>
+    <p class="txt">
+    기본 줄간격은 "1.2" 입니다.
+    </p>
+    <p class="mttl01">sample code</p>            
+    <div class="cord">
+        <pre class="pre">
+&#60;script type="text/javascript" src="keditor/js/raonkeditor.js"&#62;&#60;/script&#62;	
+ 
+&#60;!-- ..... 생략 ..... --&#62;
+ 
+&#60;div style="width:900px;height:550px"&#62;  
+    &#60;script type="text/javascript"&#62;
+
+        var paramObj = {
+            Id: 'editor1',          
+            // 에디터 메뉴에 노출할 줄간격을 1.2, 1.3, 1.4 으로 설정합니다.
+            LineHeightList: '1.2,1.3,1.4'
+        };
+        
+        new RAONKEditor(paramObj);
+
+    &#60;/script&#62;       
+&#60;/div&#62;
+        </pre>  
+    </div>                   
+    </div>
+</div>
+</body>
+</html>
+
