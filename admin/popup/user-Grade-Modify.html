@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="../../css/font.css">  
+    <link media="all" rel="stylesheet" href="../../css/common.css">  
+    <link media="all" rel="stylesheet" href="../../css/board.css"> 
+    <link media="all" rel="stylesheet" href="../../css/admin.css"> 
+    <link media="all" rel="stylesheet" href="../../css/popup.css"> 
+    <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+    <script src="../../js/jquery-3.7.0.min.js"></script>
+    <script src="../../js/datepicker/datepicker.min.js"></script>
+    <script src="../../js/datepicker/datepicker.ko-KR.js"></script>
+    <script src="../../js/contents/admin/new-contents.js"></script>
+    <title>회원 등급 변경 팝업</title>
+</head>
+<body>
+
+        <!-- 회원등급변경 팝업 시작 -->
+        <div id="userGrade" class="popup-panel is-active">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-userGrade">
+                <div class="popup-header">
+                    <h2>회원 등급 변경</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 회원정보 테이블:s -->
+                    <form class="popup-form">
+                        <fieldset>
+                            <div class="formset">
+                                <p>아이디</p>
+                                <span class="formvalue">gildong_adm</span>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>현재 등급</p>
+                                <span class="formvalue">일반 회원 5등급</span>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>요청 등급</p>
+                                <label for="uNation"></label>
+                                <select name="newGrade" id="newGrade">
+                                    <option value="GM01">일반 회원 1등급</option>
+                                    <option value="GM02">일반 회원 2등급</option>
+                                    <option value="GM03">일반 회원 3등급</option>
+                                    <option value="GM04">일반 회원 4등급</option>
+                                    <option value="GM05">일반 회원 5등급</option>
+                                    <option value="GM06">일반 회원 6등급</option>
+                                    <option value="GM07">일반 회원 7등급</option>
+                                    <option value="GM08">일반 회원 8등급</option>
+                                    <option value="GM09">일반 회원 9등급</option>
+                                    <option value="GM10">일반 회원 10등급</option>
+                                    <option value="GM11">일반 회원 11등급</option>
+                                    <option value="GM12">일반 회원 12등급</option>
+                                    <option value="GM13">일반 회원 13등급</option>
+                                    <option value="GM14">일반 회원 14등급</option>
+                                    <option value="GM15">일반 회원 15등급</option>
+                                    <option value="GM16">일반 회원 16등급</option>
+                                    <option value="GM17">일반 회원 17등급</option>
+                                    <option value="GM18">일반 회원 18등급</option>
+                                    <option value="GM19">일반 회원 19등급</option>
+                                    <option value="TOS1">시스템 관리자</option>						
+                                </select>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- 회원정보 테이블:e -->
+                </div>
+                <div class="brd-btn-area center">
+                    <div class="btn-list">
+                        <input type="button" value="수정" class="btn btn-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 회원등급변경 팝업 끝 -->
+
+
+</body>
+</html>

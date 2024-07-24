@@ -31,11 +31,20 @@
 .search-text .search-act {background: #43464C; color:#ffffff; border:none; padding:1.0rem 2.8rem; font-size:1.4rem; margin:0 0.8rem;}
 .search-text .search-act:hover {background: #111111;transition: all ease 0.2s 0s;}
 
+/* 게시판 탭 */
+.brd-tab-list {display: flex; align-items: center; gap: 8px; margin-bottom: 2rem;}
+.brd-tab-list li a {display: block; padding: 1.6rem 4rem; border: 2px solid #EAEDF1; color: #626E76; background: #EAEDF1; border-radius: 5px; font-size: 1.5rem; font-weight: 500;}
+.brd-tab-list li.focus a {border: 2px solid #155CD6; color: #155CD6; background: #F8FBFF; font-weight: bold;}
+
 /* 게시판 정보 */
 .brd-info {display:flex; justify-content: space-between; align-items: center; margin-bottom:0.8rem;}
 .brd-info .brd-num {font-size:1.4rem; display:flex; justify-content: flex-start; align-items: center;}
 .brd-info .brd-num > li:first-child::after {display: inline-block; content: ''; height:10px; width:1px; background:#cccccc; margin:0 10px;}
 .brd-info .brd-sort {font-size:1.4rem; padding-top:0.4rem; padding-bottom:0.4rem; height:3.2rem;}
+.brd-info .search-tl {display: flex; gap: 6px;}
+.brd-info .search-tl select {height: 38px;}
+.brd-info .search-tl .search-act {background: #43464C; color: #ffffff; border: none; padding: 1.0rem 2.8rem; font-size: 1.4rem;}
+.brd-info .search-tl .search-act:hover {background: #111111; transition: all ease 0.2s 0s;}
 
 /* [사용자] 게시판 정보 및 검색 */
 .brd-search-info {width:100%; margin-bottom:3.6rem; background: #fafafb; border-radius: 6px; /* border:1px solid #f5f5f5; */ box-sizing: border-box;}
@@ -193,12 +202,13 @@
 
 /* 게시판 버튼 */
 .brd-btn-area {margin-top:2.4rem;}
+.brd-btn-area.c-type {margin-top:3.6rem; text-align: center;}
 .brd-btn-area input[type=button] {margin-right:0.2rem;}
 .brd-btn-area input[type=button]:last-child {margin-right:0;}
 
 
 /* 페이지 */
-.pagination { margin:16px 0 0 0; text-align: center; clear:both; }
+.pagination { margin:16px 0 0 0; text-align: center; clear:both;}
 .pagination a {color:#767676; display:inline-block; margin:2px; width:3.2rem; height:3.2rem; text-align:center; font-size:1.4rem; line-height:3.2rem; vertical-align:middle; border-radius: 4px;}
 .pagination a.on {color:#ffffff; background:#43464C; display:inline-block; margin:2px; width: 3.2rem;  height: 3.2rem; text-align: center; font-size: 1.4rem; line-height:3.2rem; border-radius: 4px; vertical-align: middle;}
 .pagination a:hover {background: #f1f1f1; transition: all ease 0.2s 0s;}
@@ -268,6 +278,45 @@
 .brd-view-tutorial {margin-bottom:2.0rem; text-align:center;}
 .tutorial-iframe {text-align:center; position: relative; padding-bottom: 50.56%; height: 0;width: 90%;margin: 0 auto;}
 .tutorial-iframe iframe {width:100%; height:100%; position:absolute; top:0; left:0; border-radius:8px;}
+
+/* 통합인증관리 상세 */
+.text_bg_box {box-sizing: border-box; border:1px solid #efefef; background:#F9FAFB; border-radius: 8px; padding:3.2rem 4.0rem; margin:0 0 3.6rem 0;}
+.create_rq .user_info {display:flex; justify-content: flex-start; border-bottom:1px solid #dedede; padding:0 0 2.4rem 0; margin: 0 0 2.4rem 0; flex-wrap: wrap;}
+.create_rq .user_info::before {content: ''; display: block; background: url(../images/icon_user.svg) no-repeat center center; width: 16px; height: 16px; background-size: contain; margin-right:14px;}
+.create_rq .user_info > li::after {content: ''; display: inline-block; margin:0 14px; background:#8D96A6; width:1px; height: 12px; }
+.create_rq .user_info > li:last-child::after {display: none;}
+
+.create_detail ul > li {display: flex; justify-content: flex-start; align-items: baseline; margin-bottom:1.6rem;}
+.create_detail ul > li:last-child {margin:0;}
+.create_detail label {display: inline-block; width:90px; margin:0;}
+.create_detail input, .create_detail textarea {background-color: #ffffff; font-size:1.5rem; padding:0.8rem 1.2rem; line-height:2.4rem; width:100%; display:inline-block; margin:0;} 
+.create_detail select {background-color: #ffffff; font-size:1.5rem; padding:0.8rem 3.2rem 0.8rem 1.2rem; line-height:2.4rem; display:inline-block; margin:0;} 
+
+.input_wrap {width:calc(100% - 94px);}
+.input_wrap .error_txt {margin:0.6rem 0 0 0; line-height: 16px;}
+
+.user_info_detail {display: flex; justify-content:space-between; border-bottom:1px solid #dedede; border-top:1px solid #dedede; padding:2.0rem 0 0.8rem 0; margin:2.0rem 0;}
+.user_info_detail ul {width:48%;}
+.user_info_detail ul li {margin:0 0 1.2rem 0; display: flex; line-height: 1.4; align-items: center;}
+.user_info_detail ul li span {line-height: 28px;}
+.user_info_detail ul li span:first-child {display: inline-block; width:140px; font-weight: 600; margin:0;}
+.user_info_detail ul li span:last-child {width:calc(100% - 140px);}
+
+.my_login_info {text-align: right; display: flex; justify-content: end; font-size:1.4rem; color:#666666;}
+.my_login_info > dt {margin-right:0.8rem;}
+
+.brd_detail01 {background:#F9FAFB; border-radius: 8px; padding:3.2rem 3.6rem; margin:0 0 3.2rem 0;}
+.brd_tit {font-size:2.0rem; width:calc(100% - 100px); font-weight: 600;}
+
+.ss_btn, .ss_add {height: auto; margin-left:1.2rem; background: #ebeaea; color:#3d4b62; padding:0.4rem 1.0rem; font-size:1.4rem; border-radius:5px;box-shadow: 1px 1px 1px 0 rgb(255 255 255 / 80%);}
+.ss_btn:hover, .ss_add:hover  { background: #dfdfdf; transition: all ease 0.2s 0s;}
+.ss_btn::before {content:''; display: inline-block; background: url(../images/admin/icon_setting_dark.svg) no-repeat center center; background-size: contain; width: 12px; height: 11px; margin-right:0.4rem;}
+.ss_add::before {content:''; display: inline-block; background: url(../images/admin/icon_user_dark.svg) no-repeat center center; background-size: contain; width: 12px; height: 11px; margin-right:0.4rem;}
+
+.modify_btn {height: auto; position:absolute;top: 3.2rem;right: 4.0rem;background: #ebeaea; color:#1C2E4D; padding:0.8rem 1.0rem; font-size:1.4rem; border-radius:5px; box-shadow: 1px 1px 1px 0 rgb(255 255 255 / 80%);}
+.modify_btn:hover {background:#dfdfdf; transition: all ease 0.2s 0s;}
+.modify_btn::before {content:''; display: inline-block; background: url(../images/admin/icon_pencil.svg) no-repeat center center; background-size: contain; width: 12px; height: 11px; margin-right:0.4rem;}
+
 
 /* 그룹 정보 상세 */
 .group-detail-wrap {position: relative;box-sizing: border-box;/* background: #fdfdfd; border-top: 2px solid #43464C; */}

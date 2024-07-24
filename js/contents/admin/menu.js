@@ -1,6 +1,12 @@
 $(document).ready(function() {
-    // 기본적으로 .gnb-depth2를 숨깁니다.
-    $('.gnb-depth1 .gnb-depth2').hide();
+
+    // 각 .gnb-depth1 요소에 대해 active 클래스가 없으면 해당 .gnb-depth2를 숨깁니다.
+    $('.gnb-depth1 > li').each(function() {
+        var $link = $(this).children('a');
+        if (!$link.hasClass('active')) {
+            $(this).children('.gnb-depth2').hide();
+        }
+    });
 
     // .gnb-depth1 > li > a를 클릭했을 때의 이벤트 핸들러
     $('.gnb-depth1 > li > a').on('click', function(event) {
@@ -16,15 +22,18 @@ $(document).ready(function() {
             if ($this.hasClass('active')) {
                 // .active 클래스가 있는 경우, ul을 숨기고 .active 클래스를 제거합니다.
                 $this.removeClass('active');
-                $ul.hide();  // hide()를 사용하여 숨김
+                $this.parent('.foldable').removeClass('open');
+                $ul.hide();
             } else {
                 // 모든 .gnb-depth2를 숨기고 모든 .active 클래스를 제거합니다.
                 $('.gnb-depth1 .gnb-depth2').hide();
                 $('.gnb-depth1 > li > a').removeClass('active');
+                $('.gnb-depth1 > li').removeClass('open');
 
                 // 클릭된 요소에 .active 클래스를 추가하고 ul을 보여줍니다.
                 $this.addClass('active');
-                $ul.show();  // show()를 사용하여 표시
+                $this.parent('.foldable').addClass('open');
+                $ul.show();
             }
         }
     });

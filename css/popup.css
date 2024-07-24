@@ -1,0 +1,44 @@
+/* 팝업 스타일 */
+.popup-panel {position: fixed; top: 0; left: 0; display: none; width: 100%; height: 100%; z-index: 9250;}
+.popup-panel.is-active {display: block;}
+.popup-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: .65; filter: alpha(opacity=65); z-index: 9998;}
+.popup-content {overflow: hidden; display: block; padding: 3.6rem 5rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
+
+.popup-content-userModify {width: 660px;}
+.popup-content-userGrade {width: 540px;}
+.popup-content-confirMation {width: 340px;}
+
+.popup-header {margin-bottom: 2.8rem; display: flex; align-items: center; justify-content: space-between;}
+.popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
+.popup-header .close-button {display: block; width: 30px; height: 30px; background: url(../images/admin/pop-close.svg) no-repeat; background-size: contain;}
+.popup-message {text-align: center; font-size: 18px; font-weight: 500; margin: 12px 0;}
+.popup-body {height: calc(100% - 142px); max-height: calc(80vh - 142px); overflow-y: auto; overflow-x: hidden;}
+.popup-body .board-block:first-child {margin-top: 0;}
+.popup-content-05 .popup-body {height: calc(100% - 72px);}
+.popup-body::-webkit-scrollbar {width: 1em;}
+.popup-body::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
+.popup-body::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.popup-body.flex-col {width: 100%; height: auto; max-height: calc(80vh - 142px);}
+.popup-body.flex-col>div {width: auto; display: block; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
+.popup-body.flex-col .board-title {width: auto; display: flex; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
+.popup-body.flex-col .board-list {width: 100%; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
+.popup-content .btn-list {display: flex; justify-content: center; margin: 2.4rem 0 0; gap: 8px;}
+.popup-content .btn-list input[type="button"] {width: 16rem; height: 40px; border-radius: 4px; transition: all ease 0.2s 0s;}
+
+.popup-form fieldset {margin: 0 0 12px;}
+.popup-form fieldset:last-child {margin: 0;}
+.popup-form fieldset .formset {width: 100%;}
+.popup-form fieldset .formset {display: flex; align-items: center; justify-content: space-between; gap: 4px;}
+.popup-form fieldset .formset p {width: 110px; font-size: 1.5rem; font-weight: 600;}
+.popup-form fieldset .formset input[type="text"],
+.popup-form fieldset .formset select {flex: 1; margin: 2px;}
+.popup-form fieldset .formset .formvalue {flex: 1; margin: 2px; display: block; padding: 4px 10px; line-height: 22px;}
+.popup-form fieldset .formset input[type="text"]::placeholder {color: #aaa;}
+.popup-form fieldset .formset input[type="button"] {margin: 2px;}
+.popup-form fieldset .formset input:focus,
+.popup-form fieldset .formset select:focus {outline: 2px solid #222;}
+.popup-form fieldset .formset .infoType {display: flex; flex-direction: column; width: calc(100% - 114px);}
+.popup-form fieldset .formset .infoType > div {display: flex; align-items: center; gap: 2px;}
+.popup-form fieldset .formset .infoType > div > input[type="text"] {flex: 1;}
+.popup-form fieldset .formset .infoType > em {position: relative; padding: 8px 6px 4px 23px; color: #aaa; font-size: 13px;}
+.popup-form fieldset .formset .infoType > em:before {position: absolute; left: 5px; top: 7px; width: 14px; height: 14px; display: block; background: url(../images/admin/icon_info.svg) no-repeat; background-size: cover;}

@@ -21,6 +21,9 @@
 /* 공통 */
 .h2-tit {font-weight: bold; font-size:3.6rem; margin-bottom:3.6rem;}
 .h3-tit {font-weight: 500; font-size:2.4rem; margin-bottom:2.8rem; position: relative; padding:0 0 0 2.4rem}
+.h4-tit {font-size: 2.0rem; font-weight: 600; margin: 4.0rem 0 2.4rem 0; position: relative; padding: 0 0 0 1.2rem; line-height: 1;}
+.h4-tit:first-of-type {margin-top: 0;}
+.h4-tit::after {top: 0; left: 0; width: 0.5rem; height: 2.0rem; background: #27b6f6; display: block; position: absolute; border-radius: 2px;}
 
 .round-txt {padding:0.4rem 1.0rem; border-radius: 150px;font-size: 1.4rem;}
 .state-txt {border-radius: 0.4rem; padding:0.4rem 1.0rem !important; font-size: 1.4rem;}
@@ -46,6 +49,9 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 
 .btn-blue {background: #3C55A9; color: #ffffff; border: 1px solid #3C55A9 !important;}
 .btn-blue:hover {background: #223B8F; border: 1px solid #223B8F !important;}
+
+.btn-red {background: #CD3839; color: #ffffff; border: 1px solid #CD3839 !important;}
+.btn-red:hover {background: #BD2526; border: 1px solid #BD2526 !important;}
 
 .btn-blue-gray {background: #6E7587; color: #ffffff; border: 1px solid #6E7587 !important;}
 .btn-blue-gray:hover {background: #515B73; border: 1px solid #515B73 !important;}
@@ -110,6 +116,10 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 .admin-gnb-box .gnb-depth1 {padding:0;}
 .admin-gnb-box .gnb-depth1 > li > a {padding: 1.8rem 2.0rem 1.8rem 3.0rem;cursor: pointer; display: block;font-size:1.7rem;color:#444444;position: relative;font-weight: 500;display: flex;justify-content: left;align-items: center;border-bottom: 1px solid #edeff8; }
 .admin-gnb-box .gnb-depth1 > li {position:relative;}
+.admin-gnb-box .gnb-depth1 > li.foldable {position:relative;}
+.admin-gnb-box .gnb-depth1 > li.foldable:after {position: absolute; right: 20px; top: 19px; width: 15px; height: 15px; display: block; content: ''; background: url(../images/common/ic_arrow.svg) no-repeat; background-size: contain;}
+.admin-gnb-box .gnb-depth1 > li.foldable:hover:after {background: url(../images/common/ic_arrow_white.svg) no-repeat; background-size: contain;}
+.admin-gnb-box .gnb-depth1 > li.foldable.open:after {transform: rotate(-180deg); background: url(../images/common/ic_arrow_white.svg) no-repeat; background-size: contain;}
 .admin-gnb-box .gnb-depth1 > li a::before{content: '';display: inline-block;margin-right:12px;width:1.5rem;height:1.5rem;margin-top: -0.1rem;}
 .admin-gnb-box.portal .gnb-depth1 > li:nth-of-type(1) a::before {background: url(../images/admin/gnb_dashboard.svg) no-repeat center center; background-size:contain;}
 .admin-gnb-box.portal .gnb-depth1 > li:nth-of-type(2) a::before {background: url(../images/admin/gnb_brd.svg) no-repeat center center; background-size:contain;}
@@ -224,6 +234,7 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 	html {font-size:11px;}
     .admin-content-inner {width:1700px;}
     #admin-footer {width:1700px;}
+    .admin-gnb-box .gnb-depth1 > li.foldable:after {top: 22px;}
 }
 
 @media all and (max-width:1400px){

@@ -74,6 +74,7 @@ a {color: inherit; text-decoration: none;  cursor:pointer;}
 .flex-center {display:flex; justify-content: center !important; align-items: center;}
 .flex-end {display:flex; justify-content: flex-end !important; align-items: center;}
 .flex-between {display:flex; justify-content: space-between !important; align-items: center;}
+.flex-col {display: flex; flex-direction: column;}
 
 .ellipsis {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;word-break: break-all;}
 .ellipsis-2 {white-space: inherit;overflow:hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word; word-break: keep-all;}
