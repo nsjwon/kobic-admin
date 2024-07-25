@@ -3,55 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link media="all" rel="stylesheet" href="../../css/font.css">  
-    <link media="all" rel="stylesheet" href="../../css/common.css">  
-    <link media="all" rel="stylesheet" href="../../css/board.css"> 
-    <link media="all" rel="stylesheet" href="../../css/admin.css"> 
-    <link media="all" rel="stylesheet" href="../../css/popup.css"> 
-    <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
-    <script src="../../js/jquery-3.7.0.min.js"></script>
-    <script src="../../js/datepicker/datepicker.min.js"></script>
-    <script src="../../js/datepicker/datepicker.ko-KR.js"></script>
-    <script src="../../js/contents/admin/new-contents.js"></script>
-    <title>회원 정보 수정 팝업</title>
+    <link media="all" rel="stylesheet" href="../../../css/font.css">  
+    <link media="all" rel="stylesheet" href="../../../css/common.css">  
+    <link media="all" rel="stylesheet" href="../../../css/board.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+    <script src="../../../js/jquery-3.7.0.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+    <script src="../../../js/contents/templates/adminsso/new-contents.js"></script>
+    <title>회원 정보 등록 팝업</title>
 </head>
 <body>
-    <div id="userModify" class="popup-panel is-active">
+    
+    <!-- 회원정보등록 팝업 시작 -->
+    <div id="userRegist" class="popup-panel is-active">
         <div class="popup-bg"></div>
-        <div class="popup-content popup-content-userModify">
+        <div class="popup-content popup-content-userRegist">
             <div class="popup-header">
-                <h2>회원 정보 수정</h2>
+                <h2>회원 정보 등록</h2>
                 <a class="close-button" href="#none"></a>
             </div>
             <div class="popup-body flex-col">
                 <!-- 회원정보 테이블:s -->
-                 <form class="popup-form">
+                    <form class="popup-form">
                     <fieldset>
                         <div class="formset">
                             <p>이름<span class="txt-point"> *</span></p>
                             <label for="userName"></label>
-                            <input type="text" id="userName" value="홍길동">
+                            <input type="text" id="userName" value="">
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="formset">
                             <p>영문 이름</p>
                             <label for="enName"></label>
-                            <input type="text" id="enName" value="Gil-dong">
+                            <input type="text" id="enName" value="">
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="formset">
                             <p>영문 성</p>
                             <label for="enFamily"></label>
-                            <input type="text" id="enFamily" value="Hong">
+                            <input type="text" id="enFamily" value="">
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="formset">
                             <p>아이디<span class="txt-point"> *</span></p>
                             <label for="userId"></label>
-                            <input type="text" id="userId" value="gildonghong">
+                            <input type="text" id="userId" value="">
                             <input type="button" class="btn btn-black" value="중복확인">
                         </div>
                     </fieldset>
@@ -61,9 +63,9 @@
                             <div class="infoType">
                                 <div>
                                     <label for="pwFirst"></label>
-                                    <input type="text" id="pwFirst" value="********">
+                                    <input type="text" id="pwFirst" value="">
                                     <label for="pwSecond"></label>
-                                    <input type="text" id="pwSecond" value="********">
+                                    <input type="text" id="pwSecond" value="">
                                 </div>
                                 <em>영문(대문자 구분), 숫자, 특수문자를 포함 8~20자리로 입력해 주세요.</em>
                             </div>
@@ -75,9 +77,9 @@
                             <div class="infoType">
                                 <div>
                                     <label for="blFirst"></label>
-                                    <input type="text" id="blFirst" value="한국대학교">
+                                    <input type="text" id="blFirst" value="" placeholder="기관명">
                                     <label for="blSecond"></label>
-                                    <input type="text" id="blSecond" value="Hankuk Univ.">
+                                    <input type="text" id="blSecond" value="" placeholder="기관명(영문)">
                                 </div>
                             </div>
                         </div>
@@ -88,9 +90,9 @@
                             <div class="infoType">
                                 <div>
                                     <label for="bpFirst"></label>
-                                    <input type="text" id="bpFirst" value="" placeholder="소속학과 · 부서">
+                                    <input type="text" id="bpFirst" value="" placeholder="학과 · 부서명">
                                     <label for="bpSecond"></label>
-                                    <input type="text" id="bpSecond" value="" placeholder="소속학과 · 부서(영문)">
+                                    <input type="text" id="bpSecond" value="" placeholder="학과 · 부서명(영문)">
                                 </div>
                             </div>
                         </div>
@@ -110,7 +112,7 @@
                             <div class="infoType">
                                 <div>
                                     <label for="uPhone"></label>
-                                    <input type="text" id="uPhone" value="010-1234-5678">
+                                    <input type="text" id="uPhone" value="">
                                 </div>
                                 <em>'-' 제외하고 숫자만 입력해주세요.</em>
                             </div>
@@ -120,18 +122,20 @@
                         <div class="formset">
                             <p>국가연구자번호</p>
                             <label for="rscNum"></label>
-                            <input type="text" id="rscNum" value="12567845">
+                            <input type="text" id="rscNum" value="">
                         </div>
                     </fieldset>
-                 </form>
+                    </form>
                 <!-- 회원정보 테이블:e -->
             </div>
             <div class="brd-btn-area center">
                 <div class="btn-list">
-                    <input type="button" value="수정" class="btn btn-blue">
+                    <input type="button" value="등록" class="btn btn-blue">
                 </div>
             </div>
         </div>
     </div>
+    <!-- 회원정보등록 팝업 끝 -->
+
 </body>
 </html>

@@ -235,6 +235,16 @@
 		#excelFileExport {
 			cursor: pointer;
 		}
+
+		.state-txt {border-radius: 4px; padding: 3px 8px; font-size: 13px;}
+		.txt-red {color:#dd6161; background:#FFE9E9; border:1px solid #ffd0d0}
+		.txt-purple {color:#b556b8; background:#f0d5f1; border:1px solid #dfbbdf}
+		.txt-yellow {color:#eb9617; background:#fff8de; border:1px solid #fff0b9}
+		.txt-green {color:#25684d; background:#eefcf7; border:1px solid #bff1dc}
+		.txt-blue {color:#223b8f; background: #edf4fe;border: 1px solid #cfdcef;}
+		.txt-gray {color:#666; background:#f4f4f4; border:1px solid #dddddd}
+		.txt-dark {color:#ffffff; background:#6a6f77; border:1px solid #6a6f77}
+		.txt-blue-line {color:#223b8f; border: 1px solid #223b8f;}
 	</style>
 </head>
 
@@ -251,17 +261,21 @@
 				</li>
 				<li>
 					<strong>총 작업량</strong>
-					<span>28화면 중 6화면 완료</span>
+					<span>31화면 중 12화면 완료</span>
 				</li>
 				<!-- <li>
 					<strong>카테고리 별 작업률</strong>
 					<span>
 					</span>
 				</li> -->
-				<!-- <li>
-					<strong>소스파일URL</strong>
-					<span><a href="https://github.com/nsjwon/kdnPublish">Git Repository - https://github.com/nsjwon/kdnPublish</a></span>
-				</li> -->
+				<li>
+					<strong>피그마 URL</strong>
+					<span>Figma Prototype - <a href="https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1">https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1</a></span>
+				</li>
+				<li>
+					<strong>깃허브 URL</strong>
+					<span>Git Repository - <a href="https://github.com/nsjwon/kobic-admin">https://github.com/nsjwon/kobic-admin</a></span>
+				</li>
 				<li>
 					<strong>작업현황 내보내기</strong>
 					<input type="button" id="excelFileExport" value="엑셀 다운로드">
@@ -303,13 +317,13 @@
 
 			<tr>
 				<td colspan="6"><strong>통합포털 대시보드</strong></td>
-				<td><a href="./admin/dashboard/kobic-main.html">kobic-main.html</a></td>
+				<td><a href="./templates/admindash/kobic-main.html">kobic-main.html</a></td>
 				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td colspan="6"><strong>Bio-Express 대시보드</strong></td>
-				<td><a href="./admin/dashboard/bio-main.html">bio-main.html</a></td>
+				<td><a href="./templates/admindash/bio-main.html">bio-main.html</a></td>
 				<td></td>
 			</tr>
 
@@ -323,105 +337,105 @@
 				<td rowspan="13">바이오 익스프레스 관리자 기능 통합</td>
 				<td>KOID-RF-SFR-01701-FN01</td>
 				<td>분석 파이프라인 목록</td>
-				<td>List</td>
-				<td><a href="./admin/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN02</td>
 				<td>분석 파이프라인 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN03</td>
 				<td>분석 프로그램 목록</td>
-				<td>List</td>
-				<td><a href="./admin/program/program-List.html" target="_blank">program-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/program/program-List.html" target="_blank">program-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN04</td>
 				<td>분석 프로그램 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN05</td>
 				<td>분석 프로그램 실행 목록</td>
-				<td>List</td>
-				<td><a href="./admin/program/program-Run-List.html" target="_blank">program-Run-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/program/program-Run-List.html" target="_blank">program-Run-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN06</td>
 				<td>공개 등록 신청 파이프라인 전체 목록</td>
-				<td>List</td>
-				<td><a href="./admin/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN07</td>
 				<td>공개 등록 신청 파이프라인 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN08</td>
 				<td>공개 등록 신청 파이프라인 승인 목록</td>
-				<td>List</td>
-				<td><a href="./admin/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN09</td>
 				<td>공개 등록 신청 프로그램 전체 목록</td>
-				<td>List</td>
-				<td><a href="./admin/program/program-Public-List.html" target="_blank">program-Public-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/program/program-Public-List.html" target="_blank">program-Public-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN10</td>
 				<td>공개 등록 신청 프로그램 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/program/program-Public-Detail.html" target="_blank">program-Public-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/program/program-Public-Detail.html" target="_blank">program-Public-Detail.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN11</td>
 				<td>공개 등록 신청 프로그램 승인 목록</td>
-				<td>List</td>
-				<td><a href="./admin/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN12</td>
 				<td>분석 파이프라인 실행 통계</td>
-				<td>Statistics</td>
-				<td><a href="./admin/pipeline/pipeline-Run-Stat.html" target="_blank">pipeline-Run-Stat.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
+				<td><a href="./templates/adminsso/pipeline/pipeline-Run-Stat.html" target="_blank">pipeline-Run-Stat.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN13</td>
 				<td>분석 프로그램 실행 통계</td>
-				<td>Statistics</td>
-				<td><a href="./admin/program/program-Run-Stat.html" target="_blank">program-Run-Stat.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
+				<td><a href="./templates/adminsso/program/program-Run-Stat.html" target="_blank">program-Run-Stat.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 
@@ -451,35 +465,35 @@
 				<td rowspan="28">통합 인증 서비스 관리자 기능 통합</td>
 				<td>KOID-RF-SFR-01702-FN14</td>
 				<td>사용자 목록</td>
-				<td>List</td>
-				<td><a href="./admin/member/user-List.html" target="_blank">user-List.html</a></td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/member/user-List.html" target="_blank">user-List.html</a></td>
 				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN15</td>
 				<td>사용자 정보 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/member/user-Detail.html" target="_blank">user-Detail.html</a></td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/member/user-Detail.html" target="_blank">user-Detail.html</a></td>
 				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN16</td>
 				<td>사용자 정보 등록</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/member/user-Regist.html" target="_blank">user-Regist.html</a> -->
+					<a href="./templates/adminsso/popup/user-Regist.html" target="_blank">user-Regist.html</a>
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN17</td>
 				<td>사용자 정보 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<a href="./admin/popup/user-Modify.html" target="_blank">user-Modify.html</a>
+					<a href="./templates/adminsso/popup/user-Modify.html" target="_blank">user-Modify.html</a>
 				</td>
 				<td class="center">완료</td>
 			</tr>
@@ -487,9 +501,9 @@
 			<tr>
 				<td>KOID-RF-SFR-01702-FN18</td>
 				<td>사용자 등급 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<a href="./admin/popup/user-Grade-Modify.html" target="_blank">user-Grade-Modify.html</a>
+					<a href="./templates/adminsso/popup/user-Grade-Modify.html" target="_blank">user-Grade-Modify.html</a>
 				</td>
 				<td class="center">완료</td>
 			</tr>
@@ -497,9 +511,9 @@
 			<tr>
 				<td>KOID-RF-SFR-01702-FN19</td>
 				<td>사용자 탈퇴</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-purple">Alert</span></td>
 				<td>
-					<a href="./admin/popup/user-Delete.html" target="_blank">user-Delete.html</a>
+					<a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">confirm-Popup.html</a>
 				</td>
 				<td class="center">완료</td>
 			</tr>
@@ -507,205 +521,212 @@
 			<tr>
 				<td>KOID-RF-SFR-01702-FN20</td>
 				<td>사용자 그룹 목록</td>
-				<td>List</td>
-				<td><a href="./admin/group/group-List.html" target="_blank">group-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/group/group-List.html" target="_blank">group-List.html</a></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN21</td>
 				<td>사용자 그룹 정보 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/group/group-Detail.html" target="_blank">group-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td><a href="./templates/adminsso/group/group-Detail.html" target="_blank">group-Detail.html</a></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN22</td>
 				<td>사용자 그룹 등록</td>
-				<td>Regist</td>
-				<td><a href="./admin/group/group-Regist.html" target="_blank">group-Regist.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
+				<td>
+					<!-- <a href="./templates/adminsso/group/group-Regist.html" target="_blank">group-Regist.html</a> -->
+				</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN23</td>
 				<td>사용자 그룹 정보 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/group/group-Modify.html" target="_blank">group-Modify.html</a> -->
+					<a href="./templates/adminsso/popup/group-Modify.html" target="_blank">group-Modify.html</a>
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN24</td>
 				<td>사용자 그룹 등급 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/group/group-Grade-Modify.html" target="_blank">group-Grade-Modify.html</a> -->
+					<a href="./templates/adminsso/popup/group-Grade-Modify.html" target="_blank">group-Grade-Modify.html</a>
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN25</td>
 				<td>사용자 그룹 해제</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Delete.html" target="_blank">group-Delete.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN26</td>
 				<td>사용자 그룹 생성 승인</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Approval.html" target="_blank">group-Approval.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01702-FN27</td>
 				<td>사용자 그룹 생성 보류</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Pending.html" target="_blank">group-Pending.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN28</td>
 				<td>관리자 그룹 목록</td>
-				<td>List</td>
-				<td><a href="./admin/group/group-Admin-List.html" target="_blank">group-Admin-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/group/group-List.html" target="_blank">(공통) group-List.html</a> -->
+				</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN29</td>
 				<td>관리자 그룹 정보 상세</td>
-				<td>Detail</td>
-				<td><a href="./admin/group/group-Admin-Detail.html" target="_blank">group-Admin-Detail.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>(공통)</td>
+				<!-- <td><a href="./templates/adminsso/group/group-Detail.html" target="_blank">(공통) group-Detail.html</a></td> -->
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN30</td>
 				<td>관리자 그룹 등록</td>
-				<td>Regist</td>
-				<td><a href="./admin/group/group-Admin-Regist.html" target="_blank">group-Admin-Regist.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<!-- <a href="./templates/adminsso/group/group-Admin-Regist.html" target="_blank">group-Admin-Regist.html</a> -->
+				</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN31</td>
 				<td>관리자 그룹 정보 수정</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Admin-Modify.html" target="_blank">group-Admin-Modify.html</a> -->
+				<td><span class="state-txt txt-gray">Popup</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/group-Modify.html" target="_blank">(공통) group-Modify.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN32</td>
 				<td>관리자 그룹 등급 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/group/group-Admin-Grade-Modify.html" target="_blank">group-Admin-Grade-Modify.html</a> -->
+					<a href="./templates/adminsso/popup/group-Admin-Grade-Modify.html" target="_blank">group-Admin-Grade-Modify.html</a>
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN33</td>
 				<td>관리자 그룹 해제</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Admin-Delete.html" target="_blank">group-Admin-Delete.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN34</td>
 				<td>관리자 그룹 생성 승인</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Admin-Approval.html" target="_blank">group-Admin-Approval.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01702-FN35</td>
 				<td>관리자 그룹 생성 보류</td>
-				<td>Popup</td>
-				<td>
-					<!-- <a href="./admin/group/group-Admin-Pending.html" target="_blank">group-Admin-Pending.html</a> -->
+				<td><span class="state-txt txt-purple">Alert</span></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN36</td>
 				<td>관리자 권한 설정 이력 관리 </td>
-				<td>List</td>
-				<td><a href="./admin/event/event-List.html" target="_blank">event-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/event/event-List.html" target="_blank">event-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01702-FN37</td>
 				<td>관리자 권한 자동 갱신 설정</td>
-				<td>Detail</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
-					<!-- <a href="./admin/event/event-Author-Setting.html" target="_blank">event-Author-Setting.html</a> -->
+					<!-- <a href="./templates/adminsso/event/event-Author-Setting.html" target="_blank">event-Author-Setting.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN38</td>
 				<td>연계 사이트 가입 현황 통계</td>
-				<td>Statistics</td>
-				<td><a href="./admin/stat/stat-View.html" target="_blank">stat-View.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
+				<td><a href="./templates/adminsso/stat/stat-View.html" target="_blank">stat-View.html</a></td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01702-FN39</td>
 				<td>연계 사이트 로그인 통계</td>
-				<td>Statistics</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>
-					<!-- <a href="./admin/stat/stat-Login.html" target="_blank">stat-Login.html</a> -->
+					<!-- <a href="./templates/adminsso/stat/stat-Login.html" target="_blank">stat-Login.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01702-FN40</td>
 				<td>그룹 회원 가입 현황 통계</td>
-				<td>Statistics</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>
-					<!-- <a href="./admin/stat/stat-Group-Signup.html" target="_blank">stat-Group-Signup.html</a> -->
+					<!-- <a href="./templates/adminsso/stat/stat-Group-Signup.html" target="_blank">stat-Group-Signup.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01702-FN41</td>
 				<td>사용자별 연계 사이트 로그인 현황 통계</td>
-				<td>Statistics</td>
+				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>
-					<!-- <a href="./admin/stat/stat-Relative-Login.html" target="_blank">stat-Relative-Login.html</a> -->
+					<!-- <a href="./templates/adminsso/stat/stat-Relative-Login.html" target="_blank">stat-Relative-Login.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 
@@ -725,85 +746,85 @@
 				<td rowspan="9" colspan="2">기타 요구사항 외</td>
 				<td></td>
 				<td>유형관리 목록</td>
-				<td>List</td>
-				<td><a href="./admin/type/type-List.html" target="_blank">type-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/type/type-List.html" target="_blank">type-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>유형 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/type/type-Modify.html" target="_blank">type-Modify.html</a> -->
+					<!-- <a href="./templates/adminsso/type/type-Modify.html" target="_blank">type-Modify.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td></td>
 				<td>유형 등록</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/type/type-Regist.html" target="_blank">type-Regist.html</a> -->
+					<!-- <a href="./templates/adminsso/type/type-Regist.html" target="_blank">type-Regist.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>등급관리 목록</td>
-				<td>List</td>
-				<td><a href="./admin/grade/grade-List.html" target="_blank">grade-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/grade/grade-List.html" target="_blank">grade-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>등급 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/grade/grade-Modify.html" target="_blank">grade-Modify.html</a> -->
+					<!-- <a href="./templates/adminsso/grade/grade-Modify.html" target="_blank">grade-Modify.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td></td>
 				<td>등급 등록</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/grade/grade-Regist.html" target="_blank">grade-Regist.html</a> -->
+					<!-- <a href="./templates/adminsso/grade/grade-Regist.html" target="_blank">grade-Regist.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>약관관리 목록</td>
-				<td>List</td>
-				<td><a href="./admin/policy/policy-List.html" target="_blank">policy-List.html</a></td>
-				<td class="center">작업중</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td><a href="./templates/adminsso/policy/policy-List.html" target="_blank">policy-List.html</a></td>
+				<td class="center"></td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>약관 수정</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/policy/policy-Modify.html" target="_blank">policy-Modify.html</a> -->
+					<!-- <a href="./templates/adminsso/policy/policy-Modify.html" target="_blank">policy-Modify.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 			
 			<tr>
 				<td></td>
 				<td>약관 등록</td>
-				<td>Popup</td>
+				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./admin/policy/policy-Regist.html" target="_blank">policy-Regist.html</a> -->
+					<!-- <a href="./templates/adminsso/policy/policy-Regist.html" target="_blank">policy-Regist.html</a> -->
 				</td>
-				<td class="center">작업중</td>
+				<td class="center"></td>
 			</tr>
 
 			<!-- <tr id="resultRow">

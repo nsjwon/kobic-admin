@@ -32,7 +32,7 @@
 .search-text .search-act:hover {background: #111111;transition: all ease 0.2s 0s;}
 
 /* 게시판 탭 */
-.brd-tab-list {display: flex; align-items: center; gap: 8px; margin-bottom: 2rem;}
+.brd-tab-list {display: flex; align-items: center; gap: 8px; margin-bottom: 2.4rem;}
 .brd-tab-list li a {display: block; padding: 1.6rem 4rem; border: 2px solid #EAEDF1; color: #626E76; background: #EAEDF1; border-radius: 5px; font-size: 1.5rem; font-weight: 500;}
 .brd-tab-list li.focus a {border: 2px solid #155CD6; color: #155CD6; background: #F8FBFF; font-weight: bold;}
 

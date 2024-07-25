@@ -1,0 +1,570 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../../css/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+        <script src="../../../js/contents/admin/new-contents.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable open"><a class="active" href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a class="on" href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li> 
+                                <li><a href="../../../templates/adminsso/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/adminsso/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../../templates/adminsso/stat/stat-View.html">통계정보</a></li>     	          
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+					             
+                        <h2 class="h2-tit">그룹 관리</h2>    
+                        <h4 class="h4-tit">그룹 정보</h4>
+                        <!-- board wrap :s-->
+                        <div class="brd-wrap">
+
+                            <!-- detail wrap: s -->
+                            <div class="text_bg_box user_info">
+                                <h4 class="brd_tit">감리 그룹 테스트</h4>
+                                <div class="user_info_detail">
+                                    <ul>
+                                        <li><span class="tit">그룹장</span><span class="text">test_adm1</span></li>
+                                        <li><span class="tit">그룹장 소속기관</span><span class="text">테스트용</span></li>
+                                        <li><span class="tit">그룹 생성일</span><span class="text">2023-11-29</span></li>
+                                        <li><span class="tit">그룹원 수</span><span class="text">4</span></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="tit">그룹 유형</span><span class="text">기타 그룹</span></li>
+                                        <li>
+                                            <span class="tit">그룹 등급</span>
+                                            <span class="text">그룹 5등급</span>
+                                            <button class="ss_btn popup-button" data-target="#groupGrade">등급변경</button>
+                                        </li>
+                                        
+                                        <li><span class="tit">그룹 설명</span><span class="text">그룹 테스트</span></li>
+                                    </ul>
+                                </div>
+                                <button class="modify_btn popup-button" data-target="#groupModify">수정하기</button>
+                                <dl class="my_login_info">
+                                    <dt>마지막 로그인</dt>
+                                    <dd>2024-07-24 11:37</dd>                      
+                                </dl>
+                            </div>
+                            <!-- detail wrap: e -->
+
+                            <!-- board tab wrap :s -->
+                            <div class="brd-tab-wrap">
+                                <ul class="brd-tab-list">
+                                    <li class="focus"><a href="#tab1" class="tab_tit">요청 목록</a></li>
+                                    <li><a href="#tab2" class="tab_tit">그룹원</a></li>
+                                </ul>
+                            </div>
+                            <!-- board tab wrap :e -->
+
+                            <!-- tab_box 탭 묶음 :s -->
+                            <div class="tab_box">
+
+                                <!-- tab 탭컨텐츠1 :s -->
+                                <div class="tab_cont" id="tab1" style="display:block;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
+                                    <!-- board info :s -->
+                                    <div class="brd-info">
+                                        <ul class="brd-num">
+                                            <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                            <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                                        </ul>                
+                                        <label for="boardSort" class="hidden">정렬</label>
+                                        <div class="search-tl">
+                                            <select name="srcSort" class="brd-sort">
+                                                <option value="srcAll">전체</option>
+                                                <option value="srcId">아이디</option>
+                                                <option value="srcName">이름</option>
+                                                <option value="srcEmail">이메일</option>
+                                            </select>
+                                            <input type="text" name="srcText" placeholder="검색어를 입력하세요.">
+                                            <input type="button" class="search-act" value="검색">
+                                            <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
+                                                <option value="tutorialRegDt">요청일 순</option>
+                                                <option value="tutorialHit">요청유형 순</option>
+                                                <option value="tutorialLang">상태순</option>
+                                            </select>
+
+                                        </div>
+                                    </div>                               
+                                    <!-- board info : e-->
+
+                                    <!-- board table :s -->
+                                    <div class="table-wrap">
+                                        <table class="brd-list-01">
+                                            <caption>그룹관리 정보입니다.</caption>
+                                            <colgroup>
+                                                <col style="width:7.0rem"> 
+                                                <col style="width:15%"> 
+                                                <col style="width:15%"> 
+                                                <col>                
+                                                <col style="width:15%"> 
+                                                <col style="width:12.0rem"> 
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">순번</th>
+                                                    <th scope="col">요청자</th>
+                                                    <th scope="col">요청 유형</th>
+                                                    <th scope="col">요청 이유</th>
+                                                    <th scope="col">요청일</th>
+                                                    <th scope="col">상태</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>	
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><p>사용자</p></td>
+                                                        <td>그룹 회원 가입 요청</td>
+                                                        <td>테스트</td>
+                                                        <td>2024-07-29</td>
+                                                        <td><span class="state-txt txt-blue">승인</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><p>사용자</p></td>
+                                                        <td>그룹 회원 가입 요청</td>
+                                                        <td>테스트</td>
+                                                        <td>2024-07-29</td>
+                                                        <td><span class="state-txt txt-red">미승인</span></td>
+                                                    </tr>
+
+
+
+                                                    <!-- 데이터가 없을 때 노출되는 행:s -->
+                                                    <!-- <tr>
+                                                        <td colspan="6">요청 내역이 없습니다.</td>
+                                                    </tr> -->
+                                                    <!-- 데이터가 없을 때 노출되는 행:e -->
+                                                                        
+                                                
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- board table :e -->
+                
+                                    <!-- page:s -->
+                                    <div class="pagination">       
+                                        <span class="prev-group">
+                                            <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
+                                            <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
+                                        </span>
+                                        <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
+                                        
+                                        <span class="next-group">
+                                            <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
+                                            <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
+                                        </span>             
+                                    </div>                  
+                                    <!-- page:e -->  
+                                </div>
+                                <!-- tab 탭컨텐츠1 :e -->   
+
+                                <!-- tab 탭컨텐츠2 :s -->
+                                <div class="tab_cont" id="tab2" style="display:none;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
+                                    <!-- board info :s -->
+                                    <div class="brd-info">
+                                        <ul class="brd-num">
+                                            <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                            <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                                        </ul>                
+                                        <label for="boardSort" class="hidden">정렬</label>
+                                        <div class="search-tl">
+                                            <select name="srcSort" class="brd-sort">
+                                                <option value="srcAll">전체</option>
+                                                <option value="srcId">아이디</option>
+                                                <option value="srcName">이름</option>
+                                                <option value="srcEmail">이메일</option>
+                                            </select>
+                                            <input type="text" name="srcText" placeholder="검색어를 입력하세요.">
+                                            <input type="button" class="search-act" value="검색">
+                                            <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
+                                                <option value="tutorialRegDt">최신순</option>
+                                                <option value="tutorialHit">조회순</option>
+                                                <option value="tutorialLang">언어순</option>
+                                            </select>
+
+                                        </div>
+                                    </div>                               
+                                    <!-- board info : e-->
+
+                                    <!-- board table :s -->
+                                    <div class="table-wrap">
+                                        <table class="brd-list-01">
+                                            <caption>그룹관리 정보입니다.</caption>
+                                            <colgroup>
+                                                <col style="width:7.0rem"> 
+                                                <col style="width:15%"> 
+                                                <col style="width:15%"> 
+                                                <col>                
+                                                <col style="width:15%"> 
+                                                <col style="width:15%"> 
+                                                <col style="width:12.0rem"> 
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">순번</th>
+                                                    <th scope="col">이름</th>
+                                                    <th scope="col">이메일</th>
+                                                    <th scope="col">소속기관</th>
+                                                    <th scope="col">그룹 회원 등급</th>
+                                                    <th scope="col">가입일</th>
+                                                    <th scope="col">그룹원 탈퇴</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>	
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>홍길동</td>
+                                                        <td>gildonghong@mail.com</td>
+                                                        <td>KOBIC</td>
+                                                        <td class="settd">
+                                                            <span>그룹 회원 기본 등급</span>
+                                                            <button class="setting_icon popup-button" data-target="#userGrade">
+                                                        </td>
+                                                        <td>2024-07-29</td>
+                                                        <td class="settd">
+                                                            <a href="#none" class="state-txt txt-gray popup-button" data-target="#confirMation" onclick="setMessage('type02')">탈퇴</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>홍길동</td>
+                                                        <td>gildonghong@mail.com</td>
+                                                        <td>KOBIC</td>
+                                                        <td class="settd">
+                                                            <span>그룹 회원 기본 등급</span>
+                                                            <button class="setting_icon popup-button" data-target="#userGrade">
+                                                        </td>
+                                                        <td>2024-07-29</td>
+                                                        <td class="settd">
+                                                            <a href="#none" class="state-txt txt-gray popup-button" data-target="#confirMation" onclick="setMessage('type02')">탈퇴</a>
+                                                        </td>
+                                                    </tr>
+
+
+
+                                                    <!-- 데이터가 없을 때 노출되는 행:s -->
+                                                    <!-- <tr>
+                                                        <td colspan="6">요청 내역이 없습니다.</td>
+                                                    </tr> -->
+                                                    <!-- 데이터가 없을 때 노출되는 행:e -->
+                                                                        
+                                                
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- board table :e -->
+                
+                                    <!-- page:s -->
+                                    <div class="pagination">       
+                                        <span class="prev-group">
+                                            <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
+                                            <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
+                                        </span>
+                                        <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
+                                        
+                                        <span class="next-group">
+                                            <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
+                                            <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
+                                        </span>             
+                                    </div>                  
+                                    <!-- page:e -->  
+                                </div>
+                                <!-- tab 탭컨텐츠2 :e -->   
+                                
+                            </div>
+                            <!-- tab_box 탭 묶음 :e -->
+                             
+                            <!-- board button :s -->
+                            <div class="brd-btn-area c-type">
+	                            <div class="btn-list">
+	                                <label for="brdDel" class="hidden">그룹 해제</label>
+	                                <input type="button" class="btn btn-red popup-button" value="그룹 해제" id="brdDel" onclick="setMessage('type03');" data-target="#confirMation">
+	                                <label for="brdlist" class="hidden">목록</label>
+	                                <input type="button" class="btn btn-black" value="목록" id="brdlist" onclick="location.href='../../../templates/adminsso/member/user-List.html'">
+	                            </div>
+	                        </div>
+                            <!-- board button :e -->
+
+                        </div>                          
+                        <!-- board wrap :e-->	 
+                                    
+                                        
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+
+        <!-- Popup Contents :s -->
+
+
+        <!-- 그룹정보수정 팝업 시작 -->
+        <div id="groupModify" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-groupModify">
+                <div class="popup-header">
+                    <h2>그룹 정보 수정</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 그룹정보 테이블:s -->
+                    <form class="popup-form">
+                        <fieldset>
+                            <div class="formset">
+                                <p>그룹명</p>
+                                <label for="grName"></label>
+                                <input type="text" id="grName" value="일반 그룹">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>그룹 설명</p>
+                                <label for="grInfo"></label>
+                                <textarea type="text" id="grInfo" value="그룹 정보 수정 테스트입니다."></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>공개 여부</p>
+                                <label for="grOpen"></label>
+                                <select type="text" id="grOpen">
+                                    <option value="public">공개</option>
+                                    <option value="private">비공개</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                     </form>
+                     <!-- 그룹정보 테이블:e -->
+                </div>
+                <div class="brd-btn-area center">
+                    <div class="btn-list">
+                        <input type="button" value="수정" class="btn btn-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 그룹정보수정 팝업 끝 -->
+
+
+        <!-- 그룹등급변경 팝업 시작 -->
+        <div id="groupGrade" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-groupGrade">
+                <div class="popup-header">
+                    <h2>그룹 등급 변경</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 그룹정보 테이블:s -->
+                    <form class="popup-form">
+                        <fieldset>
+                            <div class="formset">
+                                <p>현재 등급</p>
+                                <span class="formvalue">그룹 2등급</span>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>변경 등급</p>
+                                <label for="uNation"></label>
+                                <select name="newGrade" id="newGrade">
+                                    <option value="GM01">그룹 1등급</option>
+                                    <option value="GM02">그룹 2등급</option>				
+                                </select>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- 그룹정보 테이블:e -->
+                </div>
+                <div class="brd-btn-area center">
+                    <div class="btn-list">
+                        <input type="button" value="수정" class="btn btn-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 그룹등급변경 팝업 끝 -->
+
+
+        <!-- 확인메세지 팝업 시작 -->
+        <div id="confirMation" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-confirMation">
+                <p class="popup-message">회원을 강제 탈퇴 하시겠습니까?</p>
+                <div class="popup-body flex-col">
+
+                </div>
+                <div class="brd-btn-area center">
+                    <div class="btn-list">
+                        <input type="button" value="예" class="btn btn-blue">
+                        <input type="button" value="아니요" class="btn btn-gray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 확인메세지 팝업 끝 -->
+
+
+        <!-- Popup Contents :e -->
+        
+
+        
+        <!-- js -->
+        <script src="../../../js/amcharts/core.js"></script>
+        <script src="../../../js/amcharts/charts.js"></script>
+        <script src="../../../js/amcharts/animated.js"></script>
+        <script src="../../../js/contents/templates/adminsso/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                // 테이블 행 클릭 시 상세페이지 연결
+                var linkfile = '../../group/group-Detail.html';
+                
+                // tr 요소를 클릭했을 때 이벤트 핸들러
+                $('table tr td').on('click', function() {
+                    if(!$(this).hasClass("settd")) {
+                        // 공통 URL로 이동합니다.
+                        window.location.href = linkfile;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+            
+        </script>
+    </body>
+</html>
