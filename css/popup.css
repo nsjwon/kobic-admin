@@ -7,7 +7,9 @@
 .popup-content-userModify,
 .popup-content-groupModify {width: 660px;}
 .popup-content-userGrade,
-.popup-content-groupGrade {width: 540px;}
+.popup-content-groupGrade, 
+.popup-content-memberGrade, 
+.popup-content-adminGrade {width: 540px;}
 .popup-content-confirMation {width: 340px;}
 
 .popup-header {margin-bottom: 2.8rem; display: flex; align-items: center; justify-content: space-between;}
