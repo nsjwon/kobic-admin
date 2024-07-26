@@ -317,6 +317,18 @@
 .modify_btn:hover {background:#dfdfdf; transition: all ease 0.2s 0s;}
 .modify_btn::before {content:''; display: inline-block; background: url(../images/admin/icon_pencil.svg) no-repeat center center; background-size: contain; width: 12px; height: 11px; margin-right:0.4rem;}
 
+/* 요청현황 상세 */
+.request_info_user {line-height: 1.4; display:flex; border-top:1px solid #dedede; border-bottom:1px solid #dedede; padding:2.0rem 0; margin:2.0rem 0;} 
+.request_info_user dt {font-weight: 600;width: 140px;}
+.request_info_user dd > ul {display:flex; flex-direction: row;flex-wrap: wrap; }
+.request_info_user dd > ul > li::after {content: ''; display: inline-block; margin:0 14px; background:#8D96A6; width:1px; height: 12px; }
+.request_info_user dd > ul > li:last-child::after {display: none;}
+.request_info_detail {display: flex; justify-content:space-between; border-bottom:1px solid #dedede; padding:0 0 2.0rem 0; margin:0 0 2.0rem 0;}
+.request_info_detail ul {width:48%;}
+.request_info_detail ul li {margin: 0 0 1.2rem 0; display: flex; line-height: 1.4; align-items: center;}
+.request_info_detail ul li span:first-child {display: inline-block; width:140px; font-weight: 600; margin:0;}
+.request_info_detail ul li span:last-child {display:inline-block; width:calc(100% - 140px); line-height: 28px;} 
+.request_info_detail ul li .status-txt {width:unset !important;}
 
 /* 그룹 정보 상세 */
 .group-detail-wrap {position: relative;box-sizing: border-box;/* background: #fdfdfd; border-top: 2px solid #43464C; */}
