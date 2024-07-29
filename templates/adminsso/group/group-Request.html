@@ -133,39 +133,38 @@
 
                             <!-- detail wrap: s -->
                             <div class="text_bg_box user_info">
-                                <h4 class="brd_tit">일반 사용자 그룹1</h4>
+                                <h4 class="brd_tit">관리자 그룹 01</h4>
                                 <dl class="request_info_user">
                                     <dt>요청자</dt>
                                     <dd>
                                         <ul>
-                                            <li>최희정(hjchoi95129)</li>
-                                            <li>choihj@snu.ac.kr</li>
-                                            <li>서울대학교 대학 자연과학대학</li>
+                                            <li>나인소프트(ninesoft_adm)</li>
+                                            <li>jhkim@ninesoft.biz</li>
+                                            <li>소속기관</li>
                                         </ul>
                                     </dd>
                                 </dl>
                                 <div class="request_info_detail">
                                     <ul>
                                         <li><span class="tit">그룹 구분</span><span class="text">사용자</span></li>
-                                        <li><span class="tit">그룹 유형</span><span class="text">성과물 등록 공동 작업 그룹</span></li>
+                                        <li><span class="tit">그룹 유형</span><span class="text">기타 그룹</span></li>
                                         <li><span class="tit">공개 여부</span><span class="text">공개</span></li>
-                                        <li><span class="tit">그룹 설명</span><span class="text">구조생물학연구실에서 생성된 바이오데이터 공동 입력</span></li>
+                                        <li><span class="tit">그룹 설명</span><span class="text">테스트 그룹입니다.</span></li>
                                     </ul>
                                     <ul>
                                         <li><span class="tit">요청 구분</span><span class="text">그룹</span></li>
-                                        <li><span class="tit">요청 유형</span><span class="text">그룹 생성</span></li>
-                                        <li><span class="tit">요청일</span><span class="text">2024-03-05 8:33</span></li>
-                                        <li><span class="tit">요청 이유</span><span class="text">본 구조생물학연구실에서 생성된 바이오데이터를 연구자들이 공동으로 입력하기 위해 사용자 그룹 생성을 요청합니다.</span></li>
-                                        <li><span class="tit">상태</span><span class="status-txt txt-red">미승인</span></li>
+                                        <li><span class="tit">요청 유형</span><span class="text">그룹 등급 변경</span></li>
+                                        <li><span class="tit">요청일</span><span class="text">2022-11-04 10:51</span></li>
+                                        <li><span class="tit">현재 등급</span><span class="text">그룹 2등급 (GR02)</span></li>
+                                        <li><span class="tit">요청 등급</span><span class="text">그룹 2등급 (GR02)</span></li>
+                                        <li><span class="tit">요청 이유</span><span class="text">변경요청합니다.</span></li>
+                                        <li><span class="tit">상태</span><span class="state-txt txt-red">미승인</span></li>
                                     </ul>
                                 </div>
-                                <dl class="my_login_info">
-                                    <dt class="txt-point">승인요청중</dt>
-                                </dl>
+                                <span class="rq_waiting txt-point">승인요청중</span>
                             </div>
                             <!-- detail wrap: e -->
 
-                             
                             <!-- board button :s -->
                             <div class="brd-btn-area c-type">
 	                            <div class="btn-list">
@@ -174,7 +173,7 @@
 	                                <label for="brdApp" class="hidden">승인</label>
 	                                <input type="button" class="btn btn-blue popup-button" value="승인" id="brdApp" onclick="setMessage('type04');" data-target="#confirMation">
 	                                <label for="brdlist" class="hidden">목록</label>
-	                                <input type="button" class="btn btn-black" value="목록" id="brdlist" onclick="location.href='../../../templates/adminsso/member/user-List.html'">
+	                                <input type="button" class="btn btn-black" value="목록" id="brdlist" onclick="javascript:history.back();">
 	                            </div>
 	                        </div>
                             <!-- board button :e -->
@@ -216,7 +215,7 @@
         <div id="confirMation" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-confirMation">
-                <p class="popup-message">회원을 강제 탈퇴 하시겠습니까?</p>
+                <p class="popup-message"></p>
                 <div class="popup-body flex-col">
 
                 </div>
@@ -239,23 +238,18 @@
         <script src="../../../js/amcharts/core.js"></script>
         <script src="../../../js/amcharts/charts.js"></script>
         <script src="../../../js/amcharts/animated.js"></script>
-        <script src="../../../js/contents/templates/adminsso/main.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
         <script>
             $(document).ready(function() {
                 // 테이블 행 클릭 시 상세페이지 연결
-                var linkfile = '../../group/group-Detail.html';
+                var linkfile = '../../event/event-Detail.html';
                 
                 // tr 요소를 클릭했을 때 이벤트 핸들러
-                $('table tr td').on('click', function() {
-                    if(!$(this).hasClass("settd")) {
-                        // 공통 URL로 이동합니다.
-                        window.location.href = linkfile;
-                    } else {
-                        return false;
-                    }
+                $('table tr').on('click', function() {
+                    // 공통 URL로 이동합니다.
+                    window.location.href = linkfile;
                 });
             });
-            
         </script>
     </body>
 </html>

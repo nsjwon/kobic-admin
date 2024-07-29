@@ -126,119 +126,80 @@
                     <!-- admin content inner :s -->
                     <div class="admin-content-inner">
 					             
-                        <h2 class="h2-tit">약관관리</h2>    
+                        <h2 class="h2-tit">약관 관리</h2>    
+                        <h4 class="h4-tit">약관 수정</h4>
                         <!-- board wrap :s-->
-                        <div class="brd-wrap">
-
-                            <!-- tab_box 탭 묶음 :s -->
-                            <div class="tab_box">
-                                
-                                <!-- tab1 탭컨텐츠1 :s -->
-                                <div class="tab_cont" id="tab1" style="display:block;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
-                                    <!-- board info :s -->
-                                    <div class="brd-info">
-                                        <ul class="brd-num">
-                                            <li><span class="">전체</span> <span class="bold">20</span>건</li>
-                                            <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
-                                        </ul>                
-                                        <label for="boardSort" class="hidden">정렬</label>
-                                        <div class="search-tl">
-                                            <select name="srcSort" class="brd-sort">
-                                                <option value="srcAll">전체</option>
-                                                <option value="pcId">약관명</option>
-                                            </select>
-                                            <input type="text" name="srcText" placeholder="검색어를 입력하세요.">
-                                            <input type="button" class="search-act" value="검색">
-                                            <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
-                                                <option value="tutorialRegDt">최근생성일 순</option>
-                                                <option value="tutorialHit">약관명 순</option>
-                                            </select>
-
+                         <div class="brd-wrap">
+							<form name="modifyForm" id="modifyForm">
+                                <!-- <p class="essential-item"><span class="txt-point">*</span> 필수입력</p>   -->
+                                <!-- board modify :s-->
+                                <div class="brd-modify">
+                                    <div class="brd-w-inner">
+                                        <div class="brd-w-item">
+                                            <label for="pcTitle" class="brd-w-tit">약관명</label>
+                                            <div class="brd-input-wrap">
+                                                <input type="text" name="pcTitle" id="pcTitle" value="" placeholder="제목을 입력해주세요.">
+                                            </div>  
                                         </div>
-                                    </div>                               
-                                    <!-- board info : e-->
-
-                                    <!-- board table :s -->
-                                    <div class="table-wrap">
-                                        <table class="brd-list-01">
-                                            <caption>약관관리 정보입니다.</caption>
-                                            <colgroup>
-                                                <col style="width:7.0rem"> 
-                                                <col>
-                                                <col style="width:12.0rem">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">순번</th>
-                                                    <th scope="col">약관명</th>
-                                                    <th scope="col">필수 동의</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>	
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td><p class="left">개인정보 수집 및 이용</p></td>
-                                                        <td>Y</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td><p class="left">개인정보 수집 및 이용에 대한 안내</p></td>
-                                                        <td>Y</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td><p class="left">국가생명연구자원정보센터(KOBIC)홈페이지 회원 이용약관</p></td>
-                                                        <td>Y</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td><p class="left">홈페이지 회원</p></td>
-                                                        <td>N</td>
-                                                    </tr>
-
-
-
-                                                    <!-- 데이터가 없을 때 노출되는 행:s -->
-                                                    <!-- <tr>
-                                                        <td colspan="6">조회 된 정보가 없습니다.</td>
-                                                    </tr> -->
-                                                    <!-- 데이터가 없을 때 노출되는 행:e -->
-                                                                        
-                                                
-                                            
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- board table :e -->
-                                    <!-- board button :s -->
-                                    <div class="brd-btn-area flex-end">
-                                        <div class="btn-list">
-                                            <label for="brdWrite" class="hidden">등록</label>
-                                            <input type="button" class="btn btn-blue" value="등록" onClick="location.href='./policy-Regist.html'">
+                                        <div class="brd-w-item">
+                                            <label for="pcTitle" class="brd-w-tit">내용</label>
+                                            <div class="brd-input-wrap">
+                                                <div class="brd-edit-area">
+													<input type="hidden" name="videoDesc" id="contentValue">
+													<input type="hidden" name="videoDescText" id="contentValueText">													
+													<!-- RaonKEditor Script:s -->
+													<script src="../../../js/common/editor_common.js"></script>
+													<script src="../../../js/raonkeditor/js/raonkeditor.js"></script>
+													<script>
+														raonkEditorInit_adminVideo("adminEditor_video");
+													</script>
+                                                    <div id="raonk_frame_holderadminEditor_video" style="width:100%; height:600px;  overflow: visible;">
+                                                        <iframe frameborder="0" scrolling="no" id="raonk_frame_adminEditor_video" title="에디터 전체영역" width="100%" height="100%" style="width: 100%; height: 100%;" src="https://www.kobic.re.kr/kobic/js/raonkeditor/pages/editor_release.html"></iframe>
+                                                    </div>
+													<!-- RaonKEditor Script:e -->
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="brd-w-item">
+											<p class="brd-w-tit">필수동의</p>
+											<div class="brd-input-wrap brd-radio">
+												<input type="hidden" id="pcYnValue" name="pcYnValue" value="Y">
+												<input type="radio" id="pcPublic" name="pcPublic" checked="checked"><label for="pcPublic">Y</label>
+												<input type="radio" id="pcPrivate" name="pcPrivate"><label for="pcPrivate">N</label>
+											</div> 
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <label for="pcTitle" class="brd-w-tit">약관 효력기간</label>
+                                            <div class="brd-input-wrap">
+                                                <input type="number" name="paperYear" id="paperYear" value="" placeholder="" maxlength="4"> 일
+                                            </div>  
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <label for="pcTitle" class="brd-w-tit">약관 변경 시 <br>공지기간</label>
+                                            <div class="brd-input-wrap">
+                                                <input type="number" name="paperYear" id="paperYear" value="" placeholder="" maxlength="4"> 일
+                                            </div>  
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <label for="pcTitle" class="brd-w-tit">약관 재동의 <br>요구 공지기간</label>
+                                            <div class="brd-input-wrap">
+                                                <input type="number" name="paperYear" id="paperYear" value="" placeholder="" maxlength="4"> 일
+                                            </div>  
+                                        </div>
+										
                                     </div>
-                                    <!-- board button :e -->
-                    
-                                    <!-- page:s -->
-                                    <div class="pagination mtop36">       
-                                        <span class="prev-group">
-                                            <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
-                                            <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
-                                        </span>
-                                        <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
-                                        
-                                        <span class="next-group">
-                                            <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
-                                            <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
-                                        </span>             
-                                    </div>                  
-                                    <!-- page:e -->      
+                                </div>     
+                                <!-- board modify :e-->
+                                <div class="brd-btn-area center">
+                                    <div class="btn-list">
+										<label for="brdModify" class="hidden">등록</label>
+										<input type="button" class="btn btn-blue" value="등록">
+										<label for="brdCancel" class="hidden">취소</label>
+										<input type="button" class="btn btn-black" value="취소" id="brdCancel" onclick="javascript:history.back();">
+                                    </div>
                                 </div>
-                                <!-- tab1 탭컨텐츠1 :e -->
-
-                            </div>
-                            <!-- tab_box 탭 묶음 :e -->
-                        </div>                          
+                            </form>
+                        </div> 
                         <!-- board wrap :e-->	 
                                     
                                         
@@ -267,11 +228,13 @@
         </div>
             
 
+
         <!-- Popup Contents :s -->
-        
+
         <!-- Popup Contents :e -->
+        
 
-
+        
         <!-- js -->
         <script src="../../../js/amcharts/core.js"></script>
         <script src="../../../js/amcharts/charts.js"></script>
@@ -280,7 +243,7 @@
         <script>
             $(document).ready(function() {
                 // 테이블 행 클릭 시 상세페이지 연결
-                var linkfile = '../../adminsso/policy/policy-Modify.html';
+                var linkfile = '../../event/event-Detail.html';
                 
                 // tr 요소를 클릭했을 때 이벤트 핸들러
                 $('table tr').on('click', function() {

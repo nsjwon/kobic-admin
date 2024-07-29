@@ -1,0 +1,608 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../../css/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+        <script src="../../../js/contents/admin/new-contents.js"></script>
+        <script src="../../../js/ssoscript/statistics.js"></script>
+
+
+        <!-- Resources -->
+        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable open"><a class="active" href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a class="on" href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li> 
+                                <li><a href="../../../templates/adminsso/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/adminsso/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../../templates/adminsso/stat/stat-View.html">통계정보</a></li>     	          
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+                        
+                        <h2 class="h2-tit">통계관리</h2>    
+                        <div class="admin-dash-wrap">
+                            
+                            <div class="section-item">
+                                <div class="stat-tit-wrap">
+                                    <h2>회원 현황 통계<span class="fc-gary small-txt">(단위:명)</span></h2>
+                                    <div class="amd-chart-search input-date-wrap">
+                                        <select name="timeSort" class="brd-sort">
+                                            <option value="timeDay">일별</option>
+                                            <option value="timeMonth">월별</option>
+                                            <option value="timeYear">연도별</option>
+                                        </select>
+                                        <label for="loginStartDate" class="hidden">시작일</label>
+                                        <input type="text" name="searchDate" id="loginStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>~</span>
+                                        <label for="loginEndDate" class="hidden">종료일</label>
+                                        <input type="text" name="searchDate" id="loginEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
+                                        <label for="searchBtn01" class="hidden">조회</label>
+                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn01" onclick="getLoginStatistics()">  
+                                        <ul class="date-range">
+                                            <li>
+                                                <label for="dateBtn0701" class="hidden">7일</label>
+                                                <input type="button" value="7일" id="dateBtn0701" class="btn btn-line-gray" onclick="getLoginStatistics(7)">  
+                                            </li>
+                                            <li>
+                                                <label for="dateBtn3001" class="hidden">30일</label>
+                                                <input type="button" value="30일" id="dateBtn3001" class="btn btn-line-gray" onclick="getLoginStatistics(30)">  
+                                            </li>
+                                        </ul>
+                                    </div>                                    
+                                </div>
+                                <div class="stat-box-wrap">
+                                    <div class="stat-box">
+                                        <h2 class="h2-tit">전체회원</h2>
+                                        <div class="stat-chart-item" id="chartdiv1"></div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <h2 class="h2-tit">가입 및 탈퇴</h2>
+                                        <div class="stat-chart-item" id="chartdiv2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section-item">
+                                <div class="stat-tit-wrap">
+                                    <h2>게시물 등록 현황<span class="fc-gary small-txt">(단위:건)</span></h2>
+                                    <div class="amd-chart-search input-date-wrap">
+                                        <label for="postStartDate" class="hidden">시작일</label>
+                                        <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>~</span>
+                                        <label for="postEndDate" class="hidden">종료일</label>
+                                        <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
+                                        <label for="searchBtn02" class="hidden">조회</label>
+                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
+                                        <ul class="date-range">
+                                            <li>
+                                                <label for="dateBtn0702" class="hidden">7일</label>
+                                                <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
+                                            </li>
+                                            <li>
+                                                <label for="dateBtn3002" class="hidden">30일</label>
+                                                <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
+                                            </li>
+                                        </ul>
+                                    </div>     
+                                </div>
+                                <div class="dash-box">
+                                    <div class="adm-chart-item" id="postChartDiv"></div>
+                                </div>
+                            </div>
+
+                            <div class="section-item">
+                                <h2 class="h2-tit">문의사항 게시글</h2>
+                                <div class="dash-box">
+                                    <ul class="dash-brd-list"> <!-- 최대 최근 4건 노출 -->
+                                        <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
+                                            
+                                                <span class="round-txt txt-blue-line">이용문의</span>
+                                                
+                                                
+                                            
+                                            <div class="brd-list-tit-box">
+                                                <span class="brd-list-tit">BIO EXPRESS 데이터 업로드 관련 문의 </span>
+                                                <ul class="brd-list-info">
+                                                    <li><span>작성자</span><span>k**** </span></li>
+                                                    <li><span>작성일</span><span>2021-11-02 17:09:57</span></li>
+                                                    <li><span>조회수</span><span>16</span></li>
+                                                </ul>
+                                            </div>
+                                            <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
+                                        </li>
+                                        <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
+                                            
+                                                <span class="round-txt txt-blue-line">이용문의</span>
+                                                
+                                                
+                                            
+                                            <div class="brd-list-tit-box">
+                                                <span class="brd-list-tit">제가 가진 파일과 연결이 되지 않습니다.</span>
+                                                <ul class="brd-list-info">
+                                                    <li><span>작성자</span><span>k****** </span></li>
+                                                    <li><span>작성일</span><span>2021-11-25 13:31:02</span></li>
+                                                    <li><span>조회수</span><span>17</span></li>
+                                                </ul>
+                                            </div>
+                                            <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
+                                        </li>
+                                        <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
+                                            
+                                                <span class="round-txt txt-blue-line">이용문의</span>
+                                                
+                                                
+                                            
+                                            <div class="brd-list-tit-box">
+                                                <span class="brd-list-tit">Bio Express 2.0 BWA-Index 기능 관련 문의</span>
+                                                <ul class="brd-list-info">
+                                                    <li><span>작성자</span><span>k**** </span></li>
+                                                    <li><span>작성일</span><span>2021-12-28 09:01:24</span></li>
+                                                    <li><span>조회수</span><span>44</span></li>
+                                                </ul>
+                                            </div>
+                                            <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
+                                        </li>
+                                        <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
+                                            
+                                                <span class="round-txt txt-blue-line">이용문의</span>
+                                                
+                                                
+                                            
+                                            <div class="brd-list-tit-box">
+                                                <span class="brd-list-tit">GBox를 command line에서 작업할 수 있도록 기능을 추가해주시면 감사하겠습니다.</span>
+                                                <ul class="brd-list-info">
+                                                    <li><span>작성자</span><span>d******* </span></li>
+                                                    <li><span>작성일</span><span>2022-02-16 22:08:18</span></li>
+                                                    <li><span>조회수</span><span>40</span></li>
+                                                </ul>
+                                            </div>
+                                            <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                                <a href="../../templates/adminsso/board/go_qna" class="more">더보기</a>
+                            </div>
+
+                        
+                    </div>        
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+        <!-- Popup Contents :s -->
+        
+        <!-- Popup Contents :e -->
+
+
+        <!-- js -->
+        <script src="../../../js/amcharts/core.js"></script>
+        <script src="../../../js/amcharts/charts.js"></script>
+        <script src="../../../js/amcharts/animated.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script>
+
+        // 회원현황통계 전체회원 가상그래프
+        function drawTotalJoinChart(totalJoinList) {
+                am5.ready(function() {
+                    if (root1) {
+                        root1.container.children.clear();
+                        root1.dispose();
+                    }
+
+                    root1 = am5.Root.new("chartdiv1");
+                    root1.setThemes([
+                        am5themes_Animated.new(root1)
+                    ]);
+
+                    // 차트 생성
+                    chart1 = root1.container.children.push(am5xy.XYChart.new(root1, {
+                        panX: true,
+                        panY: true,
+                        wheelX: "panX",
+                        wheelY: "zoomX",
+                        pinchZoomX: true
+                    }));
+
+                    var cursor = chart1.set("cursor", am5xy.XYCursor.new(root1, {}));
+                    cursor.lineY.set("visible", false);
+
+                    var xRenderer = am5xy.AxisRendererX.new(root1, { minGridDistance: 30 });
+                    xRenderer.labels.template.setAll({
+                        rotation: -90,
+                        centerY: am5.p50,
+                        centerX: am5.p100,
+                        paddingRight: 15
+                    });
+
+                    var xAxis = chart1.xAxes.push(am5xy.CategoryAxis.new(root1, {
+                        maxDeviation: 0.3,
+                        categoryField: "day",
+                        renderer: xRenderer,
+                        tooltip: am5.Tooltip.new(root1, {})
+                    }));
+
+                    var yAxis = chart1.yAxes.push(am5xy.ValueAxis.new(root1, {
+                        maxDeviation: 0.3,
+                        renderer: am5xy.AxisRendererY.new(root1, {})
+                    }));
+
+                    var series = chart1.series.push(am5xy.ColumnSeries.new(root1, {
+                        name: "Series 1",
+                        xAxis: xAxis,
+                        yAxis: yAxis,
+                        valueYField: "totalJoinCount",
+                        sequencedInterpolation: true,
+                        categoryXField: "day",
+                        tooltip: am5.Tooltip.new(root1, {
+                            labelText: "{valueY}"
+                        })
+                    }));
+
+                    series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
+                    series.columns.template.adapters.add("fill", function(fill, target) {
+                        return chart1.get("colors").getIndex(series.columns.indexOf(target));
+                    });
+
+                    series.columns.template.adapters.add("stroke", function(stroke, target) {
+                        return chart1.get("colors").getIndex(series.columns.indexOf(target));
+                    });
+
+                    var data = [];
+                    for (var i = 0; i < totalJoinList.length; i++) {
+                        var d = totalJoinList[i];
+                        var dataObj = {
+                            "day": d.dayUnit,
+                            "totalJoinCount": d.tot
+                        };
+                        data.push(dataObj);
+                    }
+
+                    xAxis.data.setAll(data);
+                    series.data.setAll(data);
+
+                    // 데이터 다운로드 
+                    am5plugins_exporting.Exporting.new(root1, {
+                        menu: am5plugins_exporting.ExportingMenu.new(root1, {
+                            container: document.getElementById("chartdiv1")
+                        }),
+                        dataSource: data,
+                        dataFields: {
+                            day: "날짜",
+                            totalJoinCount: "전체회원(단위:명)"
+                        },
+                        dataFieldsOrder: ["day", "totalJoinCount"]
+                    });
+
+                    series.appear(1000);
+                    chart1.appear(1000, 100);
+                });
+            }
+
+            // 가상 데이터
+            const virtualData = [
+                { dayUnit: "2024-07-20", tot: 100 },
+                { dayUnit: "2024-07-21", tot: 150 },
+                { dayUnit: "2024-07-22", tot: 200 },
+                { dayUnit: "2024-07-23", tot: 250 },
+                { dayUnit: "2024-07-24", tot: 300 },
+                { dayUnit: "2024-07-25", tot: 350 },
+                { dayUnit: "2024-07-26", tot: 400 }
+            ];
+
+            // 차트 그리기
+            drawTotalJoinChart(virtualData);
+
+
+
+
+
+
+
+            // 회원현황통계 가입 및 탈퇴 가상그래프
+            
+            function drawJoinAndWithdrawalChart(joinList, withdrawalList) {
+                am5.ready(function() {
+
+                    if (root2) {
+                        root2.container.children.clear();
+                        root2.dispose();
+                    }
+
+                    root2 = am5.Root.new("chartdiv2");
+                    root2.setThemes([am5themes_Animated.new(root2)]);
+
+                    chart2 = root2.container.children.push(
+                        am5xy.XYChart.new(root2, {
+                            panX: false,
+                            panY: false,
+                            wheelX: "panX",
+                            wheelY: "zoomX",
+                            layout: root2.verticalLayout
+                        })
+                    );
+
+                    chart2.set(
+                        "scrollbarX",
+                        am5.Scrollbar.new(root2, {
+                            orientation: "horizontal"
+                        })
+                    );
+
+                    var data = [];
+                    for (var i = 0; i < joinList.length; i++) {
+                        var joinData = joinList[i];
+                        var withdrawalData = withdrawalList[i];
+                        var dataObj = {
+                            "day": joinData.dayUnit,
+                            "join": joinData.tot,
+                            "withdrawal": withdrawalData.tot
+                        };
+                        data.push(dataObj);
+                    }
+
+                    // 데이터 다운로드 
+                    am5plugins_exporting.Exporting.new(root2, {
+                        menu: am5plugins_exporting.ExportingMenu.new(root2, {
+                            container: document.getElementById("chartdiv2")
+                        }),
+                        dataSource: data,
+                        dataFields: {
+                            day: "날짜",
+                            join: "가입(단위:명)",
+                            withdrawal: "탈퇴(단위:명)"
+                        },
+                        dataFieldsOrder: ["day", "join", "withdrawal"]
+                    });
+
+                    var xAxis = chart2.xAxes.push(
+                        am5xy.CategoryAxis.new(root2, {
+                            categoryField: "day",
+                            renderer: am5xy.AxisRendererX.new(root2, {}),
+                            tooltip: am5.Tooltip.new(root2, {})
+                        })
+                    );
+
+                    xAxis.data.setAll(data);
+
+                    var yAxis = chart2.yAxes.push(
+                        am5xy.ValueAxis.new(root2, {
+                            min: 0,
+                            extraMax: 0.1,
+                            renderer: am5xy.AxisRendererY.new(root2, {})
+                        })
+                    );
+
+                    // 가입
+                    var series1 = chart2.series.push(
+                        am5xy.LineSeries.new(root2, {
+                            xAxis: xAxis,
+                            yAxis: yAxis,
+                            valueYField: "join",
+                            categoryXField: "day",
+                            tooltip: am5.Tooltip.new(root2, {
+                                pointerOrientation: "horizontal",
+                                labelText: "Join : {valueY} {info}"
+                            })
+                        })
+                    );
+
+                    if (data.length < 2) {
+                        series1.bullets.push(function() {
+                            return am5.Bullet.new(root2, {
+                                sprite: am5.Circle.new(root2, {
+                                    radius: 5,
+                                    fill: series1.get("fill")
+                                })
+                            });
+                        });
+                    }
+
+                    series1.strokes.template.setAll({
+                        strokeWidth: 3,
+                        templateField: "strokeSettings"
+                    });
+                    series1.data.setAll(data);
+
+                    // 탈퇴
+                    var series2 = chart2.series.push(
+                        am5xy.LineSeries.new(root2, {
+                            xAxis: xAxis,
+                            yAxis: yAxis,
+                            valueYField: "withdrawal",
+                            categoryXField: "day",
+                            tooltip: am5.Tooltip.new(root2, {
+                                pointerOrientation: "horizontal",
+                                labelText: "Withdrawal : {valueY} {info}"
+                            })
+                        })
+                    );
+
+                    if (data.length < 2) {
+                        series2.bullets.push(function() {
+                            return am5.Bullet.new(root2, {
+                                sprite: am5.Circle.new(root2, {
+                                    radius: 5,
+                                    fill: series2.get("fill")
+                                })
+                            });
+                        });
+                    }
+
+                    series2.strokes.template.setAll({
+                        strokeWidth: 3,
+                        strokeDasharray: [3, 3],
+                        templateField: "strokeSettings"
+                    });
+
+                    series2.data.setAll(data);
+
+                    chart2.set("cursor", am5xy.XYCursor.new(root2, {}));
+                    chart2.appear(1000, 100);
+                    series1.appear();
+
+                });
+            }
+
+            // 가상 데이터
+            const joinVirtualData = [
+                { dayUnit: "2024-07-20", tot: 100 },
+                { dayUnit: "2024-07-21", tot: 150 },
+                { dayUnit: "2024-07-22", tot: 200 },
+                { dayUnit: "2024-07-23", tot: 250 },
+                { dayUnit: "2024-07-24", tot: 300 },
+                { dayUnit: "2024-07-25", tot: 350 },
+                { dayUnit: "2024-07-26", tot: 400 }
+            ];
+
+            const withdrawalVirtualData = [
+                { dayUnit: "2024-07-20", tot: 20 },
+                { dayUnit: "2024-07-21", tot: 30 },
+                { dayUnit: "2024-07-22", tot: 25 },
+                { dayUnit: "2024-07-23", tot: 40 },
+                { dayUnit: "2024-07-24", tot: 35 },
+                { dayUnit: "2024-07-25", tot: 45 },
+                { dayUnit: "2024-07-26", tot: 50 }
+            ];
+
+            // 차트 그리기
+            drawJoinAndWithdrawalChart(joinVirtualData, withdrawalVirtualData);
+        </script>
+    </body>
+</html>

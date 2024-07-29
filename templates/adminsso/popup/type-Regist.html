@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="../../../css/font.css">  
+    <link media="all" rel="stylesheet" href="../../../css/common.css">  
+    <link media="all" rel="stylesheet" href="../../../css/board.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+    <script src="../../../js/jquery-3.7.0.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+    <script src="../../../js/contents/templates/adminsso/new-contents.js"></script>
+    <title>유형 등록 팝업</title>
+</head>
+<body>
+    
+
+        <!-- 유형 등록 팝업 시작 -->
+        <div id="typeRegist" class="popup-panel is-active">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-typeRegist">
+                <div class="popup-header">
+                    <h2>유형 등록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 유형정보 테이블:s -->
+                    <form class="popup-form">
+                        <fieldset>
+                            <div class="formset">
+                                <p>구분</p>
+                                <label for="uNation"></label>
+                                <select name="gradeType" id="gradeType" class="valid" aria-invalid="false">
+                                    <option value="member">회원</option>
+                                    <option value="group">사용자 그룹</option>
+                                    <option value="admin">관리자 그룹</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>등급코드</p>
+                                <label for="gdCode"></label>
+                                <input type="text" id="gdCode" value="">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>등급명</p>
+                                <label for="gdName"></label>
+                                <input type="text" id="gdName" value="일반 회원 19등급">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="formset">
+                                <p>설명</p>
+                                <label for="gdInfo"></label>
+                                <textarea type="text" id="gdInfo" value="유형에 대한 설명입니다."></textarea>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- 유형정보 테이블:e -->
+                </div>
+                <div class="brd-btn-area center">
+                    <div class="btn-list">
+                        <input type="button" value="등록하기" class="btn btn-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 유형 등록 팝업 끝 -->
+
+
+</body>
+</html>

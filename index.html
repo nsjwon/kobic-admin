@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<script src="./js/jquery-3.6.3.min.js"></script>
+	<script src="./js/jquery-3.7.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
 	<title>[KOBIC 통합 포털 관리자 - 작업현황]</title>
@@ -32,6 +32,7 @@
 			// step 5. 엑셀 파일 내보내기 
 			saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), excelHandler.getExcelFileName());
 		}
+
 		$(document).ready(function() { 
 			$("#excelFileExport").click(function(){
 				exportExcel();
@@ -257,16 +258,16 @@
 			<ul>
 				<li>
 					<strong>기준일</strong>
-					<span>2024-07-26</span>
+					<span>2024-07-29</span>
 				</li>
 				<li>
 					<strong>총 작업량</strong>
-					<span>32화면 중 13화면 완료 (공통 페이지 및 미필요 항목 제외)</span>
+					<span>52화면 중 32화면 완료</span>
 				</li>
 				<li>
 					<strong>카테고리 별 작업률</strong>
 					<span>
-						대시보드(1/2), 바이오익스프레스(0/13), 통합인증관리(12/17)
+						바이오익스프레스(1/14), 통합인증관리(31/38)
 					</span>
 				</li>
 				<li>
@@ -304,8 +305,6 @@
 				<th rowspan="2">화면유형</th>
 				<th rowspan="2">화면링크</th>
 				<th rowspan="2">상태</th>
-				<!-- <th rowspan="2">퍼블리싱</th> -->
-				<!-- <th rowspan="2"><a href="https://validator.w3.org/nu/" target="_blank">웹표준</a></th> -->
 			</tr>
 			<tr>
 				<th>세부요구사항ID</th>
@@ -339,7 +338,7 @@
 				<td>KOID-RF-SFR-01701-FN01</td>
 				<td>분석 파이프라인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -347,7 +346,7 @@
 				<td>KOID-RF-SFR-01701-FN02</td>
 				<td>분석 파이프라인 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -355,7 +354,7 @@
 				<td>KOID-RF-SFR-01701-FN03</td>
 				<td>분석 프로그램 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/program/program-List.html" target="_blank">program-List.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-List.html" target="_blank">program-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -363,7 +362,7 @@
 				<td>KOID-RF-SFR-01701-FN04</td>
 				<td>분석 프로그램 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminsso/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -371,7 +370,7 @@
 				<td>KOID-RF-SFR-01701-FN05</td>
 				<td>분석 프로그램 실행 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/program/program-Run-List.html" target="_blank">program-Run-List.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Run-List.html" target="_blank">program-Run-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -379,7 +378,7 @@
 				<td>KOID-RF-SFR-01701-FN06</td>
 				<td>공개 등록 신청 파이프라인 전체 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -387,7 +386,7 @@
 				<td>KOID-RF-SFR-01701-FN07</td>
 				<td>공개 등록 신청 파이프라인 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -395,7 +394,7 @@
 				<td>KOID-RF-SFR-01701-FN08</td>
 				<td>공개 등록 신청 파이프라인 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -403,7 +402,7 @@
 				<td>KOID-RF-SFR-01701-FN09</td>
 				<td>공개 등록 신청 프로그램 전체 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/program/program-Public-List.html" target="_blank">program-Public-List.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Public-List.html" target="_blank">program-Public-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -411,7 +410,7 @@
 				<td>KOID-RF-SFR-01701-FN10</td>
 				<td>공개 등록 신청 프로그램 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminsso/program/program-Public-Detail.html" target="_blank">program-Public-Detail.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Public-Detail.html" target="_blank">program-Public-Detail.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -419,7 +418,7 @@
 				<td>KOID-RF-SFR-01701-FN11</td>
 				<td>공개 등록 신청 프로그램 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminsso/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -427,7 +426,7 @@
 				<td>KOID-RF-SFR-01701-FN12</td>
 				<td>분석 파이프라인 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
-				<td><a href="./templates/adminsso/pipeline/pipeline-Run-Stat.html" target="_blank">pipeline-Run-Stat.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Run-Stat.html" target="_blank">pipeline-Run-Stat.html</a></td>
 				<td class="center"></td>
 			</tr>
 			
@@ -435,7 +434,7 @@
 				<td>KOID-RF-SFR-01701-FN13</td>
 				<td>분석 프로그램 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
-				<td><a href="./templates/adminsso/program/program-Run-Stat.html" target="_blank">program-Run-Stat.html</a></td>
+				<td><a href="./templates/adminbioex/program/program-Run-Stat.html" target="_blank">program-Run-Stat.html</a></td>
 				<td class="center"></td>
 			</tr>
 
@@ -590,7 +589,7 @@
 				<td>사용자 그룹 생성 보류</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>(공통)
-					<!-- <a href="./templates/adminsso/popup/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
+					<!-- <a href="./templates/adminsso/group/confirm-Popup.html" target="_blank">(공통) confirm-Popup.html</a> -->
 				</td>
 				<td class="center">완료</td>
 			</tr>
@@ -679,7 +678,7 @@
 				<td>관리자 권한 설정 이력 관리 </td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/event/event-List.html" target="_blank">event-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
@@ -744,12 +743,12 @@
 
 
 			<tr>
-				<td rowspan="9" colspan="2">기타 요구사항 외</td>
+				<td rowspan="10" colspan="2">기타 요구사항 외</td>
 				<td></td>
 				<td>유형관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/type/type-List.html" target="_blank">type-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -757,9 +756,9 @@
 				<td>유형 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/type/type-Modify.html" target="_blank">type-Modify.html</a> -->
+					<a href="./templates/adminsso/popup/type-Modify.html" target="_blank">type-Modify.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
@@ -767,9 +766,9 @@
 				<td>유형 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/type/type-Regist.html" target="_blank">type-Regist.html</a> -->
+					<a href="./templates/adminsso/popup/type-Regist.html" target="_blank">type-Regist.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -777,7 +776,7 @@
 				<td>등급관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/grade/grade-List.html" target="_blank">grade-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -785,9 +784,9 @@
 				<td>등급 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/grade/grade-Modify.html" target="_blank">grade-Modify.html</a> -->
+					<a href="./templates/adminsso/popup/grade-Modify.html" target="_blank">grade-Modify.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
@@ -795,9 +794,9 @@
 				<td>등급 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/grade/grade-Regist.html" target="_blank">grade-Regist.html</a> -->
+					<a href="./templates/adminsso/popup/grade-Regist.html" target="_blank">grade-Regist.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -805,27 +804,38 @@
 				<td>약관관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/policy/policy-List.html" target="_blank">policy-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td></td>
 				<td>약관 수정</td>
-				<td><span class="state-txt txt-gray">Popup</span></td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/policy/policy-Modify.html" target="_blank">policy-Modify.html</a> -->
+					<a href="./templates/adminsso/policy/policy-Modify.html" target="_blank">policy-Modify.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td></td>
 				<td>약관 등록</td>
-				<td><span class="state-txt txt-gray">Popup</span></td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
-					<!-- <a href="./templates/adminsso/policy/policy-Regist.html" target="_blank">policy-Regist.html</a> -->
+					<a href="./templates/adminsso/policy/policy-Regist.html" target="_blank">policy-Regist.html</a>
 				</td>
-				<td class="center"></td>
+				<td class="center">완료</td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td>이벤트로그 상세</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<a href="./templates/adminsso/event/event-Detail.html" target="_blank">event-Detail.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<!-- <tr id="resultRow">

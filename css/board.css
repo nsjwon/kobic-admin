@@ -42,9 +42,10 @@
 .brd-info .brd-num > li:first-child::after {display: inline-block; content: ''; height:10px; width:1px; background:#cccccc; margin:0 10px;}
 .brd-info .brd-sort {font-size:1.4rem; padding-top:0.4rem; padding-bottom:0.4rem; height:3.2rem;}
 .brd-info .search-tl {display: flex; gap: 6px;}
-.brd-info .search-tl select {height: 38px;}
+.brd-info .search-tl select {height: 3.8rem;}
 .brd-info .search-tl .search-act {background: #43464C; color: #ffffff; border: none; padding: 1.0rem 2.8rem; font-size: 1.4rem;}
 .brd-info .search-tl .search-act:hover {background: #111111; transition: all ease 0.2s 0s;}
+.brd-info .search-tl .search-date span {margin: 0;}
 
 /* [사용자] 게시판 정보 및 검색 */
 .brd-search-info {width:100%; margin-bottom:3.6rem; background: #fafafb; border-radius: 6px; /* border:1px solid #f5f5f5; */ box-sizing: border-box;}
@@ -317,20 +318,24 @@
 .modify_btn:hover {background:#dfdfdf; transition: all ease 0.2s 0s;}
 .modify_btn::before {content:''; display: inline-block; background: url(../images/admin/icon_pencil.svg) no-repeat center center; background-size: contain; width: 12px; height: 11px; margin-right:0.4rem;}
 
-/* 요청현황 상세 */
+/* 요청 현황 상세 */
 .request_info_user {line-height: 1.4; display:flex; border-top:1px solid #dedede; border-bottom:1px solid #dedede; padding:2.0rem 0; margin:2.0rem 0;} 
-.request_info_user dt {font-weight: 600;width: 140px;}
+.request_info_user dt {font-weight: 600; width: 160px;}
 .request_info_user dd > ul {display:flex; flex-direction: row;flex-wrap: wrap; }
 .request_info_user dd > ul > li::after {content: ''; display: inline-block; margin:0 14px; background:#8D96A6; width:1px; height: 12px; }
 .request_info_user dd > ul > li:last-child::after {display: none;}
 .request_info_detail {display: flex; justify-content:space-between; border-bottom:1px solid #dedede; padding:0 0 2.0rem 0; margin:0 0 2.0rem 0;}
 .request_info_detail ul {width:48%;}
-.request_info_detail ul li {margin: 0 0 1.2rem 0; display: flex; line-height: 1.4; align-items: center;}
-.request_info_detail ul li span:first-child {display: inline-block; width:140px; font-weight: 600; margin:0;}
-.request_info_detail ul li span:last-child {display:inline-block; width:calc(100% - 140px); line-height: 28px;} 
-.request_info_detail ul li .status-txt {width:unset !important;}
+.request_info_detail ul li {margin:0 0 1.2rem 0; display: flex; line-height: 1.4; align-items: center;}
+.request_info_detail ul li span {line-height: 28px;}
+.request_info_detail ul li span:first-child {display: inline-block; width:160px; font-weight: 600; margin:0;}
+.request_info_detail ul li span:last-child {display:inline-block; width:calc(100% - 160px);} 
+.request_info_detail ul li .state-txt {width:unset !important; padding: 0rem 1rem !important;}
 
-/* 그룹 정보 상세 */
+.rq_waiting {text-align: right; display: block; font-size:1.4rem; font-weight: 600;}
+
+
+/* 그룹 관리 상세 */
 .group-detail-wrap {position: relative;box-sizing: border-box;/* background: #fdfdfd; border-top: 2px solid #43464C; */}
 .group-detail-top {padding: 2.0rem 0 1.6rem 0.2rem;border-top: 2px solid #343434;/* margin-bottom: 1.6rem; */}
 .group-detail-top .brd-tit {font-size: 2.0rem;margin: 0 0 1.0rem 0;word-wrap: break-word;word-break: keep-all;font-weight: 600;color: #113382;}
@@ -348,6 +353,25 @@
 .my-group-wrap .brd-list-01 tbody tr:hover {background: none;}
 .my-group-wrap .table-box + .brd-btn-area {margin-top:3.2rem;}
 .my-group-wrap .table-box + .brd-btn-area input[type=button] {width:140px;}
+
+
+/* 이벤트로그 상세 */
+.event_info_detail {display: flex; justify-content:space-between; border-bottom:1px solid #dedede; border-top:1px solid #dedede; padding:2.0rem 0 0.8rem 0; margin:2.0rem 0;}
+.event_info_detail ul {width:48%;}
+.event_info_detail ul li {margin:0 0 1.2rem 0; display: flex; line-height: 1.4; align-items: center;}
+.event_info_detail ul li span {line-height: 28px;}
+.event_info_detail ul li span:first-child {display: inline-block; width:180px; font-weight: 600; margin:0;}
+.event_info_detail ul li span:last-child {width:calc(100% - 180px);}
+
+.log_info_tit > dt  {font-size:2.0rem; width:calc(100% - 100px); font-weight: 600; margin:0 0 1.2rem 0;}
+
+/* 통계관리 */
+.amd-chart-search select.brd-sort {margin-right: 8px;}
+.stat-box-wrap {display: flex; align-items: center; gap: 16px;}
+.stat-box-wrap .stat-box {border-radius: 0.4rem; border: 1px solid #dedede; flex: 1; position: relative;}
+.stat-box .am5exporting-icon.am5exporting-align-right {top: 2.4rem; right: 2.4rem;}
+.stat-box .stat-chart-item {width: calc(100% - 7.0rem); margin: 0 3.5rem 3.5rem; height: 400px;}
+.stat-box .h2-tit {padding: 3.6rem 3.6rem 0; font-size: 2rem;}
 
 /* 사용자 게시판 상세 및 등록 및 수정 */
 .sub-brd-wrap .brd-view { border-top: 2px solid #43464C;}
