@@ -192,6 +192,9 @@
                                 <!-- board modify :e-->
                                 <div class="brd-btn-area center">
                                     <div class="btn-list">
+                                        <label for="brdDel" class="hidden">삭제</label>
+                                        <!-- <input type="button" class="btn btn-red popup-button" value="삭제" id="brdDel" onclick="deletePost(18);" data-target="#confirMation"> -->
+                                        <input type="button" class="btn btn-red popup-button" data-target="#confirMation" onclick="setMessage('type06')" value="삭제"> 
 										<label for="brdModify" class="hidden">수정</label>
 										<input type="button" class="btn btn-blue" value="수정">
 										<label for="brdCancel" class="hidden">목록</label>
@@ -230,6 +233,26 @@
 
 
         <!-- Popup Contents :s -->
+
+
+                <!-- 확인메세지 팝업 시작 -->
+                <div id="confirMation" class="popup-panel is-active">
+                    <div class="popup-bg"></div>
+                    <div class="popup-content popup-content-confirMation">
+                        <p class="popup-message">삭제 하시겠습니까?</p>
+                        <div class="popup-body flex-col">
+        
+                        </div>
+                        <div class="brd-btn-area center">
+                            <div class="btn-list">
+                                <input type="button" value="예" class="btn btn-blue">
+                                <input type="button" value="아니요" class="btn btn-gray close-button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 확인메세지 팝업 끝 -->
+
 
         <!-- Popup Contents :e -->
         

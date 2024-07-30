@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="../../../css/font.css">  
+    <link media="all" rel="stylesheet" href="../../../css/common.css">  
+    <link media="all" rel="stylesheet" href="../../../css/board.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
+    <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+    <script src="../../../js/jquery-3.7.0.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+    <script src="../../../js/contents/templates/adminsso/new-contents.js"></script>
+    <title>회원 목록 팝업</title>
+</head>
+<body>
+
+        <!-- 회원 목록 팝업 시작 -->
+        <div id="memberSearch" class="popup-panel is-active">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-memberSearch">
+                <div class="popup-header">
+                    <h2>회원 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 회원정보 테이블:s -->
+                    <div id="stat_lp_members_fragment">
+
+                        <!-- board search : s-->
+                        <div class="search-section">
+                            <div class="search-text">
+                                <label for="searchCate" class="hidden">구분</label>
+                                <select name="searchCate" id="searchCate">
+                                    <option value="all">구분 전체</option>
+                                    <option value="tutorialTitle">제목</option>
+                                    <option value="tutorialContent">내용</option>
+                                    <option value="tutorialRegId">작성자</option>
+                                </select>
+                                <label for="searchWord" class="hidden">검색어</label>
+                                <input type="text" name="searchWord" id="searchWord" class="" placeholder="검색어를 입력하세요." value="">
+                                <label for="searchWordBtn" class="hidden">검색</label>
+                                <input type="button" class="search-act" value="검색" id="searchWordBtn" onclick="getPostList();">
+                            </div>
+                        </div>
+                        <!-- board search : e-->
+
+                        <!-- board info :s -->
+                        <div class="brd-info">
+                            <ul class="brd-num">
+                                <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                            </ul>                
+                            <label for="boardSort" class="hidden">정렬</label>
+                            <div class="search-tl">
+                                <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
+                                    <option value="memberRegDt" selected="selected">최근가입 순</option>
+                                    <option value="memberAuthorCd">등급 순</option>
+                                    <option value="memberNm">이름 순</option>
+                                    <option value="memberId">아이디 순</option>
+                                </select>
+                            </div>
+                        </div>                               
+                        <!-- board info : e-->
+
+                        <div class="table-wrap">
+                            <table class="brd-list-01">
+                                <caption>회원의 선택, 아이디, 이름, 이메일 정보입니다.</caption>
+                                <colgroup>
+                                    <col style="width:20%"> 
+                                    <col style="width:20%"> 
+                                    <col>          
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">아이디</th>
+                                        <th scope="col">이름</th>
+                                        <th scope="col">이메일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">daylee</td> 
+                                        <td id="lpMemberNo" style="display:none;">9603</td>
+                                        <td aria-label="이름" id="lpMemberNm">이다용</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">daylee@kribb.re.kr</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">asdla007</td> 
+                                        <td id="lpMemberNo" style="display:none;">9602</td>
+                                        <td aria-label="이름" id="lpMemberNm">임종엽</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">asdla007@gmail.com</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">robertw_ed</td> 
+                                        <td id="lpMemberNo" style="display:none;">9601</td>
+                                        <td aria-label="이름" id="lpMemberNm">Robert</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">Robert.Whelan@ed.ac.uk</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">dgcha</td> 
+                                        <td id="lpMemberNo" style="display:none;">9600</td>
+                                        <td aria-label="이름" id="lpMemberNm">차동곤</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">gondong.cha@gmail.com</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">seongwonlee</td> 
+                                        <td id="lpMemberNo" style="display:none;">9599</td>
+                                        <td aria-label="이름" id="lpMemberNm">이성원</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">seongwon.lee.16@gmail.com</td>
+                                    </tr>	
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- page:s -->
+                        <div class="pagination">       
+                            <span class="prev-group">
+                                <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
+                                <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
+                            </span>
+                            <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
+                            
+                            <span class="next-group">
+                                <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
+                                <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
+                            </span>             
+                        </div>                  
+                        <!-- page:e -->                 
+                            
+                    </div>
+                    <!-- 회원정보 테이블:e -->
+                </div>
+            </div>
+        </div>
+        <!-- 회원 목록 팝업 끝 -->
+
+
+        <script>
+            // 로그인 현황 통계 > 사이트별 로그인 누적 현황 > 회원 목록 클릭 이벤트 
+            $(document).on("click", "#stat_lp_members_fragment tbody tr", function() {
+                
+                var memberNo = $(this).find("#lpMemberNo").text();
+                var memberNm = $(this).find("#lpMemberNm").text();
+                
+                $(".close-button").click();
+                
+                if ( currentSelectedMemberInput == "top" )  {
+                    $("#selectedMemberTop").text(memberNm);
+                    getMemberAumulativeLoginStatusForSite(memberNo);
+                }
+                else {
+                    $("#selectedMemberBottom").text(memberNm);
+                    $("#selectedMemberNoBottom").val(memberNo);
+                    getMemberLoginStatusForSite(0);
+                }
+                
+            });
+        </script>
+</body>
+</html>

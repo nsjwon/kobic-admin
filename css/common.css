@@ -99,6 +99,7 @@ a {color: inherit; text-decoration: none;  cursor:pointer;}
 .mbtm5 { margin-bottom: 5px !important; }
 .mbtm10 { margin-bottom: 10px !important; }
 .mbtm20 { margin-bottom: 20px !important; }
+.mbtm24 { margin-bottom: 24px !important; }
 .mbtm30 { margin-bottom: 30px !important; }
 .mbtm40 { margin-bottom: 40px !important; }
 .mbtm50 { margin-bottom: 50px !important; }
@@ -123,6 +124,7 @@ a {color: inherit; text-decoration: none;  cursor:pointer;}
 
 .mright0 { margin-right: 0px !important; }
 .mright5 { margin-right: 5px !important; }
+.mright8 { margin-right: 8px !important; }
 .mright10 { margin-right: 10px !important; }
 .mright20 { margin-right: 20px !important; }
 .mright30 { margin-right: 30px !important; }

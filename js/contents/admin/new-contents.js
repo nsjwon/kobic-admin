@@ -79,6 +79,8 @@ $(document).ready(function() {
             message = '요청을 승인 하시겠습니까?';
         } else if (type === 'type05') {
             message = '요청을 보류 하시겠습니까?';
+        } else if (type === 'type06') {
+            message = '약관을 삭제 하시겠습니까?';
         }
 
         const popup = document.querySelector('#confirMation');

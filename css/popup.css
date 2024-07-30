@@ -7,6 +7,7 @@
 .popup-content-userModify,
 .popup-content-groupModify {width: 660px;}
 .popup-content-confirMation {width: 340px;}
+.popup-content-memberSearch {width: 660px;}
 
 .popup-header {margin-bottom: 2.8rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
@@ -45,3 +46,9 @@
 .popup-form fieldset .formset .infoType > em:before {position: absolute; left: 5px; top: 7px; width: 14px; height: 14px; display: block; background: url(../images/admin/icon_info.svg) no-repeat; background-size: cover;}
 
 .popup-form fieldset textarea {flex: 1; margin: 2px; background-color: #ffffff; line-height:2.4rem; width:calc(100% - 114px); height: 8rem; display:inline-block;}
+
+/* 회원목록 */
+#stat_lp_members_fragment {padding: 1px;}
+#memberSearch .search-text {margin-bottom: 2rem; padding: 1px;}
+#memberSearch .search-text .search-act {margin-right: 0;}
+#memberSearch .search-text input[type="text"] {flex: 1;}

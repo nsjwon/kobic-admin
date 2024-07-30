@@ -139,7 +139,7 @@
                             
                             <div class="section-item">
                                 <div class="stat-tit-wrap">
-                                    <h2>회원 현황 통계<span class="fc-gary small-txt">(단위:명)</span></h2>
+                                    <h2>회원 현황 통계</h2>
                                     <div class="amd-chart-search input-date-wrap">
                                         <select name="timeSort" class="brd-sort">
                                             <option value="timeDay">일별</option>
@@ -166,43 +166,214 @@
                                     </div>                                    
                                 </div>
                                 <div class="stat-box-wrap">
-                                    <div class="stat-box">
-                                        <h2 class="h2-tit">전체회원</h2>
-                                        <div class="stat-chart-item" id="chartdiv1"></div>
+                                    <div class="stat-area">
+                                        <h4 class="h4-tit">전체회원<span class="fc-gary small-txt"> (단위:명)</span></h4>
+                                        <div class="stat-box">
+                                            <div class="stat-chart-item" id="chartdiv1"></div>
+                                        </div>
                                     </div>
-                                    <div class="stat-box">
-                                        <h2 class="h2-tit">가입 및 탈퇴</h2>
-                                        <div class="stat-chart-item" id="chartdiv2"></div>
+                                    <div class="stat-area">
+                                        <h4 class="h4-tit">가입 및 탈퇴<span class="fc-gary small-txt"> (단위:명)</span></h4>
+                                        <div class="stat-box">
+                                            <div class="stat-chart-item" id="chartdiv2"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="section-item">
-                                <div class="stat-tit-wrap">
-                                    <h2><span class="fc-gary small-txt">(단위:명)</span></h2>
-                                    <div class="amd-chart-search input-date-wrap">
-                                        <label for="postStartDate" class="hidden">시작일</label>
-                                        <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
-                                        <span>~</span>
-                                        <label for="postEndDate" class="hidden">종료일</label>
-                                        <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
-                                        <label for="searchBtn02" class="hidden">조회</label>
-                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
-                                        <ul class="date-range">
-                                            <li>
-                                                <label for="dateBtn0702" class="hidden">7일</label>
-                                                <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
-                                            </li>
-                                            <li>
-                                                <label for="dateBtn3002" class="hidden">30일</label>
-                                                <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
-                                            </li>
-                                        </ul>
-                                    </div>     
+                                <h2 class="mbtm24 mtop60">로그인 현황 통계</h2>
+
+                                <!-- board tab wrap :s -->
+                                <div class="brd-tab-wrap">
+                                    <ul class="brd-tab-list">
+                                        <li class="focus"><a href="#tab1" class="tab_tit">사이트</a></li>
+                                        <li><a href="#tab2" class="tab_tit">그룹</a></li>
+                                        <li><a href="#tab3" class="tab_tit">사용자</a></li>
+                                    </ul>
                                 </div>
-                                <div class="dash-box">
-                                    <div class="adm-chart-item" id="postChartDiv"></div>
+                                <!-- board tab wrap :e -->
+
+                                <!-- tab_box 탭 묶음 :s -->
+                                <div class="tab_box">
+
+                                    <!-- tab 탭컨텐츠1 :s -->
+                                    <div class="tab_cont" id="tab1" style="display:block;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit">사이트별 로그인 누적 현황<span class="fc-gary small-txt"> (단위:명)</span></h4>
+                                                </div>
+                                                <div class="stat-box">
+                                                    <div class="stat-chart-item" id="chartdiv3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit mbtm0">로그인 현황<span class="fc-gary small-txt"> (단위:건)</span></h4>
+                                                    <div class="amd-chart-search input-date-wrap">
+                                                        <select name="siteList" id="siteList" class="site_list mright8" onchange="getEachSiteLoginStatus(0);">
+                                                            <option value="WEB_BIO">BioExpress 웹사이트</option>
+                                                            <option value="WEB_SSO">통합 사용자 인증 시스템 (SSO) 웹사이트</option>
+                                                            <option value="WEB_KONA">KoNA 웹사이트</option>
+                                                            <option value="WEB_KBDS">KBDS 웹사이트</option>
+                                                            <option value="WEB_KOBIC">국가생명연구자원정보센터(KOBIC) 웹사이트</option>	
+                                                        </select>
+                                                        <label for="postStartDate" class="hidden">시작일</label>
+                                                        <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                                        <span>~</span>
+                                                        <label for="postEndDate" class="hidden">종료일</label>
+                                                        <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
+                                                        <label for="searchBtn02" class="hidden">조회</label>
+                                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
+                                                        <ul class="date-range">
+                                                            <li>
+                                                                <label for="dateBtn0702" class="hidden">7일</label>
+                                                                <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
+                                                            </li>
+                                                            <li>
+                                                                <label for="dateBtn3002" class="hidden">30일</label>
+                                                                <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
+                                                            </li>
+                                                        </ul>
+                                                    </div>     
+                                                </div>
+                                                <div class="dash-box">
+                                                    <div class="adm-chart-item" id="chartdiv4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 탭컨텐츠1 :e -->  
+
+                                    <!-- tab 탭컨텐츠2 :s -->
+                                    <div class="tab_cont" id="tab2" style="display:none;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit">그룹 회원들 사이트별 로그인 누적 현황<span class="fc-gary small-txt"> (단위:명)</span></h4>
+                                                    <div class="amd-chart-search input-date-wrap">
+                                                        <select name="groupListTop" id="groupListTop" class="site_list" onchange="getGroupMembersLoginStatusForSite();">
+                                                            <option value="20220703145816A01" status="admin">KBDS품질관리자그룹</option>
+                                                            <option value="20220703145855A01" status="admin">KBDS등록관리자그룹</option>
+                                                            <option value="20220703145923A01" status="admin">KBDS인체유래물관리자그룹</option>
+                                                            <option value="20220703145945A01" status="admin">KBDS품질담당자그룹</option>
+                                                            <option value="20220703150000A01" status="admin">KBDS등록담당자그룹</option>
+                                                            <option value="20220703150016A01" status="admin">KBDS인체유래물담당자그룹</option>
+                                                            <option value="20220901173754A01" status="admin">KOBIC관리자</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="stat-box">
+                                                    <div class="stat-chart-item" id="chartdiv5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit">로그인 현황<span class="fc-gary small-txt"> (단위:건)</span></h4>
+                                                    <div class="amd-chart-search input-date-wrap">
+                                                        <select name="groupListTop" id="groupListTop" class="site_list" onchange="getGroupMembersLoginStatusForSite();">
+                                                            <option value="20220703145816A01" status="admin">KBDS품질관리자그룹</option>
+                                                            <option value="20220703145855A01" status="admin">KBDS등록관리자그룹</option>
+                                                            <option value="20220703145923A01" status="admin">KBDS인체유래물관리자그룹</option>
+                                                            <option value="20220703145945A01" status="admin">KBDS품질담당자그룹</option>
+                                                            <option value="20220703150000A01" status="admin">KBDS등록담당자그룹</option>
+                                                            <option value="20220703150016A01" status="admin">KBDS인체유래물담당자그룹</option>
+                                                            <option value="20220901173754A01" status="admin">KOBIC관리자</option>
+                                                        </select>
+                                                        <label for="selectedGroupMember" class="hidden">그룹회원 선택</label>
+                                                        <input type="button" class="btn-find-person popup-button" data-target="#memberSearch" value="그룹회원 선택" aria-controls="groupMemeberLp" id="selectedGroupMember"> 
+                                                        <label for="postStartDate" class="hidden">시작일</label>
+                                                        <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                                        <span>~</span>
+                                                        <label for="postEndDate" class="hidden">종료일</label>
+                                                        <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
+                                                        <label for="searchBtn02" class="hidden">조회</label>
+                                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
+                                                        <ul class="date-range">
+                                                            <li>
+                                                                <label for="dateBtn0702" class="hidden">7일</label>
+                                                                <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
+                                                            </li>
+                                                            <li>
+                                                                <label for="dateBtn3002" class="hidden">30일</label>
+                                                                <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
+                                                            </li>
+                                                        </ul>
+                                                    </div>     
+                                                </div>
+                                                <div class="dash-box">
+                                                    <div class="adm-chart-item" id="chartdiv6"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 탭컨텐츠2 :e -->  
+
+                                    <!-- tab 탭컨텐츠3 :s -->
+                                    <div class="tab_cont" id="tab3" style="display:none;"> <!-- 아이디로 구분 / 보여지는 첫번째 탭 내용에 style="display: block;" -->
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit mbtm0">사용자별 로그인 누적 현황<span class="fc-gary small-txt"> (단위:명)</span></h4>
+                                                    <div class="amd-chart-search input-date-wrap">
+                                                        <label for="selectedMemberBottom" class="hidden">사용자 선택</label>
+                                                        <input type="button" class="btn-find-person mright0" value="사용자 선택" aria-controls="memberListLp" id="selectedMemberBottom">
+                                                    </div>   
+                                                </div>
+                                                <div class="stat-box">
+                                                    <div class="stat-chart-item" id="chartdiv7"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="stat-box-wrap">
+                                            <div class="stat-area">
+                                                <div class="stat-tit-wrap">
+                                                    <h4 class="h4-tit mbtm0">로그인 현황<span class="fc-gary small-txt"> (단위:건)</span></h4>
+                                                    <div class="amd-chart-search input-date-wrap">
+                                                        <select name="siteList" id="siteList" class="site_list" onchange="getEachSiteLoginStatus(0);">
+                                                            <option value="WEB_BIO">BioExpress 웹사이트</option>
+                                                            <option value="WEB_SSO">통합 사용자 인증 시스템 (SSO) 웹사이트</option>
+                                                            <option value="WEB_KONA">KoNA 웹사이트</option>
+                                                            <option value="WEB_KBDS">KBDS 웹사이트</option>
+                                                            <option value="WEB_KOBIC">국가생명연구자원정보센터(KOBIC) 웹사이트</option>	
+                                                        </select>
+                                                        <label for="selectedMemberBottom" class="hidden">사용자 선택</label>
+                                                        <input type="button" class="btn-find-person" value="사용자 선택" aria-controls="memberListLp" id="selectedMemberBottom"> 
+                                                        <label for="postStartDate" class="hidden">시작일</label>
+                                                        <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                                        <span>~</span>
+                                                        <label for="postEndDate" class="hidden">종료일</label>
+                                                        <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
+                                                        <label for="searchBtn02" class="hidden">조회</label>
+                                                        <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
+                                                        <ul class="date-range">
+                                                            <li>
+                                                                <label for="dateBtn0702" class="hidden">7일</label>
+                                                                <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
+                                                            </li>
+                                                            <li>
+                                                                <label for="dateBtn3002" class="hidden">30일</label>
+                                                                <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
+                                                            </li>
+                                                        </ul>
+                                                    </div>     
+                                                </div>
+                                                <div class="dash-box">
+                                                    <div class="adm-chart-item" id="chartdiv8"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 탭컨텐츠3 :e -->  
+
+
                                 </div>
+                                <!-- tab_box 탭 묶음 :e --> 
                             </div>
 
                     </div>        
@@ -233,6 +404,128 @@
 
         <!-- Popup Contents :s -->
         
+
+        <!-- 회원 목록 팝업 시작 -->
+        <div id="memberSearch" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-memberSearch">
+                <div class="popup-header">
+                    <h2>회원 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 회원정보 테이블:s -->
+                    <div id="stat_lp_members_fragment">
+
+                        <!-- board search : s-->
+                        <div class="search-section">
+                            <div class="search-text">
+                                <label for="searchCate" class="hidden">구분</label>
+                                <select name="searchCate" id="searchCate">
+                                    <option value="all">구분 전체</option>
+                                    <option value="tutorialTitle">제목</option>
+                                    <option value="tutorialContent">내용</option>
+                                    <option value="tutorialRegId">작성자</option>
+                                </select>
+                                <label for="searchWord" class="hidden">검색어</label>
+                                <input type="text" name="searchWord" id="searchWord" class="" placeholder="검색어를 입력하세요." value="">
+                                <label for="searchWordBtn" class="hidden">검색</label>
+                                <input type="button" class="search-act" value="검색" id="searchWordBtn" onclick="getPostList();">
+                            </div>
+                        </div>
+                        <!-- board search : e-->
+
+                        <!-- board info :s -->
+                        <div class="brd-info">
+                            <ul class="brd-num">
+                                <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                            </ul>                
+                            <label for="boardSort" class="hidden">정렬</label>
+                            <div class="search-tl">
+                                <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
+                                    <option value="memberRegDt" selected="selected">최근가입 순</option>
+                                    <option value="memberAuthorCd">등급 순</option>
+                                    <option value="memberNm">이름 순</option>
+                                    <option value="memberId">아이디 순</option>
+                                </select>
+                            </div>
+                        </div>                               
+                        <!-- board info : e-->
+
+                        <div class="table-wrap">
+                            <table class="brd-list-01">
+                                <caption>회원의 선택, 아이디, 이름, 이메일 정보입니다.</caption>
+                                <colgroup>
+                                    <col style="width:20%"> 
+                                    <col style="width:20%"> 
+                                    <col>          
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">아이디</th>
+                                        <th scope="col">이름</th>
+                                        <th scope="col">이메일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">daylee</td> 
+                                        <td id="lpMemberNo" style="display:none;">9603</td>
+                                        <td aria-label="이름" id="lpMemberNm">이다용</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">daylee@kribb.re.kr</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">asdla007</td> 
+                                        <td id="lpMemberNo" style="display:none;">9602</td>
+                                        <td aria-label="이름" id="lpMemberNm">임종엽</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">asdla007@gmail.com</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">robertw_ed</td> 
+                                        <td id="lpMemberNo" style="display:none;">9601</td>
+                                        <td aria-label="이름" id="lpMemberNm">Robert</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">Robert.Whelan@ed.ac.uk</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">dgcha</td> 
+                                        <td id="lpMemberNo" style="display:none;">9600</td>
+                                        <td aria-label="이름" id="lpMemberNm">차동곤</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">gondong.cha@gmail.com</td>
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="아이디" id="lpMemberId">seongwonlee</td> 
+                                        <td id="lpMemberNo" style="display:none;">9599</td>
+                                        <td aria-label="이름" id="lpMemberNm">이성원</td> 
+                                        <td aria-label="이메일" id="lpMemberEmail">seongwon.lee.16@gmail.com</td>
+                                    </tr>	
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- page:s -->
+                        <div class="pagination">       
+                            <span class="prev-group">
+                                <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
+                                <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
+                            </span>
+                            <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
+                            
+                            <span class="next-group">
+                                <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
+                                <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
+                            </span>             
+                        </div>                  
+                        <!-- page:e -->                 
+                            
+                    </div>
+                    <!-- 회원정보 테이블:e -->
+                </div>
+            </div>
+        </div>
+        <!-- 회원 목록 팝업 끝 -->
+
+
         <!-- Popup Contents :e -->
 
 
@@ -241,7 +534,30 @@
         <script src="../../../js/amcharts/charts.js"></script>
         <script src="../../../js/amcharts/animated.js"></script>
         <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/ssoscript/statistics.js"></script>
         <script>
+            // 로그인 현황 통계 > 사이트별 로그인 누적 현황 > 회원 목록 클릭 이벤트 
+            $(document).on("click", "#stat_lp_members_fragment tbody tr", function() {
+                
+                var memberNo = $(this).find("#lpMemberNo").text();
+                var memberNm = $(this).find("#lpMemberNm").text();
+                
+                $(".close-button").click();
+                
+                if ( currentSelectedMemberInput == "top" )  {
+                    $("#selectedMemberTop").text(memberNm);
+                    getMemberAumulativeLoginStatusForSite(memberNo);
+                }
+                else {
+                    $("#selectedMemberBottom").text(memberNm);
+                    $("#selectedMemberNoBottom").val(memberNo);
+                    getMemberLoginStatusForSite(0);
+                }
+                
+            });
+
+
+
 
         // 회원현황통계 전체회원 가상그래프
         function drawTotalJoinChart(totalJoinList) {
@@ -360,174 +676,180 @@
 
 
 
-            // 회원현황통계 가입 및 탈퇴 가상그래프
-            
-            function drawJoinAndWithdrawalChart(joinList, withdrawalList) {
-                am5.ready(function() {
+        // 회원현황통계 가입 및 탈퇴 가상그래프
+        
+        function drawJoinAndWithdrawalChart(joinList, withdrawalList) {
+            am5.ready(function() {
 
-                    if (root2) {
-                        root2.container.children.clear();
-                        root2.dispose();
-                    }
+                if (root2) {
+                    root2.container.children.clear();
+                    root2.dispose();
+                }
 
-                    root2 = am5.Root.new("chartdiv2");
-                    root2.setThemes([am5themes_Animated.new(root2)]);
+                root2 = am5.Root.new("chartdiv2");
+                root2.setThemes([am5themes_Animated.new(root2)]);
 
-                    chart2 = root2.container.children.push(
-                        am5xy.XYChart.new(root2, {
-                            panX: false,
-                            panY: false,
-                            wheelX: "panX",
-                            wheelY: "zoomX",
-                            layout: root2.verticalLayout
-                        })
-                    );
+                chart2 = root2.container.children.push(
+                    am5xy.XYChart.new(root2, {
+                        panX: false,
+                        panY: false,
+                        wheelX: "panX",
+                        wheelY: "zoomX",
+                        layout: root2.verticalLayout
+                    })
+                );
 
-                    chart2.set(
-                        "scrollbarX",
-                        am5.Scrollbar.new(root2, {
-                            orientation: "horizontal"
-                        })
-                    );
+                chart2.set(
+                    "scrollbarX",
+                    am5.Scrollbar.new(root2, {
+                        orientation: "horizontal"
+                    })
+                );
 
-                    var data = [];
-                    for (var i = 0; i < joinList.length; i++) {
-                        var joinData = joinList[i];
-                        var withdrawalData = withdrawalList[i];
-                        var dataObj = {
-                            "day": joinData.dayUnit,
-                            "join": joinData.tot,
-                            "withdrawal": withdrawalData.tot
-                        };
-                        data.push(dataObj);
-                    }
+                var data = [];
+                for (var i = 0; i < joinList.length; i++) {
+                    var joinData = joinList[i];
+                    var withdrawalData = withdrawalList[i];
+                    var dataObj = {
+                        "day": joinData.dayUnit,
+                        "join": joinData.tot,
+                        "withdrawal": withdrawalData.tot
+                    };
+                    data.push(dataObj);
+                }
 
-                    // 데이터 다운로드 
-                    am5plugins_exporting.Exporting.new(root2, {
-                        menu: am5plugins_exporting.ExportingMenu.new(root2, {
-                            container: document.getElementById("chartdiv2")
-                        }),
-                        dataSource: data,
-                        dataFields: {
-                            day: "날짜",
-                            join: "가입(단위:명)",
-                            withdrawal: "탈퇴(단위:명)"
-                        },
-                        dataFieldsOrder: ["day", "join", "withdrawal"]
-                    });
-
-                    var xAxis = chart2.xAxes.push(
-                        am5xy.CategoryAxis.new(root2, {
-                            categoryField: "day",
-                            renderer: am5xy.AxisRendererX.new(root2, {}),
-                            tooltip: am5.Tooltip.new(root2, {})
-                        })
-                    );
-
-                    xAxis.data.setAll(data);
-
-                    var yAxis = chart2.yAxes.push(
-                        am5xy.ValueAxis.new(root2, {
-                            min: 0,
-                            extraMax: 0.1,
-                            renderer: am5xy.AxisRendererY.new(root2, {})
-                        })
-                    );
-
-                    // 가입
-                    var series1 = chart2.series.push(
-                        am5xy.LineSeries.new(root2, {
-                            xAxis: xAxis,
-                            yAxis: yAxis,
-                            valueYField: "join",
-                            categoryXField: "day",
-                            tooltip: am5.Tooltip.new(root2, {
-                                pointerOrientation: "horizontal",
-                                labelText: "Join : {valueY} {info}"
-                            })
-                        })
-                    );
-
-                    if (data.length < 2) {
-                        series1.bullets.push(function() {
-                            return am5.Bullet.new(root2, {
-                                sprite: am5.Circle.new(root2, {
-                                    radius: 5,
-                                    fill: series1.get("fill")
-                                })
-                            });
-                        });
-                    }
-
-                    series1.strokes.template.setAll({
-                        strokeWidth: 3,
-                        templateField: "strokeSettings"
-                    });
-                    series1.data.setAll(data);
-
-                    // 탈퇴
-                    var series2 = chart2.series.push(
-                        am5xy.LineSeries.new(root2, {
-                            xAxis: xAxis,
-                            yAxis: yAxis,
-                            valueYField: "withdrawal",
-                            categoryXField: "day",
-                            tooltip: am5.Tooltip.new(root2, {
-                                pointerOrientation: "horizontal",
-                                labelText: "Withdrawal : {valueY} {info}"
-                            })
-                        })
-                    );
-
-                    if (data.length < 2) {
-                        series2.bullets.push(function() {
-                            return am5.Bullet.new(root2, {
-                                sprite: am5.Circle.new(root2, {
-                                    radius: 5,
-                                    fill: series2.get("fill")
-                                })
-                            });
-                        });
-                    }
-
-                    series2.strokes.template.setAll({
-                        strokeWidth: 3,
-                        strokeDasharray: [3, 3],
-                        templateField: "strokeSettings"
-                    });
-
-                    series2.data.setAll(data);
-
-                    chart2.set("cursor", am5xy.XYCursor.new(root2, {}));
-                    chart2.appear(1000, 100);
-                    series1.appear();
-
+                // 데이터 다운로드 
+                am5plugins_exporting.Exporting.new(root2, {
+                    menu: am5plugins_exporting.ExportingMenu.new(root2, {
+                        container: document.getElementById("chartdiv2")
+                    }),
+                    dataSource: data,
+                    dataFields: {
+                        day: "날짜",
+                        join: "가입(단위:명)",
+                        withdrawal: "탈퇴(단위:명)"
+                    },
+                    dataFieldsOrder: ["day", "join", "withdrawal"]
                 });
-            }
 
-            // 가상 데이터
-            const joinVirtualData = [
-                { dayUnit: "2024-07-20", tot: 100 },
-                { dayUnit: "2024-07-21", tot: 150 },
-                { dayUnit: "2024-07-22", tot: 200 },
-                { dayUnit: "2024-07-23", tot: 250 },
-                { dayUnit: "2024-07-24", tot: 300 },
-                { dayUnit: "2024-07-25", tot: 350 },
-                { dayUnit: "2024-07-26", tot: 400 }
-            ];
+                var xAxis = chart2.xAxes.push(
+                    am5xy.CategoryAxis.new(root2, {
+                        categoryField: "day",
+                        renderer: am5xy.AxisRendererX.new(root2, {}),
+                        tooltip: am5.Tooltip.new(root2, {})
+                    })
+                );
 
-            const withdrawalVirtualData = [
-                { dayUnit: "2024-07-20", tot: 20 },
-                { dayUnit: "2024-07-21", tot: 30 },
-                { dayUnit: "2024-07-22", tot: 25 },
-                { dayUnit: "2024-07-23", tot: 40 },
-                { dayUnit: "2024-07-24", tot: 35 },
-                { dayUnit: "2024-07-25", tot: 45 },
-                { dayUnit: "2024-07-26", tot: 50 }
-            ];
+                xAxis.data.setAll(data);
 
-            // 차트 그리기
-            drawJoinAndWithdrawalChart(joinVirtualData, withdrawalVirtualData);
+                var yAxis = chart2.yAxes.push(
+                    am5xy.ValueAxis.new(root2, {
+                        min: 0,
+                        extraMax: 0.1,
+                        renderer: am5xy.AxisRendererY.new(root2, {})
+                    })
+                );
+
+                // 가입
+                var series1 = chart2.series.push(
+                    am5xy.LineSeries.new(root2, {
+                        xAxis: xAxis,
+                        yAxis: yAxis,
+                        valueYField: "join",
+                        categoryXField: "day",
+                        tooltip: am5.Tooltip.new(root2, {
+                            pointerOrientation: "horizontal",
+                            labelText: "Join : {valueY} {info}"
+                        })
+                    })
+                );
+
+                if (data.length < 2) {
+                    series1.bullets.push(function() {
+                        return am5.Bullet.new(root2, {
+                            sprite: am5.Circle.new(root2, {
+                                radius: 5,
+                                fill: series1.get("fill")
+                            })
+                        });
+                    });
+                }
+
+                series1.strokes.template.setAll({
+                    strokeWidth: 3,
+                    templateField: "strokeSettings"
+                });
+                series1.data.setAll(data);
+
+                // 탈퇴
+                var series2 = chart2.series.push(
+                    am5xy.LineSeries.new(root2, {
+                        xAxis: xAxis,
+                        yAxis: yAxis,
+                        valueYField: "withdrawal",
+                        categoryXField: "day",
+                        tooltip: am5.Tooltip.new(root2, {
+                            pointerOrientation: "horizontal",
+                            labelText: "Withdrawal : {valueY} {info}"
+                        })
+                    })
+                );
+
+                if (data.length < 2) {
+                    series2.bullets.push(function() {
+                        return am5.Bullet.new(root2, {
+                            sprite: am5.Circle.new(root2, {
+                                radius: 5,
+                                fill: series2.get("fill")
+                            })
+                        });
+                    });
+                }
+
+                series2.strokes.template.setAll({
+                    strokeWidth: 3,
+                    strokeDasharray: [3, 3],
+                    templateField: "strokeSettings"
+                });
+
+                series2.data.setAll(data);
+
+                chart2.set("cursor", am5xy.XYCursor.new(root2, {}));
+                chart2.appear(1000, 100);
+                series1.appear();
+
+            });
+        }
+
+        // 가상 데이터
+        const joinVirtualData = [
+            { dayUnit: "2024-07-20", tot: 100 },
+            { dayUnit: "2024-07-21", tot: 150 },
+            { dayUnit: "2024-07-22", tot: 200 },
+            { dayUnit: "2024-07-23", tot: 250 },
+            { dayUnit: "2024-07-24", tot: 300 },
+            { dayUnit: "2024-07-25", tot: 350 },
+            { dayUnit: "2024-07-26", tot: 400 }
+        ];
+
+        const withdrawalVirtualData = [
+            { dayUnit: "2024-07-20", tot: 20 },
+            { dayUnit: "2024-07-21", tot: 30 },
+            { dayUnit: "2024-07-22", tot: 25 },
+            { dayUnit: "2024-07-23", tot: 40 },
+            { dayUnit: "2024-07-24", tot: 35 },
+            { dayUnit: "2024-07-25", tot: 45 },
+            { dayUnit: "2024-07-26", tot: 50 }
+        ];
+
+        // 차트 그리기
+        drawJoinAndWithdrawalChart(joinVirtualData, withdrawalVirtualData);
+
+
+
+
+
+
         </script>
     </body>
 </html>

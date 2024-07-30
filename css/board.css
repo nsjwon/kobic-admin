@@ -367,11 +367,15 @@
 
 /* 통계관리 */
 .amd-chart-search select.brd-sort {margin-right: 8px;}
-.stat-box-wrap {display: flex; align-items: center; gap: 16px;}
-.stat-box-wrap .stat-box {border-radius: 0.4rem; border: 1px solid #dedede; flex: 1; position: relative;}
+.stat-box-wrap {display: flex; align-items: center; gap: 16px; margin: 2.4rem 0;}
+.stat-box-wrap .stat-area {flex: 1; display: flex; flex-direction: column;}
+.stat-box-wrap .stat-area .h4-tit {margin-bottom: 2.4rem;}
+.stat-box-wrap .stat-area .stat-tit-wrap .h4-tit {margin-bottom: 0;}
+.stat-box-wrap .stat-box {border-radius: 0.4rem; border: 1px solid #dedede; position: relative;}
 .stat-box .am5exporting-icon.am5exporting-align-right {top: 2.4rem; right: 2.4rem;}
-.stat-box .stat-chart-item {width: calc(100% - 7.0rem); margin: 0 3.5rem 3.5rem; height: 400px;}
-.stat-box .h2-tit {padding: 3.6rem 3.6rem 0; font-size: 2rem;}
+.stat-box .stat-chart-item {width: calc(100% - 7.0rem); margin: 3.5rem; height: 400px;}
+.stat-tit-wrap {width: 100%;}
+
 
 /* 사용자 게시판 상세 및 등록 및 수정 */
 .sub-brd-wrap .brd-view { border-top: 2px solid #43464C;}
