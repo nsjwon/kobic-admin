@@ -262,12 +262,12 @@
 				</li>
 				<li>
 					<strong>총 작업량</strong>
-					<span>55화면 중 32화면 완료</span>
+					<span>56화면 중 50화면 완료</span>
 				</li>
 				<li>
 					<strong>카테고리 별 작업률</strong>
 					<span>
-						바이오익스프레스(1/14), 통합인증관리(38/41)
+						바이오익스프레스(12/15), 통합인증관리(38/41)
 					</span>
 				</li>
 				<li>
@@ -324,7 +324,7 @@
 			<tr>
 				<td colspan="6"><strong>Bio-Express 대시보드</strong></td>
 				<td><a href="./templates/admindash/bio-main.html">bio-main.html</a></td>
-				<td></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -332,14 +332,14 @@
 			</tr>
 
 			<tr>
-				<td rowspan="53"><strong>KOBIC 통합 포털 관리자 기능 통합</strong></td>
-				<td rowspan="13">KOID-RF-SFR-01701</td>
-				<td rowspan="13">바이오 익스프레스 관리자 기능 통합</td>
+				<td rowspan="55"><strong>KOBIC 통합 포털 관리자 기능 통합</strong></td>
+				<td rowspan="14">KOID-RF-SFR-01701</td>
+				<td rowspan="14">바이오 익스프레스 관리자 기능 통합</td>
 				<td>KOID-RF-SFR-01701-FN01</td>
 				<td>분석 파이프라인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminbioex/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -347,7 +347,17 @@
 				<td>분석 파이프라인 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td><a href="./templates/adminbioex/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>분석 파이프라인 작업 목록</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Task-List.html" target="_blank">pipeline-Task-List.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
@@ -355,7 +365,7 @@
 				<td>분석 프로그램 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminbioex/program/program-List.html" target="_blank">program-List.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
@@ -363,14 +373,16 @@
 				<td>분석 프로그램 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td><a href="./templates/adminbioex/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
-				<td class="center"></td>
+				<td class="center">완료</td>
 			</tr>
 
 			<tr>
 				<td>KOID-RF-SFR-01701-FN05</td>
 				<td>분석 프로그램 실행 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/program/program-Run-List.html" target="_blank">program-Run-List.html</a></td>
+				<td>
+					<a href="./templates/adminbioex/program/program-Execute-List.html" target="_blank">program-Execute-List.html</a>
+				</td>
 				<td class="center"></td>
 			</tr>
 
@@ -378,23 +390,27 @@
 				<td>KOID-RF-SFR-01701-FN06</td>
 				<td>공개 등록 신청 파이프라인 전체 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a></td>
-				<td class="center"></td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Regist-List.html" target="_blank">pipeline-Regist-List.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN07</td>
 				<td>공개 등록 신청 파이프라인 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
-				<td class="center"></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Regist-Detail.html" target="_blank">pipeline-Regist-Detail.html</a></td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN08</td>
 				<td>공개 등록 신청 파이프라인 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a></td>
+				<td>
+					<!-- <a href="./templates/adminbioex/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a> -->
+				</td>
 				<td class="center"></td>
 			</tr>
 
@@ -402,23 +418,29 @@
 				<td>KOID-RF-SFR-01701-FN09</td>
 				<td>공개 등록 신청 프로그램 전체 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/program/program-Public-List.html" target="_blank">program-Public-List.html</a></td>
-				<td class="center"></td>
+				<td>
+					<a href="./templates/adminbioex/program/program-Regist-List.html" target="_blank">program-Regist-List.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN10</td>
 				<td>공개 등록 신청 프로그램 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminbioex/program/program-Public-Detail.html" target="_blank">program-Public-Detail.html</a></td>
-				<td class="center"></td>
+				<td>
+					<a href="./templates/adminbioex/program/program-Regist-Detail.html" target="_blank">program-Regist-Detail.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN11</td>
 				<td>공개 등록 신청 프로그램 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a></td>
+				<td>
+					<!-- <a href="./templates/adminbioex/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a> -->
+				</td>
 				<td class="center"></td>
 			</tr>
 			
@@ -426,16 +448,20 @@
 				<td>KOID-RF-SFR-01701-FN12</td>
 				<td>분석 파이프라인 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Run-Stat.html" target="_blank">pipeline-Run-Stat.html</a></td>
-				<td class="center"></td>
+				<td>
+					<a href="./templates/adminbioex/statinfo/biostat-View.html" target="_blank">biostat-View.html</a>
+				</td>
+				<td class="center">완료</td>
 			</tr>
 			
 			<tr>
 				<td>KOID-RF-SFR-01701-FN13</td>
 				<td>분석 프로그램 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
-				<td><a href="./templates/adminbioex/program/program-Run-Stat.html" target="_blank">program-Run-Stat.html</a></td>
-				<td class="center"></td>
+				<td>(공통)
+					<!-- <a href="./templates/adminbioex/statinfo/biostat-View.html" target="_blank">biostat-View.html</a> -->
+				</td>
+				<td class="center">완료</td>
 			</tr>
 
 
@@ -450,6 +476,9 @@
 
 
 
+			<tr>
+				<td colspan="7" class="blank"></td>
+			</tr>
 
 
 

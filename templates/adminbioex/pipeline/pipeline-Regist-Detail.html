@@ -14,16 +14,17 @@
         <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
         <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
         <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
-        <meta property="og:url" content="https://www.kobic.re.kr../../../">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
         <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
         <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
         <title>국가생명연구자원정보센터(KOBIC)</title>   	
         <link media="all" rel="stylesheet" href="../../../css/font.css">  
         <link media="all" rel="stylesheet" href="../../../css/common.css">  
-        <link media="all" rel="stylesheet" href="../../../css/board.css"> 
         <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
-        <link media="all" rel="stylesheet" href="../../../css/popup.css"> 
-        <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css"> 
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
         <script src="../../../js/jquery-3.7.0.min.js"></script>
         <script src="../../../js/datepicker/datepicker.min.js"></script>
         <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
@@ -34,7 +35,6 @@
         <script src="../../../js/common/upload_common.js"></script>
         <script src="../../../js/contents/admin/main.js"></script>
         <script src="../../../js/contents/admin/menu.js"></script>
-        <script src="../../../js/contents/admin/new-contents.js"></script>
     </head>
         
     <body class="scroll">
@@ -91,14 +91,14 @@
                                 </li>
                                 <li><a href="#none">팝업관리</a></li>
                                 <li><a href="#none">배너관리</a></li>
-                                <li class="foldable open"><a class="active" href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
                                     <ul class="gnb-depth2">
                                         <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
                                         <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
                                         <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
                                         <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
                                         <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
-                                        <li><a class="on" href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
                                         <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
                                     </ul>
                                 </li>           	          
@@ -111,10 +111,10 @@
                         <span>Bio Express</span>
                         <nav class="admin-gnb-box biomenu">
                             <ul class="gnb-depth1">
-                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li> 
-                                <li><a href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li>
+                                <li><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
                                 <li><a href="../../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
-                                <li><a href="../../../templates/adminbioex/statinfo/biostat-View.html">통계정보</a></li>     	          
+                                <li><a href="../../../templates/adminbioex/statinfo/biostat-View.html">통계정보</a></li>     	                   
                             </ul>
                         </nav>
                     </div>
@@ -125,87 +125,102 @@
                 <div id="admin-content-wrap">
                     <!-- admin content inner :s -->
                     <div class="admin-content-inner">
-					             
-                        <h2 class="h2-tit">약관 관리</h2>    
-                        <h4 class="h4-tit">약관 수정</h4>
-                        <!-- board wrap :s-->
-                         <div class="brd-wrap">
-							<form name="modifyForm" id="modifyForm">
-                                <!-- <p class="essential-item"><span class="txt-point">*</span> 필수입력</p>   -->
-                                <!-- board modify :s-->
-                                <div class="brd-modify">
-                                    <div class="brd-w-inner">
-                                        <div class="brd-w-item">
-                                            <label for="pcTitle" class="brd-w-tit">약관명</label>
-                                            <div class="brd-input-wrap">
-                                                <input type="text" name="pcTitle" id="pcTitle" value="개인정보 수집 및 이용" placeholder="제목을 입력해주세요.">
-                                            </div>  
+					  					  
+	
+                            <!-- pipeline wrap :s -->
+                            <div class="admin-pipeline-wrap">
+                                <h2 class="h2-tit">파이프라인</h2>
+                                <h3 class="h3-tit">공개 등록 신청 관리</h3>
+                                <input type="hidden" id="rawId" value="13fbc106-f86a-40f5-b3d7-f861701e3332">
+                                <div class="pipeline-wrap">
+                                    <div class="pipeline-box" id="pipeline_area">
+                                        <div id="pipeline_div">
+                                            <div id="pipeline_con" class="pArea flowchart-container ui-draggable ui-draggable-handle" style="transform:matrix(1, 0, 0, 1, 0.5, 0.5); left:-2px; top:-2px;"></div>
                                         </div>
-                                        <div class="brd-w-item">
-                                            <label for="pcTitle" class="brd-w-tit">내용</label>
-                                            <div class="brd-input-wrap">
-                                                <div class="brd-edit-area">
-													<input type="hidden" name="videoDesc" id="contentValue">
-													<input type="hidden" name="videoDescText" id="contentValueText">													
-													<!-- RaonKEditor Script:s -->
-													<script src="../../../js/common/editor_common.js"></script>
-													<script src="../../../js/raonkeditor/js/raonkeditor.js"></script>
-													<script>
-														raonkEditorInit_adminVideo("adminEditor_video");
-													</script>
-                                                    <div id="raonk_frame_holderadminEditor_video" style="width:100%; height:600px;  overflow: visible;">
-                                                        <iframe frameborder="0" scrolling="no" id="raonk_frame_adminEditor_video" title="에디터 전체영역" width="100%" height="100%" style="width: 100%; height: 100%;" src="https://www.kobic.re.kr/kobic/js/raonkeditor/pages/editor_release.html"></iframe>
-                                                    </div>
-													<!-- RaonKEditor Script:e -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="brd-w-item">
-											<p class="brd-w-tit">필수동의</p>
-											<div class="brd-input-wrap brd-radio">
-												<input type="hidden" id="pcYnValue" name="pcYnValue" value="Y">
-												<input type="radio" id="pcPublic" name="pcPublic" checked="checked"><label for="pcPublic">Y</label>
-												<input type="radio" id="pcPrivate" name="pcPrivate"><label for="pcPrivate">N</label>
-											</div> 
-                                        </div>
-                                        <div class="brd-w-item">
-                                            <label for="pcTitle" class="brd-w-tit">약관 효력기간</label>
-                                            <div class="brd-input-wrap">
-                                                <input type="number" name="paperYear" id="paperYear" value="730" placeholder="" maxlength="4"> 일
-                                            </div>  
-                                        </div>
-                                        <div class="brd-w-item">
-                                            <label for="pcTitle" class="brd-w-tit">약관 변경 시 <br>공지기간</label>
-                                            <div class="brd-input-wrap">
-                                                <input type="number" name="paperYear" id="paperYear" value="55" placeholder="" maxlength="4"> 일
-                                            </div>  
-                                        </div>
-                                        <div class="brd-w-item">
-                                            <label for="pcTitle" class="brd-w-tit">약관 재동의 <br>요구 공지기간</label>
-                                            <div class="brd-input-wrap">
-                                                <input type="number" name="paperYear" id="paperYear" value="30" placeholder="" maxlength="4"> 일
-                                            </div>  
-                                        </div>
-										
-                                    </div>
-                                </div>     
-                                <!-- board modify :e-->
-                                <div class="brd-btn-area center">
-                                    <div class="btn-list">
-                                        <label for="brdDel" class="hidden">삭제</label>
-                                        <!-- <input type="button" class="btn btn-red popup-button" value="삭제" id="brdDel" onclick="deletePost(18);" data-target="#confirMation"> -->
-                                        <input type="button" class="btn btn-red popup-button" data-target="#confirMation" onclick="setMessage('type06')" value="삭제"> 
-										<label for="brdModify" class="hidden">수정</label>
-										<input type="button" class="btn btn-blue" value="수정">
-										<label for="brdCancel" class="hidden">목록</label>
-										<input type="button" class="btn btn-black" value="목록" id="brdCancel" onclick="javascript:history.back();">
+                                        <div id="loadingBox" style="display: none;"><img alt="loading" src="/bioexpress/img/common/loading_big.gif"></div>
                                     </div>
                                 </div>
-                            </form>
-                        </div> 
-                        <!-- board wrap :e-->	 
-                                    
-                                        
+                                <div class="p_detail_box mtop30">
+                                    <div class="p_detail_title">
+                                        <div>
+                                            <span class="p_detail_id"><span class="bold">ID : </span> <span>BX02-20221004-3560</span></span>
+                                            <p class="p_detail_tit">pipeline_01</p>
+                                        </div>
+                                        <p class="p_detail_text">'pipeline'</p>
+                                    </div>
+                                    <div class="p_detail_g">
+                                        <ul class="p_detail_list">
+                                            <li><span>Workspace Name</span><span>worksapce_01</span></li>
+                                            <li><span>Category Name</span><span>Whole-Genome-Sequencing</span></li>
+                                            <li><span>Execute Count</span><span>1</span></li>
+                                            <li><span>Reference</span><span>kobic.re.kr</span></li>	<!-- '||'로 split 필요... -->
+                                        </ul>
+                                        <ul class="p_detail_list">
+                                            <li><span>Registrant</span><span>ssm1016</span></li>
+                                            <li><span>Version</span><span>1.1</span></li>
+                                            <li><span>Create Date</span><span>2022-10-04</span></li>
+                                            <li><span>Update Date</span><span>2022-10-04</span></li>
+                                        </ul>
+                                        <ul class="p_detail_list">
+                                            <li>
+                                                <span>Regist Status</span>
+                                                
+                                                    
+                                                    <span>request</span>
+                                                    
+                                                    
+                                                
+                                            </li>
+                                            <li>
+                                                <span>Status</span>
+                                                
+                                                   <span class="status_icon2 status_wait">wait</span>
+                                            </li>
+                                            <li><span>Public</span><span class="boolean_icon boolean_false">false</span></li>
+                                        </ul>
+                                    </div>
+                            
+                                    <div class="p_keyword_g">
+                                        <span class="btn_keyword_green">#fastp</span><span class="btn_keyword">#bioinformatics</span>
+                                    </div>
+                                </div>
+                                <!-- board button : s-->
+                                <div class="brd_btn_wrap flex-center">
+                                   
+                                    <label for="Modify" class="Hidden">수정</label>
+                                    <input type="button" value="수정" id="Modify" class="btn btn_gray" onclick="modifyRegistPipeline();">
+                                    <label for="Register" class="Hidden">승인</label>
+                                    <input type="button" value="승인" id="Register" class="btn btn_blue" onclick="confirm();">
+                                    <label for="list" class="Hidden">목록</label> 
+                                    <input type="button" value="목록" id="list" class="btn btn_black" onclick="javascript:history.back();">
+                                </div>
+                                <!-- board button :e -->
+                            
+                            </div>
+                            <!-- pipeline wrap :e -->
+                            
+                            
+                        <!-- 선택한 파이프라인 정보 : s -->
+                        <form name="pipeline_info" id="pipeline_info" method="post">
+                            <input type="hidden" name="raw_id" value="13fbc106-f86a-40f5-b3d7-f861701e3332">
+                            <input type="hidden" name="registrant" value="ssm1016">
+                            <input type="hidden" name="pp_id" value="BX02-20221004-3560">
+                            <input type="hidden" name="pp_name" value="pipeline_01">
+                            <input type="hidden" name="ws_name" value="worksapce_01">
+                        </form>
+                        <!-- 선택한 파이프라인 정보 : e -->
+                            
+                            <script type="text/javascript" src="/bioexpress/new/js/contents/admin/pipeline/pipeline.js"></script>
+                            <script src="/bioexpress/js/plugins/jquery-ui.js"></script><!-- ui기본 - 텍스트스크롤바 사용 -->
+                            <script src="/bioexpress/js/plugins/panzoom.js"></script> <!-- panzoom.js -->
+                            <script src="/bioexpress/new/js/contents/pipeline_full.js"></script>
+                            <link rel="stylesheet" href="/bioexpress/js/jquery.flowchart/jquery.flowchart.css"><!-- jquery.flowchart -->
+                            <script src="/bioexpress/js/jquery.flowchart/jquery.flowchart.js"></script><!-- jquery.flowchart -->
+                            <script src="/bioexpress/js/plugins/html2canvas.js"></script><!-- html2canvas -->
+                            <script src="/bioexpress/js/d3.v3.min.js"></script>
+                            <script src="/bioexpress/new/js/contents/admin/pipeline/pipeline.js"></script>
+                        
+                        
                     </div>
                     <!-- admin content inner :e -->
                     
@@ -231,49 +246,19 @@
         </div>
             
 
-
-        <!-- Popup Contents :s -->
-
-
-                <!-- 확인메세지 팝업 시작 -->
-                <div id="confirMation" class="popup-panel is-active">
-                    <div class="popup-bg"></div>
-                    <div class="popup-content popup-content-confirMation">
-                        <p class="popup-message">삭제 하시겠습니까?</p>
-                        <div class="popup-body flex-col">
-        
-                        </div>
-                        <div class="brd-btn-area center">
-                            <div class="btn-list">
-                                <input type="button" value="예" class="btn btn-blue">
-                                <input type="button" value="아니요" class="btn btn-gray close-button">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 확인메세지 팝업 끝 -->
-
-
-        <!-- Popup Contents :e -->
-        
-
-        
-        <!-- js -->
-        <script src="../../../js/amcharts/core.js"></script>
-        <script src="../../../js/amcharts/charts.js"></script>
-        <script src="../../../js/amcharts/animated.js"></script>
-        <script src="../../../js/contents/admin/main.js"></script>
         <script>
-            $(document).ready(function() {
-                // 테이블 행 클릭 시 상세페이지 연결
-                var linkfile = '../../event/event-Detail.html';
+            
+            // $(document).ready(function() {
+            //     // 테이블 행 클릭 시 상세페이지 연결
+            //     var linkfile = './pipeline-Detail.html';
                 
-                // tr 요소를 클릭했을 때 이벤트 핸들러
-                $('table tr').on('click', function() {
-                    // 공통 URL로 이동합니다.
-                    window.location.href = linkfile;
-                });
-            });
+            //     // tr 요소를 클릭했을 때 이벤트 핸들러
+            //     $('.brd_list_box').on('click', function() {
+            //         // 공통 URL로 이동합니다.
+            //         window.location.href = linkfile;
+            //     });
+            // });
         </script>
+
     </body>
 </html>

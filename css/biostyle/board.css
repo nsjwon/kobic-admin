@@ -2,7 +2,7 @@
 
 /* 게시판 버튼 */
 .brd_btn_wrap {display: flex; justify-content: end; margin:2.8rem 0 0 0;}
-.brd_btn_wrap input {min-width:140px; margin-left:0.4rem;}
+.brd_btn_wrap input {min-width:140px; margin-left:0.4rem; height: auto;}
 
 /* 게시판 검색 영역 */
 .brd_search_box {background:#f7f8fa; border-radius: 8px; padding:20px; margin-bottom:5.0rem; border: 1px solid #eff0f5; box-sizing: border-box;}
@@ -16,16 +16,28 @@
 .brd_search_box.admin input[type=text]{min-width: 220px;}
 
 .brd_list_top {width:100%;display: flex; justify-content: space-between; align-items: center; margin-bottom:1.6rem;}
-.brd_num {display: block; font-size: 1.4rem; text-align: left; margin:0;}
+.brd_num {display: flex; align-items: center; justify-content: flex-start; gap: 8px; font-size: 1.4rem; text-align: left; margin:0;}
 .brd_num span:nth-child(3) {position:relative; padding:0 0 0 16px }
 .brd_num span:nth-child(3)::before {display: block;  position: absolute;  top: 0;  bottom: 0;  left: 6px;  width: 1px;  height: 12px;  margin: auto 0;  background-color: #999999;}
 .brd_sort {display: flex; font-size: 1.4rem; }
 .brd_sort > li {color:#999999; cursor: pointer;}
 .brd_sort > li::after {content:'ㆍ'; display: inline-block; cursor: auto; padding:0 4px; color:#999999}
 .brd_sort > li:last-child:after {display: none;} 
-.brd_sort > .on {color:#000000; font-weight: 500;}
+.brd_sort > .on {color:#000000; font-weight: 600;}
 
 .b_list_count {text-align: center; font-size:2.0rem; margin-bottom:3.6rem;}
+
+/* 게시판 정보 */
+.brd-info {display:flex; justify-content: space-between; align-items: center;}
+.brd-info .brd-num {font-size:1.4rem; display:flex; justify-content: flex-start; align-items: center;}
+.brd-info .brd-num > li:first-child::after {display: inline-block; content: ''; height:10px; width:1px; background:#cccccc; margin:0 10px;}
+.brd-info .brd-sort {font-size:1.4rem; padding-top:0.4rem; padding-bottom:0.4rem; height:3.2rem;}
+.brd-info .search-tl {display: flex; gap: 6px;}
+.brd-info .search-tl select {height: 3.8rem;}
+.brd-info .search-tl .search-act {background: #43464C; color: #ffffff; border: none; padding: 1.0rem 2.8rem; font-size: 1.4rem;}
+.brd-info .search-tl .search-act:hover {background: #111111; transition: all ease 0.2s 0s;}
+.brd-info .search-tl .search-date span {margin: 0;}
+
 
 /* 게시판 목록 */
 .brd_list_type01 {border-top:1px solid #999999; border-bottom:1px solid #dedede;}
@@ -39,7 +51,7 @@
 .brd_list > .b_title_box {width:calc(100% - 220px); margin:0 40px 0 0;}
 .brd_list > .b_title_box .b_tag {display: flex; justify-content: flex-start; flex-wrap: wrap; margin:0.6rem 0 0.4rem 0;}
 .brd_list > .b_title_box .b_tag li {background: #F5F6F8; color:#666666; padding:0.6rem 1.2rem; border-radius: 4px; text-align: center; font-size:1.2rem; margin:0 0.4rem 0.4rem 0}
-.brd_list > .b_title_box .b_tit {display: block; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-size:1.8rem; font-weight: 500; margin:0 0 1.0rem 0; line-height: 2.6rem; cursor: pointer;}
+.brd_list > .b_title_box .b_tit {display: block; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-size:1.8rem; font-weight: 600; margin:0 0 1.0rem 0; line-height: 2.6rem; cursor: pointer;}
 .brd_list > .b_title_box .b_tit a { display:block;}
 .brd_list > .b_title_box .b_info {display: flex; justify-content: flex-start; font-size:1.4rem; flex-wrap: wrap;}
 .brd_list > .b_title_box .b_info li {color:#666666; position: relative; padding-right:10px; margin-right:10px; margin-bottom:0.6rem;}
@@ -70,6 +82,7 @@
 
 .brd_none {border-top:1px solid #dedede; border-bottom:1px solid #dedede; text-align: center; padding:20.0rem 0;}
 .admin-contain-inner .brd_none {border-top:1px solid #dedede; border-bottom:1px solid #dedede; text-align: center; padding:5.4rem 0 !important;}
+.admin-content-inner .brd_none {border-top:1px solid #dedede; border-bottom:1px solid #dedede; text-align: center; padding:5.4rem 0 !important;}
 .wrokspace_none {border-top:none; border-bottom:1px solid #dedede; text-align: center;  padding:20.0rem 0;}
 .wrokspace_none > button {text-align: center; padding:0.8rem 1.8rem; border-radius: 4px;}
 .wrokspace_none > button > span {vertical-align: middle;}
@@ -78,6 +91,7 @@
 .b_tit .p_id {font-size: 1.4rem;border-radius: 4px; margin:0 0.8rem 0 0; display: inline-block; border: 1px solid #0054b7;padding: 0 1.0rem;;color: #0054b7;}
 .brd_icon_list {display: flex; align-items: center;}
 .brd_icon_list li {margin-left:1.2rem}
+.brd_icon_list li img {width: 16px;}
 
 .p_url_g {display: flex; align-items: center;}
 .p_url_g img {margin-right: 0.8rem;}

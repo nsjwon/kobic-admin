@@ -93,6 +93,15 @@
                                 <li><a href="#none">팝업관리</a></li>
                                 <li><a href="#none">배너관리</a></li>
                                 <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <!-- <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminsso/member/go_member_list" target="_blank">회원관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_all_group_list" target="_blank">그룹관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_type_management_list" target="_blank">유형관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_grade_management_list" target="_blank">등급관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_statistics" target="_blank">통계관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_policy_management_list" target="_blank">약관관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_action_log_list" target="_blank">이벤트 로그</a></li>
+                                    </ul> -->
                                     <ul class="gnb-depth2">
                                         <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
                                         <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
@@ -134,12 +143,12 @@
                             <!-- 2depth list : s-->
                             <div class="admin_2depth">
                                 <ul class="depth_list">
-                                    <li class="m_on">
+                                    <li>
                                         <a href="./program-List.html" class="depth_tit">
                                             <span>프로그램 목록</span>
                                         </a>
                                     </li>                                    
-                                    <li>
+                                    <li class="m_on">
                                         <a href="./program-Regist-List.html" class="depth_tit">
                                             <span>공개 등록 신청 프로그램 목록</span>
                                         </a>
@@ -182,226 +191,296 @@
                                 <!-- board list :s-->
                                 <div class="brd_list_type01">
                                     <div class="brd_list">
-                                        <input type="hidden" id="programId" value="0fbd5ac7-3db1-4831-a54b-0c5cebd3052a">			             
-                                        <!--
+                                        <input type="hidden" id="registProgramId" value="15c277df-af9f-4994-a9f2-b3f8b20e0202">
+                                        <!--  
                                         <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">760</span>
-                                                                                                          
+                                        -->
+                                        <span class="b_num">92</span>
                                         <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240612-0760</span><span>Clustering</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1.0.0</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>bigdata</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-12</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="kobic.re.kr/bioexpress" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="f110c914-6efa-4e09-843c-5d5c998a2326">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">759</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240612-0759</span><span>Predict</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1.0.0</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>bigdata</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-12</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="https://github.com/TencentAILabHealthcare/scBERT" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="b199d5ce-f713-4d3d-bb14-c53068e97382">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">758</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240611-0759</span><span>file</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>cluster</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-11</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="1" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="452527cf-0f41-41c6-813a-1532c0a8d601">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">757</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240611-0758</span><span>Fine-tuning</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1.0.0</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>bigdata</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-11</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="https://github.com/TencentAILabHealthcare/scBERT/releases/tag/v1.0.0" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="534ae954-1f0d-4b75-93d1-6c5ad445bfe6">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">756</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240611-0756</span><span>Pre-training</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1.0.0</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>bigdata</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-11</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="https://github.com/TencentAILabHealthcare/scBERT/tree/master" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="cd5a0273-178d-404b-9bc6-d4d85eb280fe">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">755</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240610-0755</span><span>Preprocess</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1.0.0</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>cluster</span></li>
-                                                <li><span>Registed Date</span><span>2024-06-10</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="https://github.com/TencentAILabHealthcare/scBERT" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="94cd36cf-50cd-4c37-b52c-f587355e0af0">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">754</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240509-0754</span><span>Star2_index</span></div>
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20211118-0238</span><span>Embedding</span></div>
                                             <ul class="b_info">
                                                 <li><span>Registrant</span><span>bioex</span></li>
-                                                <li><span>Version</span><span>1.0</span></li>
-                                                <li><span>Public</span><span>true</span></li>
+                                                <li><span>Version</span><span>0.1</span></li>
                                                 <li><span>Environment</span><span>cluster</span></li>
-                                                <li><span>Registed Date</span><span>2024-05-09</span></li>
-                                            </ul>
-                                        </div>
-                                        <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
-                                            <li><a href="./program-Detail.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="brd_list">
-                                        <input type="hidden" id="programId" value="b3630244-8dc2-49cd-9df2-c4ccbe88c8a3">			             
-                                        <!--
-                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">753</span>
-                                                                                                          
-                                        <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240509-0753</span><span>hailGWAS</span></div>
-                                            <ul class="b_info">
-                                                <li><span>Registrant</span><span>NA</span></li>
-                                                <li><span>Version</span><span>1</span></li>
-                                                <li><span>Public</span><span>false</span></li>
-                                                <li><span>Environment</span><span>cluster</span></li>
-                                                <li><span>Registed Date</span><span>2024-05-09</span></li>
+                                                <li><span>Registed Date</span><span>2021-11-18</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
                                             </ul>
                                         </div>
                                         <ul class="brd_icon_list">
                                             <li><img src="../../../images/bioimg/common/language/python.png" alt="python"></li>
-                                            <li><a href="./program-Detail.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                            <li><a href="https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
                                         </ul>
                                     </div>
                                     <div class="brd_list">
-                                        <input type="hidden" id="programId" value="2af3b104-ef54-4b26-817b-22b8996c60b4">			             
-                                        <!--
+                                        <input type="hidden" id="registProgramId" value="162c0885-18fd-45e6-bc6f-ae046dfb670f">
+                                        <!--  
                                         <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">752</span>
-                                                                                                          
+                                        -->
+                                        <span class="b_num">91</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20220921-0446</span><span>fastp</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>hysung</span></li>
+                                                <li><span>Version</span><span>0.20.0</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2022-09-21</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="http://github.com/OpenGene/fastp" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="218db044-cb11-4fb3-9c6f-17b525089b4c">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">90</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20211008-0110</span><span>Cellranger</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Version</span><span>0.1</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2021-10-08</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/tutorial_ct" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="2261c8bf-c791-4ba0-aa7f-307e6256a7fb">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">89</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20240506-0726</span><span>Bowtie2</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Version</span><span>2.4.5</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2024-05-06</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="22bd1c44-05a6-4ae8-b903-a7f9b8b8d666">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">88</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20211014-0135</span><span>DEG_edgeR</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>cogate</span></li>
+                                                <li><span>Version</span><span>1</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2021-10-14</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/python.png" alt="python"></li>
+                                            <li><a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="22f7172c-a7a5-456d-a90e-db40c7a8c975">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">87</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20220921-0448</span><span>fastp</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>ssm1016</span></li>
+                                                <li><span>Version</span><span>0.20.0</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2022-09-21</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="http://github.com/OpenGene/fastp," target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="238bf652-0002-4a58-9c1a-386bb372595f">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">86</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20220915-0441</span><span>fastp</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>ssm1016</span></li>
+                                                <li><span>Version</span><span>0.20.0</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2022-09-15</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="http://github.com/OpenGene/fastp," target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="2af3b104-ef54-4b26-817b-22b8996c60b4">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">85</span>
                                         <div class="b_title_box">
                                             <div class="b_tit"><span class="p_id">ID : BX03-20240509-0752</span><span>fgsea_network</span></div>
                                             <ul class="b_info">
                                                 <li><span>Registrant</span><span>bioex</span></li>
                                                 <li><span>Version</span><span>1.0</span></li>
-                                                <li><span>Public</span><span>true</span></li>
                                                 <li><span>Environment</span><span>cluster</span></li>
                                                 <li><span>Registed Date</span><span>2024-05-09</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
                                             </ul>
                                         </div>
                                         <ul class="brd_icon_list">
                                             <li><img src="../../../images/bioimg/common/language/rstudio.png" alt="r"></li>
-                                            <li><a href="./program-Detail.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                            <li><a href="https://bioconductor.org/packages/release/bioc/html/fgsea.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
                                         </ul>
                                     </div>
                                     <div class="brd_list">
-                                        <input type="hidden" id="programId" value="e2a4c019-082f-4698-b2be-0e826ccc87cc">			             
-                                        <!--
+                                        <input type="hidden" id="registProgramId" value="2e36738c-2be0-49ec-8e61-5e65ab949a5b">
+                                        <!--  
                                         <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
-                                        -->	 			            
-                                        <span class="b_num">751</span>
-                                                                                                          
+                                        -->
+                                        <span class="b_num">84</span>
                                         <div class="b_title_box">
-                                            <div class="b_tit"><span class="p_id">ID : BX03-20240509-0751</span><span>fgsea_enrichment</span></div>
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20240507-0728</span><span>Homer_makeUCSC</span></div>
                                             <ul class="b_info">
                                                 <li><span>Registrant</span><span>bioex</span></li>
-                                                <li><span>Version</span><span>1.0</span></li>
-                                                <li><span>Public</span><span>true</span></li>
+                                                <li><span>Version</span><span>4.9.1</span></li>
                                                 <li><span>Environment</span><span>cluster</span></li>
-                                                <li><span>Registed Date</span><span>2024-05-09</span></li>
+                                                <li><span>Registed Date</span><span>2024-05-07</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
                                             </ul>
                                         </div>
                                         <ul class="brd_icon_list">
-                                            <li><img src="../../../images/bioimg/common/language/rstudio.png" alt="r"></li>
-                                            <li><a href="./program-Detail.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="http://homer.ucsd.edu/homer/ngs/annotation.html" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
                                         </ul>
                                     </div>
-                                </div>   
+                                    <div class="brd_list">
+                                        <input type="hidden" id="registProgramId" value="301d015d-fde7-4f88-aae1-8b04c413fd09">
+                                        <!--  
+                                        <span class="b_num" th:text="${programStat.count + page_info.startRow}">1</span>
+                                        -->
+                                        <span class="b_num">83</span>
+                                        <div class="b_title_box">
+                                            <div class="b_tit"><span class="p_id">ID : BX03-20220919-0445</span><span>fastp</span></div>
+                                            <ul class="b_info">
+                                                <li><span>Registrant</span><span>hysung</span></li>
+                                                <li><span>Version</span><span>0.20.0</span></li>
+                                                <li><span>Environment</span><span>cluster</span></li>
+                                                <li><span>Registed Date</span><span>2022-09-19</span></li>
+                                                <li>
+                                                    <span>Registed Status</span>
+                                                    
+                                                        
+                                                        <span>request</span>
+                                                        
+                                                        
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="brd_icon_list">
+                                            <li><img src="../../../images/bioimg/common/language/bash.png" alt="bash"></li>
+                                            <li><a href="http://github.com/OpenGene/fastp" target="_blank"><img src="../../../images/bioimg/content/link.png" alt="link"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <!-- board list :e-->
                                 
                             
@@ -453,7 +532,7 @@
             </main>
             <!-- admin container :e -->
         </div>
-            
+                        
 
 
         
@@ -461,7 +540,7 @@
             
             $(document).ready(function() {
                 // 테이블 행 클릭 시 상세페이지 연결
-                var linkfile = './program-Detail.html';
+                var linkfile = './program-Regist-Detail.html';
                 
                 // tr 요소를 클릭했을 때 이벤트 핸들러
                 $('.brd_list').on('click', function() {
@@ -470,6 +549,7 @@
                 });
             });
         </script>
+
 
 
     </body>

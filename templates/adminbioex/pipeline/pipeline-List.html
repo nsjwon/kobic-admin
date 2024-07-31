@@ -1,0 +1,528 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css"> 
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <!-- <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminsso/member/go_member_list" target="_blank">회원관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_all_group_list" target="_blank">그룹관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_type_management_list" target="_blank">유형관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_grade_management_list" target="_blank">등급관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_statistics" target="_blank">통계관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_policy_management_list" target="_blank">약관관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_action_log_list" target="_blank">이벤트 로그</a></li>
+                                    </ul> -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li>
+                                <li><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../../templates/adminbioex/statinfo/biostat-View.html">통계정보</a></li>     	                   
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+					  
+	
+		    
+                        <!-- pipeline wrap :s -->
+                        <div class="admin-pipeline-wrap">
+                            <h2 class="h2-tit">파이프라인</h2>
+                            <!-- 2depth list : s-->
+                            <div class="admin_2depth">
+                                <ul class="depth_list">
+                                    <li class="m_on">
+                                        <a href="./pipeline-List.html" class="depth_tit">
+                                            <span>파이프라인 목록</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="./pipeline-Regist-List.html" class="depth_tit">
+                                            <span>공개 등록 신청 파이프라인 목록</span>
+                                        </a>
+                                    </li>                                
+                                    <li>
+                                        <a href="./pipeline-Task-List.html" class="depth_tit">
+                                            <span>작업 목록</span>
+                                        </a>
+                                    </li>    
+                                </ul>
+                            </div>
+                            <!-- 2depth list :e -->
+                    
+                            <!-- board list search :s -->
+                <!-- 	        <div class="brd_search_box mbtm30"> -->
+                <!-- 	            <div class="brd_search"> -->
+                <!-- 	                <label for="searchCate" class="Hidden">구분</label> -->
+                <!-- 	                <select name="searchCate" id="searchCate"> -->
+                <!-- 	                    <option>Total</option> -->
+                <!-- 	                    <option>Title</option> -->
+                <!-- 	                    <option>Description</option> -->
+                <!-- 	                </select> -->
+                <!-- 	                <label for="searchWord" class="Hidden">search</label> -->
+                <!-- 	                <input type="text" name="searchWord" id="searchWord" class="" placeholder="Enter your search word" /> -->
+                <!-- 	                <label for="searchWordBtn" class="Hidden">search</label> -->
+                <!-- 	                <input type="button" class="search_activate" value="SEARCH" id="searchWordBtn" /> -->
+                <!-- 	            </div> -->
+                <!-- 	        </div> -->
+                            <!-- board list search :e -->
+                            <div id="pipeline_fragment">
+                                <!-- <div class="admin_info_bg">
+                                    <ul>
+                                        <li> There are <span class="bold fc_orange"> a total <span class="bold fc_orange">4,641</span> </span>Pipelines registered in Bio-Express.</li>
+                                        
+                                    </ul>
+                                </div> -->
+                        
+                                
+                                <!-- board list count & sort :s -->
+                                <div class="brd_list_top">
+
+
+                                    <!-- board info :s -->
+                                    <div class="brd-info">
+                                        <ul class="brd-num">
+                                            <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                            <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                                        </ul> 
+                                    </div>
+                                    <!-- board info :e -->
+
+
+                                    <!-- <ul class="brd_num">
+                                        <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                        <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                                    </ul> -->
+                                    <!-- pipeline search : s-->
+                                    <div class="brd_search_box admin">
+                                        <label for="category" class="Hidden">구분</label>
+                                        <label for="search" class="Hidden">검색어</label>
+                                        <input type="text" name="pipelineSearch" id="pipelineSearch" class="" placeholder="검색어를 입력하세요." value="">
+                                        
+                                        <label for="searchWordBtn" class="Hidden">검색</label>
+                                        <input type="button" class="search_activate" value="검색" id="searchWordBtn" onclick="pipelinePaging(1);">
+                                        
+                                        <label for="sorting" class="Hidden">정렬</label>
+                                        <select class="searchAlign" name="pipelineSorting" id="pipelineSorting" onchange="pipelinePaging(1);">
+                                            <option value="createDate_desc">최신 순</option>
+                                            <option value="pipelineName_desc">이름 순</option>
+                                        </select>
+                                    </div> 
+                                    <!-- pipeline search : e-->
+                                    
+                                </div>
+                                <!-- board list count & sort :e -->
+                        
+                                <!-- borad list :s -->
+                                <div class="brd_list_type02">
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="dd5e53a4-db23-4fa0-8ca8-03207dba03da">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">movepi</div>
+                                            <div class="pp_text">21</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>NA</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>NA</span></li>
+                                                <li><span>Create Date</span><span>NA</span></li>
+                                                <li><span>Update Date</span><span>2022-10-03</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Single-Cell-RNA-Sequencing-Pipeline</span><span class="btn_keyword">#1</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="2c99b77e-99bb-423a-ad85-78eb2aaf5ea2">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">WGS-instance-pipeline-01</div>
+                                            <div class="pp_text">WGS-instance-pipeline-01</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>test_workspace</span></li>
+                                                <li><span>Create Date</span><span>2024-07-30</span></li>
+                                                <li><span>Update Date</span><span>2024-07-30</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="2805558e-d542-492a-9335-6542b46cd0bc">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">Test</div>
+                                            <div class="pp_text">Test</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>SBaby</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>test</span></li>
+                                                <li><span>Create Date</span><span>2024-07-21</span></li>
+                                                <li><span>Update Date</span><span>2024-07-21</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Test</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="a5a37547-6dc2-46ab-84ec-c79b06d8ab26">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">testpipe</div>
+                                            <div class="pp_text">test</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>nuwan</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>test</span></li>
+                                                <li><span>Create Date</span><span>2024-07-19</span></li>
+                                                <li><span>Update Date</span><span>2024-07-20</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#none</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="1d4dca3d-8c44-463c-bc0d-c978a19ed927">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_wgs_240716_mac</div>
+                                            <div class="pp_text">The whole-genome-sequencing pipeline is a modular pipeline for processing WGS data. This pipeline takes a fastq file as input and provides haplotype call results and annotations and visualizations based on GATK pipeline. 
+                First, raw read data with well-calibrated base error estimates in fastq format are mapped to the reference genome. The BWA mapping application is used to map reads to the human genome reference, allowing for two mismatches in 30-base seeds, and generate a technology-independent SAM/BAM reference file format. Next, duplicate fragments are marked and eliminated with Picard(http://picard.sourceforge.net), mapping quality is assessed and low-quality mapped reads are filtered, and paired read information is evaluated to ensure that all mate-pair information is in sync between each read. We then refine the initial alignments by local realignment and identify suspicious regions. Using this information as a covariate along with other technical covariates and known sites of variation, the GATK base quality score recalibration (BQSR) is carried out. Call germline SNPs and indels via local re-assembly of haplotypes using the recalibrated and realigned BAM files. Finally, we provide somalier, a tool to quickly assess relevance from sequencing data in BAM, CRAM or VCF format.
+                </div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>kobic_202407</span></li>
+                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="d683e94a-553f-46db-80f6-8ed3085336a2">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_wgs_01</div>
+                                            <div class="pp_text">The whole-genome-sequencing pipeline is a modular pipeline for processing WGS data. This pipeline takes a fastq file as input and provides haplotype call results and annotations and visualizations based on GATK pipeline. 
+                First, raw read data with well-calibrated base error estimates in fastq format are mapped to the reference genome. The BWA mapping application is used to map reads to the human genome reference, allowing for two mismatches in 30-base seeds, and generate a technology-independent SAM/BAM reference file format. Next, duplicate fragments are marked and eliminated with Picard(http://picard.sourceforge.net), mapping quality is assessed and low-quality mapped reads are filtered, and paired read information is evaluated to ensure that all mate-pair information is in sync between each read. We then refine the initial alignments by local realignment and identify suspicious regions. Using this information as a covariate along with other technical covariates and known sites of variation, the GATK base quality score recalibration (BQSR) is carried out. Call germline SNPs and indels via local re-assembly of haplotypes using the recalibrated and realigned BAM files. Finally, we provide somalier, a tool to quickly assess relevance from sequencing data in BAM, CRAM or VCF format.
+                </div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>test_240716</span></li>
+                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="6946361c-01ef-40d9-a63a-affae5640107">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_scrna</div>
+                                            <div class="pp_text">Bio-express's Single-cell-RNA-Sequencing-Pipeline is an extensible toolkit for analyzing single-cell gene expression data using the Scanpy pipeline. It includes methods for preprocessing, visualization, clustering, differential expression testing. Its Python-based implementation efficiently deals with data sets of more than one million cells. we present ANNDATA, a generic class for handling annotated data matrices. 
+                This pipeline features
+                1) We regress out confounding variables, normalize, and identify highly variable genes. 2) TSNE and graph-drawing (Fruchterman–Reingold) visualizations show cell-type annotations obtained by comparisons with bulk expression. 3) Cells are clustered and plotted using the Louvain algorithm. It also supports clustering using various algorithms. 4) Ranking the differentially expressed genes in clusters identifies marker genes that match the bulk label</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>test_240716</span></li>
+                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                <li><span>Update Date</span><span>2024-07-17</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Single-cell RNA sequencing</span><span class="btn_keyword">#Next-generation sequencing</span><span class="btn_keyword_gray">#Bioinformatics</span><span class="btn_keyword_blue">#Single-cell genomics</span><span class="btn_keyword_red">#Human Cell Atlas</span><span class="btn_keyword_green">#Cell_Biology</span><span class="btn_keyword">#Genomics</span><span class="btn_keyword_gray">#transcriptome</span><span class="btn_keyword_blue">#Biotechnology</span><span class="btn_keyword_red">#heterogeneity</span><span class="btn_keyword_green">#Multiomics</span><span class="btn_keyword">#scRNA-seq</span><span class="btn_keyword_gray">#scATAC-seq</span><span class="btn_keyword_blue">#Epigenetics</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="b16a8b74-affa-49e0-9d84-b663fb3f0d18">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_scrna_240715</div>
+                                            <div class="pp_text">Bio-express's Single-cell-RNA-Sequencing-Pipeline is an extensible toolkit for analyzing single-cell gene expression data using the Scanpy pipeline. It includes methods for preprocessing, visualization, clustering, differential expression testing. Its Python-based implementation efficiently deals with data sets of more than one million cells. we present ANNDATA, a generic class for handling annotated data matrices. 
+                This pipeline features
+                1) We regress out confounding variables, normalize, and identify highly variable genes. 2) TSNE and graph-drawing (Fruchterman–Reingold) visualizations show cell-type annotations obtained by comparisons with bulk expression. 3) Cells are clustered and plotted using the Louvain algorithm. It also supports clustering using various algorithms. 4) Ranking the differentially expressed genes in clusters identifies marker genes that match the bulk label</div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>kobic_202407</span></li>
+                                                <li><span>Create Date</span><span>2024-07-15</span></li>
+                                                <li><span>Update Date</span><span>2024-07-15</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Single-cell RNA sequencing</span><span class="btn_keyword">#Next-generation sequencing</span><span class="btn_keyword_gray">#Bioinformatics</span><span class="btn_keyword_blue">#Single-cell genomics</span><span class="btn_keyword_red">#Human Cell Atlas</span><span class="btn_keyword_green">#Cell_Biology</span><span class="btn_keyword">#Genomics</span><span class="btn_keyword_gray">#transcriptome</span><span class="btn_keyword_blue">#Biotechnology</span><span class="btn_keyword_red">#heterogeneity</span><span class="btn_keyword_green">#Multiomics</span><span class="btn_keyword">#scRNA-seq</span><span class="btn_keyword_gray">#scATAC-seq</span><span class="btn_keyword_blue">#Epigenetics</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="8498ab7f-5e41-4b2d-9de6-dd496b3916ef">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_wgs_240715_03</div>
+                                            <div class="pp_text">The whole-genome-sequencing pipeline is a modular pipeline for processing WGS data. This pipeline takes a fastq file as input and provides haplotype call results and annotations and visualizations based on GATK pipeline. 
+                First, raw read data with well-calibrated base error estimates in fastq format are mapped to the reference genome. The BWA mapping application is used to map reads to the human genome reference, allowing for two mismatches in 30-base seeds, and generate a technology-independent SAM/BAM reference file format. Next, duplicate fragments are marked and eliminated with Picard(http://picard.sourceforge.net), mapping quality is assessed and low-quality mapped reads are filtered, and paired read information is evaluated to ensure that all mate-pair information is in sync between each read. We then refine the initial alignments by local realignment and identify suspicious regions. Using this information as a covariate along with other technical covariates and known sites of variation, the GATK base quality score recalibration (BQSR) is carried out. Call germline SNPs and indels via local re-assembly of haplotypes using the recalibrated and realigned BAM files. Finally, we provide somalier, a tool to quickly assess relevance from sequencing data in BAM, CRAM or VCF format.
+                </div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>kobic_202407</span></li>
+                                                <li><span>Create Date</span><span>2024-07-15</span></li>
+                                                <li><span>Update Date</span><span>2024-07-15</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>
+                                    <div class="pipeline_list brd_list_box">
+                                        <input type="hidden" id="pipelineId" value="44e13d64-d5e4-47b4-ba4a-d1178e9bf292">
+                                        <div class="pp_title_box">
+                                            <div class="pp_tit">inst_wgs_240714_02</div>
+                                            <div class="pp_text">The whole-genome-sequencing pipeline is a modular pipeline for processing WGS data. This pipeline takes a fastq file as input and provides haplotype call results and annotations and visualizations based on GATK pipeline. 
+                First, raw read data with well-calibrated base error estimates in fastq format are mapped to the reference genome. The BWA mapping application is used to map reads to the human genome reference, allowing for two mismatches in 30-base seeds, and generate a technology-independent SAM/BAM reference file format. Next, duplicate fragments are marked and eliminated with Picard(http://picard.sourceforge.net), mapping quality is assessed and low-quality mapped reads are filtered, and paired read information is evaluated to ensure that all mate-pair information is in sync between each read. We then refine the initial alignments by local realignment and identify suspicious regions. Using this information as a covariate along with other technical covariates and known sites of variation, the GATK base quality score recalibration (BQSR) is carried out. Call germline SNPs and indels via local re-assembly of haplotypes using the recalibrated and realigned BAM files. Finally, we provide somalier, a tool to quickly assess relevance from sequencing data in BAM, CRAM or VCF format.
+                </div>
+                                        </div>
+                                        <div class="pp_info_g">
+                                            <ul>
+                                                <li><span>Registrant</span><span>bioex</span></li>
+                                                <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                                <li><span>Public</span><span>false</span></li>		                        
+                                                <li><span>Workspace Name</span><span>kobic_202407</span></li>
+                                                <li><span>Create Date</span><span>2024-07-15</span></li>
+                                                <li><span>Update Date</span><span>2024-07-15</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="p_keyword_g">
+                                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                                        </div>
+                                        
+                                        <a href="" class="more"><span class="Hidden">자세히보기</span></a>
+                                    </div>	            
+                                </div>                                
+                                <!-- borad list :e -->
+                                
+                        
+                                <!-- 목록은 5개씩 노출 -->
+                                <!-- pagination :s-->
+                                <div class="pagination">
+                                    <span class="prev_g">
+                                        <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                        <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                    </span>
+                                    <a onclick="pipelinePaging(1);" class="on">1</a><a onclick="pipelinePaging(2);">2</a><a onclick="pipelinePaging(3);">3</a><a onclick="pipelinePaging(4);">4</a><a onclick="pipelinePaging(5);">5</a><a onclick="pipelinePaging(6);">6</a><a onclick="pipelinePaging(7);">7</a><a onclick="pipelinePaging(8);">8</a><a onclick="pipelinePaging(9);">9</a><a onclick="pipelinePaging(10);">10</a>
+                                    <span class="next_g">
+                                        <a class="page_n" onclick="pipelinePaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                        <a class="page_n_end" onclick="pipelinePaging(465);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                    </span>                
+                                </div>
+                                
+                                <!-- pagination :e-->
+                            </div>
+                        </div>
+                        <!-- pipeline wrap :e -->
+                        
+                        <script type="text/javascript" src="/bioexpress/new/js/contents/admin/pipeline/pipeline.js"></script>
+                    
+
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+        <script>
+            
+            $(document).ready(function() {
+                // 테이블 행 클릭 시 상세페이지 연결
+                var linkfile = './pipeline-Detail.html';
+                
+                // tr 요소를 클릭했을 때 이벤트 핸들러
+                $('.brd_list_box').on('click', function() {
+                    // 공통 URL로 이동합니다.
+                    window.location.href = linkfile;
+                });
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,263 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css"> 
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li>
+                                <li><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../../templates/adminbioex/statinfo/biostat-View.html">통계정보</a></li>     	                   
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+					  
+	   
+                            <!-- pipeline wrap :s -->
+                            <div class="admin-pipeline-wrap">
+                                <h2 class="h2-tit">파이프라인</h2>
+                                <h3 class="h3-tit">파이프라인 정보</h3>
+                                <div class="p_detail_box mbtm40">
+                                    <input type="hidden" id="pipelineId" value="NA">
+                                    <div class="p_detail_title">
+                                        <div>
+                                            <span class="p_detail_id"><span class="bold">ID : </span> <span>NA</span></span>
+                                            <p class="p_detail_tit">movepi</p>
+                                        </div>
+                                        <p class="p_detail_text">21</p>
+                                    </div>
+                                    <div class="p_detail_g">
+                                        <ul class="p_detail_list">
+                                            <li><span>Workspace Name</span><span>NA</span></li>
+                                            <li><span>Public</span><span class="boolean_icon boolean_false">false</span></li>
+                                         </ul>
+                                        <ul class="p_detail_list">
+                                            <li><span>Registrant</span><span>NA</span></li>
+                                            <li><span>Regist Code</span><span>PI-REG-0010</span></li>
+                                        </ul>
+                                        <ul class="p_detail_list">
+                                            <li><span>Create Date</span><span>NA</span></li>
+                                            <li><span>Update Date</span><span>2022-10-03</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="p_keyword_g">
+                                        <span class="btn_keyword_green">#Single-Cell-RNA-Sequencing-Pipeline</span><span class="btn_keyword">#1</span>
+                                    </div>
+                                </div>
+                        
+                                <h3 class="h3-tit">작업 관리</h3>
+                                <div id="task_fragment">
+                                    <!-- board list search :s -->
+                        <!-- 	        <div class="brd_search_box mbtm30"> -->
+                        <!-- 	            <div class="brd_search"> -->
+                        <!-- 	                <label for="searchCate" class="Hidden">구분</label> -->
+                        <!-- 	                <select name="searchCate" id="searchCate"> -->
+                        <!-- 	                    <option>Total</option> -->
+                        <!-- 	                    <option>Title</option> -->
+                        <!-- 	                    <option>Description</option> -->
+                        <!-- 	                </select> -->
+                        <!-- 	                <label for="searchWord" class="Hidden">search</label> -->
+                        <!-- 	                <input type="text" name="searchWord" id="searchWord" class="" placeholder="Enter your search word" /> -->
+                        <!-- 	                <label for="searchWordBtn" class="Hidden">search</label> -->
+                        <!-- 	                <input type="button" class="search_activate" value="SEARCH" id="searchWordBtn" /> -->
+                        <!-- 	            </div> -->
+                        <!-- 	        </div> -->
+                                    <!-- board list search :e -->
+                                    <!-- board list count & sort :s -->
+                                    <div class="brd_list_top">
+                                        <div class="brd_num">
+                                            <span class="">Total</span>
+                                                 
+                                            <span class="bold">0</span>                                    
+                                            <span>Page</span> 
+                                                
+                                            <span class="bold">1/1</span>                                                                    
+                                        </div>
+                        <!-- 	            <ul class="brd_sort"> -->
+                        <!-- 	                <li class="on">최신순</li> 선택되었을때 class="on" -->
+                        <!-- 	                <li>실행순</li> -->
+                        <!-- 	            </ul> -->
+                                    </div>
+                                    <!-- board list count & sort :e -->
+                                    
+                                    <!-- board list :s-->
+                                       
+                                    <!-- board list :e-->
+                                    <div class="brd_none">
+                                        <span>등록된 태스크가 없습니다.</span>
+                                    </div>
+                            
+                                    <!-- 목록은 10개씩 노출 -->
+                                    <!-- pagination :s-->
+                                    
+                                    <div class="pagination">
+                                        <span class="prev_g">
+                                            <a class="page_p_end"><span class="Hidden">처음 페이지로 이동</span></a>
+                                            <a class="page_p"><span class="Hidden">이전 페이지로 이동</span></a>
+                                        </span>
+                                        <a class="on">1</a>
+                                        <span class="next_g">
+                                            <a class="page_n"><span class="Hidden">다음 페이지로 이동</span></a>
+                                            <a class="page_n_end"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                        </span>                 
+                                    </div>
+                                    <!-- pagination :e-->
+                                </div>
+                        
+                                <!-- board button : s-->
+                                <div class="brd_btn_wrap flex-center">
+                                    <label for="Modify" class="Hidden">수정</label>
+                                    <input type="button" value="수정" id="Modify" class="btn btn_gray" onclick="modifyPipeline();">
+                                    <label for="list" class="Hidden">목록</label> 
+                                    <input type="button" value="목록" id="list" class="btn btn_black" onclick="javascript:history.back();">
+                                </div>
+                                <!-- board button :e -->
+                        
+                            </div>
+                            <!-- pipeline wrap :e -->
+                            
+                            <script type="text/javascript" src="/bioexpress/new/js/contents/admin/pipeline/pipeline.js"></script>
+                            
+                        
+                    
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+    </body>
+</html>

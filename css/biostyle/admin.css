@@ -65,7 +65,7 @@
 .admin-contain-inner {width:90%; margin:60px auto;} */
 
 /* 관리자 - 하단 */
-/* #admin-footer {width:90%; margin: 0 auto 3.4rem auto;; font-size:1.4rem; color:#555555; border-top: 1px solid #dedede;
+/* #admin-footer {width:90%; margin: 0 auto 3.4rem auto; font-size:1.4rem; color:#555555; border-top: 1px solid #dedede;
     padding: 2.8rem 0 0 0;}
 .footer-wrap {position:relative; line-height: 1.4; width:100%; margin:0 auto;}
 .footer-wrap ul {display: flex; justify-items: flex-start;}
@@ -86,7 +86,7 @@
 
 .h2-tit {font-weight: bold; font-size:3.6rem; margin-bottom:3.6rem;}
 
-.h3-tit {font-weight: 500; font-size:2.4rem; margin-bottom:2.8rem; position: relative; padding:0 0 0 2.4rem}
+.h3-tit {font-weight: 600; font-size:2rem; margin-bottom:2.8rem; position: relative; padding:0 0 0 2.4rem}
 .h3-tit:before {content:"";display:block;position:absolute;left:4px;top:4px;width:4px;height:16px;background:#42b2ff;transform:rotate(60deg);-webkit-transform:rotate(60deg);}
 .h3-tit:after {content:"";display:block;position:absolute;left:8px;top:6px;width:4px;height:16px;background:#41d8c9;transform:rotate(60deg);-webkit-transform:rotate(60deg);} 
 
@@ -111,8 +111,10 @@
 .admin_2depth > .depth_list li.m_on {z-index: 1;}
 .admin_2depth > .depth_list li a {position:relative;box-sizing: border-box;border-bottom: 4px solid transparent;padding: 0 0.4rem 1.2rem 0.4rem;display: block;margin-right: 2.4rem;color: #888888; font-size:1.8rem} 
 .admin_2depth > .depth_list li:last-child a {margin-right:0;}
-.admin_2depth > .depth_list li.m_on a {position:relative;border-bottom: 4px solid #569ffe;color: #222222; font-weight: 500;}
-.admin_2depth > .depth_list li a:hover {transition: all ease 0.1s 0s; border-bottom:4px solid #569ffe; color: #222222; font-weight: 500;}
+.admin_2depth > .depth_list li.m_on a {position:relative;border-bottom: 4px solid #569ffe;color: #222222; font-weight: 600;}
+.admin_2depth > .depth_list li.m_on a span {color: #222222; font-weight: 600;}
+.admin_2depth > .depth_list li a:hover {transition: all ease 0.1s 0s; border-bottom:4px solid #569ffe; color: #222222; font-weight: 600;}
+.admin_2depth > .depth_list li a:hover span {color: #222222; font-weight: 600;}
 
 /* dashboard */
 .dash_box {border-radius: 8px; border: 1px solid #dedede; margin-bottom:3.6rem;}

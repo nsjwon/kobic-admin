@@ -220,7 +220,7 @@
     border-radius: 0;
     margin: 0;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     width: 50%;
 }
 
@@ -342,13 +342,13 @@
     background: #083776;
     border-radius: 8px;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .tab_type02 > .tab_list li a:hover {
     transition: all ease 0.1s 0s;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
     background: #083776;
     border-radius: 8px;
 }
@@ -498,7 +498,7 @@
 
 .v_tit {
     font-size: 2.8rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 2.0rem;
 }
 
@@ -577,7 +577,7 @@
 
 .video_list > li.t_on > a span {
     text-decoration: underline;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .video_play {
@@ -604,7 +604,7 @@
 
 .pipeline_list .pp_title_box .pp_tit {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     width: calc(100% - 160px);
     line-height: 1.4;
     cursor: pointer;
@@ -625,7 +625,7 @@
 /* .pipeline_list .pp_info_g {display: flex; justify-content: space-between; padding:0.8rem 0 0 0; font-size:1.5rem;}
 .pipeline_list .pp_info_g > ul {width:50%;}
 .pipeline_list .pp_info_g > ul > li {margin:1.0rem 0; line-height: 1.4;}
-.pipeline_list .pp_info_g > ul > li > span:first-child {font-weight: 500; position:relative; padding:0 18px 0 0; color:#444444;}
+.pipeline_list .pp_info_g > ul > li > span:first-child {font-weight: 600; position:relative; padding:0 18px 0 0; color:#444444;}
 .pipeline_list .pp_info_g > ul > li > span:first-child::after {display: block;  position: absolute;  top:0;  bottom: 0;  right: 8px;  width: 1px;  height: 12px;  margin: auto 0; background-color: #999999;}
 .pipeline_list .pp_info_g > ul > li > span:last-child {color:#666666;}
 .pipeline_list .pp_info_g > ul > li:nth-child(5), .pipeline_list .pp_info_g > ul > li:nth-child(6) {margin:0;} */
@@ -720,7 +720,7 @@
 
 .p_detail_title .p_detail_tit {
     font-size: 2.0rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -748,7 +748,7 @@
 }
 
 .p_detail_list li span:first-child {
-    font-weight: 500;
+    font-weight: 600;
     width: 160px;
     color: #222222;
 }
@@ -842,7 +842,7 @@
 
 .pipeline_list_n .pp_title_box .pp_tit {
     font-size: 2.4rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
     color: #222222;
 }
@@ -998,7 +998,7 @@
 
 .program_list .pg_title_box .pg_tit {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
     overflow: hidden;
     white-space: nowrap;
@@ -1123,7 +1123,7 @@
     display: flex;
     align-items: center;
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.3;
     overflow: hidden;
     white-space: nowrap;
@@ -1324,7 +1324,7 @@
 
 .workspace_list .ws_title_box .ws_tit {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     width: calc(100% - 160px);
     line-height: 1.4;
 }
@@ -1359,7 +1359,7 @@
 }
 
 .workspace_list .ws_info_g > ul > li > span:first-child {
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     padding: 0 18px 0 0;
     color: #444444;
@@ -1395,7 +1395,7 @@
 
 .workspace_create > span, .pipeline_create > span {
     vertical-align: middle;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .workspace_create > span::after, .pipeline_create > span::after {
@@ -1488,7 +1488,7 @@
 
 .task_list .task_title_box .task_tit {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     width: calc(100% - 160px);
     line-height: 1.4;
 }
@@ -1508,7 +1508,7 @@
 /* .task_list .task_info_g {display: flex; justify-content: space-between; padding:0.8rem 0 0 0; font-size:1.5rem;}
 .task_list .task_info_g > ul {width:50%;}
 .task_list .task_info_g > ul > li {margin:1.0rem 0; line-height: 1.4;}
-.task_list .task_info_g > ul > li > span:first-child {font-weight: 500; position:relative; padding:0 18px 0 0; color:#444444;}
+.task_list .task_info_g > ul > li > span:first-child {font-weight: 600; position:relative; padding:0 18px 0 0; color:#444444;}
 .task_list .task_info_g > ul > li > span:first-child::after {display: block;  position: absolute;  top:0;  bottom: 0;  right: 8px;  width: 1px;  height: 12px;  margin: auto 0; background-color: #999999;}
 .task_list .task_info_g > ul > li > span:last-child {color:#666666;}
 .task_list .task_info_g > ul > li:nth-child(3) {margin-bottom:0;} */
@@ -1603,7 +1603,7 @@
 .p_detail_info span:first-child {
     margin-right: 8px;
     color: #444444;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .p_detail_info li:last-child::after {
@@ -1624,7 +1624,7 @@
 }
 
 .log-wrap dl dt {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 1.2rem
 }
 
@@ -1691,7 +1691,7 @@
 }
 
 .progress-item.active {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .progress-item.active .step-counter {
@@ -1749,7 +1749,7 @@
     border-radius: 4px;
     font-size: 2.2rem;
     padding: 2.8rem 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .pipeline_check {
@@ -1765,7 +1765,7 @@
 }
 
 .pipeline_check .pp_check_box > span {
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     display: block;
     border-bottom: 1px solid #eaedf1;
@@ -1843,7 +1843,7 @@
 }
 
 .workspace_check_list > span {
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     display: block;
     border-bottom: 1px solid #eaedf1;
@@ -1894,7 +1894,7 @@
 
 .workspace_check_info .w_detail_title .w_detail_tit {
     font-size: 2.0rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .workspace_check_info .w_detail_title .w_detail_text {
@@ -1921,7 +1921,7 @@
 }
 
 .w_detail_g > ul > li > span:first-child {
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     padding: 0 18px 0 0;
     color: #444444;
@@ -1970,7 +1970,7 @@
     display: inline-block;
     width: 160px;
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .d-input-list input, .d-input-list textarea {
@@ -2005,7 +2005,7 @@
 }
 
 .para-item-num > span:first-child {
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     color: #aaaaaa;
     display: flex;
@@ -2100,7 +2100,7 @@
 
 .para-inner-title {
     position: relative;
-    font-weight: 500;
+    font-weight: 600;
     padding: 1.6rem 0 1.6rem 1.2rem;
     cursor: pointer;
 }
@@ -2174,7 +2174,7 @@
 }
 
 .para_data_info li span:first-child {
-    font-weight: 500;
+    font-weight: 600;
     width: 120px;
     color: #222222;
     position: relative;
@@ -2210,7 +2210,7 @@
 }
 
 .para_data_list > li .para_data_tit {
-    font-weight: 500;
+    font-weight: 600;
     width: 200px;
     position: relative;
     padding: 0 40px 0 24px;
@@ -2405,7 +2405,7 @@
 }
 
 .pipe_basic_info > dt {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.8rem;
 }
 
@@ -2442,7 +2442,7 @@
     font-weight: normal;
     margin-right: 0.4rem;
     color: #1f2630;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .pipe_detail_info > ul li span:last-child {
@@ -2622,7 +2622,7 @@
 .my-workspace-item .myw_inner::after {content: ''; display: block; width: 0; height: 0; border-bottom: 10px solid #999999; border-top: 10px solid transparent; border-left: 10px solid transparent; border-right: 10px solid transparent; position:absolute; top: calc(50% - 15px); right:2.0rem;}
 .my-workspace-item.on .myw_inner::after {content: ''; display: block; width: 0; height: 0; border-bottom: 10px solid transparent; border-top: 10px solid #222222; border-left: 10px solid transparent; border-right: 10px solid transparent; position:absolute; top: calc(50% - 5px); right:2.0rem;}
 .myw_title {padding:0 0 0 1.4rem}
-.myw_tit {display: block; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;  font-size: 1.8rem;  font-weight: 500;  margin: 0 0 1.0rem 0;line-height: 2.6rem; cursor: pointer;} 
+.myw_tit {display: block; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;  font-size: 1.8rem;  font-weight: 600;  margin: 0 0 1.0rem 0;line-height: 2.6rem; cursor: pointer;} 
 .myw_txt {color:#666666; margin:0.8rem 0 0.8rem 0; display: block;}
 .myw_info {display: flex; justify-content: flex-start; font-size:1.4rem; flex-wrap: wrap;}
 .myw_info li {color:#666666; position: relative; padding-right:10px; margin-right:10px;}
@@ -2636,7 +2636,7 @@
 .myw_pipeline {padding:2.4rem 0 0 0;}
 .myw_p_detail_box {position:relative;border-radius: 8px;background: #f3f3f7;padding: 2.0rem 2.8rem; margin:0 0 0.8rem 0;border: 1px solid #dedfdf;}
 .myw_p_detail_box .myw_p_detail_title {border-bottom: 1px dashed #c0c0c0; padding:0 0 1.4rem 0; margin:0 0 1.0rem 0; cursor: pointer;}
-.myw_p_detail_title .myw_p_detail_tit {font-size:1.8rem; font-weight: 500; color:#005f9f;}
+.myw_p_detail_title .myw_p_detail_tit {font-size:1.8rem; font-weight: 600; color:#005f9f;}
 .myw_p_detail_title .myw_p_detail_text {color:#666666; margin-top:0.6rem; font-size:1.5rem}
 .pipe_more {background: url(../../images/content/icon_more.svg) no-repeat center center; width:30px; height: 30px; background-size: contain; position: absolute; top:2.0rem; right:2.8rem;}
 .pipe_more:hover {opacity: 0.8; transition: all ease 0.2s 0s;}
@@ -2644,7 +2644,7 @@
 .myw_p_detail_g {display: flex; justify-content: space-between;}
 .myw_p_detail_list {margin:0; width:50%;font-size: 1.5rem;}
 .myw_p_detail_list li {display: flex;padding: 0.3rem 0;line-height: 1.4; color:#444444;} 
-.myw_p_detail_list li span:first-child {font-weight: 500; width:160px; color:#222222;}
+.myw_p_detail_list li span:first-child {font-weight: 600; width:160px; color:#222222;}
 .myw_p_detail_list li span:last-child {display: flex; align-items: center; width:calc(100% - 160px); }
 .myw_p_detail_list li span > img {margin-right:0.6rem;}
 */
@@ -2697,7 +2697,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 0.8rem 0;
     line-height: 3.0rem;
     cursor: pointer;
@@ -2847,7 +2847,7 @@
 
 .myw_p_detail_title .myw_p_tit > p {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #005f9f;
 }
 
@@ -3003,7 +3003,7 @@
 .tb_type01 th {
     padding: 14px 12px;
     vertical-align: middle;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     position: relative;
     border-bottom: 1px solid #EDEDED;
@@ -3359,7 +3359,7 @@
     text-align: left;
     margin: 3rem 0 3rem 0;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cont_wrap .subtap_tit01 {
@@ -3367,7 +3367,7 @@
     color: #222222;
     margin: 1.8rem 0 1.6rem 0;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cont_wrap .subtap_tit02 {
@@ -3376,7 +3376,7 @@
     color: #164687;
     line-height: 1.5;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cont_wrap .subtap_tit03 {
@@ -3385,7 +3385,7 @@
     color: #000000;
     line-height: 1.5;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cont_wrap .subtap_tit04 {
@@ -3394,7 +3394,7 @@
     color: #056eb4;
     line-height: 1.5;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cont_wrap .subtap_tit05 {
@@ -3403,7 +3403,7 @@
     color: #000000;
     line-height: 1.5;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: underline;
 }
 
@@ -3541,14 +3541,14 @@
 
 .tit_bold {
     color: #222222 !important;
-    font-weight: 500;
+    font-weight: 600;
     margin: 2px 0;
 }
 
 .l-list {
     margin: 1.2rem 0 0.8rem 0 !important;
     color: #444444 !important;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .l-icon2 {
@@ -3645,7 +3645,7 @@
 .tb_type02 th {
     padding: 14px 12px;
     vertical-align: middle;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     position: relative;
     border-bottom: 0.2rem solid #ffffff;
@@ -3795,7 +3795,7 @@
 
 .introduction-wrap .section-4 .b-box .result_t {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     line-height: 1.2;
 }
@@ -3809,7 +3809,7 @@
 
 .introduction-wrap .big_title {
     font-size: 2.4rem !important;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 1.2rem !important;
     color: #222428;
 }
@@ -3830,7 +3830,7 @@
 
 .introduction-wrap .big_txt {
     font-size: 2.0rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 1.2rem;
 }
 
@@ -3839,7 +3839,7 @@
     min-width: 10rem;
     font-weight: normal;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.4rem 2.0rem;
     text-align: center;
     border-radius: 150px;
@@ -3901,7 +3901,7 @@
     text-align: center;
     display: block;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 1.2rem 0;
 }
 
@@ -4155,7 +4155,7 @@
     width: 90%;
     font-size: 18px;
     color: #222222;
-    font-weight: 500;
+    font-weight: 600;
     height: 22px;
 }
 
@@ -4317,7 +4317,7 @@
 
 .os-item .os-cont span:first-child {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
     display: block;
     margin-bottom: 1.0rem;
 }
@@ -4589,7 +4589,7 @@
     justify-content: space-between;
     align-items: center;
     color: #333333;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.3px;
 }
 
@@ -4675,7 +4675,7 @@
 .release-wrap .release-item .release_tit > span {
     font-size: 1.4rem;
     margin-left: 8px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.6rem 1.2rem;
     border-radius: 150px;
     border: 1px solid #154cc1;

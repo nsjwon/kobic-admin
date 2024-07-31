@@ -1,0 +1,426 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css"> 
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li>
+                                <li><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../../templates/adminbioex/statinfo/biostat-View.html">통계정보</a></li>     	                   
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+					  
+	
+		    
+                        <!-- pipeline wrap :s -->
+                        <div class="admin-pipeline-wrap">
+                            <h2 class="h2-tit">파이프라인</h2>
+                            <!-- 2depth list : s-->
+                            <div class="admin_2depth">
+                                <ul class="depth_list">
+                                    <li>
+                                        <a href="./pipeline-List.html" class="depth_tit">
+                                            <span>파이프라인 목록</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="./pipeline-Regist-List.html" class="depth_tit">
+                                            <span>공개 등록 신청 파이프라인 목록</span>
+                                        </a>
+                                    </li>                                
+                                    <li class="m_on">
+                                        <a href="./pipeline-Task-List.html" class="depth_tit">
+                                            <span>작업 목록</span>
+                                        </a>
+                                    </li>    
+                                </ul>
+                            </div>
+                            <!-- 2depth list :e -->
+                    
+                            <!-- board list search :s -->
+                            <div id="pipeline_fragment">
+                        
+                                
+                                <!-- board list count & sort :s -->
+                                <div class="brd_list_top">
+
+
+                                    <!-- board info :s -->
+                                    <div class="brd-info">
+                                        <ul class="brd-num">
+                                            <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                                            <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                                        </ul> 
+                                    </div>
+                                    <!-- board info :e -->
+
+                                    <!-- pipeline search : s-->
+                                    <div class="brd_search_box admin">
+                                        <label for="category" class="Hidden">구분</label>
+                                        <label for="search" class="Hidden">검색어</label>
+                                        <input type="text" name="pipelineSearch" id="pipelineSearch" class="" placeholder="검색어를 입력하세요." value="">
+                                        
+                                        <label for="searchWordBtn" class="Hidden">검색</label>
+                                        <input type="button" class="search_activate" value="검색" id="searchWordBtn" onclick="pipelinePaging(1);">
+                                        
+                                        <label for="sorting" class="Hidden">정렬</label>
+                                        <select class="searchAlign" name="pipelineSorting" id="pipelineSorting" onchange="pipelinePaging(1);">
+                                            <option value="createDate_desc">최신 순</option>
+                                            <option value="pipelineName_desc">이름 순</option>
+                                        </select>
+                                    </div> 
+                                    <!-- pipeline search : e-->
+                                    
+                                </div>
+                                <!-- board list count & sort :e -->
+                        
+                                <!-- borad list :s -->
+                                <div class="brd_list_type02">
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="0001453f-0c0a-404a-a36b-265b225373ab">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">multi_core_py3.8</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>multi_core</span></li>
+                                                <li><span>Submission Time</span><span>2023-07-07 17:52:35</span></li>                                            
+                                                <li><span>Task ID</span><span>9fbe4736-7d1e-433e-b96b-636bbf89b56d</span></li>
+                                                <li><span>Pipeline Name</span><span>core_30</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20230615-4596</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00030701-9ea4-4f47-ab0a-4e4b93fb66b4">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">multi_core_py3.10</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>multi_core</span></li>
+                                                <li><span>Submission Time</span><span>2023-07-04 10:39:53</span></li>                                            
+                                                <li><span>Task ID</span><span>805181dc-26b5-4c7c-a60c-d85c18da9252</span></li>
+                                                <li><span>Pipeline Name</span><span>core_01</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20230615-4560</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00035d9c-6727-4f63-9680-36f8f947dad4">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">multi_core_py3.8</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>multi_core</span></li>
+                                                <li><span>Submission Time</span><span>2023-06-15 22:14:21</span></li>                                            
+                                                <li><span>Task ID</span><span>964b3cc6-1101-43c6-993c-9f90aa0c70dd</span></li>
+                                                <li><span>Pipeline Name</span><span>core_33</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20230615-4599</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00035e3f-0661-4822-b693-4787e32375c2">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">multi_core_py3.7</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>multi_core</span></li>
+                                                <li><span>Submission Time</span><span>2023-06-26 14:59:13</span></li>                                            
+                                                <li><span>Task ID</span><span>361985bc-2cf6-4d9e-9abe-89a6f97597f8</span></li>
+                                                <li><span>Pipeline Name</span><span>core_06</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20230615-4568</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="0004147b-418a-4bae-bb67-68dd743dbbb4">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">BaseRecalibrator</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kjh98</span></li>
+                                                <li><span>Workspace Name</span><span>BX01-20210916-0024</span></li>
+                                                <li><span>Submission Time</span><span>2021-09-16 10:01:51</span></li>                                            
+                                                <li><span>Task ID</span><span>7f6a4d89-bb62-49fd-a471-fff8a48a117f</span></li>
+                                                <li><span>Pipeline Name</span><span>execute_web_0916_01</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20210916-0118</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_wait">wait</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00057830-fcf1-425d-aefe-eaef3333fd4f">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">Normalize</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>poc</span></li>
+                                                <li><span>Submission Time</span><span>2022-08-12 14:36:50</span></li>                                            
+                                                <li><span>Task ID</span><span>76814ff3-5d22-4c03-a61c-b63c00025ac5</span></li>
+                                                <li><span>Pipeline Name</span><span>_1_single-cell_poc_37_pipeline</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20220810-2636</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00059228-6aba-4a77-86ed-ded20d998e48">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">fastp</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>podman_5</span></li>
+                                                <li><span>Submission Time</span><span>2023-05-18 20:53:56</span></li>                                            
+                                                <li><span>Task ID</span><span>b2f86363-60ec-492b-a4b9-ae98cf17d3ac</span></li>
+                                                <li><span>Pipeline Name</span><span>wgs_42</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20230518-4482</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="000610c4-f92a-4319-b53e-490b291fe1db">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">fastp</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">bioex</span></li>
+                                                <li><span>Workspace Name</span><span>workspace</span></li>
+                                                <li><span>Submission Time</span><span>2022-10-20 17:43:25</span></li>                                            
+                                                <li><span>Task ID</span><span>775da2cc-98d3-49e3-b03a-07200325558c</span></li>
+                                                <li><span>Pipeline Name</span><span>pipeline01</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20221017-3717</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="00074e1f-0e67-40f6-9881-f29ea47a9ceb">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">Filter</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">bioex</span></li>
+                                                <li><span>Workspace Name</span><span>kai</span></li>
+                                                <li><span>Submission Time</span><span>2022-04-04 14:42:33</span></li>                                            
+                                                <li><span>Task ID</span><span>ef3ee50b-3d58-4e33-aa51-e64e6872171e</span></li>
+                                                <li><span>Pipeline Name</span><span>Single-Cell_RNA_Sequencing_Pipeline</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20220404-1823</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                    <div class="task_list brd_list_box">
+                                        <input type="hidden" id="taskId" value="0007ce8a-5297-4c24-857e-d8e38b1dfac8">
+                                        <div class="task_title_box">
+                                            <div class="task_tit">PlotMarker</div>
+                                        </div>
+                                        <div class="task_info_g">
+                                            <ul>
+                                                <li><span class="fc_blue">Member ID</span><span class="fc_blue bold">kogun82</span></li>
+                                                <li><span>Workspace Name</span><span>poc</span></li>
+                                                <li><span>Submission Time</span><span>2022-08-11 15:14:29</span></li>                                            
+                                                <li><span>Task ID</span><span>14d71454-1f8c-4988-92f5-dc858ea11e34</span></li>
+                                                <li><span>Pipeline Name</span><span>_1_single-cell_poc_52_pipeline</span></li>
+                                                <li><span>Pipeline ID</span><span>BX02-20220810-2636</span></li>
+                                            </ul>
+                                        </div>                                        
+                                        
+                                        <span class="task_status status_icon2 status_complete">complete</span>
+                                    </div>
+                                </div>
+                                <!-- borad list :e -->
+                                
+                        
+                                <!-- 목록은 5개씩 노출 -->
+                                <!-- pagination :s-->
+                                <div class="pagination">
+                                    <span class="prev_g">
+                                        <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                        <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                    </span>
+                                    <a onclick="pipelinePaging(1);" class="on">1</a><a onclick="pipelinePaging(2);">2</a><a onclick="pipelinePaging(3);">3</a><a onclick="pipelinePaging(4);">4</a><a onclick="pipelinePaging(5);">5</a><a onclick="pipelinePaging(6);">6</a><a onclick="pipelinePaging(7);">7</a><a onclick="pipelinePaging(8);">8</a><a onclick="pipelinePaging(9);">9</a><a onclick="pipelinePaging(10);">10</a>
+                                    <span class="next_g">
+                                        <a class="page_n" onclick="pipelinePaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                        <a class="page_n_end" onclick="pipelinePaging(465);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                    </span>                
+                                </div>
+                                
+                                <!-- pagination :e-->
+                            </div>
+                        </div>
+                        <!-- pipeline wrap :e -->
+                        
+                        <script type="text/javascript" src="/bioexpress/new/js/contents/admin/pipeline/pipeline.js"></script>
+                    
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+    </body>
+</html>
