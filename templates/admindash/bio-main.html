@@ -1,0 +1,1108 @@
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->	
+        <title>국가생명연구자원정보센터(KOBIC)</title>   	
+        <link media="all" rel="stylesheet" href="../../css/font.css">  
+        <link media="all" rel="stylesheet" href="../../css/common.css">  
+        <link media="all" rel="stylesheet" href="../../css/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../css/biostyle/board.css"> 
+        <link media="all" rel="stylesheet" href="../../css/biostyle/admin.css"> 
+        <link media="all" rel="stylesheet" href="../../css/biostyle/content.css"> 
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+        <script src="../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../js/axios/axios.min.js"></script>
+        <script src="../../js/oembed/oembed-provider.js"></script>
+        <script src="../../js/common/common.js"></script>
+        <script src="../../js/common/editor_common.js"></script>
+        <script src="../../js/common/upload_common.js"></script>
+        <script src="../../js/contents/admin/main.js"></script>
+        <script src="../../js/contents/admin/menu.js"></script>
+    </head>
+        
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+        
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../index.html"><img src="../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
+                            <li>                
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>                       
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+                
+            <!-- admin container :s -->
+            <main id="admin-container">
+                
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>통합포털</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li><a href="../../templates/admindash/kobic-main.html">대시보드</a></li> 
+                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">팝업관리</a></li>
+                                <li><a href="#none">배너관리</a></li>
+                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <!-- <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminsso/member/go_member_list" target="_blank">회원관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_all_group_list" target="_blank">그룹관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_type_management_list" target="_blank">유형관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_grade_management_list" target="_blank">등급관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_statistics" target="_blank">통계관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_policy_management_list" target="_blank">약관관리</a></li>
+                                        <li><a href="../../templates/adminsso/member/go_action_log_list" target="_blank">이벤트 로그</a></li>
+                                    </ul> -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>           	          
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                    <div class="admin-gnb-inner mtop40">
+                        <span>Bio Express</span>
+                        <nav class="admin-gnb-box biomenu">
+                            <ul class="gnb-depth1">
+                                <li><a class="active" href="../../templates/admindash/bio-main.html">대시보드</a></li> 
+                                <li><a href="../../templates/adminsso/pipeline/pipeline-List.html">파이프라인관리</a></li>
+                                <li><a href="../../templates/adminsso/program/program-List.html">프로그램관리</a></li>
+                                <li><a href="../../templates/adminsso/stat/stat-View.html">통계정보</a></li>     	          
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+                    
+                <!-- admin content :s -->			
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+                        <div class="admin-dashboard-wrap">
+                            <div class="excute_box dash_box">
+                                <!-- tab list : s-->
+                                <div class="tab_type_admin tab_default">
+                                    <ul class="tab_list">
+                                        <li class="t_on">
+                                            <a href="#tab1" class="tab_tit">
+                                                <span>Execute Task</span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#tab2" class="tab_tit">
+                                                <span>Execute SubTask</span>
+                                            </a>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                <!-- tab list :e -->
+                                <!-- tab box :s -->
+                                <div class="tab_box_type_admin tab_box">
+                                    <!-- Execute Task :s -->
+                                    <div class="tab_cont" id="tab1" style="display: block;">
+                                        <div class="chart_cont01" id="adminchartdiv1"><div style="width: 100%; height: 100%; position: relative; left: 0.03125px; top: -0.333328px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" style="width: 100%; height: 100%; overflow: visible;"><defs><clipPath id="id-46"><rect width="1003" height="400"></rect></clipPath><linearGradient id="gradient-id-69" x1="1%" x2="99%" y1="59%" y2="41%"><stop stop-color="#474758" offset="0"></stop><stop stop-color="#474758" stop-opacity="1" offset="0.75"></stop><stop stop-color="#3cabff" stop-opacity="1" offset="0.755"></stop></linearGradient><filter id="filter-id-78" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><filter id="filter-id-99" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><clipPath id="id-132"><path d="M0,0 L775,0 L775,326 L0,326 L0,0"></path></clipPath><clipPath id="id-649"><rect width="775" height="326"></rect></clipPath><filter id="filter-id-51" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="filter-id-66" filterUnits="objectBoundingBox" width="120%" height="120%" x="-10%" y="-10%"><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><filter id="filter-id-137" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g><g fill="#ffffff" fill-opacity="0"><rect width="1003" height="400"></rect></g><g><g role="region" clip-path="url(&quot;#id-46&quot;)" opacity="1" aria-label="Chart"><g transform="translate(15,15)"><g><g><g><g><g><g><g transform="translate(198,0)"><g fill="#ffffff" fill-opacity="0"><rect width="775" height="326"></rect></g><g><g><g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(-310,0)" display="none"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(-155,0)" display="none"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(155,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(310,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(465,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(620,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(775,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(930,0)" display="none"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g></g></g><g><g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,326)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,33)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,65)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,98)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,130)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,163)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,196)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,228)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,261)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,293)"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g></g></g><g><g><g role="group" stroke-opacity="0" fill-opacity="1" stroke="#67b7dc" aria-label="value"><g><g clip-path="url(&quot;#id-132&quot;)"><g><g><g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,3.26)" id="id-808"><g><g><path d="M0,0 L747.1,0 a0,0 0 0 1 0,0 L747.1,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,35.86)"><g><g><path d="M0,0 L440.2,0 a0,0 0 0 1 0,0 L440.2,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,68.46)" id="id-827"><g><g><path d="M0,0 L334.8,0 a0,0 0 0 1 0,0 L334.8,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,101.06)"><g><g><path d="M0,0 L272.8,0 a0,0 0 0 1 0,0 L272.8,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,133.66)"><g><g><path d="M0,0 L257.3,0 a0,0 0 0 1 0,0 L257.3,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,166.26)"><g><g><path d="M0,0 L238.7,0 a0,0 0 0 1 0,0 L238.7,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,198.86)"><g><g><path d="M0,0 L207.7,0 a0,0 0 0 1 0,0 L207.7,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,231.46)"><g><g><path d="M0,0 L179.8,0 a0,0 0 0 1 0,0 L179.8,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,264.06)"><g><g><path d="M0,0 L155,0 a0,0 0 0 1 0,0 L155,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0" transform="translate(0,296.66)"><g><g><path d="M0,0 L151.9,0 a0,0 0 0 1 0,0 L151.9,26.08 a0,0 0 0 1 -0,0 L0,26.08 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g></g></g></g></g><g></g></g></g></g></g><g clip-path="url(&quot;#id-649&quot;)"><g><g fill="#67b7dc" stroke="#67b7dc"><g></g></g></g></g><g><g><g><g></g></g><g><g></g></g></g></g><g><g></g></g><g><g></g></g><g role="button" focusable="true" tabindex="0" opacity="0" visibility="hidden" aria-hidden="true" transform="translate(735,-3)" aria-labelledby="id-37-title"><g fill="#6794dc" stroke="#ffffff" fill-opacity="1" stroke-opacity="0" transform="translate(0,8)"><path d="M17,0 L18,0 a17,17 0 0 1 17,17 L35,17 a17,17 0 0 1 -17,17 L17,34 a17,17 0 0 1 -17,-17 L0,17 a17,17 0 0 1 17,-17 Z"></path></g><g transform="translate(9,9)"><g stroke="#ffffff" style="pointer-events: none;" transform="translate(0,8)"><path d=" M0,0  L11,0 " transform="translate(2.5,7.5)"></path></g><g fill="#000000" style="pointer-events: none;" transform="translate(17,8)"><g display="none"></g></g></g><title id="id-37-title">Zoom Out</title></g></g></g><g><g><g aria-hidden="true"><g><g fill="#000000" transform="translate(0,163) rotate(-90)"><g display="none"></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none" transform="translate(198,326)" opacity="0" visibility="hidden" aria-hidden="true"><path transform="translate(-0.5,-0.5)" d=" M0,0  L775,0 "></path></g><g transform="translate(0,0)"><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" transform="translate(198,163)"><g transform="translate(-188,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>alignment_SRR5339163</tspan></text></g></g><g fill="#000000" transform="translate(198,342.3)" display="none"><g transform="translate(-10,0)" display="none"></g></g><g fill="#000000" transform="translate(198,16.3)"><g transform="translate(-40,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>test</tspan></text></g></g><g fill="#000000" transform="translate(198,48.9)"><g transform="translate(-110,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>Classification</tspan></text></g></g><g fill="#000000" transform="translate(198,81.5)"><g transform="translate(-154,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>macs_peak_calling</tspan></text></g></g><g fill="#000000" transform="translate(198,114.1)"><g transform="translate(-117,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>preprocessing</tspan></text></g></g><g fill="#000000" transform="translate(198,146.7)"><g transform="translate(-188,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>alignment_SRR5331413</tspan></text></g></g><g fill="#000000" transform="translate(198,179.3)"><g transform="translate(-188,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>alignment_SRR5339163</tspan></text></g></g><g fill="#000000" transform="translate(198,211.9)"><g transform="translate(-81,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>pipeline1</tspan></text></g></g><g fill="#000000" transform="translate(198,244.5)"><g transform="translate(-98,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>pipeline_01</tspan></text></g></g><g fill="#000000" transform="translate(198,277.1)"><g transform="translate(-85,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>clustering</tspan></text></g></g><g fill="#000000" transform="translate(198,309.7)"><g transform="translate(-132,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>kobic_20210916</tspan></text></g></g></g></g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;" transform="translate(198,0)"><path d=" M0,0  L0,326 " transform="translate(-0.5,-0.5)"></path></g></g></g></g></g><g transform="translate(973,0)"><g></g></g></g></g><g><g transform="translate(198,0)"></g></g><g transform="translate(0,326)"><g transform="translate(198,0)"><g aria-hidden="true"><g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M0,0  L775,0 " transform="translate(-0.5,-0.5)"></path></g><g><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" transform="translate(387.5,0)"><g transform="translate(-5,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>L</tspan></text></g></g><g fill="#000000" transform="translate(-310,0)" display="none"><g transform="translate(-16.5,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>-100</tspan></text></g></g><g fill="#000000" transform="translate(-155,0)" display="none"><g transform="translate(-12,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>-50</tspan></text></g></g><g fill="#000000"><g transform="translate(-5,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>0</tspan></text></g></g><g fill="#000000" transform="translate(155,0)"><g transform="translate(-9.5,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>50</tspan></text></g></g><g fill="#000000" transform="translate(310,0)"><g transform="translate(-14,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>100</tspan></text></g></g><g fill="#000000" transform="translate(465,0)"><g transform="translate(-14,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>150</tspan></text></g></g><g fill="#000000" transform="translate(620,0)"><g transform="translate(-14,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>200</tspan></text></g></g><g fill="#000000" transform="translate(775,0)"><g transform="translate(-14,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>250</tspan></text></g></g><g fill="#000000" transform="translate(930,0)" display="none"><g transform="translate(-14,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>300</tspan></text></g></g></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(0,-326)"><path transform="translate(-0.5,-0.5)" d=" M0,0  L0,326 "></path></g><g fill="#000000" transform="translate(387.5,44)"><g display="none"></g></g></g></g></g></g></g></g></g></g></g></g><g><g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-51&quot;)" style="pointer-events: none;" transform="translate(0,6)"><path d="M3,0 L3,0 L0,-6 L13,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(12,6)"><g transform="translate(0,7)" display="none"></g></g></g></g><g visibility="hidden" style="pointer-events: none;" display="none"><g fill="#ffffff" opacity="1"><rect width="1003" height="400"></rect></g><g><g transform="translate(501.5,200)"><g><g stroke-opacity="1" fill="#f3f3f3" fill-opacity="0.8"><g><g><path d=" M53,0  a53,53,0,0,1,-106,0 a53,53,0,0,1,106,0 M42,0  a42,42,0,0,0,-84,0 a42,42,0,0,0,84,0 L42,0 "></path></g></g></g><g stroke-opacity="1" fill="#000000" fill-opacity="0.2"><g><g><path d=" M50,0  a50,50,0,0,1,-100,0 a50,50,0,0,1,100,0 M45,0  a45,45,0,0,0,-90,0 a45,45,0,0,0,90,0 L45,0 "></path></g></g></g><g fill="#000000" fill-opacity="0.4"><g transform="translate(-21,-12)" style="user-select: none;"><text x="21px" y="24" dy="-6.48" text-anchor="middle"><tspan>100%</tspan></text></g></g></g></g></g></g><g opacity="0.3" aria-labelledby="id-66-title" filter="url(&quot;#filter-id-66&quot;)" style="cursor: pointer;" transform="translate(0,379)"><g fill="#ffffff" opacity="0"><rect width="66" height="21"></rect></g><g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="#3cabff"><path d=" M15,15  C17.4001,15 22.7998,15.0001 27,15 C31.2002,14.9999 33.2999,6 36,6 C38.7001,6 38.6999,10.5 40.5,10.5 C42.3001,10.5 42.2999,6 45,6 C47.7001,6 50.9999,14.9999 54,15 C57.0002,15.0001 58.7999,15 60,15"></path></g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="url(&quot;#gradient-id-69&quot;)"><path d=" M6,15  C8.2501,15 9.7498,15.0001 15,15 C20.2502,14.9999 20.7748,3.6 27,3.6 C33.2252,3.6 33.8998,14.9999 39.9,15 C45.9002,15.0001 45.9748,15 51,15 C56.0252,15 57.7499,15 60,15"></path></g></g><title id="id-66-title">Chart created using amCharts library</title></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(-25,15)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,0 L20,0 L25,0 L20,10 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(-15,15)"><g transform="translate(0,5)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(213,341)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(223,341)"><g transform="translate(0,5)" display="none"></g></g></g></g><g role="tooltip" opacity="0" aria-describedby="id-827" transform="translate(380.4,96.5)" aria-hidden="true" visibility="hidden"><g fill="#8067dc" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-137&quot;)" style="pointer-events: none;" transform="translate(6,-17.5)"><path d="M3,0 L201,0 a3,3 0 0 1 3,3 L204,32 a3,3 0 0 1 -3,3 L3,35 a3,3 0 0 1 -3,-3 L0,32 L0,22.5 L-6,17.5 L0,12.5 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(108,-17.5)"><g transform="translate(-90,7)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>macs_peak_calling: </tspan><tspan style="font-weight:bold">108</tspan></text></g></g></g></g></g></g></g></g></svg></div></div>
+                                    </div>
+                                    <!-- Execute Task :e -->
+                                    <!-- Execute SubTask :s -->
+                                    <div class="tab_cont" id="tab2">
+                                        <div class="chart_cont01" id="adminchartdiv2"><div style="width: 100%; height: 100%; position: relative;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" style="width: 100%; height: 100%; overflow: visible;"><defs><clipPath id="id-171"><rect width="0" height="0"></rect></clipPath><linearGradient id="gradient-id-194" x1="1%" x2="99%" y1="59%" y2="41%"><stop stop-color="#474758" offset="0"></stop><stop stop-color="#474758" stop-opacity="1" offset="0.75"></stop><stop stop-color="#3cabff" stop-opacity="1" offset="0.755"></stop></linearGradient><filter id="filter-id-203" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><filter id="filter-id-224" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><clipPath id="id-257"><path d="M0,0 L0.0001,0 L0.0001,0.0001 L0,0.0001 L0,0"></path></clipPath><clipPath id="id-647"><rect width="0" height="0"></rect></clipPath><filter id="filter-id-176" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="filter-id-191" filterUnits="objectBoundingBox" width="120%" height="120%" x="-10%" y="-10%"><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><filter id="filter-id-262" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g><g fill="#ffffff" fill-opacity="0"><rect width="0" height="0"></rect></g><g><g role="region" clip-path="url(&quot;#id-171&quot;)" opacity="1" aria-label="Chart"><g transform="translate(15,15)"><g><g><g><g><g><g><g transform="translate(0,0)"><g fill="#ffffff" fill-opacity="0" transform="translate(0,0)"><rect width="0" height="0"></rect></g><g><g><g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g></g></g><g><g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M0,0  L0,0 " transform="translate(-0.5,-0.5)"></path></g></g></g><g><g><g role="group" stroke-opacity="0" fill-opacity="1" stroke="#67b7dc" aria-label="value"><g><g clip-path="url(&quot;#id-257&quot;)"><g><g><g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g><g stroke-opacity="1" fill-opacity="0.8" stroke="#8067dc" fill="#8067dc" role="menuitem" focusable="true" tabindex="0"><g><g><path d="M0,0 L0,0 a0,0 0 0 1 0,0 L0,0 a0,0 0 0 1 -0,0 L0,0 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0 Z"></path></g></g></g></g></g></g></g><g></g></g></g></g></g><g clip-path="url(&quot;#id-647&quot;)"><g><g fill="#67b7dc" stroke="#67b7dc"><g></g></g></g></g><g><g><g><g></g></g><g><g></g></g></g></g><g><g></g></g><g><g></g></g><g role="button" focusable="true" tabindex="0" opacity="0" visibility="hidden" aria-hidden="true" transform="translate(0,-3)" aria-labelledby="id-162-title"><g fill="#6794dc" stroke="#ffffff" fill-opacity="1" stroke-opacity="0" transform="translate(0,8)"><path d="M9,0 L9,0 a9,9 0 0 1 9,9 L18,9 a9,9 0 0 1 -9,9 L9,18 a9,9 0 0 1 -9,-9 L0,9 a9,9 0 0 1 9,-9 Z"></path></g><g transform="translate(9,9)"><g stroke="#ffffff" transform="translate(0,8)" style="pointer-events: none;"><path d=" M0,0  L11,0 " transform="translate(2.5,7.5)"></path></g><g fill="#000000" transform="translate(6,8)" style="pointer-events: none;"><g></g></g></g><title id="id-162-title">Zoom Out</title></g></g></g><g><g><g aria-hidden="true"><g><g fill="#000000" transform="translate(0,0) rotate(-90)"><g></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none" transform="translate(0,0)"><path transform="translate(-0.5,-0.5)" d=" M0,0  L0,0 "></path></g><g transform="translate(20,0)"><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;"><g transform="translate(-10,0)" style="user-select: none;"><text x="0" y="0" dy="0"><tspan>L</tspan></text></g></g><g fill="#000000" display="none"><g transform="translate(-10,0)"></g></g><g fill="#000000"><g transform="translate(-10,0)"></g></g></g></g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M0,0  L0,0.0001 " transform="translate(-0.5,-0.5)"></path></g></g></g></g></g><g><g></g></g></g></g><g><g></g></g><g><g><g aria-hidden="true"><g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M0,0  L0.0001,0 " transform="translate(-0.5,-0.5)"></path></g><g><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;"><g transform="translate(0,10)" style="user-select: none;"><text x="0" y="0" dy="0"><tspan>L</tspan></text></g></g><g fill="#000000" display="none"><g transform="translate(0,10)"></g></g><g fill="#000000" display="none"><g transform="translate(0,10)"></g></g><g fill="#000000"><g transform="translate(0,10)"></g></g><g fill="#000000"><g transform="translate(0,10)"></g></g><g fill="#000000" display="none"><g transform="translate(0,10)"></g></g></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path transform="translate(-0.5,-0.5)" d=" M0,0  L0,0 "></path></g><g fill="#000000"><g></g></g></g></g></g></g></g></g></g></g></g></g><g><g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-176&quot;)" style="pointer-events: none;"><path d="M3,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" transform="translate(12,0)" style="pointer-events: none;"><g transform="translate(0,7)"></g></g></g></g><g visibility="hidden" display="none" style="pointer-events: none;"><g fill="#ffffff" opacity="1"><rect width="0" height="0"></rect></g><g><g><g><g stroke-opacity="1" fill="#f3f3f3" fill-opacity="0.8"><g><g><path d=" M53,0  a53,53,0,0,1,-106,0 a53,53,0,0,1,106,0 M42,0  a42,42,0,0,0,-84,0 a42,42,0,0,0,84,0 L42,0 "></path></g></g></g><g stroke-opacity="1" fill="#000000" fill-opacity="0.2"><g><g><path d=" M50,0  a50,50,0,0,1,-100,0 a50,50,0,0,1,100,0 M45,0  a45,45,0,0,0,-90,0 a45,45,0,0,0,90,0 L45,0 "></path></g></g></g><g fill="#000000" fill-opacity="0.4"><g></g></g></g></g></g></g><g opacity="0" aria-labelledby="id-191-title" filter="url(&quot;#filter-id-191&quot;)" transform="translate(0,0)" aria-hidden="true" visibility="hidden" style="cursor: pointer;"><g fill="#ffffff" opacity="0"><rect width="66" height="21"></rect></g><g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="#3cabff"><path d=" M15,15  C17.4001,15 22.7998,15.0001 27,15 C31.2002,14.9999 33.2999,6 36,6 C38.7001,6 38.6999,10.5 40.5,10.5 C42.3001,10.5 42.2999,6 45,6 C47.7001,6 50.9999,14.9999 54,15 C57.0002,15.0001 58.7999,15 60,15"></path></g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="url(&quot;#gradient-id-194&quot;)"><path d=" M6,15  C8.2501,15 9.7498,15.0001 15,15 C20.2502,14.9999 20.7748,3.6 27,3.6 C33.2252,3.6 33.8998,14.9999 39.9,15 C45.9002,15.0001 45.9748,15 51,15 C56.0252,15 57.7499,15 60,15"></path></g></g><title id="id-191-title">Chart created using amCharts library</title></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(-25,5)" style="pointer-events: none;"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,0 L20,0 L25,10 L20,10 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" transform="translate(-15,5)" style="pointer-events: none;"><g transform="translate(0,5)"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(-5,15)" style="pointer-events: none;"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" transform="translate(5,15)" style="pointer-events: none;"><g transform="translate(0,5)"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-262&quot;)" transform="translate(6,-5.5)" style="pointer-events: none;"><path d="M3,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,8 L0,10.5 L-6,5.5 L0,0.5 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" transform="translate(18,-5.5)" style="pointer-events: none;"><g transform="translate(0,7)"></g></g></g></g></g></g></g></g></svg></div></div>
+                                    </div>
+                                    <!-- Execute SubTask :e -->
+                                </div>
+                                <!-- tab box :e -->                               
+                            </div>
+                            
+                            <div class="usage_box dash_box">
+                                <h3 class="dash-h3">Job Resource Usage</h3>
+                                <div class="chart_cont01" id="adminchartdiv3"><div style="width: 100%; height: 100%; position: relative; left: 0.03125px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" style="width: 100%; height: 100%; overflow: visible;"><defs><clipPath id="id-296"><rect width="1003" height="400"></rect></clipPath><linearGradient id="gradient-id-319" x1="1%" x2="99%" y1="59%" y2="41%"><stop stop-color="#474758" offset="0"></stop><stop stop-color="#474758" stop-opacity="1" offset="0.75"></stop><stop stop-color="#3cabff" stop-opacity="1" offset="0.755"></stop></linearGradient><filter id="filter-id-328" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><filter id="filter-id-349" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><filter id="filter-id-369" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"></filter><clipPath id="id-402"><path d="M0,0 L865,0 L865,300 L0,300 L0,0"></path></clipPath><clipPath id="id-422"><path d="M0,0 L865,0 L865,300 L0,300 L0,0"></path></clipPath><clipPath id="id-442"><path d="M0,0 L865,0 L865,300 L0,300 L0,0"></path></clipPath><clipPath id="id-463"><rect width="865" height="300"></rect></clipPath><clipPath id="id-646"><rect width="865" height="300"></rect></clipPath><filter id="filter-id-301" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="filter-id-316" filterUnits="objectBoundingBox" width="120%" height="120%" x="-10%" y="-10%"><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><filter id="filter-id-407" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="filter-id-427" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="filter-id-447" filterUnits="objectBoundingBox" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></feGaussianBlur><feOffset result="offsetBlur" dx="1" dy="1"></feOffset><feFlood flood-color="#000000" flood-opacity="0.5"></feFlood><feComposite in2="offsetBlur" operator="in"></feComposite><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><clipPath id="id-651"><rect width="865" height="300"></rect></clipPath><clipPath id="id-656"><rect width="865" height="300"></rect></clipPath><clipPath id="id-670"><rect width="865" height="300"></rect></clipPath></defs><g><g fill="#ffffff" fill-opacity="0"><rect width="1003" height="400"></rect></g><g><g role="region" clip-path="url(&quot;#id-296&quot;)" opacity="1" aria-label="Chart"><g transform="translate(15,15)"><g><g><g><g><g><g><g transform="translate(54,0)" style="touch-action: none; user-select: none; -webkit-user-drag: none;"><g fill="#ffffff" fill-opacity="0"><rect width="865" height="300"></rect></g><g><g><g></g></g><g><g></g></g><g><g></g></g><g><g><g role="group" stroke-opacity="1" fill-opacity="0" stroke="#67b7dc" aria-label="cpu" id="id-397"><g><g clip-path="url(&quot;#id-402&quot;)"><g><g><g><g fill="#67b7dc" fill-opacity="0" stroke="#67b7dc" stroke-opacity="1" style="pointer-events: none;"><g><g stroke-opacity="0"><path d=""></path></g><g fill="none" fill-opacity="0"><path d=""></path></g></g></g></g></g></g></g><g></g></g></g><g role="group" stroke-opacity="1" fill-opacity="0" stroke="#6794dc" aria-label="io" id="id-417"><g><g clip-path="url(&quot;#id-422&quot;)"><g><g><g><g fill="#6794dc" fill-opacity="0" stroke="#6794dc" stroke-opacity="1" style="pointer-events: none;"><g><g stroke-opacity="0"><path d=""></path></g><g fill="none" fill-opacity="0"><path d=""></path></g></g></g></g></g></g></g><g></g></g></g><g role="group" stroke-opacity="1" fill-opacity="0" stroke="#6771dc" aria-label="mem" id="id-437"><g><g clip-path="url(&quot;#id-442&quot;)"><g><g><g><g fill="#6771dc" fill-opacity="0" stroke="#6771dc" stroke-opacity="1" style="pointer-events: none;"><g><g stroke-opacity="0"><path d=""></path></g><g fill="none" fill-opacity="0"><path d=""></path></g></g></g></g></g></g></g><g></g></g></g></g></g><g clip-path="url(&quot;#id-646&quot;)"><g><g fill="#67b7dc" stroke="#67b7dc" clip-path="url(&quot;#id-670&quot;)"><g></g></g><g fill="#6794dc" stroke="#6794dc" clip-path="url(&quot;#id-656&quot;)"><g></g></g><g fill="#6771dc" stroke="#6771dc" clip-path="url(&quot;#id-651&quot;)"><g></g></g></g></g><g><g><g><g></g></g><g><g></g></g><g><g></g></g></g></g><g><g></g></g><g><g></g></g><g><g></g></g><g opacity="0" visibility="hidden" aria-hidden="true" clip-path="url(&quot;#id-463&quot;)" style="touch-action: none; user-select: none; -webkit-user-drag: none;"><g><g fill-opacity="0.2" fill="#000000" visibility="hidden" style="pointer-events: none;"><path></path></g><g stroke="#000000" fill="none" stroke-dasharray="3,3" stroke-opacity="0.4" style="pointer-events: none;" transform="translate(865,0)"><path d=" M0,0  L0,300 "></path></g><g stroke="#000000" fill="none" stroke-dasharray="3,3" stroke-opacity="0.4" style="pointer-events: none;" transform="translate(0,271.3)"><path d=" M0,0  L865,0 "></path></g></g></g><g role="button" focusable="true" tabindex="0" opacity="0" visibility="hidden" aria-hidden="true" transform="translate(825,-3)" aria-labelledby="id-287-title"><g fill="#6794dc" stroke="#ffffff" fill-opacity="1" stroke-opacity="0" transform="translate(0,8)"><path d="M17,0 L18,0 a17,17 0 0 1 17,17 L35,17 a17,17 0 0 1 -17,17 L17,34 a17,17 0 0 1 -17,-17 L0,17 a17,17 0 0 1 17,-17 Z"></path></g><g transform="translate(9,9)"><g stroke="#ffffff" style="pointer-events: none;" transform="translate(0,8)"><path d=" M0,0  L11,0 " transform="translate(2.5,7.5)"></path></g><g fill="#000000" style="pointer-events: none;" transform="translate(17,8)"><g display="none"></g></g></g><title id="id-287-title">Zoom Out</title></g></g></g><g><g><g aria-hidden="true"><g><g fill="#000000" transform="translate(0,164.5) rotate(-90)"><g style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>min</tspan></text></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none" opacity="0" visibility="hidden" aria-hidden="true" transform="translate(54,300)"><path transform="translate(-0.5,-0.5)" d=" M0,0  L865,0 "></path></g><g transform="translate(24,0)"><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" transform="translate(30,150)"><g transform="translate(-20,-34)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>L</tspan></text></g></g></g></g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;" transform="translate(54,0)"><path d=" M0,0  L0,300 " transform="translate(-0.5,-0.5)"></path></g></g></g></g></g><g transform="translate(919,0)"><g><g aria-hidden="true"><g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M0,0  L0,300 " transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none" transform="translate(-865,300)" opacity="1"><path transform="translate(-0.5,-0.5)" d=" M0,0  L865,0 "></path></g><g><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" transform="translate(0,150)"><g transform="translate(10,-12)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>L</tspan></text></g></g></g></g><g fill="#000000" transform="translate(54,139) rotate(90)"><g style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>GB</tspan></text></g></g></g></g></g></g></g></g><g><g transform="translate(54,0)"></g></g><g transform="translate(0,300)"><g transform="translate(54,0)"><g aria-hidden="true"><g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M0,0  L865,0 " transform="translate(-0.5,-0.5)"></path></g><g><g><g fill="#000000" aria-label="L" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" display="none"><g transform="translate(-5,10)" style="user-select: none;"><text x="0" y="24" dy="-6.48"><tspan>L</tspan></text></g></g></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none" display="none" transform="translate(0,-300)"><path transform="translate(-0.5,-0.5)" d=" M0,0  L0,300 "></path></g><g fill="#000000" transform="translate(432.5,0)"><g display="none"></g></g></g></g></g></g></g></g><g role="group" aria-label="Legend" transform="translate(0,330)"><g><g focusable="true" tabindex="0" role="switch" aria-controls="id-397" aria-labelledby="id-397" aria-checked="true" transform="translate(376,0)" style="cursor: pointer;"><g fill="#ffffff" fill-opacity="0"><rect width="61" height="40"></rect></g><g transform="translate(0,8)"><g fill="#67b7dc" style="pointer-events: none;" transform="translate(0,0.5)"><g fill="#ffffff" fill-opacity="0" stroke-opacity="0" stroke="#000000"><rect width="23" height="23"></rect></g><g><g fill="#67b7dc" fill-opacity="0" stroke="#67b7dc" stroke-opacity="1" transform="translate(0,11.5)"><line x1="0" y1="0" x2="23" y2="0.00001"></line></g><g fill="#67b7dc" stroke="#67b7dc" transform="translate(11.5,11.5)" focusable="true" tabindex="0"><g><g><circle r="5"></circle></g></g></g></g></g><g fill="#000000" aria-label="cpu" style="pointer-events: none;" transform="translate(28,0)"><g style="user-select: none;"><text x="0" y="24" overflow="hidden" dy="-6.48"><tspan>cpu</tspan></text></g></g><g fill="#000000" style="pointer-events: none;" display="none"><g display="none"></g></g></g></g><g focusable="true" tabindex="0" role="switch" aria-controls="id-417" aria-labelledby="id-417" aria-checked="true" transform="translate(457,0)" style="cursor: pointer;"><g fill="#ffffff" fill-opacity="0"><rect width="48" height="40"></rect></g><g transform="translate(0,8)"><g fill="#6794dc" style="pointer-events: none;" transform="translate(0,0.5)"><g fill="#ffffff" fill-opacity="0" stroke-opacity="0" stroke="#000000"><rect width="23" height="23"></rect></g><g><g fill="#6794dc" fill-opacity="0" stroke="#6794dc" stroke-opacity="1" transform="translate(0,11.5)"><line x1="0" y1="0" x2="23" y2="0.00001"></line></g><g fill="#6794dc" stroke="#6794dc" transform="translate(11.5,11.5)" focusable="true" tabindex="0"><g><g><circle r="5"></circle></g></g></g></g></g><g fill="#000000" aria-label="io" style="pointer-events: none;" transform="translate(28,0)"><g style="user-select: none;"><text x="0" y="24" overflow="hidden" dy="-6.48"><tspan>io</tspan></text></g></g><g fill="#000000" style="pointer-events: none;" display="none"><g display="none"></g></g></g></g><g focusable="true" tabindex="0" role="switch" aria-controls="id-437" aria-labelledby="id-437" aria-checked="true" transform="translate(525,0)" style="cursor: pointer;"><g fill="#ffffff" fill-opacity="0"><rect width="72" height="40"></rect></g><g transform="translate(0,8)"><g fill="#6771dc" style="pointer-events: none;" transform="translate(0,0.5)"><g fill="#ffffff" fill-opacity="0" stroke-opacity="0" stroke="#000000"><rect width="23" height="23"></rect></g><g><g fill="#6771dc" fill-opacity="0" stroke="#6771dc" stroke-opacity="1" transform="translate(0,11.5)"><line x1="0" y1="0" x2="23" y2="0.00001"></line></g><g fill="#6771dc" stroke="#6771dc" transform="translate(11.5,11.5)" focusable="true" tabindex="0"><g><g><circle r="5"></circle></g></g></g></g></g><g fill="#000000" aria-label="mem" style="pointer-events: none;" transform="translate(28,0)"><g style="user-select: none;"><text x="0" y="24" overflow="hidden" dy="-6.48"><tspan>mem</tspan></text></g></g><g fill="#000000" style="pointer-events: none;" display="none"><g display="none"></g></g></g></g></g></g></g></g></g></g><g><g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-301&quot;)" style="pointer-events: none;" transform="translate(0,6)"><path d="M3,0 L3,0 L0,-6 L13,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(12,6)"><g transform="translate(0,7)" display="none"></g></g></g></g><g visibility="hidden" display="none"><g fill="#ffffff" opacity="1"><rect width="1003" height="400"></rect></g><g><g><g><g stroke-opacity="1" fill="#f3f3f3" fill-opacity="0.8"><g><g><path d=" M53,0  a53,53,0,0,1,-106,0 a53,53,0,0,1,106,0 M42,0  a42,42,0,0,0,-84,0 a42,42,0,0,0,84,0 L42,0 "></path></g></g></g><g stroke-opacity="1" fill="#000000" fill-opacity="0.2"><g><g><path d=""></path></g></g></g><g fill="#000000" fill-opacity="0.4"><g display="none"></g></g></g></g></g></g><g opacity="0.3" aria-labelledby="id-316-title" filter="url(&quot;#filter-id-316&quot;)" style="cursor: pointer;" transform="translate(0,379)"><g fill="#ffffff" opacity="0"><rect width="66" height="21"></rect></g><g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="#3cabff"><path d=" M15,15  C17.4001,15 22.7998,15.0001 27,15 C31.2002,14.9999 33.2999,6 36,6 C38.7001,6 38.6999,10.5 40.5,10.5 C42.3001,10.5 42.2999,6 45,6 C47.7001,6 50.9999,14.9999 54,15 C57.0002,15.0001 58.7999,15 60,15"></path></g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="url(&quot;#gradient-id-319&quot;)"><path d=" M6,15  C8.2501,15 9.7498,15.0001 15,15 C20.2502,14.9999 20.7748,3.6 27,3.6 C33.2252,3.6 33.8998,14.9999 39.9,15 C45.9002,15.0001 45.9748,15 51,15 C56.0252,15 57.7499,15 60,15"></path></g></g><title id="id-316-title">Chart created using amCharts library</title></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(69,315)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(79,315)"><g transform="translate(0,5)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0" display="none"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;"><path></path></g><g><g fill="#ffffff" style="pointer-events: none;"><g transform="translate(0,5)"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(5,15)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,0 L20,0 L929,0 L20,10 L20,10 a0,0 0 0 1 -0,0 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(15,15)"><g transform="translate(0,5)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-407&quot;)" style="pointer-events: none;" transform="translate(6,0)"><path d="M3,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,8 L0,8 L-6,0 L0,-2 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(18,0)"><g transform="translate(0,7)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-427&quot;)" style="pointer-events: none;" transform="translate(6,0)"><path d="M3,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,8 L0,8 L-6,0 L0,-2 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(18,0)"><g transform="translate(0,7)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-447&quot;)" style="pointer-events: none;" transform="translate(6,0)"><path d="M3,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,8 L0,8 L-6,0 L0,-2 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(18,0)"><g transform="translate(0,7)" display="none"></g></g></g></g></g></g></g></g></svg></div></div>
+                            </div>
+                
+                            <div class="task_box dash_box">
+                                <!-- tab list : s-->
+                                <div class="tab_type_admin tab_default02">
+                                    <ul class="tab_list02" id="task_tabs">
+                                        <li class="t_on">
+                                            <a href="#tab_complete" class="tab_tit">
+                                                <span>Task Complete Status</span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#tab_error" class="tab_tit">
+                                                <span>Task Error Status</span>
+                                            </a>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                <!-- tab list :e -->
+                                <!-- tab box :s -->
+                                <div class="tab_box_type_admin tab_box02">
+                                    <!-- Task Complete Status : s-->
+                                    <div class="tab_cont02" id="tab_complete" style="display: block;">           
+                                        <div id="task_complete_fragment">                             
+                                            <div class="dash_brd">
+                                                <!-- board list count & sort :s -->
+                                                <div class="brd_list_top">
+                                                    <div class="brd_num">
+                                                        <span class="">Total</span>
+                                                        <span class="bold">70212</span>    
+                                                                                            
+                                                        <span>Page</span> 
+                                                        <span class="bold">1/14043</span>                                    
+                                                                                            
+                                                    </div>
+                                                    
+                                                    <!-- complete : board search : s-->
+                                                    <!-- <div class="admin-search" style="display: flex;">
+                                                        <label for="complete_category" class="Hidden">Category</label>
+                                                        <select class="" name="complete_category" id="complete_category">
+                                                            <option th:selected="${category}=='all'" value="all" th:text="All">All</option>
+                                                            <option th:selected="${category}=='pipelineName'" value="pipelineName" th:text="PipelineName">Pipeline Name</option>
+                                                            <option th:selected="${category}=='programName'" value="programName" th:text="ProgramName">Program Name</option>
+                                                            <option th:selected="${category}=='member'" value="member" th:text="Member">Member</option>
+                                                            <option th:selected="${category}=='submissionTime'" value="submissionTime" th:text="SubmissionTime">Submission Time</option>
+                                                        </select>
+                                                        <label for="complete_search" class="Hidden">Search Word</label>
+                                                        <input type="text" name="complete_search" id="complete_search" class="text" placeholder="Please enter your search term." th:value="${search}"/>
+                                                        <label for="complete_search_btn" class="Hidden">Search</label>
+                                                        <input type="button" class="button" th:value="Search" id="complete_search_btn" th:onclick="taskPaging(1);"/>
+                                                        
+                                                        <label for="complete_sorting" class="Hidden">Order</label>
+                                                        <select class="" name="complete_sorting" id="complete_sorting">
+                                                            <option th:selected="${sorting}=='recentSession'" value="recentSession" th:text="RecentSession">Recent Session</option>
+                                                            <option th:selected="${sorting}=='previousSession'" value="previousSession" th:text="PreviousSession">Previous Session</option>
+                                                            <option th:selected="${sorting}=='multi'" value="multi" th:text="Multi">Multi</option>
+                                                            <option th:selected="${sorting}=='single'" value="single" th:text="Single">Single</option>
+                                                        </select>
+                                                    </div> -->
+                                                     <!-- complete : board search : e-->
+                                                </div>
+                                                <!-- board list count & sort :e -->
+                                                <!-- board list :s-->
+                                                <div class="brd_list_type01">
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="completeTaskId" value="0001453f-0c0a-404a-a36b-265b225373ab">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + complete_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">70212</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">core_30</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>multi_core_py3.8</span></li>
+                                                                <li><span>Member</span><span>kogun82</span></li>
+                                                                <li><span>Submission Time</span><span>2023-07-07 17:52:35</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_multi">Multi</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="completeTaskId" value="00030701-9ea4-4f47-ab0a-4e4b93fb66b4">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + complete_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">70211</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">core_01</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>multi_core_py3.10</span></li>
+                                                                <li><span>Member</span><span>kogun82</span></li>
+                                                                <li><span>Submission Time</span><span>2023-07-04 10:39:53</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_multi">Multi</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="completeTaskId" value="00035d9c-6727-4f63-9680-36f8f947dad4">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + complete_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">70210</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">core_33</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>multi_core_py3.8</span></li>
+                                                                <li><span>Member</span><span>kogun82</span></li>
+                                                                <li><span>Submission Time</span><span>2023-06-15 22:14:21</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_multi">Multi</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="completeTaskId" value="00035e3f-0661-4822-b693-4787e32375c2">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + complete_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">70209</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">core_06</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>multi_core_py3.7</span></li>
+                                                                <li><span>Member</span><span>kogun82</span></li>
+                                                                <li><span>Submission Time</span><span>2023-06-26 14:59:13</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_multi">Multi</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="completeTaskId" value="00057830-fcf1-425d-aefe-eaef3333fd4f">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + complete_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">70208</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">_1_single-cell_poc_37_pipeline</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>Normalize</span></li>
+                                                                <li><span>Member</span><span>kogun82</span></li>
+                                                                <li><span>Submission Time</span><span>2022-08-12 14:36:50</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_multi">Multi</span>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <!-- board list :s-->
+                                                
+                    
+                                                <!-- 목록은 5개씩 노출 -->
+                                                <!-- pagination :s-->
+                                                <div class="pagination">       
+                                                    <span class="prev_g">
+                                                        <a class="page_p_end" onclick="taskPaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                                        <a class="page_p" onclick="taskPaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                                    </span>
+                                                    <a onclick="taskPaging(1);" class="on">1</a><a onclick="taskPaging(2);">2</a><a onclick="taskPaging(3);">3</a><a onclick="taskPaging(4);">4</a><a onclick="taskPaging(5);">5</a><a onclick="taskPaging(6);">6</a><a onclick="taskPaging(7);">7</a><a onclick="taskPaging(8);">8</a><a onclick="taskPaging(9);">9</a><a onclick="taskPaging(10);">10</a>
+                                                    <span class="next_g">
+                                                        <a class="page_n" onclick="taskPaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                                        <a class="page_n_end" onclick="taskPaging(14043);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                                    </span>                
+                                                </div>
+                                                
+                                                <!-- pagination :e-->                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Task Complete Status :e -->
+                                    <!-- Task Error Status :s -->
+                                    <div class="tab_cont02" id="tab_error">
+                                        <div id="task_error_fragment">
+                                            <div class="dash_brd">                                            
+                                                <!-- board list count & sort :s -->
+                                                <div class="brd_list_top">
+                                                    <div class="brd_num">
+                                                        <span class="">Total</span>
+                                                        <span class="bold">23</span>    
+                                                                                            
+                                                        <span>Page</span> 
+                                                        <span class="bold">1/5</span>                                    
+                                                                                                  
+                                                    </div>
+                                                    
+                                                    <!-- error : board search : s-->
+                                                    <!-- <div class="admin-search" style="display: flex;">
+                                                        <label for="error_category" class="Hidden">Category</label>
+                                                        <select class="" name="error_category" id="error_category">
+                                                            <option th:selected="${category}=='all'" value="all" th:text="All">All</option>
+                                                            <option th:selected="${category}=='pipelineName'" value="pipelineName" th:text="PipelineName">Pipeline Name</option>
+                                                            <option th:selected="${category}=='programName'" value="programName" th:text="ProgramName">Program Name</option>
+                                                            <option th:selected="${category}=='member'" value="member" th:text="Member">Member</option>
+                                                            <option th:selected="${category}=='submissionTime'" value="submissionTime" th:text="SubmissionTime">Submission Time</option>
+                                                        </select>
+                                                        <label for="error_search" class="Hidden">Search Word</label>
+                                                        <input type="text" name="error_search" id="error_search" class="text" placeholder="Please enter your search term." th:value="${search}"/>
+                                                        <label for="error_search_btn" class="Hidden">Search</label>
+                                                        <input type="button" class="button" th:value="Search" id="error_search_btn" th:onclick="taskPaging(1);"/>
+                                                        <label for="complete_sorting" class="Hidden">Order</label>
+                                                        <select class="" name="complete_sorting" id="complete_sorting">
+                                                            <option th:selected="${sorting}=='recentSession'" value="recentSession" th:text="RecentSession">Recent Session</option>
+                                                            <option th:selected="${sorting}=='previousSession'" value="previousSession" th:text="PreviousSession">Previous Session</option>
+                                                            <option th:selected="${sorting}=='multi'" value="multi" th:text="Multi">Multi</option>
+                                                            <option th:selected="${sorting}=='single'" value="single" th:text="Single">Single</option>
+                                                        </select>
+                                                    </div> -->
+                                                     <!-- error : board search : e-->
+                                                    
+                                                </div>
+                                                <!-- board list count & sort :e -->
+                                                <!-- board list :s-->
+                                                <div class="brd_list_type01">
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="errorTaskId" value="0119ab96-a731-42e7-b588-20018ab05a5c">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + error_page.startRow}">1</span>
+                                                         -->	                                     
+                                                        <span class="b_num">23</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">workbench_WGS-Spark_211013_final</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>Put</span></li>
+                                                                <li><span>Member</span><span>bioex</span></li>
+                                                                <li><span>Submission Time</span><span>2021-11-01 13:42:07</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_single">Single</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="errorTaskId" value="02293b3a-bbfb-4a9e-a8d9-d3904223e842">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + error_page.startRow}">1</span>
+                                                         -->	                                     
+                                                        <span class="b_num">22</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">wget</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>cellranger</span></li>
+                                                                <li><span>Member</span><span>bioex</span></li>
+                                                                <li><span>Submission Time</span><span>2021-11-02 16:44:56</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_single">Single</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="errorTaskId" value="0d84a5d6-d0c3-4d3b-a263-bb732cf204cb">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + error_page.startRow}">1</span>
+                                                         -->	                                     
+                                                        <span class="b_num">21</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">sc_rna_seq_preprocessing_test</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>cellranger</span></li>
+                                                                <li><span>Member</span><span>bioex</span></li>
+                                                                <li><span>Submission Time</span><span>2021-11-02 16:46:13</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_single">Single</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="errorTaskId" value="0d84bfa9-4975-497d-96c5-a0651fb40af6">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + error_page.startRow}">1</span>
+                                                         -->	                                     
+                                                        <span class="b_num">20</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">wget</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>cellranger</span></li>
+                                                                <li><span>Member</span><span>bioex</span></li>
+                                                                <li><span>Submission Time</span><span>2021-11-02 16:44:26</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_single">Single</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="errorTaskId" value="0fa1fae5-105e-4ea9-a7ca-cd4c30f7bd3b">
+                                                        <!-- 
+                                                        <span class="b_num" th:text="${taskStat.count + error_page.startRow}">1</span>
+                                                         -->	                                     
+                                                        <span class="b_num">19</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">kmeans</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Program Name</span><span>data_preprocessing</span></li>
+                                                                <li><span>Member</span><span>bioex</span></li>
+                                                                <li><span>Submission Time</span><span>2024-06-11 10:24:32</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="use_core core_icon core_single">Single</span>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <!-- board list :e-->
+                                                
+                    
+                                                <!-- 목록은 5개씩 노출 -->
+                                                <!-- pagination :s-->
+                                                <div class="pagination">       
+                                                    <span class="prev_g">
+                                                        <a class="page_p_end" onclick="taskPaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                                        <a class="page_p" onclick="taskPaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                                    </span>
+                                                    <a onclick="taskPaging(1);" class="on">1</a><a onclick="taskPaging(2);">2</a><a onclick="taskPaging(3);">3</a><a onclick="taskPaging(4);">4</a><a onclick="taskPaging(5);">5</a>
+                                                    <span class="next_g">
+                                                        <a class="page_n" onclick="taskPaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                                        <a class="page_n_end" onclick="taskPaging(5);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                                    </span>                
+                                                </div>
+                                                
+                                                <!-- pagination :e-->                       
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Task Error Status :e -->   
+                                </div>
+                                <!-- tab box :e -->       
+                            </div>
+                
+                            <div class="pipe_box dash_box">
+                                <!-- tab list : s-->
+                                <div class="tab_type_admin tab_default03">
+                                    <ul class="tab_list03" id="pipe_tabs">
+                                        <li class="t_on">
+                                            <a href="#tab_all" class="tab_tit">
+                                                <span>Pipeline All</span>
+                                            </a>
+                                        </li>                                        
+                                        <li>
+                                            <a href="#tab_dev" class="tab_tit">
+                                                <span>Pipeline Development</span>
+                                            </a>
+                                        </li>  
+                                        <li>
+                                            <a href="#tab_inst" class="tab_tit">
+                                                <span>Pipeline Instance</span>
+                                            </a>
+                                        </li>    
+                                    </ul>
+                                </div>
+                                <!-- tab list :e -->
+                                <!-- tab box :s -->
+                                <div class="tab_box_type_admin tab_box03">
+                                    <!-- Pipeline All: s-->
+                                    <div class="tab_cont03" id="tab_all" style="display: block;">                    
+                                        <div id="all_pipe_fragment">                   
+                                            <div class="dash_brd">
+                                                <!-- board list count & sort :s -->
+                                                <div class="brd_list_top">
+                                                    <div class="brd_num">
+                                                        <span class="">Total</span>
+                                                        <span class="bold">4643</span>    
+                                                                                            
+                                                        <span>Page</span> 
+                                                        <span class="bold">1/929</span>                                    
+                                                                                              
+                                                    </div>
+                                                    
+                                                    <!-- all : board search : s-->
+                                                    <!-- <div class="admin-search" style="display: flex;">
+                                                        <label for="all_category" class="Hidden">Category</label>
+                                                        <select class="" name="all_category" id="all_category">
+                                                            <option th:selected="${category}=='all'" value="all" th:text="All">All</option>
+                                                            <option th:selected="${category}=='pipelineName'" value="pipelineName" th:text="PipelineName">Pipeline Name</option>
+                                                            <option th:selected="${category}=='owner'" value="owner" th:text="Owner">Owner</option>
+                                                            <option th:selected="${category}=='createDate'" value="createDate" th:text="CreateDate">"Create Date"</option>
+                                                            <option th:selected="${category}=='updateDate'" value="updateDate" th:text="UpdateDate">Update Date</option>
+                                                            <option th:selected="${category}=='executeCount'" value="executeCount" th:text="ExecuteCount">Execute Count</option>
+                                                            <option th:selected="${category}=='version'" value="version" th:text="Version">Version</option>
+                                                        </select>
+                                                        <label for="all_search" class="Hidden">Search Word</label>
+                                                        <input type="text" name="all_search" id="all_search" class="text" placeholder="Please enter your search term." th:value="${search}"/>
+                                                        <label for="all_search_btn" class="Hidden">Search</label>
+                                                        <input type="button" class="button" th:value="Search" id="all_search_btn" th:onclick="pipelinePaging(1);"/>
+                                                        
+                                                        <label for="all_sorting" class="Hidden">Order</label>
+                                                        <select class="" name="all_sorting" id="all_sorting">
+                                                            <option th:selected="${sorting}=='complete'" value="complete" th:text="Complete">"Complete"</option>
+                                                            <option th:selected="${sorting}=='wait'" value="wait" th:text="Wait">Wait</option>
+                                                            <option th:selected="${sorting}=='run'" value="run" th:text="Run">Run</option>
+                                                            <option th:selected="${sorting}=='stop'" value="stop" th:text="Stop">Stop</option>
+                                                        </select>
+                                                    </div> -->
+                                                     <!-- all : board search : e-->
+                                                    
+                                                </div>
+                                                <!-- board list count & sort :e -->
+                                                <!-- board list :s-->
+                                                <div class="brd_list_type01">
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="pipelineId" value="dd5e53a4-db23-4fa0-8ca8-03207dba03da">
+                                                        <!--  
+                                                        <span class="b_num"  th:text="${pipelineStat.count + all_page.startRow}">1</span>
+                                                        -->
+                                                        <span class="b_num">4643</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">movepi</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>NA</span></li>
+                                                                <li><span>Create Date</span><span>NA</span></li>
+                                                                <li><span>Update Date</span><span>2022-10-03</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>1.1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_wait">wait</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="pipelineId" value="2805558e-d542-492a-9335-6542b46cd0bc">
+                                                        <!--  
+                                                        <span class="b_num"  th:text="${pipelineStat.count + all_page.startRow}">1</span>
+                                                        -->
+                                                        <span class="b_num">4642</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">Test</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>SBaby</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-21</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-21</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="pipelineId" value="a5a37547-6dc2-46ab-84ec-c79b06d8ab26">
+                                                        <!--  
+                                                        <span class="b_num"  th:text="${pipelineStat.count + all_page.startRow}">1</span>
+                                                        -->
+                                                        <span class="b_num">4641</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">testpipe</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>nuwan</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-19</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-20</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_stop">stop</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="pipelineId" value="1d4dca3d-8c44-463c-bc0d-c978a19ed927">
+                                                        <!--  
+                                                        <span class="b_num"  th:text="${pipelineStat.count + all_page.startRow}">1</span>
+                                                        -->
+                                                        <span class="b_num">4640</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_240716_mac</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bioex</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="pipelineId" value="d683e94a-553f-46db-80f6-8ed3085336a2">
+                                                        <!--  
+                                                        <span class="b_num"  th:text="${pipelineStat.count + all_page.startRow}">1</span>
+                                                        -->
+                                                        <span class="b_num">4639</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_01</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>kjh98</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <!-- board list :e-->
+                                                
+                    
+                                                <!-- 목록은 5개씩 노출 -->
+                                                <!-- pagination :s-->
+                                                <div class="pagination">       
+                                                    <span class="prev_g">
+                                                        <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                                        <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                                    </span>
+                                                    <a onclick="pipelinePaging(1);" class="on">1</a><a onclick="pipelinePaging(2);">2</a><a onclick="pipelinePaging(3);">3</a><a onclick="pipelinePaging(4);">4</a><a onclick="pipelinePaging(5);">5</a><a onclick="pipelinePaging(6);">6</a><a onclick="pipelinePaging(7);">7</a><a onclick="pipelinePaging(8);">8</a><a onclick="pipelinePaging(9);">9</a><a onclick="pipelinePaging(10);">10</a>
+                                                    <span class="next_g">
+                                                        <a class="page_n" onclick="pipelinePaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                                        <a class="page_n_end" onclick="pipelinePaging(929);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                                    </span>                
+                                                </div>
+                                                
+                                                <!-- pagination :e-->                         
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pipeline All :e -->
+                                    <!-- Pipeline Development :s -->
+                                    <div class="tab_cont03" id="tab_dev">            
+                                        <div id="dev_pipe_fragment">                 
+                                            <div class="dash_brd">
+                                                <!-- board list count & sort :s -->
+                                                <div class="brd_list_top">
+                                                    <div class="brd_num">
+                                                        <span class="">Total</span>
+                                                        <span class="bold">1483</span>    
+                                                                                            
+                                                        <span>Page</span> 
+                                                        <span class="bold">1/297</span>                                    
+                                                                                              
+                                                    </div>
+                                                    
+                                                    <!-- dev : board search : s-->
+                                                    <!-- <div class="admin-search" style="display: flex;">
+                                                        <label for="dev_category" class="Hidden">Category</label>
+                                                        <select class="" name="dev_category" id="dev_category">
+                                                            <option th:selected="${category}=='all'" value="all" th:text="All">All</option>
+                                                            <option th:selected="${category}=='pipelineName'" value="pipelineName" th:text="PipelineName">Pipeline Name</option>
+                                                             <option th:selected="${category}=='owner'" value="owner" th:text="Owner">Owner</option>
+                                                            <option th:selected="${category}=='createDate'" value="createDate" th:text="CreateDate">"Create Date"</option>
+                                                            <option th:selected="${category}=='updateDate'" value="updateDate" th:text="UpdateDate">Update Date</option>
+                                                            <option th:selected="${category}=='executeCount'" value="executeCount" th:text="ExecuteCount">Execute Count</option>
+                                                            <option th:selected="${category}=='version'" value="version" th:text="Version">Version</option>
+                                                        </select>
+                                                        <label for="dev_search" class="Hidden">Search Word</label>
+                                                        <input type="text" name="dev_search" id="dev_search" class="text" placeholder="Please enter your search term." th:value="${search}"/>
+                                                        <label for="dev_search_btn" class="Hidden">Search</label>
+                                                        <input type="button" class="button" th:value="Search" id="dev_search_btn" th:onclick="pipelinePaging(1);"/>
+                                                        
+                                                        <label for="dev_sorting" class="Hidden">Order</label>
+                                                        <select class="" name="dev_sorting" id="dev_sorting">
+                                                             <option th:selected="${sorting}=='complete'" value="complete" th:text="Complete">"Complete"</option>
+                                                            <option th:selected="${sorting}=='wait'" value="wait" th:text="Wait">Wait</option>
+                                                            <option th:selected="${sorting}=='run'" value="run" th:text="Run">Run</option>
+                                                            <option th:selected="${sorting}=='stop'" value="stop" th:text="Stop">Stop</option>
+                                                        </select>
+                                                    </div> -->
+                                                     <!-- dev : board search : e-->
+                                                    
+                                                </div>
+                                                <!-- board list count & sort :e -->
+                                                <!-- board list :s-->
+                                                <div class="brd_list_type01">
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="devPipelineId" value="dd5e53a4-db23-4fa0-8ca8-03207dba03da">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + dev_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">1483</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">movepi</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>NA</span></li>
+                                                                <li><span>Create Date</span><span>NA</span></li>
+                                                                <li><span>Update Date</span><span>2022-10-03</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>1.1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_wait">wait</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="devPipelineId" value="2805558e-d542-492a-9335-6542b46cd0bc">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + dev_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">1482</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">Test</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>SBaby</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-21</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-21</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="devPipelineId" value="a5a37547-6dc2-46ab-84ec-c79b06d8ab26">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + dev_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">1481</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">testpipe</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>nuwan</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-19</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-20</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_stop">stop</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="devPipelineId" value="53257dac-86db-463d-a3ba-842c2dce3eb9">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + dev_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">1480</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">new_pipeline_240710_01</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bioex</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-10</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-10</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>test</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            <span class="status_icon2 status_wait">wait</span>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="devPipelineId" value="9b320ea4-6674-426b-a636-6213a7f432d1">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + dev_page.startRow}">1</span>
+                                                         -->	                                    
+                                                        <span class="b_num">1479</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">kribb</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bd40fbea-2915-4ef7-a130-fd5758027576</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-08</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-08</span></li>
+                                                                <li><span>Execute Count</span><span>0</span></li>
+                                                                <li><span>Version</span><span>1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_wait">wait</span>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                <!-- board list :e-->
+                                                
+                                                 
+                    
+                                                <!-- 목록은 5개씩 노출 -->
+                                                <!-- pagination :s-->
+                                                <div class="pagination">       
+                                                    <span class="prev_g">
+                                                        <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                                        <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                                    </span>
+                                                    <a onclick="pipelinePaging(1);" class="on">1</a><a onclick="pipelinePaging(2);">2</a><a onclick="pipelinePaging(3);">3</a><a onclick="pipelinePaging(4);">4</a><a onclick="pipelinePaging(5);">5</a><a onclick="pipelinePaging(6);">6</a><a onclick="pipelinePaging(7);">7</a><a onclick="pipelinePaging(8);">8</a><a onclick="pipelinePaging(9);">9</a><a onclick="pipelinePaging(10);">10</a>
+                                                    <span class="next_g">
+                                                        <a class="page_n" onclick="pipelinePaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                                        <a class="page_n_end" onclick="pipelinePaging(297);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                                    </span>                
+                                                </div>
+                                                
+                                                <!-- pagination :e-->                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pipeline Development :e -->   
+                                    <!-- Pipeline Instance :s -->
+                                    <div class="tab_cont03" id="tab_inst">                  
+                                        <div id="inst_pipe_fragment">           
+                                            <div class="dash_brd">
+                                                <!-- board list count & sort :s -->
+                                                <div class="brd_list_top">
+                                                    <div class="brd_num">
+                                                        <span class="">Total</span>
+                                                        <span class="bold">3160</span>    
+                                                                                            
+                                                        <span>Page</span> 
+                                                        <span class="bold">1/632</span>                                    
+                                                                                              
+                                                    </div>
+                                                    
+                                                    <!-- inst : board search : s-->
+                                                    <div class="admin-search" style="display: flex;">
+                                                        <label for="inst_category" class="Hidden">Category</label>
+                                                        <select class="" name="inst_category" id="inst_category">
+                                                            <option value="all">All</option>
+                                                            <option value="pipelineName">PipelineName</option>
+                                                             <option value="owner">Owner</option>
+                                                            <option value="createDate">CreateDate</option>
+                                                            <option value="updateDate">UpdateDate</option>
+                                                            <option value="executeCount">ExecuteCount</option>
+                                                            <option value="version">Version</option>
+                                                        </select>
+                                                        <label for="inst_search" class="Hidden">Search Word</label>
+                                                        <input type="text" name="inst_search" id="inst_search" class="text" placeholder="Please enter your search term." value="">
+                                                        <label for="inst_search_btn" class="Hidden">Search</label>
+                                                        <input type="button" class="button" value="Search" id="inst_search_btn" onclick="pipelinePaging(1);">
+                                                        
+                                                        <label for="inst_sorting" class="Hidden">Order</label>
+                                                        <select class="" name="inst_sorting" id="inst_sorting">
+                                                             <option value="complete">Complete</option>
+                                                            <option value="wait">Wait</option>
+                                                            <option value="run">Run</option>
+                                                            <option value="stop">Stop</option>
+                                                        </select>
+                                                    </div>
+                                                     <!-- inst : board search : e-->
+                                                    
+                                                </div>
+                                                <!-- board list count & sort :e -->
+                                                <!-- board list :s-->
+                                                <div class="brd_list_type01">
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="instPipelineId" value="1d4dca3d-8c44-463c-bc0d-c978a19ed927">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + inst_page.startRow}">1</span>
+                                                         -->
+                                                        <span class="b_num">3160</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_240716_mac</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bioex</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="instPipelineId" value="6946361c-01ef-40d9-a63a-affae5640107">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + inst_page.startRow}">1</span>
+                                                         -->
+                                                        <span class="b_num">3159</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_scrna</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>kjh98</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-17</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>0.1</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="instPipelineId" value="d683e94a-553f-46db-80f6-8ed3085336a2">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + inst_page.startRow}">1</span>
+                                                         -->
+                                                        <span class="b_num">3158</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_01</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>kjh98</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-16</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="instPipelineId" value="44e13d64-d5e4-47b4-ba4a-d1178e9bf292">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + inst_page.startRow}">1</span>
+                                                         -->
+                                                        <span class="b_num">3157</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_240714_02</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bioex</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-15</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-15</span></li>
+                                                                <li><span>Execute Count</span><span>1</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brd_list">
+                                                        <input type="hidden" id="instPipelineId" value="8498ab7f-5e41-4b2d-9de6-dd496b3916ef">
+                                                        <!-- 
+                                                        <span class="b_num"  th:text="${pipelineStat.count + inst_page.startRow}">1</span>
+                                                         -->
+                                                        <span class="b_num">3156</span>
+                                                        <div class="b_title_box">
+                                                            <div class="b_tit">inst_wgs_240715_03</div>
+                                                            <ul class="b_info">
+                                                                <li><span>Owner</span><span>bioex</span></li>
+                                                                <li><span>Create Date</span><span>2024-07-15</span></li>
+                                                                <li><span>Update Date</span><span>2024-07-15</span></li>
+                                                                <li><span>Execute Count</span><span>2</span></li>
+                                                                <li><span>Version</span><span>1.0</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="b_state">
+                                                            
+                                                            <span class="status_icon2 status_complete">complete</span>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <!-- board list :e-->
+                                                
+                                                
+                    
+                                                <!-- 목록은 5개씩 노출 -->
+                                                <!-- pagination :s-->
+                                                <div class="pagination">       
+                                                    <span class="prev_g">
+                                                        <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                                                        <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+                                                    </span>
+                                                    <a onclick="pipelinePaging(1);" class="on">1</a><a onclick="pipelinePaging(2);">2</a><a onclick="pipelinePaging(3);">3</a><a onclick="pipelinePaging(4);">4</a><a onclick="pipelinePaging(5);">5</a><a onclick="pipelinePaging(6);">6</a><a onclick="pipelinePaging(7);">7</a><a onclick="pipelinePaging(8);">8</a><a onclick="pipelinePaging(9);">9</a><a onclick="pipelinePaging(10);">10</a>
+                                                    <span class="next_g">
+                                                        <a class="page_n" onclick="pipelinePaging(2);"><span class="Hidden">다음 페이지로 이동</span></a>
+                                                        <a class="page_n_end" onclick="pipelinePaging(632);"><span class="Hidden">마지막 페이지로 이동</span></a>
+                                                    </span>                
+                                                </div>
+                                                
+                                                <!-- pagination :e-->    
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pipeline Instance :e -->   
+                                </div>
+                                <!-- tab box :e --> 
+                            </div>
+                        </div>
+                    
+                        <script src="../../js/amcharts/core.js"></script><!-- amcharts -->
+                        <script src="../../js/amcharts/charts.js"></script><!-- amcharts -->
+                        <script src="../../js/amcharts/rangeSelector.js"></script><!-- amcharts -->
+                        <script src="../../js/amcharts/animated.js"></script><!-- amcharts -->	
+                        <script src="../../js/contents/admin/main.js"></script>
+                        <script>
+                        
+                            drawChartExecuteTask();
+                            drawChartExecuteSubTask();
+                            drawChartJob();
+                        
+                        </script>
+                        
+                                        
+                    </div>
+                    <!-- admin content inner :e -->
+                    
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+            
+
+    </body>
+</html>

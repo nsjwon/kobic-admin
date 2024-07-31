@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+/* 관리자 - board search 영역 */
+.admin-search > select {padding: 9px 30px 9px 9px; margin-left: 8px; line-height: normal; font-size: 1.4rem;}
+.admin-search > .button {padding: 0px 25px; margin-left: 8px; font-size: 1.4rem;}
+.admin-search > .text {padding: 9px; margin-left: 8px; width: 270px; font-size: 1.4rem;}
+
+/* 공통 */
+.admin_info_bg {padding:0; margin-bottom:4.0rem; font-size: 2.0rem;}
+.admin_info_bg > ul {display: flex; justify-content: center;}
+.admin_info_bg > ul > li {margin:0 1.0rem 0 0; position: relative; padding:0 1.0rem 0 0;}
+.admin_info_bg > ul > li::after {display: block;  position: absolute;  top: 0;  bottom: 0;  right: 0;  width: 1px;  height: 14px;  margin: auto 0;  background-color: #999999;}
+.admin_info_bg > ul > li:last-child::after {display: none;} 
+
+/* 탭 */
+.tab_type_admin {padding:2.8rem 2.4rem 0 2.4rem;}
+.tab_type_admin > .tab_list, .tab_type_admin > .tab_list02, .tab_type_admin > .tab_list03 {display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;}
+.tab_type_admin > .tab_list li, .tab_type_admin > .tab_list02 li, .tab_type_admin > .tab_list03 li {border-radius: 0;margin: 0; text-align: center;}
+.tab_type_admin > .tab_list li.t_on, .tab_type_admin > .tab_list02 li.t_on, .tab_type_admin > .tab_list03 li.t_on {z-index: 1; font-weight: bold;}
+.tab_type_admin > .tab_list li a, .tab_type_admin > .tab_list02 li a, .tab_type_admin > .tab_list03 li a {position:relative;box-sizing: border-box; padding: 0 0.4rem 1.2rem 0.4rem;display: block;margin-right: 1.6rem; color: #888888;  font-size:1.8rem; border-bottom: 4px solid transparent;} 
+.tab_type_admin > .tab_list li:last-child a, .tab_type_admin > .tab_list02 li:last-child a, .tab_type_admin > .tab_list03 li:last-child a {margin-right:0;}
+.tab_type_admin > .tab_list li.t_on a, .tab_type_admin > .tab_list02 li.t_on a, .tab_type_admin > .tab_list03 li.t_on a {position:relative;border-bottom: 4px solid #569ffe; color:#222222; font-weight: bold; }
+.tab_type_admin > .tab_list li a:hover, .tab_type_admin > .tab_list02 li a:hover, .tab_type_admin > .tab_list03 li a:hover  {transition: all ease 0.1s 0s; ; color: #ffffff; font-weight: bold; border-bottom: 4px solid #569ffe; color:#222222;}
+
+.tab_cont02, .tab_cont03 {display: none;}
+
+/* 2차메뉴 */
+.admin_2depth {margin:0 0 3.2rem 0;}
+.admin_2depth > .depth_list {display: flex; align-items: center; justify-content: flex-start;}
+.admin_2depth > .depth_list li {border-radius: 0;margin: 0; text-align: center;}
+.admin_2depth > .depth_list li.m_on {z-index: 1;}
+.admin_2depth > .depth_list li a {position:relative;box-sizing: border-box;border-bottom: 4px solid transparent;padding: 0 0.4rem 1.2rem 0.4rem;display: block;margin-right: 2.4rem;color: #888888; font-size:1.8rem} 
+.admin_2depth > .depth_list li:last-child a {margin-right:0;}
+.admin_2depth > .depth_list li.m_on a {position:relative;border-bottom: 4px solid #569ffe;color: #222222; font-weight: 500;}
+.admin_2depth > .depth_list li a:hover {transition: all ease 0.1s 0s; border-bottom:4px solid #569ffe; color: #222222; font-weight: 500;}
+
+/* dashboard */
+.dash_box {border-radius: 8px; border: 1px solid #dedede; margin-bottom:3.6rem;}
+.dash_box:last-child {margin-bottom:0;}
+.dash-h3 {font-weight: bold; font-size:1.8rem;margin: 2.4rem 2.4rem 0 2.4rem;border-bottom: 4px solid #569ffe;display: inline-block;box-sizing: border-box;padding: 0 0.4rem 1.2rem 0.4rem;}
+.dash_box .chart_cont01 {height:400px; padding: 0; margin: 3.2rem; position: relative; width: calc(100% - 6.4rem); }
+.dash_box .dash_brd { padding: 0; margin: 3.2rem; position: relative; width: calc(100% - 6.4rem); }
+.use_core {display: flex; justify-content: flex-start; border-radius: 150px; padding: 0.8rem 1.6rem; background: #F5F6F8; position:absolute; top:3.0rem; right:0; }
+
+
+/* Program */
+.code_g {background: #ffffff; margin-top:2.4rem}
+.log_path > dd {background:none !important; border:none !important; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow: auto; color: #444444;}
+.public_status {display: flex; justify-content: flex-start; border-radius: 150px; padding: 0.8rem 1.6rem;background: #F5F6F8; position:absolute;top: calc(50% - 16px);right: 0;}
+
+/* Statistics */
+.statistics_chart {width:100%; height:600px; border-radius: 8px; border:1px solid #dedede; }
+.s_chart_inner {padding:2.4rem; height:90%;}
+
+/* setting */
+.brd_date_input input.brdDate {width:200px !important; position:relative; background:#ffffff url(../../images/bioimg/content/icon_date.svg) no-repeat calc(100% - 1.0rem) center; background-size: 20px; padding:0.8rem 3.2rem 0.8rem 1.2rem;}
+.brd_date_input input.brdDate::after {content: '3'; z-index: 1; position:absolute; top:0; right:0; display: inline-block; background: url(../../images/bioimg/content/icon_date.svg) no-repeat center center; height:20px; width:20px; background-size: contain;}
+
+.brd_order_input input.brdOrder {width:200px !important; }
+.brd-write .edit_area {border:1px solid #dedede; border-radius: 4px; height: 100px;}
+
+/* code */
+pre code.hljs {line-height: 1.4; font-size: 1.4rem; padding: 2.4rem !important;}
+
+/* workspace detail */ 
+.admin-workspace-wrap .pp_info_g {margin:0 auto;}
+.admin-workspace-wrap .p_detail_list {display: flex; justify-content: flex-start; font-size:1.4rem; flex-wrap: wrap; margin:0; width:100%;}
+.admin-workspace-wrap .p_detail_list li {color:#333333; position: relative; padding-right:10px; margin-right:10px; margin-bottom:0.8rem;}
+.admin-workspace-wrap .p_detail_list li:last-child { padding-right:0; margin-right:0;}
+.admin-workspace-wrap .p_detail_list li::after {display: block;position: absolute;top: 0;bottom: 0;right: 0;width: 1px;height: 10px;margin: auto 0;background-color: #c4c4c4;}
+.admin-workspace-wrap .p_detail_list span:first-child {margin-right:6px; color:#999999; width:unset; font-weight:normal;}
+.admin-workspace-wrap .p_detail_list li span:last-child {display: unset; width: unset; word-break: unset; position: unset;}
+.admin-workspace-wrap .p_detail_list li:last-child::after{display: none;}
+
+.admin-pipeline-wrap .p_detail_list {width:calc(33.3% - 2.0rem);}
+.admin-program-wrap .p_detail_list {width:calc(33.3% - 2.0rem);}
+
+
+
+@media all and (min-width:2460px){
+	html {font-size:11px;}
+}
+
+@media all and (max-width:1280px){
+ .admin {width:1280px;}
+ #header {width:1280px;position: absolute;}
+ .head-inner {width:1200px;}
+ #admin-gnb-wrap {width:260px;position: unset;}
+ .admin-gnb-inner {width:220px;}
+ #admin-container-wrap {width: calc(100% - 260px);margin: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 게시판 */
