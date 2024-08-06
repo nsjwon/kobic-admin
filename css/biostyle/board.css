@@ -7,10 +7,10 @@
 /* 게시판 검색 영역 */
 .brd_search_box {background:#f7f8fa; border-radius: 8px; padding:20px; margin-bottom:5.0rem; border: 1px solid #eff0f5; box-sizing: border-box;}
 .brd_search {display: flex; justify-content: end; width:70%; margin:0 auto;}
-.brd_search_box input[type=text] {width:calc(100% - 4.0rem); padding:1rem; margin:0 0 0 0.8rem; font-size:1.4rem;}
+.brd_search_box input[type=text] {width:calc(100% - 4.0rem); padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0 0 0 0.8rem; font-size:1.5rem;}
 .brd_search_box input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px #ffffff inset;}
 .brd_search_box select {padding:1.0rem 3.0rem 1.0rem 1.0rem; margin:0; font-size:1.4rem; background-color: #ffffff;}
-.brd_search_box .search_activate {background: #444444; color:#ffffff; border:none !important; padding:1.0rem 2.8rem; font-size:1.4rem; border-radius: 5px; margin:0 0.8rem;}
+.brd_search_box .search_activate {background: #43464C; color:#ffffff; border:none !important; padding:1.0rem 2.8rem; font-size:1.4rem; border-radius: 5px; margin:0 0.6rem;}
 .brd_search_box .search_activate:hover {background: #000000;transition: all ease 0.2s 0s;}
 .brd_search_box.admin{display: flex !important; border: none !important; background: none !important; padding: unset !important; margin-bottom: 0px !important;}
 .brd_search_box.admin input[type=text]{min-width: 220px;}
@@ -40,7 +40,7 @@
 
 
 /* 게시판 목록 */
-.brd_list_type01 {border-top:1px solid #999999; border-bottom:1px solid #dedede;}
+.brd_list_type01 {border-top:2px solid #343434; border-bottom:1px solid #dedede;}
 .brd_list {width:100%; display: flex; border-bottom:1px solid #dedede; padding:1.8rem 0; justify-content: flex-start; position:relative;}
 .brd_list:hover {background: #fbfbfb;transition: all ease 0.2s 0s;}
 .brd_list:hover .b_tit {color:#0054B7; transition: all ease 0.2s 0s;}
@@ -171,17 +171,19 @@
 .cmt_depth03:last-child > div {margin:0;}
 
 /* 페이지 */
-.pagination { margin:32px 0 0 0; text-align: center; clear:both; }
-.pagination a {color:#767676; border:solid 1px #ffffff; display:inline-block; margin:2px; width:40px; height:40px; text-align:center; font-size:1.4rem; line-height:40px; vertical-align:middle; border-radius: 150px;}
-.pagination a.on {color:#ffffff; background:#222222; border:1px solid #222222; display:inline-block; margin:2px; width: 40px;  height: 40px; text-align: center; font-size: 1.4rem; line-height:40px; border-radius: 150px; vertical-align: middle;}
-.pagination a:hover {border:solid 1px #dedede; background: #f1f1f1; transition: all ease 0.2s 0s;}
-.pagination a.on:hover {color:#ffffff; background:#222222; border:1px solid #222222;}
-.pagination .prev_g a, .pagination .next_g a {width:40px; height:40px; background:url(../../images/board/pagination_arrow.svg) no-repeat; border:solid 1px #dedede; }
-.pagination .prev_g a:hover, .pagination .next_g a:hover {background-color: #f1f1f1; transition: all ease 0.2s 0s;}
-.pagination .prev_g a.page_p_end {background-position:12px 12px;}
-.pagination .prev_g a.page_p {background-position:-31px 12px;}
-.pagination .next_g a.page_n_end {background-position:-121px 12px;}
-.pagination .next_g a.page_n {background-position:-75px 12px;}
+.pagination { margin:32px 0 0 0; text-align: center; clear:both;}
+.pagination a {color: #767676; display: inline-block; margin: 2px; width: 3.2rem; height: 3.2rem; text-align: center; font-size: 1.4rem; line-height: 3.2rem; vertical-align: middle; border-radius: 4px;}
+.pagination a.on {color: #ffffff; background: #43464C; display: inline-block; margin: 2px; width: 3.2rem; height: 3.2rem; text-align: center; font-size: 1.4rem; line-height: 3.2rem; border-radius: 4px; vertical-align: middle;}
+.pagination a:hover {background: #f1f1f1; transition: all ease 0.2s 0s;}
+.pagination a.on:hover {color:#ffffff; background:#43464C;}
+.pagination .prev_g {margin-right: 6px;}
+.pagination .next_g {margin-left: 6px;}
+.pagination .prev_g a, .pagination .next_g a {width:30px; height:40px; background:url(../../images/board/pagination_arrow.svg) no-repeat; margin: 0; opacity: 0.7;}
+.pagination .prev_g a:hover, .pagination .next_g a:hover {opacity: 1;}
+.pagination .prev_g a.page_p_end {background-position:8px 12px;}
+.pagination .prev_g a.page_p {background-position:-37px 12px;}
+.pagination .next_g a.page_n_end {background-position:-128px 12px;}
+.pagination .next_g a.page_n {background-position:-81px 12px;}
 .pagination a.M_on { color:#fff; background:#68757d; border:#555e65 solid 1px; font-weight:bold; }
 .pagination a.Arrow { padding:1px 0 1px 0;}
 .pagination .pager span {color:#777777; border:solid 1px #dedede; display:inline-block; margin:0 2px; width:25px; height:25px; text-align:center; font-size:12px; line-height:25px; vertical-align:middle; cursor:pointer; }
