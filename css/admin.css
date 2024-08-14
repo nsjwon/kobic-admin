@@ -76,8 +76,8 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 .btn-down:hover {background: #ffffff; border: 1px solid #43464C !important;  color:#222222;  transition: all ease 0.2s 0s;}
 .btn-down:hover > span { font-weight: 600 !important;}
 
-.brd-write + .brd-btn-area .btn, 
-.brd-modify + .brd-btn-area .btn, 
+.brd-write + .brd-btn-area .btn,
+.brd-modify + .brd-btn-area .btn,
 .brd-view + .brd-btn-area .btn {min-width:160px;}
 
 .setting_icon {display: inline-block !important; background: url(../images/admin/icon_setting_dark.svg) no-repeat center center; background-size: contain; width: 15px; height: 15px; margin: 0 0 2px 4px; vertical-align: middle;}
@@ -146,10 +146,6 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 .admin-gnb-box.portal .gnb-depth1 > li:nth-of-type(5) > a:hover::before,
 .admin-gnb-box.portal .gnb-depth1 > li:nth-of-type(5) > a.active::before {background: url(../images/admin/gnb_sso_w.svg) no-repeat center center; background-size:contain;}
 
-
-/*.admin-gnb-box .gnb-depth1 > li a.active::after {display: block;content: '';height: 100%;width: 0.5rem;background: #5884c5;position:absolute;top:0;right: 0;}
-.admin-gnb-box .gnb-depth1 > li > a:hover::after {display: block;content: '';height: 100%;width: 0.5rem;background: #5884c5;position:absolute;top:0;right: 0;}
-*/
 .admin-gnb-box .gnb-depth2 {padding:1.2rem 0 1.4rem 0;/* border-top: 1px solid #f7f9fd ; */background: #edeff8; position:relative;}
 .admin-gnb-box .gnb-depth2 > li {display: block; padding: 0.7rem 0;}
 .admin-gnb-box .gnb-depth2 > li > a {font-size:1.6rem;position: relative;padding: 0 0 0 4.4rem;display: block;display: flex;justify-content: flex-start;align-items: center;font-weight: 500;color:#3d3f44;}
@@ -159,7 +155,6 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 .admin-gnb-box .gnb-depth2 > li > a.on {color:#215bb2; text-decoration: underline; font-weight: 700;}
 .admin-gnb-box .gnb-depth2 > li > a:hover::before,
 .admin-gnb-box .gnb-depth2 > li > a.on::before {background: #215bb2 !important;}
-/* a.active + .gnb-depth2:before {width:5px;height: calc(100% + 1px);content:'';display:block;position:absolute; top: -1px;left: 0;background: #1b5dbf;} */
 
 .admin-gnb-box .gnb-depth1 > li a.active.more-depth::after,
 .admin-gnb-box .gnb-depth1 > li a:hover.more-depth::after {content: '';display: block;position:absolute;top: calc(50% - 0.7rem);right: 2.0rem;border-radius: 150px;width: 1.4rem;height: 1.4rem;background: url(../images/admin/icon_arrow_btm_w.svg) no-repeat center center;background-size: contain;/* padding: 0.2rem; */}
@@ -167,7 +162,7 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 
 
 /* 바이오 익스프레스 메뉴 */
-.admin-gnb-box.biomenu .gnb-depth1 > li {cursor: pointer; display: block;align-items: center; font-size:1.8rem; color:#444444;position: relative;}
+.admin-gnb-box.biomenu.portal .gnb-depth1 > li {cursor: pointer; display: block;align-items: center; font-size:1.8rem; color:#444444;position: relative;}
 .admin-gnb-box.biomenu .gnb-depth1 > li::before {content: '';display: inline-block; margin-right:20px; width:24px; height:24px;position: absolute;left: 28px;top: 10px;}
 .admin-gnb-box.biomenu .gnb-depth1 > li:nth-of-type(1) a::before {background: url(../images/admin/gnb_dashboard.svg) no-repeat center center; background-size:contain;}
 .admin-gnb-box.biomenu .gnb-depth1 > li:nth-of-type(2) a::before {background: url(../images/admin/gnb_pipeline.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
@@ -181,6 +176,24 @@ input {padding:0.8rem 1.2rem 0.8rem 1.2rem; margin:0;}
 .admin-gnb-box.biomenu .gnb-depth1 > li:nth-of-type(4) a:hover::before, .admin-gnb-box .gnb-depth1 > li:nth-of-type(4) a.active::before {background: url(../images/admin/gnb_stat_w.svg) no-repeat center center; background-size:contain;}
 .admin-gnb-box.biomenu .gnb-depth1 > li:nth-of-type(5) a:hover::before, .admin-gnb-box .gnb-depth1 > li:nth-of-type(5) a.active::before {background: url(../images/admin/gnb_popup_w.svg) no-repeat center center; background-size:contain;}
 
+/* 관리자 메뉴 통합 */
+.admin-gnb-box.portal .gnb-depth1 > li {cursor: pointer; display: block;align-items: center; font-size:1.8rem; color:#444444;position: relative;}
+.admin-gnb-box.portal .gnb-depth1 > li::before {content: '';display: inline-block; margin-right:20px; width:24px; height:24px;position: absolute;left: 28px;top: 10px;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu1 > a::before {background: url(../images/admin/gnb_dashboard.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu2 > a::before {background: url(../images/admin/gnb_brd.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu3 > a::before {background: url(../images/admin/gnb_pipeline.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu4 > a::before {background: url(../images/admin/gnb_stat.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu5 > a::before {background: url(../images/admin/gnb_popup.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu6 > a::before {background: url(../images/admin/gnb_banner.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu7 > a::before {background: url(../images/admin/gnb_sso.svg) no-repeat center center; background-size:contain; width: 1.7rem; height: 1.7rem;}
+
+.admin-gnb-box.portal .gnb-depth1 > li.menu1 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu1 > a.active::before {background: url(../images/admin/gnb_dashboard_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu2 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu2 > a.active::before {background: url(../images/admin/gnb_brd_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu3 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu3 > a.active::before {background: url(../images/admin/gnb_pipeline_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu4 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu4 > a.active::before {background: url(../images/admin/gnb_stat_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu5 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu5 > a.active::before {background: url(../images/admin/gnb_popup_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu6 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu6 > a.active::before {background: url(../images/admin/gnb_banner_w.svg) no-repeat center center; background-size:contain;}
+.admin-gnb-box.portal .gnb-depth1 > li.menu7 > a:hover::before, .admin-gnb-box.portal .gnb-depth1 > li.menu7 > a.active::before {background: url(../images/admin/gnb_sso_w.svg) no-repeat center center; background-size:contain;}
 
 /* 관리자 - 컨테이너 */
 #admin-container {padding:70px 0 0 0; display: flex; justify-content: flex-start;}

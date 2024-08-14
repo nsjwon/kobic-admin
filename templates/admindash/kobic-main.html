@@ -1,7 +1,7 @@
 <html lang="ko" id="no-fouc">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->     
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->
         <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
         <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
@@ -16,13 +16,13 @@
         <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
         <meta property="og:url" content="https://www.kobic.re.kr../../">
         <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
-        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->	
-        <title>국가생명연구자원정보센터(KOBIC)</title>   	
-        <link media="all" rel="stylesheet" href="../../css/font.css">  
-        <link media="all" rel="stylesheet" href="../../css/common.css">  
-        <link media="all" rel="stylesheet" href="../../css/board.css"> 
-        <link media="all" rel="stylesheet" href="../../css/admin.css"> 
-        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css"> 
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->
+        <title>국가생명연구자원정보센터(KOBIC)</title>
+        <link media="all" rel="stylesheet" href="../../css/font.css">
+        <link media="all" rel="stylesheet" href="../../css/common.css">
+        <link media="all" rel="stylesheet" href="../../css/board.css">
+        <link media="all" rel="stylesheet" href="../../css/admin.css">
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css">
         <script src="../../js/jquery-3.7.0.min.js"></script>
         <script src="../../js/datepicker/datepicker.min.js"></script>
         <script src="../../js/datepicker/datepicker.ko-KR.js"></script>
@@ -34,7 +34,7 @@
         <script src="../../js/contents/admin/main.js"></script>
         <script src="../../js/contents/admin/menu.js"></script>
     </head>
-        
+
     <body class="scroll">
 
         <!-- 반복영역 skip:s  -->
@@ -44,7 +44,7 @@
             <a href="#admin-footer">하단 바로가기</a>
         </div>
         <!-- 반복영역 skip:e  -->
-        
+
         <div id="wrap" class="admin">
             <!-- admin header :s -->
             <header id="admin-header">
@@ -52,28 +52,28 @@
                     <h1 class="logo"><a href="../../index.html"><img src="../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
                     <div class="util-wrap">
                         <ul class="util">
-                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li> 
-                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li> 
-                            <li>                
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li>
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li>
+                            <li>
                                 <a href="#none" class="logout-btn">로그아웃</a>
                             </li>
-                        </ul>                       
+                        </ul>
                     </div>
                 </div>
             </header>
             <!-- admin header :e -->
-                
+
             <!-- admin container :s -->
             <main id="admin-container">
-                
+
                 <!-- admin gnb :s -->
                 <div id="admin-gnb-wrap">
                     <div class="admin-gnb-inner">
-                        <span>통합포털</span>
+                        <span>ADMIN</span>
                         <nav class="admin-gnb-box portal">
                             <ul class="gnb-depth1">
-                                <li><a class="active" href="../../templates/admindash/kobic-main.html">대시보드</a></li> 
-                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                <li class="menu1"><a class="active" href="../../templates/admindash/kobic-main.html">대시보드</a></li>
+                                <li class="menu2 foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
                                     <ul class="gnb-depth2">
                                         <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
                                         <li><a href="#none">분석 튜토리얼</a></li>
@@ -85,20 +85,19 @@
                                         <li><a href="#none">KOBICian’s Story</a></li>
                                         <li><a href="#none">논문성과</a></li>
                                         <li><a href="#none">홍보영상</a></li>
+                                        <li><a href="../../templates/adminboard/pipeline-Board-List.html">분석 파이프라인</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#none">팝업관리</a></li>
-                                <li><a href="#none">배너관리</a></li>
-                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
-                                    <!-- <ul class="gnb-depth2">
-                                        <li><a href="../../templates/adminsso/member/go_member_list" target="_blank">회원관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_all_group_list" target="_blank">그룹관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_type_management_list" target="_blank">유형관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_grade_management_list" target="_blank">등급관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_statistics" target="_blank">통계관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_policy_management_list" target="_blank">약관관리</a></li>
-                                        <li><a href="../../templates/adminsso/member/go_action_log_list" target="_blank">이벤트 로그</a></li>
-                                    </ul> -->
+                                <li class="menu3 foldable"><a href="../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminbioex/pipeline/pipeline-Public-List.html">공개 등록 이력</a></li>
+                                        <li><a href="../../templates/adminbioex/pipeline/pipeline-Analysis-List.html">분석 실행 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu4"><a href="../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
+                                <li class="menu5"><a href="#none">팝업관리</a></li>
+                                <li class="menu6"><a href="#none">배너관리</a></li>
+                                <li class="menu7 foldable"><a href="#none">회원 및 그룹관리</a>
                                     <ul class="gnb-depth2">
                                         <li><a href="../../templates/adminsso/member/user-List.html">회원관리</a></li>
                                         <li><a href="../../templates/adminsso/group/group-List.html">그룹관리</a></li>
@@ -108,31 +107,31 @@
                                         <li><a href="../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
                                         <li><a href="../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
                                     </ul>
-                                </li>           	          
+                                </li>
                             </ul>
                         </nav>
                     </div>
 
-                    
-                    <div class="admin-gnb-inner mtop40">
+
+                    <!-- <div class="admin-gnb-inner mtop40">
                         <span>Bio Express</span>
                         <nav class="admin-gnb-box biomenu">
                             <ul class="gnb-depth1">
-                                <li><a href="../../templates/admindash/bio-main.html">대시보드</a></li> 
+                                <li><a href="../../templates/admindash/bio-main.html">대시보드</a></li>
                                 <li><a href="../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
                                 <li><a href="../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
-                                <li><a href="../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>     	          
+                                <li><a href="../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- admin gnb :e -->
-                    
-                <!-- admin content :s -->			
+
+                <!-- admin content :s -->
                 <div id="admin-content-wrap">
                     <!-- admin content inner :s -->
                     <div class="admin-content-inner">
-                        
+
                         <div class="admin-dash-wrap">
                                 <div class="section-item flex-between">
                                     <div class="stat-count-item brd-count">
@@ -153,23 +152,23 @@
                                         <h2>실시간 로그인 현황<span class="fc-gary small-txt">(단위:건)</span></h2>
                                         <div class="amd-chart-search input-date-wrap">
                                             <label for="loginStartDate" class="hidden">시작일</label>
-                                            <input type="text" name="searchDate" id="loginStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                            <input type="text" name="searchDate" id="loginStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker">
                                             <span>~</span>
                                             <label for="loginEndDate" class="hidden">종료일</label>
                                             <input type="text" name="searchDate" id="loginEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
                                             <label for="searchBtn01" class="hidden">조회</label>
-                                            <input type="button" class="btn btn-black" value="조회" id="searchBtn01" onclick="getLoginStatistics()">  
+                                            <input type="button" class="btn btn-black" value="조회" id="searchBtn01" onclick="getLoginStatistics()">
                                             <ul class="date-range">
                                                 <li>
                                                     <label for="dateBtn0701" class="hidden">7일</label>
-                                                    <input type="button" value="7일" id="dateBtn0701" class="btn btn-line-gray" onclick="getLoginStatistics(7)">  
+                                                    <input type="button" value="7일" id="dateBtn0701" class="btn btn-line-gray" onclick="getLoginStatistics(7)">
                                                 </li>
                                                 <li>
                                                     <label for="dateBtn3001" class="hidden">30일</label>
-                                                    <input type="button" value="30일" id="dateBtn3001" class="btn btn-line-gray" onclick="getLoginStatistics(30)">  
+                                                    <input type="button" value="30일" id="dateBtn3001" class="btn btn-line-gray" onclick="getLoginStatistics(30)">
                                                 </li>
                                             </ul>
-                                        </div>                                    
+                                        </div>
                                     </div>
                                     <div class="dash-box">
                                         <div class="adm-chart-item" id="loginChartDiv"></div>
@@ -181,23 +180,23 @@
                                         <h2>게시물 등록 현황<span class="fc-gary small-txt">(단위:건)</span></h2>
                                         <div class="amd-chart-search input-date-wrap">
                                             <label for="postStartDate" class="hidden">시작일</label>
-                                            <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker"> 
+                                            <input type="text" name="searchDate" id="postStartDate" value="2023-08-11" placeholder="시작일" class="hasDatepicker">
                                             <span>~</span>
                                             <label for="postEndDate" class="hidden">종료일</label>
                                             <input type="text" name="searchDate" id="postEndDate" value="2023-08-25" placeholder="종료일" class="hasDatepicker">
                                             <label for="searchBtn02" class="hidden">조회</label>
-                                            <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()"> 
+                                            <input type="button" class="btn btn-black" value="조회" id="searchBtn02" onclick="getPostStatistics()">
                                             <ul class="date-range">
                                                 <li>
                                                     <label for="dateBtn0702" class="hidden">7일</label>
-                                                    <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">    
+                                                    <input type="button" value="7일" id="dateBtn0702" class="btn btn-line-gray" onclick="getPostStatistics(7)">
                                                 </li>
                                                 <li>
                                                     <label for="dateBtn3002" class="hidden">30일</label>
-                                                    <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">    
+                                                    <input type="button" value="30일" id="dateBtn3002" class="btn btn-line-gray" onclick="getPostStatistics(30)">
                                                 </li>
                                             </ul>
-                                        </div>     
+                                        </div>
                                     </div>
                                     <div class="dash-box">
                                         <div class="adm-chart-item" id="postChartDiv"></div>
@@ -209,11 +208,11 @@
                                     <div class="dash-box">
                                         <ul class="dash-brd-list"> <!-- 최대 최근 4건 노출 -->
                                             <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
-                                                
+
                                                     <span class="round-txt txt-blue-line">이용문의</span>
-                                                    
-                                                    
-                                                
+
+
+
                                                 <div class="brd-list-tit-box">
                                                     <span class="brd-list-tit">BIO EXPRESS 데이터 업로드 관련 문의 </span>
                                                     <ul class="brd-list-info">
@@ -225,11 +224,11 @@
                                                 <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
                                             </li>
                                             <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
-                                                
+
                                                     <span class="round-txt txt-blue-line">이용문의</span>
-                                                    
-                                                    
-                                                
+
+
+
                                                 <div class="brd-list-tit-box">
                                                     <span class="brd-list-tit">제가 가진 파일과 연결이 되지 않습니다.</span>
                                                     <ul class="brd-list-info">
@@ -241,11 +240,11 @@
                                                 <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
                                             </li>
                                             <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
-                                                
+
                                                     <span class="round-txt txt-blue-line">이용문의</span>
-                                                    
-                                                    
-                                                
+
+
+
                                                 <div class="brd-list-tit-box">
                                                     <span class="brd-list-tit">Bio Express 2.0 BWA-Index 기능 관련 문의</span>
                                                     <ul class="brd-list-info">
@@ -257,11 +256,11 @@
                                                 <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
                                             </li>
                                             <li class="brd-list-item" onclick="location.href=/templates/adminsso/board/go_qna_detail">
-                                                
+
                                                     <span class="round-txt txt-blue-line">이용문의</span>
-                                                    
-                                                    
-                                                
+
+
+
                                                 <div class="brd-list-tit-box">
                                                     <span class="brd-list-tit">GBox를 command line에서 작업할 수 있도록 기능을 추가해주시면 감사하겠습니다.</span>
                                                     <ul class="brd-list-info">
@@ -273,17 +272,17 @@
                                                 <span class="state-txt txt-blue">답변완료</span> <!-- 답변대기 txt-gray / 답변완료 txt-blue -->
                                             </li>
                                         </ul>
-                                        
+
                                     </div>
                                     <a href="../../templates/adminsso/board/go_qna" class="more">더보기</a>
                                 </div>
 
-                            
-                        </div>        
-                                        
+
+                        </div>
+
                     </div>
                     <!-- admin content inner :e -->
-                    
+
                     <!-- admin footer :s -->
                     <footer id="admin-footer">
                         <div class="footer-wrap">
@@ -304,7 +303,7 @@
             </main>
             <!-- admin container :e -->
         </div>
-            
+
         <!-- js -->
         <script src="../../js/amcharts/core.js"></script>
         <script src="../../js/amcharts/charts.js"></script>

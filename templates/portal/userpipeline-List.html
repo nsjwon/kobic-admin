@@ -1,0 +1,975 @@
+<html lang="ko" id="no-fouc"><head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->
+<meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+<meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+<meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+<meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+<meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+<meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+<!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+<meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+<meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+<meta property="og:url" content="https://www.kobic.re.kr/kobic/">
+<!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+<link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->
+<title>국가생명연구자원정보센터(KOBIC)</title>
+<link media="all" rel="stylesheet" href="../../css/font.css">
+<link media="all" rel="stylesheet" href="../../css/common.css">
+<link media="all" rel="stylesheet" href="../../css/board.css">
+<link media="all" rel="stylesheet" href="../../css/layout.css">
+<link media="all" rel="stylesheet" href="../../css/content.css">
+<link media="all" rel="stylesheet" href="../../css/responsive.css">
+<link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css">
+<link media="all" rel="stylesheet" href="../../css/swiper/swiper-bundle.min.css">
+<!-- <link href="../../css/biostyle/layout.css" media="all" rel="stylesheet" type="text/css"> -->
+<!-- <link href="../../css/biostyle/main.css" media="all" rel="stylesheet" type="text/css"> -->
+<link href="../../css/biostyle/content.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/board.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/responsive.css" media="all" rel="stylesheet" type="text/css">
+<script src="../../js/jquery-3.7.0.min.js"></script>
+<script src="../../js/swiper/swiper-bundle.min.js"></script>
+<script src="../../js/datepicker/datepicker.min.js"></script>
+<script src="../../js/datepicker/datepicker.ko-KR.js"></script>
+<script src="../../js/axios/axios.min.js"></script>
+<script src="../../js/oembed/oembed-provider.js"></script>
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/menu.js"></script>
+<script src="../../js/common/editor_common.js"></script>
+<script src="../../js/common/upload_common.js"></script>
+<script>
+/* <![CDATA[ */
+
+// 공통 알림
+var commonAlertDelete = "\uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+var commonAlertEmpty = "\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694."
+var commonAlertCreateComplete = "\uB4F1\uB85D\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+var commonAlertModifyComplete = "\uC218\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+var commonAlertDeleteComplete = "\uC0AD\uC81C\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+var commonAlertError01 = "\uB2E4\uC2DC \uC2DC\uB3C4\uD574\uC8FC\uC138\uC694."
+var commonAlertError02 = "\uC11C\uBC84 \uC810\uAC80\uC911\uC785\uB2C8\uB2E4. \uAD00\uB9AC\uC790\uC5D0\uAC8C \uBB38\uC758\uD558\uC138\uC694."
+var commonAlertError03 = "\uC0AC\uC6A9\uC790 \uC815\uBCF4 \uC870\uD68C\uC5D0 \uC2E4\uD328 \uD588\uC2B5\uB2C8\uB2E4. \uAD00\uB9AC\uC790\uC5D0\uAC8C \uBB38\uC758\uD558\uC138\uC694."
+var searchAlert01 = "\uAC80\uC0C9\uC5B4\uB97C \uC785\uB825\uD558\uC138\uC694."
+
+// 로그인
+var loginMsgCheckId = "\uC720\uD6A8\uD558\uC9C0 \uC54A\uC740 \uC0AC\uC6A9\uC790 \uC774\uB984\uC785\uB2C8\uB2E4. \uC0AC\uC6A9\uC790 \uC774\uB984\uC740 4~15\uC790, \uC54C\uD30C\uBCB3 \uBC0F \uC22B\uC790\uB85C\uB9CC \uAD6C\uC131\uB418\uC5B4\uC57C \uD569\uB2C8\uB2E4."
+var loginMsgCheckPw = "\uC720\uD6A8\uD558\uC9C0 \uC54A\uC740 \uBE44\uBC00\uBC88\uD638\uC785\uB2C8\uB2E4. \uBE44\uBC00\uBC88\uD638\uB294 \uCD5C\uC18C 8\uC790 \uC774\uC0C1\uC774\uBA70, \uD2B9\uC218 \uBB38\uC790\uB97C \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4."
+
+// 튜토리얼
+var tutorialAlertDelete = "\uD574\uB2F9 \uD29C\uD1A0\uB9AC\uC5BC\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+
+// 교육
+var eduAlertDelete = "\uD574\uB2F9 \uAD50\uC721\uC77C\uC815\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+var eduChartXLabel = "\uAD50\uC721 \uD69F\uC218"
+var eduChartXUnit = "(\uAC74)"
+var eduChartYLabel = "\uAD50\uC721 \uC778\uC6D0"
+var eduChartYUnit = "(\uBA85)"
+
+// 문의사항 및 정보공유
+var qnaAlertReplyModify = "\uB2F5\uBCC0\uC744 \uC218\uC815\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+var qnaAlertReplyDelete = "\uD574\uB2F9 \uB2F5\uBCC0\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+
+// 소식
+var newsAlertDelete = "\uD574\uB2F9 \uC18C\uC2DD\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+
+// 공지사항
+var noticeAlertDelete = "\uD574\uB2F9 \uACF5\uC9C0\uC0AC\uD56D\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+
+// 홍보영상
+var videoAlertDelete = "\uD574\uB2F9 \uD64D\uBCF4\uC601\uC0C1\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+
+// 마이페이지
+var mypagePipelineInfo01 = "\uC0DD\uC131\uC77C"
+var mypagePipelineInfo02 = "\uC218\uC815\uC77C"
+var mypagePipelineInfo03 = "\uC6CC\uD06C\uC2A4\uD398\uC774\uC2A4\uBA85"
+var mypagePipelineInfo04 = "\uBC84\uC804"
+var mypagePipelineInfo05 = "\uACF5\uAC1C"
+var mypagePipelineInfo06 = "\uACF5\uC720"
+var mypagePipelineInfo07 = "\uC2E4\uD589"
+
+/* ]]> */
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PVWBXF0LNT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PVWBXF0LNT');
+</script>
+
+<style>
+	/* .pp_list_top {flex-direction: column; gap: 16px;}
+	.pp_title_box {width: 100%;}
+	.pipeline_list_n {padding: 0;}
+	.pipeline_list_n .pp_list_top .pp_img {width: 100%; height: 32rem; border-radius: 8px 8px 0 0 !important; border: none !important;}
+	.pipeline_list_n .pp_list_top .pp_img img {transition: all .5s;}
+	.pipeline_list_n:hover .pp_img img {scale: 1.04;}
+	.pipeline_list_n .pp_info_g .pp_detail_list {margin-bottom: 2rem;}
+	.pipeline_list_n .pp_title_box .pp_tit_g {width: 100%; height: 62px;}
+	.pipeline_list_n .pp_title_box .pp_tit, .pipeline_list_n .pp_title_box .pp_tit a {width: 100%; display: block;}
+	.pipeline_list_n .pp_title_box .pp_tit a {padding: 0 2.4rem; width: calc(100% - 4.8rem);}
+	.brd_list_type10 .pipeline_list_n {width: calc((100% - 40px) / 3);}
+	.brd_list_type10 .pipeline_list_n .p_keyword_g {max-height: 112px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; padding: 0 2.4rem; width: calc(100% - 4.8rem);}
+	.brd_list_type10 .pipeline_list_n .pp_list_top .pp_img img {object-fit: cover; width: 100%;} */
+</style>
+</head>
+<body class="scroll">
+
+    <!-- 반복영역 skip:s  -->
+    <div id="skip-nav">
+        <a href="#gnb-wrap">메뉴 바로가기</a>
+        <a href="#contain-wrap">본문 바로가기</a>
+        <a href="#footer">하단 바로가기</a>
+    </div>
+    <!-- 반복영역 skip:e  -->
+
+    <div id="wrap">
+
+        <!-- header :s -->
+        <header id="header"><div class="header-inner header-ov-bf" id="headerIn">
+<h1 class="h1-logo">
+    <!--
+    <a href="/kobic">
+    <a th:href="@{${#httpServletRequest.contextPath}}">
+    -->
+    <a href="../../index.html">
+        <img src="../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center">
+    </a>
+</h1>
+
+<!-- Navigation -->
+<!-- 국문 메뉴 -->
+<nav id="gnb-wrap">
+<ul class="gnb-inner" id="gnb">
+    <li class="gnb1">
+        <a><span>주요 서비스</span></a>
+        <div class="gnb-sub-menu">
+            <span>주요 서비스</span>
+            <ul class="s-menu-inner">
+                <li>
+                    <a href="/kobic/res/kbds">국가바이오데이터스테이션</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/res/bioexpress">바이오 익스프레스</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/res/epidemic">감염병 연구정보포털</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/res/ngp">국가 바이오 빅데이터 사업</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="gnb2">
+        <a><span>분석</span></a>
+        <div class="gnb-sub-menu">
+            <span>분석</span>
+            <ul class="s-menu-inner">
+                <li>
+                    <a href="/kobic/res/otherdb">데이터베이스</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/analysis">바이오 익스프레스</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                        <ul class="last-depth">
+                            <!-- 서브 메뉴 아이템들 동적 생성 -->
+                            <li>
+                                <a href="/kobic/analysis">서비스</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/analysis/download">다운로드</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/analysis/release">릴리즈노트</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/analysis/manual">매뉴얼</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/analysis/tutorials">튜토리얼</a>
+                            </li>
+                            <li>
+                                <a href="./userpipeline-List.html">분석 파이프라인</a>
+                            </li>
+                        </ul>
+
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="gnb3">
+        <a><span>활용ㆍ지원</span></a>
+        <div class="gnb-sub-menu">
+            <span>활용ㆍ지원</span>
+            <ul class="s-menu-inner">
+                <li>
+                    <a href="/kobic/support/research">연구지원</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/support/education">교육지원</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                        <ul class="last-depth">
+                            <!-- 서브 메뉴 아이템들 동적 생성 -->
+                            <li>
+                                <a href="/kobic/support/education">KOBIC 집합교육</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/support/education/other">타기관 교육정보</a>
+                            </li>
+                        </ul>
+
+                </li>
+                <li>
+                    <a href="/kobic/support/qna">기타지원</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                        <ul class="last-depth">
+                            <!-- 서브 메뉴 아이템들 동적 생성 -->
+                            <li>
+                                <a href="/kobic/support/qna">문의사항</a>
+                            </li>
+                            <li>
+                                <a href="/kobic/support/info">정보공유</a>
+                            </li>
+                        </ul>
+
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="gnb4">
+        <a><span>알림ㆍ활동</span></a>
+        <div class="gnb-sub-menu">
+            <span>알림ㆍ활동</span>
+            <ul class="s-menu-inner">
+                <li>
+                    <a href="/kobic/notiact/notice">공지사항</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/notiact/news">소식
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/notiact/kobicians">KOBICian's Story</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/notiact/papers">논문성과
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="gnb5">
+        <a><span>KOBIC</span></a>
+        <div class="gnb-sub-menu">
+            <span>KOBIC</span>
+            <ul class="s-menu-inner">
+                <li>
+                    <a href="/kobic/about/greeting">인사말
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/overview">개요</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/history">연혁
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/organization">조직도
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/ci">CI 소개</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/cooperation">협력
+</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/projects">수행과제</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+                <li>
+                    <a href="/kobic/about/directions">오시는 길</a>
+                    <!-- 서브 메뉴가 있다면 서브 메뉴 리스트를 표시 -->
+
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</nav>
+
+<!-- 국문이 아닌 경우 (영문 메뉴 예시) -->
+
+
+
+<ul class="util-wrap">
+
+    <!-- 슈퍼 관리자일 때만 ADMIN 표시 -->
+
+
+    <!-- 로그인 상태 : MYPAGE 표시  -->
+
+
+    <!-- 로그인 상태 : LOGOUT 표시 -->
+
+
+    <li class="site-map">
+        <a href="/kobic/sitemap"><span class="hidden">사이트맵</span></a>
+    </li>
+
+    <!-- 언어 선택 요소 -->
+    <!--
+    <li th:if="${#locale.toString() == 'ko'}" class="site-lang lang-eng">
+        <a onclick="getEngURL();">ENG</a>
+    </li>
+    <li th:unless="${#locale.toString() == 'ko'}" class="site-lang lang-eng">
+        <a onclick="getKorURL();">KOR</a>
+    </li>
+    -->
+    <li class="site-lang lang-eng">
+        <a href="javascript:void(0);" onclick="window.location.href='https://kobic.re.kr/en?lang=en';">ENG</a>
+    </li>
+
+</ul>
+<!-- 모바일 로그인 이동 : s-->
+<a href="/kobic/go_m_login" class="m-login"><span class="hidden">로그인</span></a>
+<!-- 모바일 로그인 이동 : e-->
+<!-- Mobile Navigation -->
+<div id="m-nav-wrap">
+<a href="#none" class="m-nav-open"><span class="hidden">메뉴</span></a>
+<div class="m-nav-inner">
+    <ul class="m-util-wrap">
+         <!-- 로그인 상태일 때 -->
+
+
+        <!-- 로그아웃 상태일 때 -->
+        <li>
+            <a href="/kobic/login/ssoLogin">LOGIN</a>
+        </li>
+
+        <!-- 로그인 상태 : MYPAGE 표시  -->
+        <!-- li th:if="${session.isLogin}">
+            <a th:href="@{/mypage}">MYPAGE</a>
+        </li -->
+
+        <!-- 슈퍼 관리자일 때만 ADMIN 표시 -->
+
+
+        <!-- 언어 선택 요소 -->
+        <li class="site-lang lang-eng">
+            <a onclick="getEngURL();">ENG</a>
+        </li>
+
+
+
+    </ul>
+
+    <nav id="m-gnb-wrap" class="scroll">
+        <ul class="m-gnb-inner" id="m-gnb">
+            <!-- 주 메뉴 반복 구조 -->
+            <li class="Research Resources">
+                <a href="#none"><span>주요 서비스</span></a>
+
+                <div class="m-gnb-sub-menu">
+                    <ul class="m-s-menu-inner">
+                        <!-- 서브 메뉴 반복 구조 -->
+                        <li>
+                            <a href="/kobic/res/kbds">국가바이오데이터스테이션</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/res/bioexpress">바이오 익스프레스</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/res/epidemic">감염병 연구정보포털</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/res/ngp">국가 바이오 빅데이터 사업</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="Analysis">
+                <a href="#none"><span>분석</span></a>
+
+                <div class="m-gnb-sub-menu">
+                    <ul class="m-s-menu-inner">
+                        <!-- 서브 메뉴 반복 구조 -->
+                        <li>
+                            <a href="/kobic/res/otherdb">데이터베이스</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/analysis">바이오 익스프레스</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+                                <li>
+                                    <a href="/kobic/analysis">서비스</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/analysis/download">다운로드</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/analysis/release">릴리즈노트</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/analysis/manual">매뉴얼</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/analysis/tutorials">튜토리얼</a>
+                                </li>
+                                <li>
+                                    <a href="./userpipeline-List.html">분석 파이프라인</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="Support">
+                <a href="#none"><span>활용ㆍ지원</span></a>
+
+                <div class="m-gnb-sub-menu">
+                    <ul class="m-s-menu-inner">
+                        <!-- 서브 메뉴 반복 구조 -->
+                        <li>
+                            <a href="/kobic/support/research">연구지원</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/support/education">교육지원</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+                                <li>
+                                    <a href="/kobic/support/education">KOBIC 집합교육</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/support/education/other">타기관 교육정보</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/support/qna">기타지원</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+                                <li>
+                                    <a href="/kobic/support/qna">문의사항</a>
+                                </li>
+                                <li>
+                                    <a href="/kobic/support/info">정보공유</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="Notices &amp; Activities
+">
+                <a href="#none"><span>알림ㆍ활동</span></a>
+
+                <div class="m-gnb-sub-menu">
+                    <ul class="m-s-menu-inner">
+                        <!-- 서브 메뉴 반복 구조 -->
+                        <li>
+                            <a href="/kobic/notiact/notice">공지사항</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/notiact/news">소식
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/notiact/kobicians">KOBICian's Story</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/notiact/papers">논문성과
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="KOBIC">
+                <a href="#none"><span>KOBIC</span></a>
+
+                <div class="m-gnb-sub-menu">
+                    <ul class="m-s-menu-inner">
+                        <!-- 서브 메뉴 반복 구조 -->
+                        <li>
+                            <a href="/kobic/about/greeting">인사말
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/overview">개요</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/history">연혁
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/organization">조직도
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/ci">CI 소개</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/cooperation">협력
+</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/projects">수행과제</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/kobic/about/directions">오시는 길</a>
+
+                            <!-- 마지막 깊이 메뉴 반복 구조 -->
+                            <ul class="last-depth">
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <a href="" class="m-nav-close"><span class="hidden">닫기</span></a>
+</div>
+</div>
+
+
+<!-- header.js 파일 임포트 -->
+<script src="/kobic/js/fragments/header.js"></script>
+
+</div>
+</header>
+           <!-- header :e -->
+
+        <main id="smain">
+            <!-- sub search :s -->
+            <div id="sub-search-wrap" class="sub-visual">
+<div class="sub-search-inner">
+    <div class="search-item">
+        <label for="totalSearchInput" class="hidden">통합검색어</label>
+        <input type="text" name="totalSearchInput" id="totalSearchInput" class="" placeholder="검색어를 입력하세요.">
+        <label for="totalSearchBtn" class="hidden">통합검색</label>
+        <input type="button" class="search-magnifier" value="통합검색" id="totalSearchBtn" onclick="search();">
+    </div>
+    <div class="search-word">
+        <span>추천 검색어</span>
+        <ul>
+            <li><a onclick="recommendSearch('BioProject');">#BioProject</a></li>
+            <li><a onclick="recommendSearch('NGS');">#NGS</a></li>
+            <li><a onclick="recommendSearch('Single cell');">#Single cell</a></li>
+            <li><a onclick="recommendSearch('CLOSHA');">#CLOSHA</a></li>
+            <li><a onclick="recommendSearch('RNA-seq');">#RNA-seq</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<script src="/kobic/js/contents/search/search.js"></script>
+            <!-- sub search :e -->
+            <!-- snb :s -->
+            <div id="snb-wrap">
+<div class="snb-inner">
+    <ul class="snb-ul">
+        <li class="snb-item">
+        <!--
+            <a href="/kobic" class="snb-home"><span class="hidden">HOME</span></a>
+            <a th:href="@{${#httpServletRequest.contextPath}/}" class="snb-home"><span class="hidden">HOME</span></a>
+        -->
+            <a href="/kobic/" class="snb-home"><span class="hidden">HOME</span></a>
+
+        </li>
+
+            <li class="snb-item">
+                <a href="#none" class="snb-1depth"><span>분석</span></a>
+                <div class="snb-depth-list">
+                    <ul>
+                        <li><a href="/kobic/res/kbds">주요 서비스</a></li>
+                        <li><a href="/kobic/analysis">분석</a></li>
+                        <li><a href="/kobic/support/research">활용ㆍ지원</a></li>
+                        <li><a href="/kobic/notiact/notice">알림ㆍ활동</a></li>
+                        <li><a href="/kobic/about/overview">KOBIC</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="snb-item">
+                <a href="#none" class="snb-2depth"><span>바이오 익스프레스</span></a>
+                <div class="snb-depth-list">
+                    <ul>
+                        <li><a href="/kobic/res/otherdb">데이터베이스</a></li>
+                        <li><a href="/kobic/analysis">바이오 익스프레스</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="snb-item">
+                <a href="#none" class="snb-3depth"><span>분석 파이프라인</span></a>
+                <div class="snb-depth-list">
+                    <ul>
+                        <li><a href="/kobic/analysis">서비스</a></li>
+                        <li><a href="/kobic/analysis/download">다운로드</a></li>
+                        <li><a href="/kobic/analysis/release">릴리즈노트</a></li>
+                        <li><a href="/kobic/analysis/manual">매뉴얼</a></li>
+                        <li><a href="/kobic/analysis/tutorials">튜토리얼</a></li>
+                        <li><a href="./userpipeline-List.html">분석 파이프라인</a></li>
+                    </ul>
+                </div>
+            </li>
+
+    </ul>
+</div>
+</div>
+
+            <!-- snb :e -->
+            <!-- sub contain :s -->
+            <div id="contain-wrap">
+                <!-- sub containt-inner :s -->
+                <div class="contain-inner">
+
+
+<h3 class="sub-tit-h3">분석 파이프라인</h3>
+<!-- pipeline wrap :s -->
+<div class="" id="pipeline_fragment">
+    <!-- <p class="b_list_count">There are <span class="bold fc_orange">a total of 6</span> Pipelines registered in Bio-Express.</p> -->
+        <!-- board list search :s -->
+        <!-- <div class="brd_search_box">
+            <div class="brd_search">
+                <label for="searchCate" class="Hidden">구분</label>
+                <select name="searchCate" id="searchCate" style="width: 120px;">
+                    <option>전체</option>
+                    <option>이름</option>
+                    <option>설명</option>
+                </select>
+                <label for="searchWord" class="Hidden">검색어</label>
+                <input type="text" name="searchWord" id="searchWord" class="" placeholder="검색어를 입력해주세요." />
+                <label for="searchWordBtn" class="Hidden">검색</label>
+                <input type="button" class="search_activate" value="검색" id="searchWordBtn" />
+            </div>
+        </div> -->
+        <!-- board list search :e -->
+
+        <!-- borad list :s -->
+        <div class="brd_list_type10">
+
+            <div class="pipeline_list_n" onclick="location.href='./userpipeline-Detail.html';">
+                <div class="pp_list_top">
+                    <div class="pp_img">
+
+                        <img src="../../images/bioimg/content/public_img_wgs.png" alt="">
+                    </div>
+                    <div class="pp_title_box">
+                        <div class="p_keyword_g">
+                            <span class="btn_keyword_green">#Single-cell RNA sequencing</span><span class="btn_keyword">#Next-generation sequencing</span><span class="btn_keyword_gray">#Bioinformatics</span><span class="btn_keyword_blue">#Single-cell genomics</span><span class="btn_keyword_red">#Human Cell Atlas</span><span class="btn_keyword_green">#Cell_Biology</span><span class="btn_keyword">#Genomics</span><span class="btn_keyword_gray">#transcriptome</span><span class="btn_keyword_blue">#Biotechnology</span><span class="btn_keyword_red">#heterogeneity</span><span class="btn_keyword_green">#Multiomics</span><span class="btn_keyword">#scRNA-seq</span><span class="btn_keyword_gray">#scATAC-seq</span><span class="btn_keyword_blue">#Epigenetics</span>
+                        </div>
+                        <div class="pp_tit_g">
+                           <div class="pp_tit"><p>Single-Cell-RNA-Sequencing-Pipeline</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp_info_g">
+                    <ul class="pp_detail_list">
+                        <li><span>Create Date</span><span>2024-05-09</span></li>
+                        <li><span>Update Date</span><span>2024-05-09</span></li>
+                        <!-- <li><span>Run</span><span>1,023</span></li> -->
+                    </ul>
+                </div>
+                <div class="pp_top_r" style="top: 2rem; right: 2rem;">
+                    <span class="task_count">실행 횟수<span class="bold fc_blue"> 5  회</span></span>
+                    <a class="go_work" target="_blank" onclick="">분석 실행하기</a>
+                </div>
+            </div>
+
+            <div class="pipeline_list_n">
+                <div class="pp_list_top">
+                    <div class="pp_img">
+                        <img src="../../images/bioimg/content/public_img_single_cell.png" alt="">
+
+                    </div>
+                    <div class="pp_title_box">
+                        <div class="p_keyword_g">
+                            <span class="btn_keyword_green">#Whole Genome Sequencing</span><span class="btn_keyword">#WGS</span><span class="btn_keyword_gray">#Genomics</span><span class="btn_keyword_blue">#Next Generation Sequencing</span><span class="btn_keyword_red">#Precision Medicine</span><span class="btn_keyword_green">#Clinical Genomics</span><span class="btn_keyword">#noncoding genome</span><span class="btn_keyword_gray">#GATK</span><span class="btn_keyword_blue">#fastp</span><span class="btn_keyword_red">#Cutadapt</span><span class="btn_keyword_green">#BWA</span><span class="btn_keyword">#SortSam</span><span class="btn_keyword_gray">#MarkDuplicates</span><span class="btn_keyword_blue">#CountBase</span><span class="btn_keyword_red">#BaseRecalibrator</span><span class="btn_keyword_green">#ApplyBQSR</span><span class="btn_keyword">#HaplotypeCaller</span><span class="btn_keyword_gray">#somalier</span>
+                        </div>
+                        <div class="pp_tit_g">
+                           <div class="pp_tit"><p>Whole-Genome-Sequencing Whole-Genome-Sequencing Whole-Genome-Sequencing Whole-Genome-Sequencing Whole-Genome-Sequencing</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp_info_g">
+                    <ul class="pp_detail_list">
+                        <li><span>Create Date</span><span>2022-08-10</span></li>
+                        <li><span>Update Date</span><span>2024-07-09</span></li>
+                        <li><span>Run</span><span>234</span></li>
+                    </ul>
+                </div>
+                <div class="pp_top_r" style="top: 2rem; right: 2rem;">
+                    <span class="task_count">실행 횟수<span class="bold fc_blue"> 5  회</span></span>
+                    <a class="go_work" target="_blank" onclick="">분석 실행하기</a>
+                </div>
+            </div>
+
+            <!-- <div class="pipeline_list_n">
+                <div class="pp_list_top">
+                    <div class="pp_img">
+
+                        <img src="../../images/bioimg/content/public_img_wgs.png" alt="">
+                    </div>
+                    <div class="pp_title_box">
+                        <div class="pp_tit_g">
+                           <div class="pp_tit"><p>Whole-Genome-Sequencing</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp_info_g">
+                    <ul class="pp_detail_list">
+                        <li><span>Create Date</span><span>2021-08-31</span></li>
+                        <li><span>Update Date</span><span>2024-07-08</span></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <div class="brd_list_type10">
+            <div class="pipeline_list_n">
+                <div class="pp_list_top">
+                    <div class="pp_img">
+
+                        <img src="../../images/bioimg/workbench/card_img_01.png" alt="">
+                    </div>
+                    <div class="pp_title_box">
+                        <div class="pp_tit_g">
+                            <div class="pp_tit"><p>Whole-Genome-Sequencing</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp_info_g">
+                    <ul class="pp_detail_list">
+                        <li><span>Create Date</span><span>2021-08-31</span></li>
+                        <li><span>Update Date</span><span>2024-07-08</span></li>
+                    </ul>
+                </div>
+                <div class="pp_top_r" style="top: 2rem; right: 2rem;">
+                    <a class="go_work" target="_blank" onclick="">Use analysis</a>
+                </div>
+            </div>
+
+            <div class="pipeline_list_n">
+                <div class="pp_list_top">
+                    <div class="pp_img">
+
+                        <img src="../../images/bioimg/workbench/card_img_02.png" alt="">
+                    </div>
+                    <div class="pp_title_box">
+                        <div class="pp_tit_g">
+                            <div class="pp_tit"><p>Whole-Genome-Sequencing</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp_info_g">
+                    <ul class="pp_detail_list">
+                        <li><span>Create Date</span><span>2021-08-31</span></li>
+                        <li><span>Update Date</span><span>2024-07-08</span></li>
+                    </ul>
+                </div>
+                <div class="pp_top_r" style="top: 2rem; right: 2rem;">
+                    <a class="go_work" target="_blank" onclick="">Use analysis</a>
+                </div>
+            </div>
+        </div> -->
+
+
+
+        <!-- borad list :e -->
+
+
+        <!-- 파이프라인 목록은 5개씩 노출 -->
+       <!-- pagination :s-->
+        <div class="pagination">
+            <span class="prev_g">
+                <a class="page_p_end" onclick="pipelinePaging(1);"><span class="Hidden">처음 페이지로 이동</span></a>
+                <a class="page_p" onclick="pipelinePaging(1);"><span class="Hidden">이전 페이지로 이동</span></a>
+            </span>
+            <a onclick="pipelinePaging(1);" class="on">1</a>
+            <span class="next_g">
+                <a class="page_n" onclick="pipelinePaging(1);"><span class="Hidden">다음 페이지로 이동</span></a>
+                <a class="page_n_end" onclick="pipelinePaging(1);"><span class="Hidden">마지막 페이지로 이동</span></a>
+            </span>
+        </div>
+
+        <!-- pagination :e-->
+</div>
+<!-- pipeline wrap :e -->
+
+                </div>
+                <!-- sub containt-inner :e -->
+            </div>
+
+
+            <!-- sub contain :e -->
+        </main>
+        <!-- 하단 영역 :s  -->
+        <footer id="footer"><div class="footer-inner-01">
+<div class="footer-link">
+    <ul class="footer-link-inner">
+        <li><a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a></li>
+        <li><a href="/kobic/sitemap">사이트맵</a></li>
+        <li><a href="/kobic/about/directions">오시는길</a></li>
+    </ul>
+</div>
+</div>
+<div class="footer-inner-02">
+<ul class="footer-info">
+    <li>(34141) 대전광역시 유성구 과학로 125</li>
+    <li>Tel. 042-879-8511</li>
+    <li>Fax. 042-879-8519</li>
+    <li>E-mail. webmaster@kobic.kr</li>
+</ul>
+<span class="f-copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+
+<ul class="footer-logo">
+    <li><a href="https://www.kribb.re.kr/kor/main/main.jsp" target="_blank"><img src="../../images/common/foot_logo01.svg" alt="한국생명공학연구원"></a></li>
+    <li><a href="https://www.msit.go.kr/index.do" target="_blank"><img src="../../images/common/foot_logo02.svg" alt="과학기술정보통신부"></a></li>
+</ul>
+
+</div></footer>
+       <!-- 하단 영역 :e  -->
+       <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+
+    </div>
+
+    <!-- js -->
+
+<script src="/kobic/js/contents/analysis/tutorial.js"></script>
+
+
+
+</body></html>

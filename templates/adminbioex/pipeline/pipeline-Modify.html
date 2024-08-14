@@ -1,3 +1,4 @@
+
 <html lang="ko" id="no-fouc">
     <head>
         <meta charset="utf-8">
@@ -71,11 +72,11 @@
                 <!-- admin gnb :s -->
                 <div id="admin-gnb-wrap">
                     <div class="admin-gnb-inner">
-                        <span>통합포털</span>
+                        <span>ADMIN</span>
                         <nav class="admin-gnb-box portal">
                             <ul class="gnb-depth1">
-                                <li><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li>
-                                <li class="foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                <li class="menu1"><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li>
+                                <li class="menu2 foldable open"><a href="#none" class="active">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
                                     <ul class="gnb-depth2">
                                         <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
                                         <li><a href="#none">분석 튜토리얼</a></li>
@@ -87,11 +88,19 @@
                                         <li><a href="#none">KOBICian’s Story</a></li>
                                         <li><a href="#none">논문성과</a></li>
                                         <li><a href="#none">홍보영상</a></li>
+                                        <li><a href="../../../templates/adminboard/pipeline-Board-List.html">분석 파이프라인</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#none">팝업관리</a></li>
-                                <li><a href="#none">배너관리</a></li>
-                                <li class="foldable"><a href="#none">회원 및 그룹관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                <li class="menu3 foldable"><a href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">공개 등록 이력</a></li>
+                                        <li><a href="#none">분석 실행 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu4"><a href="../../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
+                                <li class="menu5"><a href="#none">팝업관리</a></li>
+                                <li class="menu6"><a href="#none">배너관리</a></li>
+                                <li class="menu7 foldable"><a href="#none">회원 및 그룹관리</a>
                                     <ul class="gnb-depth2">
                                         <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
                                         <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
@@ -102,19 +111,6 @@
                                         <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
                                     </ul>
                                 </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-
-                    <div class="admin-gnb-inner mtop40">
-                        <span>Bio Express</span>
-                        <nav class="admin-gnb-box biomenu">
-                            <ul class="gnb-depth1">
-                                <li><a href="../../../templates/admindash/bio-main.html">대시보드</a></li>
-                                <li><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a></li>
-                                <li><a href="../../../templates/adminbioex/program/program-List.html">프로그램관리</a></li>
-                                <li><a href="../../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -129,7 +125,7 @@
 
                             <!-- pipeline wrap :s -->
                             <div class="admin-pipeline-wrap">
-                                <h2 class="h2-tit">파이프라인</h2>
+                                <h2 class="h2-tit">분석 파이프라인</h2>
                                 <h3 class="h3-tit">파이프라인 정보</h3>
                                 <div class="p_detail_box mbtm40">
                                     <input type="hidden" id="pipelineId" value="NA">
@@ -142,16 +138,16 @@
                                     </div>
                                     <div class="p_detail_g">
                                         <ul class="p_detail_list">
-                                            <li><span>워크스페이스</span><span>NA</span></li>
-                                            <li><span>노출 상태</span><span class="boolean_icon boolean_false">비노출</span></li>
+                                            <li><span>Workspace Name</span><span>NA</span></li>
+                                            <li><span>Public</span><span class="boolean_icon boolean_false">false</span></li>
                                          </ul>
                                         <ul class="p_detail_list">
-                                            <li><span>작성자</span><span>NA</span></li>
-                                            <li><span>작성 코드</span><span>PI-REG-0010</span></li>
+                                            <li><span>Registrant</span><span>NA</span></li>
+                                            <li><span>Regist Code</span><span>PI-REG-0010</span></li>
                                         </ul>
                                         <ul class="p_detail_list">
-                                            <li><span>작성일</span><span>NA</span></li>
-                                            <li><span>수정일</span><span>2022-10-03</span></li>
+                                            <li><span>Create Date</span><span>NA</span></li>
+                                            <li><span>Update Date</span><span>2022-10-03</span></li>
                                         </ul>
                                     </div>
                                     <div class="p_keyword_g">

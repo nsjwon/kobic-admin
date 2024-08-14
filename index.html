@@ -9,37 +9,37 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
 	<title>[KOBIC 통합 포털 관리자 - 작업현황]</title>
 
-	<script>  
-		function s2ab(s) { 
+	<script>
+		function s2ab(s) {
 			var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
 			var view = new Uint8Array(buf);  //create uint8array as viewer
 			for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF; //convert to octet
-			return buf;    
+			return buf;
 		}
-		function exportExcel(){ 
+		function exportExcel(){
 			// step 1. workbook 생성
 			var wb = XLSX.utils.book_new();
-		
-			// step 2. 시트 만들기 
+
+			// step 2. 시트 만들기
 			var newWorksheet = excelHandler.getWorksheet();
-			
-			// step 3. workbook에 새로만든 워크시트에 이름을 주고 붙인다.  
+
+			// step 3. workbook에 새로만든 워크시트에 이름을 주고 붙인다.
 			XLSX.utils.book_append_sheet(wb, newWorksheet, excelHandler.getSheetName());
-		
-			// step 4. 엑셀 파일 만들기 
+
+			// step 4. 엑셀 파일 만들기
 			var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
-		
-			// step 5. 엑셀 파일 내보내기 
+
+			// step 5. 엑셀 파일 내보내기
 			saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), excelHandler.getExcelFileName());
 		}
 
-		$(document).ready(function() { 
+		$(document).ready(function() {
 			$("#excelFileExport").click(function(){
 				exportExcel();
 			});
 		});
 
-		
+
 		var excelHandler = {
 				getExcelFileName : function(){
 					return '관리자페이지_작업현황.xlsx';
@@ -48,7 +48,7 @@
 					return '관리자페이지_작업현황';
 				},
 				getExcelData : function(){
-					return document.getElementById('table'); 
+					return document.getElementById('table');
 				},
 				getWorksheet : function(){
 					return XLSX.utils.table_to_sheet(this.getExcelData());
@@ -96,7 +96,7 @@
 		table tbody tr:nth-child(even) {
 			background-color: #fbfbfb;
 		}
-		
+
 		table thead tr:first-child th {
 			position: relative;
 			border-top: 3px solid #325BC4;
@@ -247,25 +247,25 @@
 			<ul>
 				<li>
 					<strong>기준일</strong>
-					<span>2024-08-06</span>
+					<span>2024-08-14</span>
 				</li>
 				<li>
 					<strong>총 작업량</strong>
-					<span>56화면 중 50화면 완료</span>
+					<span>64화면 중 63화면 완료</span>
 				</li>
 				<li>
 					<strong>카테고리 별 작업률</strong>
 					<span>
-						바이오익스프레스(12/15), 통합인증관리(38/41)
+						통합포털사용자(2/2), 통합포털관리자 대시보드(0/1) 바이오익스프레스관리자(21/21), 통합인증관리SSO(43/43)
 					</span>
 				</li>
 				<li>
 					<strong>피그마 URL</strong>
-					<span>Figma Prototype - <a href="https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1">https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1</a></span>
+					<span>Figma Prototype(현행화 필요) - <a href="https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1">https://www.figma.com/proto/ZsJ0aQlxsM1uLhdTlqpqEy/KOBIC(%EA%B3%B5%EC%9C%A0)?page-id=15%3A21&node-id=17-666&viewport=619%2C415%2C0.02&t=mQhLuDt5PSnqXgF0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=17%3A666&show-proto-sidebar=1</a></span>
 				</li>
 				<li>
 					<strong>깃허브 URL</strong>
-					<span>Git Repository - <a href="https://github.com/ninesoft90/kobic-admin-template">https://github.com/ninesoft90/kobic-admin-template</a></span>
+					<span>Git Repository(계정정보 필요) - <a href="https://github.com/ninesoft90/kobic-admin-template">https://github.com/ninesoft90/kobic-admin-template</a></span>
 				</li>
 				<li>
 					<strong>작업현황 내보내기</strong>
@@ -305,29 +305,46 @@
 		<tbody>
 
 			<tr>
-				<td colspan="6"><strong>통합포털 대시보드</strong></td>
+				<td colspan="6"><strong>통합포털 관리자 대시보드</strong></td>
 				<td><a href="./templates/admindash/kobic-main.html">kobic-main.html</a></td>
-				<td class="center">완료</td>
+				<td class="center">작업중</td>
 			</tr>
-			
-			<tr>
+
+			<!-- <tr>
 				<td colspan="6"><strong>Bio-Express 대시보드</strong></td>
 				<td><a href="./templates/admindash/bio-main.html">bio-main.html</a></td>
 				<td class="center">완료</td>
-			</tr>
+			</tr> -->
 
 			<tr>
 				<td colspan="8" class="blank"></td>
 			</tr>
 
+			<!-- <tr>
+				<td colspan="6"><strong>통합포털 분석 파이프라인 목록</strong></td>
+				<td><a href="./templates/portal/userpipeline-List.html">userpipeline-List.html</a></td>
+				<td class="center"></td>
+			</tr>
+
 			<tr>
-				<td rowspan="58"><strong>KOBIC 통합 포털 관리자 기능 통합</strong></td>
-				<td rowspan="14">KOID-RF-SFR-01701</td>
-				<td rowspan="14">바이오 익스프레스 관리자 기능 통합(14)</td>
+				<td colspan="6"><strong>통합포털 분석 파이프라인 상세</strong></td>
+				<td><a href="./templates/portal/userpipeline-Detail.html">userpipeline-Detail.html</a></td>
+				<td class="center"></td>
+			</tr> -->
+
+			<!-- <tr>
+				<td colspan="8" class="blank"></td>
+			</tr> -->
+
+			<tr>
+				<td rowspan="51"><strong>KOBIC 통합 포털 관리자 기능 통합(50)</strong></td>
+				<td rowspan="2">KOID-RF-SFR-01701</td>
+				<td rowspan="2">Bio-Express 관리자 기능 통합<br>
+					- 분석파이프라인 목록/상세(2)</td>
 				<td>KOID-RF-SFR-01701-FN01</td>
 				<td>분석 파이프라인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-List.html" target="_blank">pipeline-List.html</a> (old)</td>
 				<td class="center">완료</td>
 			</tr>
 
@@ -335,11 +352,11 @@
 				<td>KOID-RF-SFR-01701-FN02</td>
 				<td>분석 파이프라인 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a></td>
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Detail.html" target="_blank">pipeline-Detail.html</a> (old)</td>
 				<td class="center">완료</td>
 			</tr>
 
-			<tr>
+			<!-- <tr>
 				<td></td>
 				<td>분석 파이프라인 작업 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
@@ -347,112 +364,172 @@
 					<a href="./templates/adminbioex/pipeline/pipeline-Task-List.html" target="_blank">pipeline-Task-List.html</a>
 				</td>
 				<td class="center">완료</td>
-			</tr>
+			</tr> -->
 
 			<tr>
-				<td>KOID-RF-SFR-01701-FN03</td>
+				<td rowspan="3">KOID-RF-SFR-01702</td>
+				<td rowspan="3">Bio-Express 관리자 기능 통합<br>
+					- 분석 프로그램 목록/상세/실행목록(3)</td>
+				<td>KOID-RF-SFR-01702-FN01</td>
 				<td>분석 프로그램 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
-				<td><a href="./templates/adminbioex/program/program-List.html" target="_blank">program-List.html</a></td>
-				<td class="center">완료</td>
-			</tr>
-			
-			<tr>
-				<td>KOID-RF-SFR-01701-FN04</td>
-				<td>분석 프로그램 상세</td>
-				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminbioex/program/program-Detail.html" target="_blank">program-Detail.html</a></td>
-				<td class="center">완료</td>
+				<td>
+					<a href="./templates/adminbioex/program/program-List.html" target="_blank" class="txt-gray">program-List.html</a>
+				</td>
+				<td class="center">메뉴 삭제</td>
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01701-FN05</td>
+				<td>KOID-RF-SFR-01702-FN02</td>
+				<td>분석 프로그램 상세</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<a href="./templates/adminbioex/program/program-Detail.html" target="_blank" class="txt-gray">program-Detail.html</a>
+				</td>
+				<td class="center">메뉴 삭제</td>
+			</tr>
+
+			<tr>
+				<td>KOID-RF-SFR-01702-FN03</td>
 				<td>분석 프로그램 실행 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td>
-					<a href="./templates/adminbioex/program/program-Execute-List.html" target="_blank">program-Execute-List.html</a>
+					<!-- <a href="./templates/adminbioex/program/program-Execute-List.html" target="_blank">program-Execute-List.html</a> -->
+				</td>
+				<td class="center">메뉴 삭제</td>
+			</tr>
+
+
+
+
+
+
+
+
+
+			<tr>
+				<td rowspan="11">KOID-RF-SFR-01703</td>
+				<td rowspan="11">Bio-Express 관리자 기능 통합<br>
+					- 공개등록신청 파이프라인 및 <br>
+					프로그램의 목록/상세 조회, 실행통계(11)</td>
+				<td>KOID-RF-SFR-01703-FN01</td>
+				<td>공개 등록 신청 파이프라인 전체 목록</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>
+					<!-- <a href="./templates/adminbioex/pipeline/pipeline-Regist-List.html" target="_blank">pipeline-Regist-List.html</a> -->
+					<a href="./templates/adminbioex/pipeline/pipeline-Public-List.html" target="_blank">pipeline-Public-List.html</a>
+				</td>
+				<td class="center">완료</td>
+			</tr>
+
+			<tr>
+				<td>KOID-RF-SFR-01703-FN02</td>
+				<td>공개 등록 신청 파이프라인 상세</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<!-- <td><a href="./templates/adminbioex/pipeline/pipeline-Regist-Detail.html" target="_blank">pipeline-Regist-Detail.html</a></td> -->
+				<td><a href="./templates/adminbioex/pipeline/pipeline-Public-Detail.html" target="_blank">pipeline-Public-Detail.html</a></td>
+				<td class="center">완료</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>분석 실행 이력 목록</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Analysis-List.html" target="_blank">pipeline-Analysis-List.html</a>
 				</td>
 				<td class="center"></td>
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01701-FN06</td>
-				<td>공개 등록 신청 파이프라인 전체 목록</td>
-				<td><span class="state-txt txt-green">List</span></td>
-				<td>
-					<a href="./templates/adminbioex/pipeline/pipeline-Regist-List.html" target="_blank">pipeline-Regist-List.html</a>
-				</td>
-				<td class="center">완료</td>
-			</tr>
-			
-			<tr>
-				<td>KOID-RF-SFR-01701-FN07</td>
-				<td>공개 등록 신청 파이프라인 상세</td>
+				<td></td>
+				<td>분석 실행 이력 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
-				<td><a href="./templates/adminbioex/pipeline/pipeline-Regist-Detail.html" target="_blank">pipeline-Regist-Detail.html</a></td>
-				<td class="center">완료</td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Analysis-Detail.html" target="_blank">pipeline-Analysis-Detail.html</a>
+				</td>
+				<td class="center"></td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01701-FN08</td>
+				<td></td>
+				<td>프로그램 실행 이력</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Node-history.html" target="_blank">pipeline-Node-history.html</a>
+				</td>
+				<td class="center"></td>
+			</tr>
+
+			<tr>
+				<td>KOID-RF-SFR-01703-FN03</td>
 				<td>공개 등록 신청 파이프라인 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td>
 					<!-- <a href="./templates/adminbioex/pipeline/pipeline-Approval-List.html" target="_blank">pipeline-Approval-List.html</a> -->
 				</td>
-				<td class="center"></td>
+				<td class="center">메뉴 통합</td>
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01701-FN09</td>
+				<td>KOID-RF-SFR-01703-FN04</td>
 				<td>공개 등록 신청 프로그램 전체 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td>
-					<a href="./templates/adminbioex/program/program-Regist-List.html" target="_blank">program-Regist-List.html</a>
+					<a href="./templates/adminbioex/program/program-Regist-List.html" target="_blank" class="txt-gray">program-Regist-List.html</a>
 				</td>
-				<td class="center">완료</td>
+				<td class="center">메뉴 삭제</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01701-FN10</td>
+				<td>KOID-RF-SFR-01703-FN05</td>
 				<td>공개 등록 신청 프로그램 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
-					<a href="./templates/adminbioex/program/program-Regist-Detail.html" target="_blank">program-Regist-Detail.html</a>
+					<a href="./templates/adminbioex/program/program-Regist-Detail.html" target="_blank" class="txt-gray">program-Regist-Detail.html</a>
 				</td>
-				<td class="center">완료</td>
+				<td class="center">메뉴 삭제</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01701-FN11</td>
+				<td>KOID-RF-SFR-01703-FN06</td>
 				<td>공개 등록 신청 프로그램 승인 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td>
 					<!-- <a href="./templates/adminbioex/program/program-Approval-List.html" target="_blank">program-Approval-List.html</a> -->
 				</td>
-				<td class="center"></td>
+				<td class="center">메뉴 삭제</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01701-FN12</td>
+				<td>KOID-RF-SFR-01703-FN07</td>
 				<td>분석 파이프라인 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>
-					<a href="./templates/adminbioex/statinfo/statinfo-View.html" target="_blank">statinfo-View.html</a>
+					<a href="./templates/adminbioex/statinfo/statinfo-View.html" target="_blank" class="txt-gray">statinfo-View.html</a>
 				</td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01701-FN13</td>
+				<td>KOID-RF-SFR-01703-FN08</td>
 				<td>분석 프로그램 실행 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>
-					<a href="./templates/adminbioex/statinfo/statinfo-Excute-View.html" target="_blank">statinfo-Excute-View.html</a>
+					<a href="./templates/adminbioex/statinfo/statinfo-Excute-View.html" target="_blank" class="txt-gray">statinfo-Excute-View.html</a>
 				</td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
 
+			<!-- <tr>
+				<td></td>
+				<td>분석 파이프라인 수정</td>
+				<td><span class="state-txt txt-yellow">Modify</span></td>
+				<td>
+					<a href="./templates/adminbioex/pipeline/pipeline-Modify.html" target="_blank">pipeline-Modify.html</a>
+				</td>
+				<td class="center"></td>
+			</tr> -->
 
 
 
@@ -479,9 +556,10 @@
 
 
 			<tr>
-				<td rowspan="34">KOID-RF-SFR-01702</td>
-				<td rowspan="34">통합 인증 서비스 관리자 기능 통합 (34)</td>
-				<td>KOID-RF-SFR-01702-FN01</td>
+				<td rowspan="29">KOID-RF-SFR-01704</td>
+				<td rowspan="29">통합 인증 서비스 관리자 기능 통합
+					- 회원, 그룹, 등급, 통계, 약관 관리 도구 (29)</td>
+				<td>KOID-RF-SFR-01704-FN01</td>
 				<td>사용자 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/member/user-List.html" target="_blank">user-List.html</a></td>
@@ -489,7 +567,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN02</td>
+				<td>KOID-RF-SFR-01704-FN02</td>
 				<td>사용자 정보 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td><a href="./templates/adminsso/member/user-Detail.html" target="_blank">user-Detail.html</a></td>
@@ -497,7 +575,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN03</td>
+				<td>KOID-RF-SFR-01704-FN03</td>
 				<td>사용자 정보 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -507,7 +585,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN04</td>
+				<td>KOID-RF-SFR-01704-FN04</td>
 				<td>사용자 정보 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -517,7 +595,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN05</td>
+				<td>KOID-RF-SFR-01704-FN05</td>
 				<td>사용자 등급 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -527,7 +605,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN06</td>
+				<td>KOID-RF-SFR-01704-FN06</td>
 				<td>사용자 탈퇴</td>
 				<td><span class="state-txt txt-purple">Alert</span></td>
 				<td>
@@ -537,7 +615,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN07</td>
+				<td>KOID-RF-SFR-01704-FN07</td>
 				<td>사용자 그룹 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/group/group-List.html" target="_blank">group-List.html</a></td>
@@ -545,7 +623,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN08</td>
+				<td>KOID-RF-SFR-01704-FN08</td>
 				<td>사용자 그룹 정보 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td><a href="./templates/adminsso/group/group-Detail.html" target="_blank">group-Detail.html</a></td>
@@ -553,7 +631,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN09</td>
+				<td>KOID-RF-SFR-01704-FN09</td>
 				<td>사용자 그룹 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -563,7 +641,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN10</td>
+				<td>KOID-RF-SFR-01704-FN10</td>
 				<td>사용자 그룹 정보 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -573,7 +651,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN11</td>
+				<td>KOID-RF-SFR-01704-FN11</td>
 				<td>사용자 그룹 등급 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -583,7 +661,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN12</td>
+				<td>KOID-RF-SFR-01704-FN12</td>
 				<td>사용자 그룹 해제</td>
 				<td><span class="state-txt txt-purple">Alert</span></td>
 				<td>(공통)
@@ -593,7 +671,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN13</td>
+				<td>KOID-RF-SFR-01704-FN13</td>
 				<td>사용자 그룹 생성 승인</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
@@ -601,9 +679,9 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN14</td>
+				<td>KOID-RF-SFR-01704-FN14</td>
 				<td>사용자 그룹 생성 보류</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>(공통)
@@ -613,7 +691,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN15</td>
+				<td>KOID-RF-SFR-01704-FN15</td>
 				<td>관리자 그룹 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td>(공통)
@@ -623,7 +701,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN16</td>
+				<td>KOID-RF-SFR-01704-FN16</td>
 				<td>관리자 그룹 정보 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>(공통)</td>
@@ -632,7 +710,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN17</td>
+				<td>KOID-RF-SFR-01704-FN17</td>
 				<td>관리자 그룹 등록</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
@@ -642,7 +720,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN18</td>
+				<td>KOID-RF-SFR-01704-FN18</td>
 				<td>관리자 그룹 정보 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>(공통)
@@ -652,7 +730,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN19</td>
+				<td>KOID-RF-SFR-01704-FN19</td>
 				<td>관리자 그룹 등급 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -662,7 +740,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN20</td>
+				<td>KOID-RF-SFR-01704-FN20</td>
 				<td>관리자 그룹 해제</td>
 				<td><span class="state-txt txt-purple">Alert</span></td>
 				<td>(공통)
@@ -672,7 +750,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN21</td>
+				<td>KOID-RF-SFR-01704-FN21</td>
 				<td>관리자 그룹 생성 승인</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>(공통)
@@ -680,9 +758,9 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN22</td>
+				<td>KOID-RF-SFR-01704-FN22</td>
 				<td>관리자 그룹 생성 보류</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>(공통)
@@ -690,47 +768,47 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN23</td>
+				<td>KOID-RF-SFR-01704-FN23</td>
 				<td>연계 사이트 가입 현황 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td><a href="./templates/adminsso/stat/stat-View.html" target="_blank">stat-View.html</a></td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN24</td>
+				<td>KOID-RF-SFR-01704-FN24</td>
 				<td>연계 사이트 로그인 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>(공통)
 					<!-- <a href="./templates/adminsso/stat/stat-Login.html" target="_blank">stat-Login.html</a> -->
 				</td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN25</td>
+				<td>KOID-RF-SFR-01704-FN25</td>
 				<td>그룹 회원 가입 현황 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>(공통)
 					<!-- <a href="./templates/adminsso/stat/stat-Group-Signup.html" target="_blank">stat-Group-Signup.html</a> -->
 				</td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN26</td>
+				<td>KOID-RF-SFR-01704-FN26</td>
 				<td>사용자별 연계 사이트 로그인 현황 통계</td>
 				<td><span class="state-txt txt-blue">Statistics</span></td>
 				<td>(공통)
 					<!-- <a href="./templates/adminsso/stat/stat-Relative-Login.html" target="_blank">stat-Relative-Login.html</a> -->
 				</td>
-				<td class="center">완료</td>
+				<td class="center">대시보드 통합</td>
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN27</td>
+				<td>KOID-RF-SFR-01704-FN27</td>
 				<td>약관 등록</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
@@ -738,9 +816,9 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN28</td>
+				<td>KOID-RF-SFR-01704-FN28</td>
 				<td>약관 수정</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
@@ -748,9 +826,9 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN29</td>
+				<td>KOID-RF-SFR-01704-FN29</td>
 				<td>약관 삭제</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>(공통)
@@ -760,25 +838,28 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN30</td>
+				<td rowspan="5">KOID-RF-SFR-01705</td>
+				<td rowspan="5">통합 인증 서비스 관리자 기능 통합
+					- 통합인증시스템 API 기능 (5)</td>
+				<td>KOID-RF-SFR-01705-FN01</td>
 				<td>SSO API 접근 권한 토큰 발행</td>
-				<td colspan="3" class="center">제외</td>
+				<td colspan="3" class="center"></td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN31</td>
+				<td>KOID-RF-SFR-01705-FN02</td>
 				<td>SSO API 리프레시 토큰 발행</td>
-				<td colspan="3" class="center">제외</td>
+				<td colspan="3" class="center"></td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN32</td>
+				<td>KOID-RF-SFR-01705-FN03</td>
 				<td>SSO API 토큰 유효성 검사</td>
-				<td colspan="3" class="center">제외</td>
+				<td colspan="3" class="center"></td>
 			</tr>
-			
+
 			<tr>
-				<td>KOID-RF-SFR-01702-FN33</td>
+				<td>KOID-RF-SFR-01705-FN04</td>
 				<td>SSO API 사용자 검색 (회원 목록)</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -788,7 +869,7 @@
 			</tr>
 
 			<tr>
-				<td>KOID-RF-SFR-01702-FN34</td>
+				<td>KOID-RF-SFR-01705-FN05</td>
 				<td>SSO API 그룹 검색 (그룹 회원 목록)</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -796,7 +877,7 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 
 
 
@@ -813,8 +894,10 @@
 
 
 			<tr>
-				<td rowspan="9" colspan="2">기타 요구사항 외 (9)</td>
-				<td></td>
+				<td rowspan="13"><strong>기타 요구사항 외 (13)</strong></td>
+				<td rowspan="9"><strong>통합</strong></td>
+				<td rowspan="9">통합 인증 서비스 관리자 기능 통합 - 유형, 등급, 약관, 이벤트로그 관리 도구(9)</td>
+				<td rowspan="9"></td>
 				<td>유형관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/type/type-List.html" target="_blank">type-List.html</a></td>
@@ -822,7 +905,6 @@
 			</tr>
 
 			<tr>
-				<td></td>
 				<td>유형 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -830,9 +912,8 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td></td>
 				<td>유형 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -842,7 +923,6 @@
 			</tr>
 
 			<tr>
-				<td></td>
 				<td>등급관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/grade/grade-List.html" target="_blank">grade-List.html</a></td>
@@ -850,7 +930,6 @@
 			</tr>
 
 			<tr>
-				<td></td>
 				<td>등급 수정</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -858,9 +937,8 @@
 				</td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td></td>
 				<td>등급 등록</td>
 				<td><span class="state-txt txt-gray">Popup</span></td>
 				<td>
@@ -870,15 +948,13 @@
 			</tr>
 
 			<tr>
-				<td></td>
 				<td>약관관리 목록</td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/policy/policy-List.html" target="_blank">policy-List.html</a></td>
 				<td class="center">완료</td>
 			</tr>
-			
+
 			<tr>
-				<td></td>
 				<td>이벤트로그 목록 <br>(관리자 권한 설정 이력 관리) </td>
 				<td><span class="state-txt txt-green">List</span></td>
 				<td><a href="./templates/adminsso/event/event-List.html" target="_blank">event-List.html</a></td>
@@ -886,7 +962,6 @@
 			</tr>
 
 			<tr>
-				<td></td>
 				<td>이벤트로그 상세</td>
 				<td><span class="state-txt txt-yellow">Detail</span></td>
 				<td>
@@ -895,7 +970,46 @@
 				<td class="center">완료</td>
 			</tr>
 
+			<tr>
+				<td rowspan="4"><strong>신규</strong></td>
+				<td rowspan="2">통합 포털 관리자 - 게시판 관리 하위메뉴(2)</td>
+				<td rowspan="2"></td>
+				<td>분석 파이프라인 목록</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>
+					<a href="./templates/adminboard/pipeline-Board-List.html" target="_blank">pipeline-Board-List.html</a>
+				</td>
+				<td class="center">완료</td>
+			</tr>
 
+			<tr>
+				<td>분석 파이프라인 상세(수정)</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<a href="./templates/adminboard/pipeline-Board-Modify.html" target="_blank">pipeline-Board-Modify.html</a>
+				</td>
+				<td class="center">완료</td>
+			</tr>
+
+			<tr>
+				<td rowspan="2">통합 포털 사용자 - 분석/바이오익스프레스 하위메뉴(2)</td>
+				<td rowspan="2"></td>
+				<td>분석 파이프라인 목록</td>
+				<td><span class="state-txt txt-green">List</span></td>
+				<td>
+					<a href="./templates/portal/userpipeline-List.html" target="_blank">userpipeline-List.html</a>
+				</td>
+				<td class="center">완료</td>
+			</tr>
+
+			<tr>
+				<td>분석 파이프라인 상세(수정)</td>
+				<td><span class="state-txt txt-yellow">Detail</span></td>
+				<td>
+					<a href="./templates/portal/userpipeline-Detail.html" target="_blank">userpipeline-Detail.html</a>
+				</td>
+				<td class="center">완료</td>
+			</tr>
 
 			<!-- <tr id="resultRow">
 				<td><strong></strong></td>

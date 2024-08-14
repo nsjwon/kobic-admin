@@ -1,0 +1,403 @@
+
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->
+        <title>국가생명연구자원정보센터(KOBIC)</title>
+        <link media="all" rel="stylesheet" href="../../../css/font.css">
+        <link media="all" rel="stylesheet" href="../../../css/common.css">
+        <link media="all" rel="stylesheet" href="../../../css/admin.css">
+        <link media="all" rel="stylesheet" href="../../../css/board.css">
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css">
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css">
+        <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css">
+        <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css">
+        <script src="../../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../../js/axios/axios.min.js"></script>
+        <script src="../../../js/oembed/oembed-provider.js"></script>
+        <script src="../../../js/common/common.js"></script>
+        <script src="../../../js/common/editor_common.js"></script>
+        <script src="../../../js/common/upload_common.js"></script>
+        <script src="../../../js/contents/admin/main.js"></script>
+        <script src="../../../js/contents/admin/menu.js"></script>
+    </head>
+
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../../index.html"><img src="../../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li>
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li>
+                            <li>
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+
+            <!-- admin container :s -->
+            <main id="admin-container">
+
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>ADMIN</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li class="menu1"><a href="../../../templates/admindash/kobic-main.html">대시보드</a></li>
+                                <li class="menu2 foldable"><a href="#none">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                        <li><a href="../../../templates/adminboard/pipeline-Board-List.html">분석 파이프라인</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu3 foldable open"><a class="active" href="../../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a class="on" href="../../../templates/adminbioex/pipeline/pipeline-Public-List.html">공개 등록 이력</a></li>
+                                        <li><a href="../../../templates/adminbioex/pipeline/pipeline-Analysis-List.html">분석 실행 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu4"><a href="../../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
+                                <li class="menu5"><a href="#none">팝업관리</a></li>
+                                <li class="menu6"><a href="#none">배너관리</a></li>
+                                <li class="menu7 foldable"><a href="#none">회원 및 그룹관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+
+                <!-- admin content :s --><div id="admin-content-wrap">
+	            <!-- admin content inner :s -->
+				<div class="admin-content-inner">
+
+                    <h2 class="h2-tit">공개 등록 이력</h2>
+                 <!-- board wrap :s-->
+                 <div class="brd-wrap">
+                     <!-- board search :s -->
+                     <div class="brd-search">
+                         <div class="brd-search-inner">
+                             <div class="search-section">
+                                 <div class="search-date input-date-wrap">
+                                     <p>작성일</p>
+                                     <label for="startDate" class="hidden">시작일</label>
+                                     <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일">
+                                     <span>~</span>
+                                     <label for="endDate" class="hidden">종료일</label>
+                                     <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일">
+                                 </div>
+                                 <div class="search-date input-date-wrap">
+                                     <p>요청일</p>
+                                     <label for="startDate" class="hidden">시작일</label>
+                                     <input type="text" name="searchDate1" id="startDate1" value="" placeholder="시작일">
+                                     <span>~</span>
+                                     <label for="endDate" class="hidden">종료일</label>
+                                     <input type="text" name="searchDate1" id="endDate1" value="" placeholder="종료일">
+                                 </div>
+                                 <div class="search-state">
+                                    <label for="searchState" class="label-tit">상태</label>
+                                    <select name="searchState" id="searchState">
+                                        <option value="all">전체</option>
+                                        <option value="pu">노출</option>
+                                        <option value="pri">비노출</option>
+                                    </select>
+                                </div>
+                                 <div class="search-display search-radio">
+                                     <p>노출상태</p>
+                                     <input type="radio" id="displayBlock" name="searchDisplay" value="Y"><label for="displayBlock" class="">노출</label>
+                                     <input type="radio" id="displayNone" name="searchDisplay" value="N"><label for="displayNone" class="">비노출</label>
+                                 </div>
+                             </div>
+                             <div class="search-section">
+                                 <div class="search-text">
+                                     <p>검색조건</p>
+                                     <label for="searchCate" class="hidden">구분</label>
+                                     <select name="searchCate" id="searchCate">
+                                         <option value="all">구분 전체</option>
+                                         <option value="tutorialTitle">파이프라인명</option>
+                                         <option value="tutorialRegId">작성자</option>
+                                     </select>
+                                     <label for="searchWord" class="hidden">검색어</label>
+                                     <input type="text" name="searchWord" id="searchWord" class="" placeholder="검색어를 입력하세요." value="">
+                                     <label for="searchWordBtn" class="hidden">검색</label>
+                                     <input type="button" class="search-act" value="검색" id="searchWordBtn" onclick="getPostList();">
+                                     <label for="searchClearBtn" class="hidden">검색 초기화</label>
+                                     <input type="button" class="search-clear" value="검색 초기화" id="searchClearBtn" onclick="clearSearchCondition();">
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- board search :e -->
+
+                     <!-- board info : s-->
+                     <div class="brd-info">
+                         <ul class="brd-num">
+                             <li><span class="">전체</span> <span class="bold">20</span>건</li>
+                             <li><span>현재 페이지</span> <span class="bold txt-point">1</span>/<span>2</span></li>
+                         </ul>
+                         <label for="boardSort" class="hidden">정렬</label>
+                         <select name="boardSort" id="boardSort" class="brd-sort" onchange="getPostList();">
+                             <option value="pipelineRegDt">최신순</option>
+                             <option value="pipelineName">이름순</option>
+                         </select>
+                     </div>
+                     <!-- board info : e-->
+
+                     <!-- board table :s -->
+                     <div class="table-wrap">
+                         <table class="brd-list-01">
+                             <caption>공개 등록 이력 순번, 파이프라인명, ID, 워크스페이스명, 작성자, 작성일, 요청일, 노출 상태 정보입니다.</caption>
+                             <colgroup>
+                                 <col style="width:6.0rem">
+                                 <col style="width:12%">
+                                 <col style="width:12%">
+                                 <col>
+                                 <col style="width:12%">
+                                 <col style="width:12%">
+                                 <col style="width:12%">
+                                 <col style="width:9.0rem">
+                             </colgroup>
+                             <thead>
+                                 <tr>
+                                     <th scope="col">순번</th>
+                                     <th scope="col">파이프라인명</th>
+                                     <th scope="col">파이프라인ID</th>
+                                     <th scope="col">워크스페이스명</th>
+                                     <th scope="col">작성자</th>
+                                     <th scope="col">작성일</th>
+                                     <th scope="col">요청일</th>
+                                     <th scope="col">노출여부</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+
+                                     <tr>
+                                         <td>1</td>
+                                         <td>pipeline01</td>
+                                         <td>BX02-20210831-0038</td>
+                                         <td>workspace01</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>N</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>2</td>
+                                         <td>pipeline02</td>
+                                         <td>BX02-20210831-0034</td>
+                                         <td>workspace02</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>N</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>3</td>
+                                         <td>WGS-pipeline</td>
+                                         <td>BX02-20210903-0033</td>
+                                         <td>Bioinformatics</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>Y</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>4</td>
+                                         <td>WGS-pipeline</td>
+                                         <td>BX02-20210903-0033</td>
+                                         <td>Bioinformatics</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>Y</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>5</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>Y</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>6</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>N</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>7</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>N</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>8</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>N</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>9</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>Y</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+                                     <tr>
+                                         <td>10</td>
+                                         <td>pipeline05</td>
+                                         <td>BX02-20210831-0035</td>
+                                         <td>workspace05</td>
+                                         <td>bioex</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>2023-10-26 11:20:47</td>
+                                         <td>Y</td> <!-- 노출여부 Y / N -->
+                                     </tr>
+
+
+
+                             </tbody>
+                         </table>
+                     </div>
+                     <!-- board table :e -->
+                     <!-- board button :s -->
+                     <!-- <div class="brd-btn-area flex-between">
+                         <div class="btn-list">
+                             <label for="selectDel" class="hidden">선택 삭제</label>
+                             <input type="button" class="btn btn btn-blue-gray" value="선택 삭제" id="selectDel" onclick="deletePost();">
+                             <label for="selectDisBlock" class="hidden">선택 노출</label>
+                             <input type="button" class="btn btn btn-blue-gray" value="선택 노출" id="selectDisBlock" onclick="changeYnSelectedPost('Y');">
+                             <label for="selectDisNone" class="hidden">선택 비노출</label>
+                             <input type="button" class="btn btn btn-blue-gray" value="선택 비노출" id="selectDisNone" onclick="changeYnSelectedPost('N');">
+                         </div>
+                         <div class="btn-list">
+                             <label for="brdWrite" class="hidden">등록</label>
+                             <input type="button" class="btn btn-blue" value="등록" id="brdWrite" onclick="goAddPost();">
+                         </div>
+                     </div> -->
+                     <!-- board button :e -->
+
+                     <!-- page:s -->
+                     <div class="pagination">
+                         <span class="prev-group">
+                             <a class="page-first" onclick="getPostList(1)"><span class="hidden">처음 페이지로 이동</span></a>
+                             <a class="page-prev" onclick="getPostList(1)"><span class="hidden">이전 페이지로 이동</span></a>
+                         </span>
+                         <a onclick="getPostList(1);" class="on">1</a><a onclick="getPostList(2);">2</a>
+
+                         <span class="next-group">
+                             <a class="page-next" onclick="getPostList(2)"><span class="hidden">다음 페이지로 이동</span></a>
+                             <a class="page-end" onclick="getPostList(2)"><span class="hidden">마지막 페이지로 이동</span></a>
+                         </span>
+                     </div>
+                     <!-- page:e -->
+                 </div>
+                 <!-- board wrap :e-->
+
+         </div>
+         <!-- admin content inner :e -->
+
+         <!-- admin footer :s -->
+         <footer id="admin-footer"><div class="footer-wrap">
+<ul>
+    <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+    <li>Tel. 042-879-8511</li>
+    <li>Fax. 042-879-8519</li>
+    <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+</ul>
+<span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+<a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+</div></footer>
+         <!-- admin footer :e -->
+     </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+
+
+        <script>
+
+            $(document).ready(function() {
+                // 테이블 행 클릭 시 상세페이지 연결
+                var linkfile = './pipeline-Board-Modify.html';
+
+                // tr 요소를 클릭했을 때 이벤트 핸들러
+                $('.brd-list-01 > tr').on('click', function() {
+                    // 공통 URL로 이동합니다.
+                    window.location.href = linkfile;
+                });
+            });
+        </script>
+    </body>
+</html>

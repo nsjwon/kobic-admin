@@ -1,0 +1,529 @@
+<html lang="ko" id="no-fouc"><head>
+
+	<title>CLOSHA</title>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->
+<meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+<meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 화면맞춤 -->
+<meta name="author" content="저작자"><!-- 저작자 -->
+<meta name="keywords" content="키워드"><!-- 키워드 -->
+<meta name="description" content="설명"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+<meta name="copyright" content="Copyright © 2020 BY BioExpress. ALL RIGHTS RESERVED."><!-- 저작권 -->
+<!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BioExpress">
+<meta property="og:description" content="BioExpress">
+<meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+<meta property="og:url" content="https://www.kobic.re.kr/bioexpress">
+<!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+<link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->
+
+<title>CLOSHA</title>
+
+<link href="/bioexpress/new/css/sweetalert2.css" media="all" rel="stylesheet" type="text/css">
+<link href="/bioexpress/new/css/font.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/common.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/layout.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/main.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/content.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/biostyle/board.css" media="all" rel="stylesheet" type="text/css">
+<link href="../../css/board.css" media="all" rel="stylesheet" type="text/css">
+<link href="/bioexpress/new/css/responsive.css" media="all" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/jquery-3.7.0.min.js"></script>
+<!-- <script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/bioexpress/js/jquery-validate-1.19.3.min.js"></script>
+<script type="text/javascript" src="/bioexpress/js/jquery-validate-additional_methodds-1.19.3.min.js"></script>
+<script type="text/javascript" src="/bioexpress/new/js/sweetalert2.js"></script>
+
+<script type="text/javascript" src="/bioexpress/new/js/common.js"></script>
+<script type="text/javascript" src="/bioexpress/new/js/layout.js"></script>
+<script type="text/javascript" src="/bioexpress/new/js/contents/community.js"></script> -->
+
+
+<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5SECP14MWL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-5SECP14MWL');
+	</script>
+
+<!-- swiper script :s -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+<link rel="stylesheet" href="/bioexpress/new/css/swiper-bundle.min.css">
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="/bioexpress/new/js/plugins/swiper-bundle.min.js"></script>
+<!-- swiper script :e -->
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+<link rel="stylesheet" href="/bioexpress/new/css/aos.css">
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+<script src="/bioexpress/new/js/plugins/aos.js"></script>
+
+<script>
+	/*<![CDATA[*/
+
+		var locale = getLanguageCookie();
+		let raonLanguage = "en-us";
+
+
+		const buttonConfirm = "Confirm"
+		const buttonBrowser = "Browser"
+		const buttonCancel = "Cancel"
+		const buttonSubmit = "Submit"
+		const buttonCreate = "Create"
+		const buttonEdit = "EDIT"
+		const buttonDelete = "DELETE"
+		const buttonRegist =  "Register"
+		const buttonReply = "\uB2F5\uAE00 eng"
+		const messageNoData = "No Data"
+		const messageGContactAdmin = "Please contact the admin."
+		const messageQExecute = "Do you want to execute it?"
+		const messageAExecute = "It's executed."
+		const messageAExecuteFail = "Failed to execute."
+		const messageAStop = "It's stopped."
+		const messageAStopFail = "Failed to stop."
+		const messageGEnterItem = "Please enter a {0}."
+		const messageGRequiredLogin = "You must be logged in."
+		const messageGPreparing1 = "The function is being prepared."
+		const messageQRegister = "Do you want to register it?"
+		const messageARegister = "It's registered."
+		const messgaeQEdit = "Would you like to edit?"
+		const messgaeAEdit = "Edited."
+		const messageQDelete = "Do you want to delete it?"
+		const messageADelete = "It's deleted"
+		const messageRetry = "Please try again."
+
+
+		var member_id =null
+		const tab2Col1 = "Name"
+		const tab2Col2 = "Description"
+		const tab2Col3 = "Type"
+
+		const pipelinePopCol1 = "Name"
+		const pipelinePopCol2 = "Required"
+		const pipelinePopCol3 = "Value"
+		const pipelinePopCol4 = "Type"
+
+		const gboxBrowserTitle = "GBox Web Browser"
+		const gboxBrowserCol1 = "Name"
+		const gboxBrowserCol2 = "Size"
+		const gboxBrowserCol3 = "Modified"
+
+		const messageQSave = "Do you want to save it?"
+		const messageASave = "It's saved."
+		const messageQExecuteImme = "Do you want to run the created job immediately?<br>You can check the progress of the job on MyPage."
+		const messageGPipelineInfoInput = "Please enter your pipeline information."
+		const messageGPipelineSelect = "Please select a Pipeline."
+
+		const projectPipelineCategory1 = "Root Category"
+		const projectPipelineCategory2 = "Sub Category"
+		const projectPipelineCategory3 = "Pipeline List"
+
+		const messageCommunityTitle = "Please enter the subject."
+
+
+	/*]]>*/
+</script>
+
+</head>
+
+<body class="scroll" data-aos-easing="ease" data-aos-duration="900" data-aos-delay="0">
+	<!-- 반복영역 건너뛰기 -->
+    <div id="skip_nav"><a href="#main">본문영역 바로가기</a>
+<a href="#footer">하단 바로가기</a></div>
+	<!-- //반복영역 건너뛰기 -->
+
+	<!-- wrap -->
+	<div id="wrap" class="sub">
+		<!--header S -->
+		<header id="header"><div class="head-inner">
+	<h1 class="logo">
+		<a href="../../index.html"><img src="../../images/bioimg/logo/logo_closha_n.svg" alt="closha"></a>
+	</h1>
+	<nav class="gnb-wrap">
+		<ul class="gnb">
+			<li>
+				<div class="gnb_tit">
+					<a href="/bioexpress/introduction">Intro</a>
+				</div>
+			</li>
+			<li>
+				<div class="gnb_tit">
+					<a href="/bioexpress/howtouse">Manual</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</div>
+<div class="header_bg"></div>
+
+
+<script type="text/javascript">
+	var locale = getLanguageCookie();
+	$(".locale_hidden").css("display", locale === 'ko' ? '' : 'none');
+</script></header>
+		<!--header E -->
+
+	<section id="sub-container">
+	    <div class="svisual">
+	        <div class="svisual-wrap sv03">
+	            <div class="sv-box aos-init aos-animate" data-aos="fade-down">
+	                <p class="sv_tit fc_white">The only cloud-based integrated data analysis service in Korea</p>
+	                <span class="sv_txt fc_white">Check the basic analysis information by viewing the open programs and pipelines.</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div id="lnb-wrap">
+	        <div class="lnb-inner">
+	            <h2 class="sub-h2">Public Contents</h2>
+	            <div class="lnb-box">
+	                <ul>
+						<li class="active"><a href="/bioexpress/pipeline/pipeline">Analysis Pipeline</a></li> <!-- 해당 페이지일때 class="avtive" 유지 -->
+						<li><a href="/bioexpress/program/program">Analysis Program</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <div id="container-wrap">
+	        <div class="contain-inner">
+	            <h3 class="sub-h3">Single-Cell-RNA-Sequencing-Pipeline</h3>
+	            <!-- pipeline wrap :s -->
+				<div class="sub-brd-wrap">
+					<!-- board wrap :s-->
+					<div class="brd-wrap">
+						<!-- board view :s-->
+						<div class="brd-view">
+							<div class="brd-view-top">
+								<!-- <span class="brd-view-tit">BX02-20220810-2636</span> -->
+								<ul class="brd-view-info">
+									<li><span>ID</span><span>BX02-20220810-2636</span></li>
+									<li><span>Category</span><span>Single-Cell-RNA-Sequencing</span></li>
+									<li><span>Reference</span><span><a href="#none">Single-Cell-RNA-Sequencing-Pipeline</a></span></li>
+									<li><span>Registrant</span><span>bioex</span></li>
+								</ul>
+								<ul class="brd-view-info">
+									<li><span>Create Date</span><span>2022-08-10</span></li>
+									<li><span>Update Date</span><span>2024-07-09</span></li>
+									<li><span>Version</span><span>2.0</span></li>
+								</ul>
+								<div class="p_keyword_g">
+                                	<span class="btn_keyword_green">#Single-cell RNA sequencing</span><span class="btn_keyword">#Next-generation sequencing</span><span class="btn_keyword_gray">#Bioinformatics</span><span class="btn_keyword_blue">#Single-cell genomics</span><span class="btn_keyword_red">#Human Cell Atlas</span><span class="btn_keyword_green">#Cell_Biology</span><span class="btn_keyword">#Genomics</span><span class="btn_keyword_gray">#transcriptome</span><span class="btn_keyword_blue">#Biotechnology</span><span class="btn_keyword_red">#heterogeneity</span><span class="btn_keyword_green">#Multiomics</span><span class="btn_keyword">#scRNA-seq</span><span class="btn_keyword_gray">#scATAC-seq</span><span class="btn_keyword_blue">#Epigenetics</span>
+                                </div>
+							</div>
+							<div class="brd-view-cont">
+								<img src="../../images/bioimg/content/public_img_wgs.png" alt=""><br>
+								<p class="pipeline-log">
+									Bio-express's Single-cell-RNA-Sequencing-Pipeline is an extensible toolkit for analyzing single-cell gene expression data using the Scanpy pipeline.<br>
+									It includes methods for preprocessing, visualization, clustering, differential expression testing.<br>
+									Its Python-based implementation efficiently deals with data sets of more than one million cells.<br>
+									we present ANNDATA, a generic class for handling annotated data matrices.<br><br>
+									<strong>This pipeline features</strong><br>
+									1) We regress out confounding variables, normalize, and identify highly variable genes.<br>
+									2) TSNE and graph-drawing (Fruchterman–Reingold) visualizations show cell-type annotations obtained by comparisons with bulk expression.<br>
+									3) Cells are clustered and plotted using the Louvain algorithm. It also supports clustering using various algorithms.<br>
+									4) Ranking the differentially expressed genes in clusters identifies marker genes that match the bulk label<br>
+								</p>
+							</div>
+						<!-- board view :e-->
+					</div>
+					<!-- board wrap :e-->
+					<div class="brd-btn-area center">
+						<div class="btn-list"><!-- 관리자 및 게시물 작성자일때만 수정/삭제 버튼 노출 -->
+							<!-- <label for="brdModify" class="hidden">Modify</label>
+							<input type="button" class="btn btn_blue" value="Modify" id="brdModify" onclick="location.href='../../templates/adminbioex/pipeline/pipeline-Modify.html'"> -->
+							<label for="brdRun" class="hidden">Use analysis</label>
+							<input type="button" class="btn btn_work" value="Use analysis" id="brdRun">
+							<label for="brdlist" class="hidden">List</label>
+							<input type="button" class="btn btn_black" value="List" id="brdlist" onclick="location.href='./userpipeline-List.html';">
+						</div>
+
+					</div>
+				</div>
+	            <!-- pipeline wrap :e -->
+	        </div>
+	    </div>
+	</section>
+
+	<script type="text/javascript" src="/bioexpress/new/js/contents/pipeline.js"></script>
+
+
+
+		<!-- footer S -->
+		<footer id="footer">
+    <div class="footer-wrap">
+        <address>Korea Bioinformation Center (KOBIC), Korea Research Institute of Bioscience &amp; Biotechnology (KRIBB), Daejeon 34141, Republic of Korea</address>
+        <ul>
+            <li>Tel : +82-42-879-8561</li>
+            <li>Fax : +82-42-879-8519</li>
+            <li>E-mail : cloud_team@kobic.kr</li>
+        </ul>
+        <span class="copy">Copyright © 2020 BY CLOSHA. ALL RIGHTS RESERVED.</span>
+        <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">Privacy policy</a>
+    </div>
+</footer>
+		<!-- footer E -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- 2023.04.06 Quick Download 제거 -->
+<!-- <button class="quick_btn open_lp" aria-controls="quick-menu">Quick Downloads</button> -->
+<a id="top_btn" class="top_btn"><span class="Hidden">TOP</span></a>
+
+<!-- <div class="layer_pop" id="quick-menu" role="dialog" aria-modal="true" aria-label="퀵메뉴 설명"> -->
+<!--     <div class="layer_pop_bg left"> -->
+<!--         <div class="layer_pop_inner scroll"> -->
+<!--             <div class="quick-wrap"> -->
+<!--                 <div class="quick_tit"> -->
+<!--                     <h4 id="lp-title">QUICK <span>Downloads</span></h4> -->
+<!--                 </div> -->
+
+<!--                 <div class="down_list"> -->
+<!--                     <span class="q_txt" th:text="#{quick_menu.sub_title_1}">환경에 맞는 OS용 워크밴치를 선택하여 다운로드 해주세요.</span> -->
+<!--                     <ul class="closha_down"> -->
+<!--                         <li> -->
+<!--                             <span class="os windows">Windows</span> -->
+<!--                             <span class="version">10/11</span> -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-windows-x86_64', file_ext='zip')}" target="_blank" class="down">Download</a>  -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-windows-x86_64.zip')}" target="_blank" class="down">Download</a> -->
+<!--                         </li> -->
+
+<!--                         <li> -->
+<!--                             <span class="os linux">Linux</span> -->
+<!--                             <span class="version">Ubuntu/RedHat</span> -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-linux-RedHat.gtk-x86_64', file_ext='tar.gz')}" target="_blank" class="down">Download</a>                              -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-linux.gtk-x86_64.tar.gz')}" target="_blank" class="down">Download</a> -->
+<!--                         </li> -->
+
+<!--                         <li> -->
+<!--                             <span class="os mac">Mac</span> -->
+<!--                             <span class="version">Intel/M1/M2</span> -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-mac-AppleSilicon-x86_64', file_ext='zip')}" target="_blank" class="down">Download</a>  -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='Bio-Express.workbench-mac-x86_64.zip')}" target="_blank" class="down">Download</a> -->
+<!--                         </li> -->
+<!--                     </ul> -->
+<!--                     <span class="q_txt mtop30" th:text="#{quick_menu.sub_title_2}">CLI(Command Line Interface) 버전 고속 전송 서비스를 다운로드 해주세요.</span> -->
+<!--                     <ul class="closha_down"> -->
+<!--                         <li> -->
+<!--                             <span class="os cli">GBox CLI</span> -->
+<!--                             <span class="version">Multi OS Platform</span> -->
+<!--                             <a th:href="@{/common/related_file_down(file_name='gbox.cli-v.2.1.jar')}" target="_blank" class="down">Download</a>                             -->
+<!--                         </li> -->
+<!--                     </ul> -->
+<!--                     <div class="manual_down"> -->
+<!--                         <span>Bio-Express 2.0 User Manual</span> -->
+<!--                         <a th:href="@{/common/related_file_down(file_name='Bio-Express_Workbench_사용자매뉴얼_v.1.1', file_ext='pdf')}" class="down_w">Download</a>  -->
+<!--                         <a th:href="@{/common/related_file_down(file_name='Bio-Express_Workbench_사용자매뉴얼_v.2.0.pdf')}" target="_blank" class="down_w">Download</a> -->
+<!--                     </div> -->
+<!--                 </div> -->
+
+<!--                 <div class="bx_vidoe"> -->
+<!--                     <a href="https://www.youtube.com/watch?v=8gYuPESKUzU" target="_blank" class="video_bg"><span class="Hidden">동영상 바로가기</span></a> -->
+<!--                 </div> -->
+<!--                 <a href="" class="r_note">Release notes</a> -->
+<!--             </div> -->
+<!--             <div class="close-wrap"><button type="button" aria-label="닫기" class="quick_close">CLOSE</button></div> -->
+
+<!--         </div> -->
+<!--     </div> -->
+<!-- </div> -->
+	<!-- 사이트맵 layer popup :s -->
+<div class="layer_pop" id="site-map" role="dialog" aria-modal="true" aria-label="사이트맵">
+    <div class="layer_pop_bg left">
+        <div class="layer_pop_inner scroll">
+            <div class="all-menu-wrap">
+                <ul class="all-menu-list">
+                    <li>
+                        <div class="menu_box">
+                            <span>CLOSHA</span>
+                            <ul>
+                                <li><a href="/bioexpress/introduction">CLOSHA</a></li>
+                                <li><a href="/bioexpress/howtouse">How To Use</a></li>
+                                <li><a href="/bioexpress/video">Tutorial</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu_box">
+                            <span>Downlaod</span>
+                            <ul>
+                                <li><a href="/bioexpress/download/package">Downlaod</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu_box">
+                            <span>Analysis service</span>
+                            <ul>
+                                <li><a href="/bioexpress/execute/execute" target="_blank">Run analysis</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="menu_box">
+                            <span>Public Contents</span>
+                            <ul>
+                                <li><a href="/bioexpress/pipeline/pipeline">Analysis Pipeline</a></li>
+                                <li><a href="/bioexpress/program/program">Analysis Program</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="locale_hidden">
+                        <div class="menu_box">
+                            <span>Community</span>
+                            <ul>
+                                <li><a href="/bioexpress/community/notice">Notice</a></li>
+                                <li><a href="/bioexpress/community/question">QnA</a></li>
+                                <li><a href="/bioexpress/community/information">Information</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu_box">
+                            <span>MyPage</span>
+                            <ul>
+                                <li><a href="/bioexpress/mypage/main">Dashboard</a></li>
+<!-- 								<li><a th:href="@{/mypage/docker}" >도커관리</a></li> -->
+<!--                                 <li><a th:href="@{/mypage/workspace}" th:text="#{menu.large_5.mid_2}">워크스페이스</a></li> -->
+<!--                                 <li><a th:href="@{/mypage/pipeline}" th:text="#{menu.large_5.mid_3}">파이프라인</a></li> -->
+<!--                                 <li><a th:href="@{/mypage/task}" th:text="#{menu.large_5.mid_4}">분석 작업관리</a></li> -->
+								<li><a href="https://www.kobic.re.kr/sso/" class="blank">My information</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+           </div>
+            <button type="button" aria-label="닫기" class="layer_pop_close">닫기</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	var locale = getLanguageCookie();
+	$(".locale_hidden").css("display", locale === 'ko' ? '' : 'none');
+</script>
+<!-- 사이트맵 layer popup :e -->
+
+	<!-- { 20210823_수정  -->
+<div id="popup">
+	<!-- workspace/pipeline node modal -->
+
+	<div id="nodeInfoModal" class="popup_content_wr">
+		<div class="popup_content scroll">
+			<button class="popup_close layer_pop_close"><span class="Hidden">닫기</span></button>
+			<h2 id="popupTitle">title</h2>
+			<table class="popup_table">
+				<colgroup>
+					<col style="width:150px">
+					<col style="width:100px">
+					<col>
+					<col style="width:100px">
+				</colgroup>
+				<tbody id="inputInfo">
+					<tr>
+						<th colspan="4" class="tith4">INPUT</th>
+					</tr>
+					<tr class="popup_tr">
+						<th>Name</th>
+						<th>Required</th>
+						<th>Value</th>
+						<th>Type</th>
+					</tr>
+					<tr>
+						<td>data area 01</td>
+						<td>data area 01 data area 01data area 01data area 01data area 01data area 01</td>
+						<td>data area 01data area 01data area 01data area 01data area 01data area 01data area 01</td>
+						<td>data area 01</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="popup_table">
+				<colgroup>
+					<col style="width:150px">
+					<col style="width:100px">
+					<col>
+					<col style="width:100px">
+				</colgroup>
+				<tbody id="outputInfo">
+					<tr>
+						<th colspan="4" class="tith4">OUTPUT</th>
+					</tr>
+					<tr class="popup_tr">
+						<th>Name</th>
+						<th>Required</th>
+						<th>Value</th>
+						<th>Type</th>
+					</tr>
+					<tr>
+						<td>content area 01</td>
+						<td>content area 01content area 01content area 01</td>
+						<td>content area 01</td>
+						<td>content area 01</td>
+					</tr>
+					<tr>
+						<td>content area 02</td>
+						<td>content area 02</td>
+						<td>content area 02</td>
+						<td>content area 02</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="popup_table">
+				<colgroup>
+					<col style="width:150px">
+					<col style="width:100px">
+					<col>
+					<col style="width:100px">
+				</colgroup>
+				<tbody id="optionInfo">
+					<tr>
+						<th colspan="4" class="tith4">OPTION</th>
+					</tr>
+					<tr class="popup_tr">
+						<th>Name</th>
+						<th>Required</th>
+						<th>Value</th>
+						<th>Type</th>
+					</tr>
+					<tr>
+						<td>content area 01</td>
+						<td>content area 01</td>
+						<td>content area 01</td>
+						<td>content area 01</td>
+					</tr>
+					<tr>
+						<td>content area 03</td>
+						<td>content area 03</td>
+						<td>content area 03</td>
+						<td>content area 03</td>
+					</tr>
+					<tr>
+						<td>content area 04</td>
+						<td>content area 04</td>
+						<td>content area 04</td>
+						<td>content area 04</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- 20210823_수정 }  -->
+
+<script>
+	$(document).ready(function () {
+		$('.popup_close').click(function () {
+			console.log("close modal")
+			$('.popup_content_wr').removeClass('active');
+			$('#pipeline_con').flowchart('removeClassOperators',"selected");
+		});
+	});
+</script>
+
+<div class="swal2-container"><div class="swal2-overlay" tabindex="-1"></div><div class="swal2-modal" style="display: none" tabindex="-1"><div class="swal2-icon swal2-error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="swal2-icon swal2-question">?</div><div class="swal2-icon swal2-warning">!</div><div class="swal2-icon swal2-info">i</div><div class="swal2-icon swal2-success"><span class="line tip"></span> <span class="line long"></span><div class="placeholder"></div> <div class="fix"></div></div><img class="swal2-image"><h2></h2><div class="swal2-content"></div><input class="swal2-input"><select class="swal2-select"></select><div class="swal2-radio"></div><label for="swal2-checkbox" class="swal2-checkbox"><input type="checkbox" id="swal2-checkbox"></label><textarea class="swal2-textarea"></textarea><div class="swal2-validationerror"></div><hr class="swal2-spacer"><button class="swal2-confirm">OK</button><button class="swal2-cancel">Cancel</button><span class="swal2-close">×</span></div></div></body></html>

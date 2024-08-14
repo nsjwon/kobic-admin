@@ -6,8 +6,9 @@
 
 .popup-content-userModify,
 .popup-content-groupModify {width: 660px;}
-.popup-content-confirMation {width: 340px;}
+.popup-content-confirMation {width: 420px;}
 .popup-content-memberSearch {width: 660px;}
+.popup-content-viewNodelog {width: 80vw;}
 
 .popup-header {margin-bottom: 2.8rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
@@ -52,3 +53,22 @@
 #memberSearch .search-text {margin-bottom: 2rem; padding: 1px;}
 #memberSearch .search-text .search-act {margin-right: 0;}
 #memberSearch .search-text input[type="text"] {flex: 1;}
+
+.popup-content-viewNodelog .popup-body {display: flex; align-items: flex-start; gap: 20px;}
+.popup-content .p_detail_box {width: calc(50% - 90px); height: fit-content; padding: 4rem; align-self: stretch;}
+.popup-content .p_detail_box .p_detail_g {align-items: center; gap: 12rem;}
+.popup-content .p_detail_box .p_detail_title {margin: 0 0 3.6rem 0;}
+.popup-content .p_detail_box .p_detail_list {margin: 0; display: flex; align-items: center;}
+.popup-content .p_detail_box > p {font-weight: bold; font-size: 1.6rem; margin-bottom: 2rem; color: #222;}
+.popup-content .p_detail_box .code_g {margin: 2rem 0 3.6rem;}
+.popup-content .p_detail_box .hljs {background: #fff;}
+.popup-content .p_detail_box .path-info {font-size: 15px; margin-bottom: 3.6rem;}
+.popup-content .p_detail_list > li {flex: 1; display: flex; align-items: center; width: 33.3%; justify-content: space-between;}
+.popup-content .p_detail_list > li > span:first-child {width: auto; margin-right: 20px;}
+.popup-content .p_detail_list > li > span:last-child {width: auto;}
+
+
+@media all and (max-width:1440px){
+    .popup-content-viewNodelog .popup-body {flex-direction: column;}
+    .popup-content .p_detail_box {width: calc(100% - 100px);}
+}

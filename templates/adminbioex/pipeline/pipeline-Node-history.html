@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="../../../css/font.css">
+    <link media="all" rel="stylesheet" href="../../../css/common.css">
+    <link media="all" rel="stylesheet" href="../../../css/admin.css">
+    <link media="all" rel="stylesheet" href="../../../css/board.css">
+    <link media="all" rel="stylesheet" href="../../../css/popup.css">
+    <link media="all" rel="stylesheet" href="../../../css/biostyle/board.css">
+    <link media="all" rel="stylesheet" href="../../../css/biostyle/admin.css">
+    <link media="all" rel="stylesheet" href="../../../css/biostyle/content.css">
+    <link media="all" rel="stylesheet" href="../../../css/datepicker/datepicker.min.css">
+    <script src="../../../js/jquery-3.7.0.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.min.js"></script>
+    <script src="../../../js/datepicker/datepicker.ko-KR.js"></script>
+    <script src="../../../js/axios/axios.min.js"></script>
+    <script src="../../../js/oembed/oembed-provider.js"></script>
+    <script src="../../../js/common/common.js"></script>
+    <script src="../../../js/common/editor_common.js"></script>
+    <script src="../../../js/common/upload_common.js"></script>
+    <script src="../../../js/contents/admin/main.js"></script>
+    <script src="../../../js/contents/admin/menu.js"></script>
+    <script src="../../../js/contents/admin/new-contents.js"></script>
+    <link rel="stylesheet" href="../../../js/highlight/styles/atom-one-light.min.css">
+    <script src="../../../js/highlight/highlight.min.js"></script>
+    <title>프로그램 실행 이력</title>
+</head>
+<body>
+
+        <!-- 로그 팝업 시작 -->
+        <div id="viewNodelog" class="popup-panel is-active">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-viewNodelog">
+                <div class="popup-header">
+                    <h2>상세 로그</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <div class="p_detail_box">
+                        <div class="p_detail_title">
+                            <div>
+                                <input type="hidden" id="rawId" value="162c0885-18fd-45e6-bc6f-ae046dfb670f">
+                                <span class="p_detail_id"><span class="bold">1. Job ID : </span> <span>3255306</span></span>
+                            </div>
+                            <div class="p_detail_g mtop10">
+                                <ul class="p_detail_list">
+                                    <li><span>실행 일자</span><span>2024-08-10</span></li>
+                                </ul>
+                                <ul class="p_detail_list">
+                                    <li><span>상태</span><span class="state-txt txt-blue">complete</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Excute Log Path</p>
+                        <div class="path-info">
+                            <span>/BIO/K-BDS/BIO-EXPRESS/log</span>
+                        </div>
+                        <p>Excute Log</p>
+                        <div class="code_g"><pre><code class="hljs language-bash"><span class="hljs-meta">#!/bin/bash</span>
+                            <span class="hljs-built_in">echo</span> <span class="hljs-string">"Total Param= <span class="hljs-variable">$#</span>,  PROG: <span class="hljs-variable">$0</span>, param1 = <span class="hljs-variable">$1</span>, param2 = <span class="hljs-variable">$2</span>"</span>;
+                            <span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">$#</span>"</span> -lt 2 ]; <span class="hljs-keyword">then</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$#</span> is Illegal number of parameters."</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"Usage: <span class="hljs-variable">$0</span> input dir, output dir"</span>
+                                <span class="hljs-built_in">exit</span> 3
+                            <span class="hljs-keyword">fi</span>
+                            args=(<span class="hljs-string">"<span class="hljs-variable">$@</span>"</span>)
+                            <span class="hljs-keyword">for</span> (( i=0; i&lt;<span class="hljs-variable">$#</span>; i++ ))
+                            <span class="hljs-keyword">do</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$i</span> th parameter = <span class="hljs-variable">${args[$i]}</span>"</span>;
+                            <span class="hljs-keyword">done</span>
+                            INPUT_DIR=<span class="hljs-variable">$1</span>
+                            OUTPUT_DIR=/hysung/sample_data/script/FastQC.sh
+                            mkdir -p <span class="hljs-variable">$OUTPUT_DIR</span>
+                            sleep 3s
+                            <span class="hljs-function"><span class="hljs-title">in_array</span></span>() {
+                                <span class="hljs-built_in">local</span> needle array value
+                                needle=<span class="hljs-string">"<span class="hljs-variable">${1}</span>"</span>; <span class="hljs-built_in">shift</span>; array=(<span class="hljs-string">"<span class="hljs-variable">${@}</span>"</span>)
+                                <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-variable">${array[@]}</span>;
+                                    <span class="hljs-keyword">do</span>
+                                        [ <span class="hljs-string">"<span class="hljs-variable">${value}</span>"</span> == <span class="hljs-string">"<span class="hljs-variable">${needle}</span>"</span> ] &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">"true"</span> &amp;&amp; <span class="hljs-built_in">return</span>;
+                                    <span class="hljs-keyword">done</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"false"</span>
+                            }
+                            array=(`find <span class="hljs-variable">$INPUT_DIR</span>/ -name <span class="hljs-string">"*.fastq.gz"</span>`) <span class="hljs-comment"># fa.gz, fastq.gz, fastq, fa Ȯ ڸ ã</span>
+                            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">"<span class="hljs-variable">${array[@]}</span>"</span>
+                            <span class="hljs-keyword">do</span>
+                                FILE=<span class="hljs-variable">${i##*/}</span>
+                                IFS=<span class="hljs-string">''</span> <span class="hljs-built_in">read</span> -r -a array &lt;&lt;&lt; <span class="hljs-string">"<span class="hljs-variable">$FILE</span>"</span>
+                                len=(<span class="hljs-variable">${#array[@]}</span>-1)
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">${array[$len]}</span>"</span>
+                                FASTP_IN_FILE_LIST+=(<span class="hljs-string">"<span class="hljs-variable">${array[$len]}</span>"</span>)
+                            <span class="hljs-keyword">done</span>
+                            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">"<span class="hljs-variable">${FASTP_IN_FILE_LIST[@]}</span>"</span>
+                            <span class="hljs-keyword">do</span>
+                                basename=<span class="hljs-variable">$i</span>
+                                FILE1=<span class="hljs-variable">${basename%1.fastq.gz}</span>
+                                IFS=<span class="hljs-string">''</span> <span class="hljs-built_in">read</span> -r -a file1_array &lt;&lt;&lt; <span class="hljs-string">"<span class="hljs-variable">$FILE1</span>"</span>
+                                file1_len=(<span class="hljs-variable">${#file1_array[@]}</span>-1)
+                                array_check=`in_array <span class="hljs-variable">${file1_array[$file1_len]}</span>2.fastq.gz <span class="hljs-variable">${FASTP_IN_FILE_LIST[@]}</span>`
+                                <span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">${array_check}</span>"</span> == <span class="hljs-string">"true"</span> ]; <span class="hljs-keyword">then</span>
+                                    IFS=<span class="hljs-string">'-'</span> <span class="hljs-built_in">read</span> -r -a SEQ_ID &lt;&lt;&lt; <span class="hljs-string">"<span class="hljs-variable">$FILE1</span>"</span>
+                                    /opt/apps/fastp/current/fastp -i <span class="hljs-variable">${INPUT_DIR}</span>/<span class="hljs-variable">${file1_array[$file1_len]}</span>1.fastq.gz -I <span class="hljs-variable">${INPUT_DIR}</span>/<span class="hljs-variable">${file1_array[$file1_len]}</span>2.fastq.gz \
+                                    -o <span class="hljs-variable">${OUTPUT_DIR}</span>/<span class="hljs-variable">${file1_array[$file1_len]}</span>1.fastq.gz -O <span class="hljs-variable">${OUTPUT_DIR}</span>/<span class="hljs-variable">${file1_array[$file1_len]}</span>2.fastq.gz \
+                                    --length_required 20 --average_qual 20 --detect_adapter_for_pe --correction \
+                                    -h <span class="hljs-variable">${OUTPUT_DIR}</span>/<span class="hljs-variable">${SEQ_ID[0]}</span>.html -j <span class="hljs-variable">${OUTPUT_DIR}</span>/<span class="hljs-variable">${SEQ_ID[0]}</span>.json
+                                <span class="hljs-keyword">fi</span>
+                            <span class="hljs-keyword">done</span>
+                            </code></pre>
+                        </div>
+                        <p>Error Log Path</p>
+                        <div class="path-info">
+                            <span>/BIO/K-BDS/BIO-EXPRESS/log</span>
+                        </div>
+                        <p>Excute Log</p>
+                        <div class="code_g">
+                            <pre>
+                                <code class="hljs language-bash">
+                                    <span class="hljs-built_in">real </span><span class="hljs-string">time0m0.197s</span><br>
+                                    <span class="hljs-keyword">time0m0.197s</span><br>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="brd-btn-area center">
+                            <div class="btn-list">
+                                <input type="button" value="재실행" class="btn btn-blue">
+                                <!-- <input type="button" value="아니요" class="btn btn-gray close-button"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p_detail_box">
+                        <div class="p_detail_title">
+                            <div>
+                                <input type="hidden" id="rawId" value="162c0885-18fd-45e6-bc6f-ae046dfb670f">
+                                <span class="p_detail_id"><span class="bold">2. Job ID : </span> <span>3255306</span></span>
+                            </div>
+                            <div class="p_detail_g mtop10">
+                                <ul class="p_detail_list">
+                                    <li><span>실행 일자</span><span>2024-08-10</span></li>
+                                </ul>
+                                <ul class="p_detail_list">
+                                    <li><span>상태</span><span class="state-txt txt-blue">complete</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Excute Log Path</p>
+                        <div class="path-info">
+                            <span>/BIO/K-BDS/BIO-EXPRESS/log</span>
+                        </div>
+                        <p>Excute Log</p>
+                        <div class="code_g"><pre><code class="hljs language-bash"><span class="hljs-meta">#!/bin/bash</span>
+                            <span class="hljs-built_in">echo</span> <span class="hljs-string">"Total Param= <span class="hljs-variable">$#</span>,  PROG: <span class="hljs-variable">$0</span>, param1 = <span class="hljs-variable">$1</span>, param2 = <span class="hljs-variable">$2</span>"</span>;
+                            <span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">$#</span>"</span> -lt 2 ]; <span class="hljs-keyword">then</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$#</span> is Illegal number of parameters."</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"Usage: <span class="hljs-variable">$0</span> input dir, output dir"</span>
+                                <span class="hljs-built_in">exit</span> 3
+                            <span class="hljs-keyword">fi</span>
+                            args=(<span class="hljs-string">"<span class="hljs-variable">$@</span>"</span>)
+                            <span class="hljs-keyword">for</span> (( i=0; i&lt;<span class="hljs-variable">$#</span>; i++ ))
+                            <span class="hljs-keyword">do</span>
+                                <span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$i</span> th parameter = <span class="hljs-variable">${args[$i]}</span>"</span>;
+                            <span class="hljs-keyword">done</span>
+                            INPUT_DIR=<span class="hljs-variable">$1</span>
+                            OUTPUT_DIR=/hysung/sample_data/script/FastQC.sh
+                            mkdir -p <span class="hljs-variable">$OUTPUT_DIR</span>
+                            sleep 3s
+                            </code></pre>
+                        </div>
+                        <p>Error Log Path</p>
+                        <div class="path-info">
+                            <span>/BIO/K-BDS/BIO-EXPRESS/log</span>
+                        </div>
+                        <p>Excute Log</p>
+                        <div class="code_g">
+                            <pre>
+                                <code class="hljs language-bash">
+                                    <span class="hljs-built_in">real </span><span class="hljs-string">time0m0.197s</span><br>
+                                    <span class="hljs-keyword">time0m0.197s</span><br>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="brd-btn-area center">
+                            <div class="btn-list">
+                                <input type="button" value="재실행" class="btn btn-blue">
+                                <!-- <input type="button" value="아니요" class="btn btn-gray close-button"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 로그 팝업 끝 -->
+
+
+</body>
+</html>

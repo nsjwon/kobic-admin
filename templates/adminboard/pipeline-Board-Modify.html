@@ -1,0 +1,319 @@
+
+<html lang="ko" id="no-fouc">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 호환성 -->
+        <meta name="generator" content="EditPlus®"><!-- 사용프로그램 -->
+        <meta name="format-detection" content="telephone=no,email=no,address=no"><!-- 전화번호, 주소, 메일등 링크로 인식방지 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 화면맞춤 -->
+        <meta name="author" content="국가생명연구자원정보센터(KOBIC)"><!-- 저작자 -->
+        <meta name="keywords" content="국가생명연구자원정보센터(KOBIC)"><!-- 키워드 -->
+        <meta name="description" content="국가생명연구자원정보센터(KOBIC)"><!-- 웹페이지의 축약된 설명을 제공_최대45자(네이버 웹마스터도구 기준) -->
+        <meta name="copyright" content="Copyright © 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED."><!-- 저작권 -->
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:s -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:description" content="국가생명연구자원정보센터(KOBIC)">
+        <meta property="og:image" content="http://홈페이지주소/경로/파일이름">
+        <meta property="og:url" content="https://www.kobic.re.kr../../">
+        <!-- 오픈그래프_소셜미디어로 공유될 때 우선적으로 활용되는 정보:e -->
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"><!-- 파비콘 -->
+        <title>국가생명연구자원정보센터(KOBIC)</title>
+        <link media="all" rel="stylesheet" href="../../css/font.css">
+        <link media="all" rel="stylesheet" href="../../css/common.css">
+        <link media="all" rel="stylesheet" href="../../css/admin.css">
+        <link media="all" rel="stylesheet" href="../../css/board.css">
+        <link media="all" rel="stylesheet" href="../../css/biostyle/board.css">
+        <link media="all" rel="stylesheet" href="../../css/biostyle/admin.css">
+        <link media="all" rel="stylesheet" href="../../css/biostyle/content.css">
+        <link media="all" rel="stylesheet" href="../../css/datepicker/datepicker.min.css">
+        <script src="../../js/jquery-3.7.0.min.js"></script>
+        <script src="../../js/datepicker/datepicker.min.js"></script>
+        <script src="../../js/datepicker/datepicker.ko-KR.js"></script>
+        <script src="../../js/axios/axios.min.js"></script>
+        <script src="../../js/oembed/oembed-provider.js"></script>
+        <script src="../../js/common/common.js"></script>
+        <script src="../../js/common/editor_common.js"></script>
+        <script src="../../js/common/upload_common.js"></script>
+        <script src="../../js/contents/admin/main.js"></script>
+        <script src="../../js/contents/admin/menu.js"></script>
+    </head>
+
+    <body class="scroll">
+
+        <!-- 반복영역 skip:s  -->
+        <div id="skip_nav">
+            <a href="#admin-gnb-wrap">좌측메뉴 바로가기</a>
+            <a href="#admin-content-wrap">본문 바로가기</a>
+            <a href="#admin-footer">하단 바로가기</a>
+        </div>
+        <!-- 반복영역 skip:e  -->
+
+        <div id="wrap" class="admin">
+            <!-- admin header :s -->
+            <header id="admin-header">
+                <div class="head-inner">
+                    <h1 class="logo"><a href="../../index.html"><img src="../../images/common/kobic_logo.svg" alt="KOBIC 국가생명연구자원정보센터 Korea Bioinformation Center"></a></h1>
+                    <div class="util-wrap">
+                        <ul class="util">
+                            <li class="today"><span class="real-time">2024-07-23 09:18:11</span></li>
+                            <li class="user"><span class="bold">Kobic_admin</span> 님, 안녕하세요.</li>
+                            <li>
+                                <a href="#none" class="logout-btn">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- admin header :e -->
+
+            <!-- admin container :s -->
+            <main id="admin-container">
+
+                <!-- admin gnb :s -->
+                <div id="admin-gnb-wrap">
+                    <div class="admin-gnb-inner">
+                        <span>ADMIN</span>
+                        <nav class="admin-gnb-box portal">
+                            <ul class="gnb-depth1">
+                                <li class="menu1"><a href="../../templates/admindash/kobic-main.html">대시보드</a></li>
+                                <li class="menu2 foldable open"><a href="#none" class="active">게시판관리</a> <!-- 해당 페이지일때 class="avtive" 유지 -->
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">2차 DB</a></li> <!-- 해당 페이지일때 class="on" 유지 -->
+                                        <li><a href="#none">분석 튜토리얼</a></li>
+                                        <li><a href="#none">집합교육일정</a></li>
+                                        <li><a href="#none">문의사항</a></li>
+                                        <li><a href="#none">정보공유</a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">소식</a></li>
+                                        <li><a href="#none">KOBICian’s Story</a></li>
+                                        <li><a href="#none">논문성과</a></li>
+                                        <li><a href="#none">홍보영상</a></li>
+                                        <li><a class="on" href="../../templates/adminboard/pipeline-Board-List.html">분석 파이프라인</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu3 foldable"><a href="../../templates/adminbioex/pipeline/pipeline-List.html">파이프라인관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="#none">공개 등록 이력</a></li>
+                                        <li><a href="#none">분석 실행 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu4"><a href="../../templates/adminbioex/statinfo/statinfo-View.html">통계정보</a></li>
+                                <li class="menu5"><a href="#none">팝업관리</a></li>
+                                <li class="menu6"><a href="#none">배너관리</a></li>
+                                <li class="menu7 foldable"><a href="#none">회원 및 그룹관리</a>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../templates/adminsso/member/user-List.html">회원관리</a></li>
+                                        <li><a href="../../templates/adminsso/group/group-List.html">그룹관리</a></li>
+                                        <li><a href="../../templates/adminsso/type/type-List.html">유형관리</a></li>
+                                        <li><a href="../../templates/adminsso/grade/grade-List.html">등급관리</a></li>
+                                        <li><a href="../../templates/adminsso/stat/stat-View.html">통계관리</a></li>
+                                        <li><a href="../../templates/adminsso/policy/policy-List.html">약관관리</a></li>
+                                        <li><a href="../../templates/adminsso/event/event-List.html">이벤트 로그</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- admin gnb :e -->
+
+                <!-- admin content :s -->
+                <div id="admin-content-wrap">
+                    <!-- admin content inner :s -->
+                    <div class="admin-content-inner">
+
+                        <h2 class="h2-tit">분석 파이프라인</h2>
+                        <!-- board wrap :s-->
+                        <div class="brd-wrap">
+                            <form name="modifyForm" id="modifyForm">
+                                <p class="essential-item"><span class="txt-point">*</span> 필수입력</p>
+                                <!-- board modify :s-->
+                                <div class="brd-modify">
+                                    <div class="brd-w-inner">
+                                        <div class="brd-w-item">
+                                            <span class="brd-w-tit">작성일</span>
+                                            <div class="brd-input-wrap">
+                                                <span>2023-12-14 15:44:06</span>
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <span class="brd-w-tit">수정일</span>
+                                            <div class="brd-input-wrap">
+                                                <span>2023-12-14 15:44:06</span>
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <span class="brd-w-tit">파이프라인명<span class="txt-point">*</span></span>
+                                            <div class="brd-input-wrap">
+                                                <input type="text" name="pplineTitle" id="pplineTitle" value="Single-Cell-RNA-Sequencing-Pipeline" placeholder="파이프라인명을 입력해주세요.">
+                                                <input type="hidden" name="pplineTitle" value="18">
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <label for="pplineId" class="brd-w-tit">파이프라인ID<span class="txt-point">*</span></label>
+                                            <div class="brd-input-wrap">
+                                                <select name="pplineId" id="pplineId"><!-- 공개 파이프라인 중 선택 -->
+													<option value="1" selected="selected">[BX02-20220810-2636] Single-Cell-RNA-Sequencing-Pipeline</option>
+													<option value="2">[BX02-20210831-0034] Whole-Genome-Sequencing</option>
+                                                    <option value="3">[BX02-20240509-5650] qiime</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <p class="brd-w-tit">노출여부<span class="txt-point">*</span></p>
+                                            <div class="brd-input-wrap brd-radio">
+                                                <input type="hidden" id="useYnValue" name="otherdbUseYn" value="Y">
+                                                <input type="radio" id="displayBlock" name="brdDisplay" checked="checked"><label for="displayBlock" class="">노출</label>
+                                                <input type="radio" id="displayNone" name="brdDisplay"><label for="displayNone" class="">비노출</label>
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+                                            <label for="tutorialKeyword" class="brd-w-tit">태그(키워드)<span class="txt-point">*</span></label>
+                                            <div class="brd-input-wrap">
+												<textarea class="brd-textarea" id="pplineKeyword" placeholder="예시-태그1,태그2,태그3">#Single-cell RNA sequencing, #Next-generation sequencing, #Bioinformatics, #Single-cell genomics#Human Cell Atlas#Cell_Biology, #Genomics, #transcriptome, #Biotechnology, #heterogeneity, #Multiomics, #scRNA-seq, #scATAC-seq, #Epigenetics</textarea>
+                                                <span id="brdNm-info" class="info-txt">태그는 쉼표로 구분해주세요.</span>
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+											<p class="brd-w-tit">링크</p>
+											<div class="brd-input-wrap">
+												<!-- 링크 있음 -->
+
+												<!-- 링크 없음 -->
+												<div class="brd-link-item">
+													<label for="newsLinkName" class="hidden">링크제목</label>
+													<input type="text" name="newsLinkNameArr" id="newsLinkName" value="" placeholder="링크제목을 입력하세요." class="news-link-tit w30">
+													<label for="newsLinkUrl" class="hidden">링크주소</label>
+													<input type="text" name="newsLinkUrlArr" id="newsLinkUrl" value="" placeholder="링크주소를 입력하세요." class="news-link-url w40">
+													<div class="brd-link-btn">
+														<label for="newsLinkDelBtn" class="hidden">링크삭제</label>
+														<input type="button" class="btn btn-disabled" value="삭제" name="newsLinkDelBtn" id="newsLinkDelBtn" onclick="delLink(this);" disabled="">
+														<label for="newsLinkAddBtn" class="hidden">링크추가</label> <!-- 맨 마지막 link item 에만 추가 버튼 노출 -->
+														<input type="button" class="btn btn-blue" value="추가" name="newsLinkAddBtn" id="newsLinkAddBtn" onclick="addLink();">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        <div class="brd-w-item">
+                                            <label for="pplinemanualUrl" class="brd-w-tit">매뉴얼 URL<span class="txt-point">*</span></label>
+                                            <div class="brd-input-wrap">
+                                                <input type="text" name="pplinemanualUrl" id="pplinemanualUrl" value="http://manual.kr" placeholder="매뉴얼 URL을 입력해주세요.">
+                                            </div>
+                                        </div>
+                                        <div class="brd-w-item">
+											<p class="brd-w-tit">내용<span class="txt-point">*</span></p>
+											<div class="brd-input-wrap">
+												<div class="brd-edit-area">
+													<input type="hidden" name="newsContent" id="contentValue" value="<p>
+                                                        Bio-express's Single-cell-RNA-Sequencing-Pipeline is an extensible toolkit for analyzing single-cell gene expression data using the Scanpy pipeline.
+                                                        It includes methods for preprocessing, visualization, clustering, differential expression testing.
+                                                        Its Python-based implementation efficiently deals with data sets of more than one million cells.
+                                                        we present ANNDATA, a generic class for handling annotated data matrices.
+
+                                                        This pipeline features
+                                                        1) We regress out confounding variables, normalize, and identify highly variable genes.
+                                                        2) TSNE and graph-drawing (Fruchterman–Reingold) visualizations show cell-type annotations obtained by comparisons with bulk expression.
+                                                        3) Cells are clustered and plotted using the Louvain algorithm. It also supports clustering using various algorithms.
+                                                        4) Ranking the differentially expressed genes in clusters identifies marker genes that match the bulk label</p>">
+													<input type="hidden" name="newsContentText" id="contentValueText">
+													<!-- RaonKEditor Script:s -->
+													<script src="../../js/common/editor_common.js"></script>
+													<script src="../../js/raonkeditor/js/raonkeditor.js"></script>
+													<script>
+														raonkEditorInit_adminNews("adminEditor_news");
+														RAONKEDITOR.SetHtmlContents(document.getElementById("contentValue").value, "adminEditor_news");
+													</script><div id="" style="width:100%; height:600px;  overflow: visible;"><iframe frameborder="0" scrolling="no" id="" title="에디터 전체영역" width="100%" height="100%" style="width: 100%; height: 100%;" src="https://www.kobic.re.kr/kobic/js/raonkeditor/pages/editor_release.html?ver=2018.1472233.1722.02"></iframe></div>
+													<!-- RaonKEditor Script:e -->
+												</div>
+											</div>
+										</div>
+                                        <div class="brd-w-item">
+											<p class="brd-w-tit">썸네일<span class="txt-point">*</span></p>
+                                            <div class="brd-input-wrap">
+												<div class="brd-thumbnail-area">
+                                                    <!-- RaonKUpload Script:s -->
+                                                    <div class="brd-content-sample">
+                                                        <p>썸네일 업로더 영역입니다.</p>
+                                                    </div>
+													<!-- RaonKUpload Script:e -->
+                                                    <p class="left" style="margin-top: 10px;">※ 첨부한 파일 클릭 시 썸네일을 미리 볼 수 있습니다. (기존 첨부된 파일은 더블 클릭 시 확인 가능)</p>
+												</div>
+											</div>
+										</div>
+                                        <div class="brd-w-item">
+                                            <p class="brd-w-tit">모식도<span class="txt-point">*</span></p>
+                                            <div class="brd-input-wrap">
+                                                <div class="brd-file-area">
+                                                    <!-- RaonKUpload Script:s -->
+                                                    <div class="brd-content-sample">
+                                                        <p>모식도 업로더 영역입니다.</p>
+                                                    </div>
+													<!-- RaonKUpload Script:e -->
+												</div>
+											</div>
+										</div>
+                                        <div class="brd-w-item">
+                                            <p class="brd-w-tit">분석 결과<span class="txt-point">*</span></p>
+											<div class="brd-input-wrap">
+                                                <div class="brd-file-area">
+                                                    <!-- RaonKUpload Script:s -->
+                                                    <div class="brd-content-sample">
+                                                        <p>분석 결과 이미지 업로더 영역입니다.</p>
+                                                    </div>
+													<!-- RaonKUpload Script:e -->
+												</div>
+											</div>
+										</div>
+
+                                        <div class="brd-w-item hidden">
+                                            <p class="brd-w-tit">썸네일 미리보기</p>
+                                            <div class="brd-input-wrap">
+                                                <div class="brd-thumbnail-preview-area">
+                                                    썸네일 미리보기 영역
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- board modify :e-->
+                                <div class="brd-btn-area center">
+                                    <div class="btn-list">
+                                        <label for="brdModify" class="hidden">수정</label>
+                                        <input type="button" class="btn btn-blue" value="수정" id="brdModify" onclick="modifyPost(18);">
+                                        <label for="brdCancel" class="hidden">취소</label>
+                                        <input type="button" class="btn btn-black" value="취소" id="brdCancel" onclick="javascript:history.back();">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- board wrap :e-->
+
+                </div>
+                <!-- admin content inner :e -->
+
+                    <!-- admin footer :s -->
+                    <footer id="admin-footer">
+                        <div class="footer-wrap">
+                            <ul>
+                                <li><address>(34141) 대전광역시 유성구 과학로 125</address></li>
+                                <li>Tel. 042-879-8511</li>
+                                <li>Fax. 042-879-8519</li>
+                                <li>E-mail. <a href="mailto:webmaster@kobic.kr">webmaster@kobic.kr</a></li>
+                            </ul>
+                            <span class="copy">Copyright (C) 2021 BY KOREA BIOINFORMATION CENTER(KOBIC). ALL RIGHTS RESERVED.</span>
+                            <a href="https://www.kobic.re.kr/sso/go_privacy_policy" target="_blank" class="privacy">개인정보처리방침</a>
+                        </div>
+                    </footer>
+                    <!-- admin footer :e -->
+                </div>
+                <!-- admin content :e -->
+                <a id="top-btn" class="top-btn"><span class="go-top-txt">TOP</span></a>
+            </main>
+            <!-- admin container :e -->
+        </div>
+
+
+    </body>
+</html>

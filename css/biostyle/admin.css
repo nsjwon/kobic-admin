@@ -82,20 +82,21 @@
 .admin_info_bg > ul {display: flex; justify-content: center;}
 .admin_info_bg > ul > li {margin:0 1.0rem 0 0; position: relative; padding:0 1.0rem 0 0;}
 .admin_info_bg > ul > li::after {display: block;  position: absolute;  top: 0;  bottom: 0;  right: 0;  width: 1px;  height: 14px;  margin: auto 0;  background-color: #999999;}
-.admin_info_bg > ul > li:last-child::after {display: none;} 
+.admin_info_bg > ul > li:last-child::after {display: none;}
 
 .h2-tit {font-weight: bold; font-size:3.6rem; margin-bottom:3.6rem;}
 
-.h3-tit {font-weight: 600; font-size:2rem; margin-bottom:2.8rem; position: relative; padding:0 0 0 2.4rem}
-.h3-tit:before {content:"";display:block;position:absolute;left:4px;top:4px;width:4px;height:16px;background:#42b2ff;transform:rotate(60deg);-webkit-transform:rotate(60deg);}
-.h3-tit:after {content:"";display:block;position:absolute;left:8px;top:6px;width:4px;height:16px;background:#41d8c9;transform:rotate(60deg);-webkit-transform:rotate(60deg);} 
+.h3-tit {font-weight: 600; font-size:2rem; margin-bottom:2.8rem; position: relative; padding:0 0 0 1.2rem}
+/* .h3-tit:before {content:"";display:block;position:absolute;left:4px;top:4px;width:4px;height:16px;background:#42b2ff;transform:rotate(60deg);-webkit-transform:rotate(60deg);} */
+/* .h3-tit:after {content:"";display:block;position:absolute;left:8px;top:6px;width:4px;height:16px;background:#41d8c9;transform:rotate(60deg);-webkit-transform:rotate(60deg);}  */
+.h3-tit:after {top: 0; left: 0; width: 0.5rem; height: 2.0rem; background: #27b6f6; display: block; position: absolute; border-radius: 2px;}
 
 /* 탭 */
 .tab_type_admin {padding:2.8rem 2.4rem 0 2.4rem;}
 .tab_type_admin > .tab_list, .tab_type_admin > .tab_list02, .tab_type_admin > .tab_list03 {display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;}
 .tab_type_admin > .tab_list li, .tab_type_admin > .tab_list02 li, .tab_type_admin > .tab_list03 li {border-radius: 0;margin: 0; text-align: center;}
 .tab_type_admin > .tab_list li.t_on, .tab_type_admin > .tab_list02 li.t_on, .tab_type_admin > .tab_list03 li.t_on {z-index: 1; font-weight: bold;}
-.tab_type_admin > .tab_list li a, .tab_type_admin > .tab_list02 li a, .tab_type_admin > .tab_list03 li a {position:relative;box-sizing: border-box; padding: 0 0.4rem 1.2rem 0.4rem;display: block;margin-right: 1.6rem; color: #888888;  font-size:1.8rem; border-bottom: 4px solid transparent;} 
+.tab_type_admin > .tab_list li a, .tab_type_admin > .tab_list02 li a, .tab_type_admin > .tab_list03 li a {position:relative;box-sizing: border-box; padding: 0 0.4rem 1.2rem 0.4rem;display: block;margin-right: 1.6rem; color: #888888;  font-size:1.8rem; border-bottom: 4px solid transparent;}
 .tab_type_admin > .tab_list li:last-child a, .tab_type_admin > .tab_list02 li:last-child a, .tab_type_admin > .tab_list03 li:last-child a {margin-right:0;}
 .tab_type_admin > .tab_list li.t_on a, .tab_type_admin > .tab_list02 li.t_on a, .tab_type_admin > .tab_list03 li.t_on a {position:relative;border-bottom: 4px solid #569ffe; color:#222222; font-weight: bold; }
 .tab_type_admin > .tab_list li.t_on a span, .tab_type_admin > .tab_list02 li.t_on a span, .tab_type_admin > .tab_list03 li.t_on a span {color:#222222; font-weight: bold;}
@@ -144,7 +145,7 @@
 /* code */
 pre code.hljs {line-height: 1.4; font-size: 1.4rem; padding: 2.4rem !important;}
 
-/* workspace detail */ 
+/* workspace detail */
 .admin-workspace-wrap .pp_info_g {margin:0 auto;}
 .admin-workspace-wrap .p_detail_list {display: flex; justify-content: flex-start; font-size:1.4rem; flex-wrap: wrap; margin:0; width:100%;}
 .admin-workspace-wrap .p_detail_list li {color:#333333; position: relative; padding-right:10px; margin-right:10px; margin-bottom:0.8rem;}
@@ -155,8 +156,13 @@ pre code.hljs {line-height: 1.4; font-size: 1.4rem; padding: 2.4rem !important;}
 .admin-workspace-wrap .p_detail_list li:last-child::after{display: none;}
 
 .admin-pipeline-wrap .p_detail_list {width:calc(33.3% - 2.0rem);}
+.admin-pipeline-wrap .p_detail_list.half {width:calc(50% - 2.0rem);}
 .admin-program-wrap .p_detail_list {width:calc(33.3% - 2.0rem);}
 
+
+/* pipeline */
+.brd-input-wrap {line-height: 28px;}
+.brd-link-btn .btn {min-width: 100px;}
 
 
 @media all and (min-width:2460px){
